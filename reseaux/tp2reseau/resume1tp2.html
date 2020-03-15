@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#content{text-align:left; width: auto;}
+		.calcul {
+			border:1px solid #f0f2f2; 
+			background-color: #c4c4c4; 
+			padding:4px 2px;
+		}
+		.siZ{font-size: 0.8em; text-align: center;}
+		.G{color:#555;}
+		.R{color:red;}
+		.B{color:blue;}
+		.B2{ color:red; font-family:Calibry;  font-weight:100; }
+
+	</style>	
+</head>
+<body >
+	<div id="content">
+		<h4><u>Exercice1</u>: @Broadcast - M&eacute;thode classique </h4>
+        <p class="R"><b>Quelle est l'@B du r&eacute;seau 180.35.128.0<span class="G">/20</b></span> ? </p>           
+        <hr>
+		<h5><u>M&eacute;thode classique</u>:&nbsp; Separer <span class="R">S</span> et <span class="B">H(pour mettre les bits H à 1)</span> </h5>		
+		
+		Classe B &rArr; on joue sur les 2 derniers octets:
+		
+		<div class="calcul">			
+          <span class="G">240.0=</span><span class="R">1111</span><span class="G">|0000.00000000 </span><br>    
+	      <span class="G">128.0=</span><span class="R">1000</span><span class="G">|0000.00000000</span><br>	      
+          <!-- garder intact les bits S -->
+	      &emsp;&emsp;&rArr;<span class="R"> S = 128</span><br>	      
+	    </div>
+		<span class="B">@Bcast&nbsp;&nbsp;&nbsp; :</span> <span class="G">180.35.</span><b class="R">128</b>.<span class="B">255</span><br>
+		
+		<p class="R"><b>Calculer le 1er et le dernier adresse du réseau ? </b></p>
+		
+		<div class="calcul">			
+          <span class="G">240.0=</span><span class="R">1111</span><span class="G">|0000.00000000 </span><br>    
+	      <span class="G">128.0=</span><span class="R">1000</span><span class="G">|0000.00000000</span><br>	      
+          <!-- garder intact les bits S -->
+	      &emsp;&emsp;<span class="B">&rArr;</span><span class="R">1000</span><span class="G">|0000.00000000=128.</span><span class="B">0</span>+1...fast<br>
+	      &emsp;&emsp;<span class="B">&rArr;</span><span class="R">1000</span><span class="G">|1111.11111111=143.</span><span class="B">255</span>-1...last<br>
+	    </div> 
+        
+        <span class="B">@R&eacute;seau :</span> <span class="G">180.35.</span><b class="R">128</b>.<span class="B">0</span><br>
+        @fast&emsp;&nbsp;&nbsp; : <span class="G">180.35.</span><b class="R">128</b>.1<br>
+        @last&emsp;&nbsp;&nbsp; : <span class="G">180.35.</span><b class="R">128</b>.254<br>
+        
+
+
+
+
+        <h5><u>M&eacute;thode rapide</u>:&emsp; Identifier <span class="R">S</span></h5>
+		<ol type="square">
+			<li>   
+			   <span class="G">180.35.128.0:@R de classe B</span> &rArr;  R = 16 bits 
+		    </li>
+			<li>   
+			   <span class="G">255.255.240.0</span> &rArr;<span class="R"> S=4bits </span> donc H=12bits 
+		    </li>
+		    <li>
+			  @B : 
+			  On garde les bits <span class="R">S</span> de l'@R. Et on met les suivants &agrave 1
+		    </li>
+	    </ol>
+	    <div class="calcul siZ">
+	      <span class="G">180.35.</span><span class="R">1000</span><span class="G ">1111.11111111=180.35.143.255</span>
+	    </div>
+	    <h5><u>Conlusion </u></h5>
+	    &bull;<span class="R"><b> S</b></span> nous donne l'<u><b>@R</b></u>, , l'<u><b>@B</b>, la <u><b>plage</b></u>(fast-last)</u><br>
+	    &bull; Et le <b>nv masque</b>(en ajoutant<span class="R"><b> S </b></span>&agrave; l'ancien masque). <span class="G">&lArr;  voir Exo3/Q6 </span> !
+		
+		<!-- ######################## Exeple2 ###################### -->
+		<hr>
+		<h4><u>Exercice2</u>: Nbre de sous-reseaux/Nbre de Machine </h4>
+        <blockquote>
+          Calculer le Nbre nets et Nbre hosts du r&eacute;seau 200.100.40.0<span class="G">/27</span> ?        
+        </blockquote>
+        <hr>
+		<ol type="square">
+			<li>   
+			   <span class="G">200.100.40.0: Classe C</span> &rArr;  R = 24 bits 
+		    </li>
+			<li>   
+			   <span class="G">255.255.255.224</span> &rArr;<span class="R"> S=3bits </span> donc H=5bits 
+		    </li>
+			<li>   
+			    Nb de SR = 2<sup>nb de 1 dans S</sup> &rArr; 2<sup>3</sup> = 8 sous-réseaux
+		    </li>
+			<li>   
+			    Nb d'@ = 2<sup>nb de 0 dans masq</sup> &rArr; 2<sup>5</sup> = 32 hosts/SR
+		    </li>
+	    </ol>
+		
+		<h5><u>V&eacute;fication</u>: liste des @ de SR <span class="R">valides</span> </h5>
+		
+
+		<div class="calcul">	    
+          <span class="R">000</span><span class="G">|00000=0:</span>@R<br>	      
+	      <span class="R">001</span><span class="G">|00000=32</span><br>
+		  <span class="R">010</span><span class="G">|00000=64</span><br>
+		  <span class="R">011</span><span class="G">|00000=96</span><br>
+		  <span class="R">100</span><span class="G">|00000=128</span><br>
+		  <span class="R">101</span><span class="G">|00000=160</span><br>
+		  <span class="R">110</span><span class="G">|00000=192</span><br>
+		  <span class="R">111</span><span class="G">|00000=224:</span>@B<br>
+	    </div> 
+        
+        <span class="B">Le "PAS" entre 2 SR est :</span> <span class="G">32( nombre de host!)/SR</span>
+
+	</div>
+</body>
+</html>

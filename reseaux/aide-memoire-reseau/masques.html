@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid #8c8b8b;
+  padding: 5px;
+  
+}
+td {background:white; text-align:center;}
+table {
+  border-spacing: 15px;
+  width:100%; 
+  border:1px solid #8c8b8b;
+  background:#8c8b81;
+}
+
+span {
+  font-size: 14px;
+  text-shadow: -1px -1px #0c0, 1px 1px #060, -3px 0 4px #000;
+  font-family:Arial, Helvetica, sans-serif;
+  color: #090;
+  padding:4px;
+  font-weight:lighter;
+  -moz-box-shadow: 2px 2px 6px #888;  
+  -webkit-box-shadow: 2px 2px 6px #888;  
+  box-shadow:2px 2px 6px #888;  
+  text-align:center;
+
+  margin:4px;
+  
+}
+
+code {
+  font-size: 14px;
+  text-shadow: -1px -1px #f00, 1px 1px #a00, -3px 0 4px #000;
+  box-shadow:2px 2px 6px #888;
+  font-family:Arial, Helvetica, sans-serif;
+  color: #dd0000;
+  padding:8px;
+  font-weight:lighter;
+  text-align:center;
+  margin:8px;  
+}
+.image { 
+  float: left; 
+  width:55.3%;
+  height: auto ;  
+  padding:20px;
+  background-color:#555;   
+  box-shadow:
+    0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+    0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+  border:1px solid #8c8b8b;
+  border-radius: 0px;
+  
+}
+</style>
+</head>
+<body style="background-color:#ddd;">
+
+<h2>Masque de sous-réseau</h2>
+<img src="img/octet.png" class="image" style="margin-right:4%;" />
+<ul type="square" style="padding-top:10%; line-height:2em;" >
+  <li> Tjrs identifier <b style="color:#dd0000; font:bold 1.4em Calibri;">S</b> avant de résoudre 1 blem</li>
+  <li> Nv masque = ancien maque + <b style="color:#dd0000; font:bold 1.4em Calibri;">S</b></li>
+</ul>
+
+
+
+<table >
+  <tr>
+    <th style="border:0; background:#111; color:#f2f1f1;"> Masques </th> 
+    <th style="border:0; background:#111; color:#f2f1f1;"> S </th>
+  </tr>
+  <tr>
+    <td style="border:0; border:0; color: #090; " >255.255.255.<b style="font-weight:bold; font-size:1.2em;" >128</b></td>
+    <td style="border:0; background-color:#555; border:0; color: #090; "><span >1 bits</span></td>
+  </tr>
+  <tr>
+    <td style="border:0;  color:#dd0000;" >255.255.255.<b style="font-weight:bold; font-size:1.2em;" >192</b></td>
+    <td style="border:0; background-color:#555; color:#dd0000;"><code>2 bits</code></td>
+  </tr>
+  <tr>
+    <td style="border:0;  color: #090;">255.255.255.<b style="font-weight:bold; font-size:1.2em;" >224</b></td>
+    <td style="border:0; background-color:#555; color: #090;"><span>3 bits</span></td>
+  </tr>
+  <tr>
+    <td style="border:0;  color:#dd0000;" >255.255.255.<b style="font-weight:bold; font-size:1.2em;" >240</b></td>
+    <td style="border:0; background-color:#555; color:#dd0000;"><code>4 bits</code></td>
+  </tr> 
+  <tr>
+    <td style="border:0;  color: #090;">255.255.255.<b style="font-weight:bold; font-size:1.2em;" >248</b></td>
+    <td style="border:0; background-color:#555; color: #090;"><span>5 bits</span></td>
+  </tr>
+  <tr>
+    <td style="border:0;  color:#dd0000;" >255.255.255.<b style="font-weight:bold; font-size:1.2em;" >252</b></td>
+    <td style="border:0; background-color:#555; color:#dd0000;"><code>6 bits</code></td>
+  </tr>
+  <tr>
+    <td style="border:0;  color: #090;">255.255.255.<b style="font-weight:bold; font-size:1.2em;" >254</b></td>
+    <td style="border:0; background-color:#555; color: #090;"><span>7 bits</span></td>
+  </tr>  
+</table>
+<p>Si on a  <b style="color:#dd0000;">S</b> et <b style="color:blue;">H</b>: On utilse <b style="color:blue;">H</b> pour calculer le masque(voir TP2/Exo5) </p>
+
+</body>
+</html>

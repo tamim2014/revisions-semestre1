@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TD6-Exercice1</title>
+	<link rel="stylesheet" href="../css/calcul.css" />	
+	<!-- le p'tit bouton du drop down -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.capture-reponse{ 
+  float: left; 
+  width:60%;
+  height: 90% ;  
+  padding:1em;
+  margin:2.5% 6.5%;
+  background-color:#555;   
+  box-shadow:
+    0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+    0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+  border:1px solid #8c8b8b;
+}
+.question7:hover{width:96%; height:200px; margin-left:-2em;}
+.question8:hover{width:96%; height:100px; margin-left:-2em;}
+</style>
+</head>
+<body style="background-color:#c4c4c4">
+	<div id="content">
+		<h4>
+          <ul type="square">
+		    <li>TD4: 1ère partie</li>
+		  </ul>
+        </h4>         
+
+		
+		<div class="breakExo" style="height:2px;"></div>
+		
+		<div class="calcul siZ" style="border-radius:0;">
+	      <b><span class="R">Question1 à Question11</span></b>
+	    </div>
+		<p>
+		    Une machine à microprocesseur sur un réseau est  identifiée  
+			par une adresse IP codée sur 32bits<br> 	  
+		</p>
+		<ol>
+		   <li>
+		      <p class="B question"><b>Qu'est-ce qu'un réseau ? <i class="fa fa-caret-down"></i> </b></p>			  
+			  <p class="reponse"><code >
+                Dispositif qui permet l'échange de donnée entre plusieurs équipements informatiques				
+			  </code></p>
+		   </li>
+           <li>
+		      <p class="question B"><b>Interêts des réseaux ? <i class="fa fa-caret-down"></i></b></p>
+			  <p class="reponse"><code>
+                &bull; Partage des ressources<br>
+				&bull; Sécurité des données<br>
+				&bull; Décongestion des flux				
+			  </code></p>
+		   </li>
+		   <li>
+		      <p class="question B"><b>Les topologies de câblage<i class="fa fa-caret-down"></i></b></p>			  
+			  <p class="reponse"><code>
+			    &bull; Bus &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <br>
+				&bull; Boucle(anneau) <br>
+				&bull; Etoile &emsp; <br>
+				&bull; Arbre &emsp; <br>
+				&bull; Maillé &emsp; <br>
+
+			  </code></p>
+		   </li>
+		   <li>
+		      <p class="question B" style="background:#c4c4c4; color:#990033;"><b>Shémas de chq téchnologie <i class="fa fa-caret-down"></i></b></p>			  
+			  <img class="reponse capture-reponse" src="img/q4.png"  />
+
+		   </li>
+		   <li>
+		      <p class="question B" style="background:#c4c4c4; color:#990033;"><b> Shémas topologies hybrides <i class="fa fa-caret-down"></i></b></p>			  		  
+              <img class="reponse capture-reponse" src="img/q5.png"  />			  
+		   </li>
+           <li>
+		      <p class="question B" style="background:#c4c4c4; color:#990033;"><b> Topologie &Phi;que et logique: &ne;ce? <i class="fa fa-caret-down"></i></b></p>			  		  
+              <p class="reponse">
+			    <code>&bull; Topologie physique:&emsp; </code><br>Liaison physique des station <br>
+				<code>&bull; Topologie Logique:&emsp; </code> <br>Sens de circulation de l'information <br>
+			  </p>		  
+		   </li>
+           <li>
+		      <p class="question B">
+			     <b> Nom de ces topologies ? <i class="fa fa-caret-down"></i></b>             			  
+                 <img class=" question7 capture-reponse"  src="img/question7.png"  />				 
+			  </p>
+              <p class="reponse" style="float:left"><code>
+			    &bull; FigA: Anneau &emsp; <br>
+				&bull; FigB: Etoile &emsp; <br>
+				&bull; FigC: Maillé &emsp; <br>
+				&bull; FigD: Anneau/Etoile &emsp; <br>
+				&bull; FigA: Bus/Etoile &emsp; <br>
+			  </code></p>			  
+		   </li>
+           <li>
+		      <p class="question B" style="background-color:#c4c4c4; color:#990033;"> 
+		         <span >Completer ce tableau <i class="fa fa-caret-down"></i></span>
+			     <img class="capture-reponse question8" src="img/question8.png" style="width:100%; padding:0.5em; margin-left:-2em; background:#ECECEA;"/> 
+               </p>		
+              <img class="reponse capture-reponse question8" src="img/reponse8.png" style="width:100%; padding:0.5em; margin-left:-2em; background:#ECECEA;"/>	           
+		   </li>
+           <li>
+		      <p class="question B" style="background-color:#c4c4c4; color:#990033;;"><b> Convertir 192.64.16.8 <i class="fa fa-caret-down"></i></b></p>			  		  
+              <p class="reponse">
+                <span class="idR" style="font-size:0.9em;">11000000<span class="R">01000000</span>00010000<span class="R">00001000</span></span>
+			  </p>		  
+		   </li>
+           <li>
+		      <p class="question B"><b> Les couches du model OSI ? <i class="fa fa-caret-down"></i></b></p>			  		  
+              <p class="reponse" style="float:left"><code>
+			 
+			    &bull; 7: Application (<b class="R">données</b>)&emsp; <br>
+				&bull; 6: Présentation (<b class="R">données</b>)&emsp; <br>
+				&bull; 5: Session (<b class="R">données</b>)&emsp; <br>
+				
+				&bull; 4: Transport (<b class="R">Segment</b>)&emsp; <br>
+				&bull; 3: Réseau (<b class="R">Paquet</b>)&emsp; <br>
+				&bull; 2: Liaison (<b class="R">Trame</b>)&emsp; <br>
+				&bull; 1: Physique (<b class="R">Bits</b>)&emsp; <br>
+
+			  </code></p>	  
+		   </li>
+           <li style="float:left">
+		      <p class="question B"  ><b > Rôle de chaque couche ?  <i class="fa fa-caret-down" style="padding-left:3em;" ></i></b></p>			  		  
+              <p class="reponse" style="float:left; margin-left:0; padding-left:0; font-size:0.8em;"><code>
+			 
+			    &bull; 7: Application(<b class="R">Accès aux service</b>) <br>
+				&bull; 6: Présentation(<b class="R">Formater les données</b>); <br>
+				&bull; 5: Session(<b class="R">Synchroniser le dialogue</b>) <br><br>
+				
+				&bull; 4: Transport(<b class="R">Controle de flux(TCP)</b>) <br>
+				&bull; 3: Réseau(<b class="R">Adressage logique(IP)</b>) <br>
+				&bull; 2: Liaison(<b class="R">Addressage physique(MAC)</b>) <br>
+				&bull; 1: Physique(<b class="R">Transmission binaires</b>) <br>
+
+			  </code></p>	  
+		   </li>		   
+		</ol><br><br><br>
+
+
+		
+	
+	</div><!-- div#content -->
+	<script type="text/javascript" src="../js/dropdown.js"></script><!-- Afficher/Cacher les réponses -->
+</body>
+</html>

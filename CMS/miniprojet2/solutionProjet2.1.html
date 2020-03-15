@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TP3: Extension</title>
+	<!-- pluggins de coloration syntaxique -->
+	<link rel="stylesheet" href="../../style/fullPageTabs.css" media="screen" /> 
+	<link rel="stylesheet" href="../../style/prism.css" media="screen" /> 
+    <script type="text/javascript" src="../../js/prism.js"></script>
+    <style>
+	  .G, G2, ct2 {text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;}
+    </style>	 
+
+</head>
+<body >
+    <h3 class="G"><span class="ct2">Etape1: Les Extensions</span></h3>
+	<div class=" onglet1-sujet">
+	 <img src="img/formulaire.png" style="width:100%; height:100%;" />
+	</div>
+	
+	<h4 class="G">wordpress/wp-content/<span class="ct2">plugins</span>/handiplugin/<span class="G2">handiplugin.php</span></h4>
+	<pre><code class="language-css" ><source lang="css" line>
+&lt?php
+	/**
+	* Plugin Name: Plugin Handi
+	* Description: Mon Deuxième plugin WordPress
+	* Version: 1.0
+	*/
+	</source></code></pre>
+	
+    <h4 style="color:white"></h4>
+	<pre><code class="language-php"><source lang="php" line>	
+session_start();
+
+class HandiPlugin
+{
+   
+	public function __construct(){		
+        add_action('admin_menu', array($this, 'plugin_handi_setup_menu'));		
+	}
+	
+	function plugin_handi_setup_menu(){
+		// titre, item, role, slug, fonction
+		add_menu_page('Mon Plugin Handi', 'Handi Footer Page', 'administrator', 'pluginHandi', array($this,'plugin_handi_contenu_page'));
+	}
+
+	function plugin_handi_contenu_page(){	
+		echo '
+		    &lt;h1>  Mon Plugin Handi Footer Page &lt;/h1>
+			&lt;h3>  Ce plugin permet d\'ajouter un texte suplementaire à tous les pages&lt;/h3>
+		    &lt;form action="" method="post">
+			   Texte: &lt;input type="text" name="contenu_a_ajouter" placeholder="Contenu de footer" class="saisie">&lt;br>
+			   &lt;input type="submit" value="Enregistrer les modifications" class="btn-enregistrer" >				
+			&lt/form>';		  
+		$_SESSION["add-footer"] = $_POST['contenu_a_ajouter'];		 
+	}
+			
+}
+new HandiPlugin();
+?>
+	</source></code></pre>
+	
+	<h4 class="G">wordpress/wp-content/<span class="ct2">themes</span>/Mini-Projet2/<span class="G2">footer.php</span></h4>
+	<pre><code class="language-markup" ><source lang="markup" line>
+&lt;?php session_start(); ?>
+
+		&lt;p> &lt;?php echo $_SESSION["add-footer"]; ?> &lt;/p>
+			
+		&lt;div class="footer"> &lt;/div>
+			
+		&lt;?php wp_footer(); ?>
+	
+    &lt;/body>
+&lt;/html>
+	</source></code></pre>
+	
+	
+	<div class=" onglet1-sujet">
+	 <img src="img/resultat-formulaire.png" style="width:100%; height:100%;" />
+	</div>
+
+
+</body>
+</html>

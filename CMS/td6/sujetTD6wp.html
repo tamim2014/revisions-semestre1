@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rapport TP2 CMS  </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- pluggins de coloration syntaxique -->
+	<link rel="stylesheet" href="../../style/prism.css" media="all" /> 
+    <script type="text/javascript" src="../../js/prism.js"></script>
+     <style>
+	    .turquoise {color:#25fde9;}
+		.saphir {color:#909cd8;}
+	    .vt {color:#00b36b;}
+		.gold {color: gold;}
+		li { color:#cc9900;}
+	 </style>	
+</head>
+<body   >
+	
+	  <p class="onglet1-sujet">
+	     <small style="float:right; font-family: Calibri Light; font-style:italic; ">02.02.2020</small><br><br>
+	     <strong class="gold">Exercice1<strong>
+		 <ul type="square" style="color:#cc9900">
+		    <li>Ajouter un dossier <strong class="vt">templates</strong> à la racine du thème</li>
+			<li>Ajouter le fichier <strong class="vt">no-sidebar.php</strong> dans ce dossier</li>
+		 </ul>
+		 <strong class="gold">Exercice2<strong> :<span class="saphir"> Construire un thème avec les caractéristique suivants:</span>
+		 <ul type="square" style="color:#cc9900">
+		    <li> Couleur de font (<strong class="vt">custom-background</strong>)</li>
+			<li> Image d'en-tête (<strong class="vt">custom-header</strong>)</li>
+			<li> Un menu (<strong class="turquoise"> init </strong>)</li>
+			<li> Un widget "calendrier" à gauche (<strong class="turquoise"> widget-init </strong>)</li>			
+		 </ul>
+		 <strong class="gold">Exercice3<strong> :<span class="saphir"> Construire un thème <span class="gold"> enfant</span> avec les caractéristique suivants:</span>
+		 <ul type="square" style="color:#cc9900">
+		    <li> Image de font (<strong class="vt">custom-background</strong>) <small style="color:black"> &lArr; on ne modifie rien </small></li>
+		    <li> Logo (<strong class="vt">custom-logo</strong>)</li>
+			<li> Titre du site (<strong class="vt"> ... </strong>)</li>
+			<li> Un widget "recherche" à droite </li>			
+		 </ul>
+		 
+		 <strong class="gold">Exercice4<strong> :<span class="saphir"> style du thème <span class="gold"> enfant</span> ...</span>
+		 <ul type="square" style="color:#cc9900">
+		    <li> Transformer le menu en menu horizontal</li>
+			<li> Avec une image de font au passage de la souris(hover) sur le menu </li>			
+		 </ul>
+		 <hr>
+		 <strong class="gold">Rappel1:<strong><span class="saphir"> Les fonctions dans le thème <span class="gold"> enfant</span> ...</span>		 
+		 <span style="width:auto;">
+			 <pre><code  class="language-php">
+				&lt;?php
+    if( !function_exists('ma_fonction') ) {
+	
+					    function ma_fonction(){
+						    // mes instructions
+						}
+						
+    }					
+				?>
+			 </code></pre>
+		 </span>
+         <strong style="color:gold;">Rappel2:</strong><span class="saphir"> Structure d'un thème </span>		 
+	  </p>
+	  
+	  <img src="img/structure2.png" style="border-radius:4px 4px 4px 4px;">
+	  
+
+
+</body>
+</html>

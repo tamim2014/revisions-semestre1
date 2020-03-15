@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid #8c8b8b;
+  padding: 5px;
+  
+}
+td {background:white;  text-align:center;}
+table {
+  border-spacing: 15px;
+  width:100%; 
+  border:1px solid #8c8b8b;
+  background:#8c8b81;
+}
+.NR{ color:red; font-weight:bold; font-size:1.2em; }
+.NM{ color:#660033; font-weight:bold; font-size:1.2em;}
+.image { 
+  float: left; 
+  width:42%;
+  height: auto ;  
+  padding:20px;
+  background-color:#555;   
+  box-shadow:
+    0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+    0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+  border:1px solid #8c8b8b;
+  border-radius: 0px;
+  
+}
+
+</style>
+</head>
+<body style="background-color:#ddd; ">
+
+<h2>Les classes d'adressage</h2>
+
+<table >
+  <tr>
+    <th style="border:0; background:#8c8b81; "></th> 
+    <th style="border:0; background:#111; color:#f2f1f1;">1er octet</th>
+	<th style="border:0; background:#111; color:#f2f1f1;">Nombre de réseaux</th>
+	<th style="border:0; background:#111; color:#f2f1f1;">Nombre de machines</th>
+  </tr>
+  <tr>
+    <td style="border:0; background-color:#555; border:0; color:#115; " >Classe A</td>
+    <td style="color:#4d94ff">0 - 127</td>
+	<td style="color:#4d94ff">2<sup class="NR">7</sup> -2</td>
+	<td style="color:#4d94ff">2<sup class="NM">24</sup> -2</td>
+  </tr>
+   <tr>
+    <td style="border:0; background-color:#555; color:#115;" >Classe B</td>
+    <td style="color:#4d94ff">128 - 191</td>
+	<td style="color:#4d94ff">2<sup class="NR">14</sup> = 16 k</td>
+	<td style="color:#4d94ff">2<sup class="NM">16</sup> -2</td>
+  </tr>
+  <tr>
+    <td style="border:0; background-color:#555; color:#115;">Classe C</td>
+    <td style="color:#4d94ff">192 - 223</td>
+	<td style="color:#4d94ff">2<sup class="NR">21</sup> = 2048 k</td>
+	<td style="color:#4d94ff">2<sup class="NM">8</sup> -2</td>
+  </tr>
+</table>
+
+<p><strong class="NR">&bull;&nbsp;<u>Question1</u>:</strong> <b>Pourquoi le nb de réseaux se calcule sur </b><b class="NR">7bits</b>( au lieu de <b class="NM">8</b>) <b>?</b></p>
+
+	<img src="classement1.png" class="image" style="margin-right:5%; " />
+	<img src="classement2.png" class="image"  />
+
+<div style="clear:both;"></div>
+
+<p><strong class="NR">&bull;&nbsp;<u>Question2</u>:</strong>  <b>Pourquoi on se prive de 2 sous-réseaux en classe A  ?</b></p>
+<ul type="square">
+  <li> L'@R 127.0.0.0 est réservée pour les communications en boucle locale</li>
+  <li> L'@R 127.0.0.1 est réservée pour les diagnostics et le bouclage(loopback)</li>
+</ul>
+
+
+
+</body>
+</html>

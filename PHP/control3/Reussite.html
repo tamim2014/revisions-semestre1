@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<pre style="font-size: 1.1em">
+	class Reussite <span style="color:red; font-weight: bold;"> extends  <b>Eleve</b></span>
+	{
+		private $eteuq;<small style="color:green"> //entier</small>
+
+		public function __construct(<span style="color:red; font-weight: bold;">$que</span>, <span style="color:red; font-weight: bold;">$te</span>, $eteuq){
+
+	             <span style="color:red; font-weight: bold;">parent::</span>__construct();
+	             $this->eteuq = $eteuq;
+		}
+
+		public function victoire(){	
+
+		     <span style="color:purple;">$eleve1</span> = new <span style="color:red; font-weight: bold;">Eleve("toto",1)</span>;
+		     <span style="color:red; font-weight: bold;">$te</span> = <span style="color:purple;">$eleve1</span>->getTe();<small style="color:green"> //entier</small>
+			
+		     return <span style="color:red; font-weight: bold;">$te</span> * $this->eteuq;
+		}
+	}
+	</pre>
+
+</body>
+</html>

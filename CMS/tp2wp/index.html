@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tp2 wordepress - definition et appel des fonctions</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../style/fullPageTabs.css" media="screen" />
+    <link rel="stylesheet" href="../table.css" media="screen" /> 	
+    <script type="text/javascript" src="../../js/fullPageTabs.js"></script>
+	<link rel="stylesheet" href="../../style/prism.css" media="screen" /> 
+    <script type="text/javascript" src="../../js/prism.js"></script>
+    <style>
+	.tablink6:hover {background-image: url("bleu.png"); color:gold;}
+    </style>	
+</head>
+<body style="position:absolute; top:0; width:100%;" onload="openPageSix('Sujet', this, 'black')"  >
+
+	<!-- MENU FULL PAGE TABS -->
+	<button class="tablink6" onclick="openPageSix('Sujet', this, 'black')" id="defaultOpen"  >Sujet</button>
+	<button class="tablink6" onclick="openPageSix('Solution', this, 'black')"  >Rapport</button>
+	<button class="tablink6" onclick="openPageSix('Cours', this, 'black')">Solution</button>
+	<button class="tablink6" onclick="openPageSix('Fiche', this, 'black')">functions</button>	
+	<button class="tablink6" onclick="openPageSix('Cinq', this, 'black')">Père</button>
+	<button class="tablink6" onclick="openPageSix('Six', this, 'black')">Fils</button>
+	
+	<!-- ONGLET 1 -->
+	<div id="Sujet" class="tabcontent">
+	  <object data="sujetTP2cms.pdf" type="application/pdf" class="chargerObjet onglet1-sujet"  ></object>
+	</div>
+	
+	<!-- ONGLET 2 -->
+	<div id="Solution" class="tabcontent">	 
+      <object data="remarques.html"  class="chargerObjet onglet1-sujet"  ></object>	   
+	  <object data="rapportTP2cms.pdf" type="application/pdf" class="chargerObjet onglet1-sujet"  ></object>	 
+	</div>
+	
+	<!-- ONGLET 3 -->
+	<div id="Cours" class="tabcontent" style="background:black">
+	     <object data="solutionTP2wp.html"  class="chargerObjet "  ></object>
+	</div>	  
+	
+	
+	<!-- ONGLET 4 -->
+	<div id="Fiche" class="tabcontent" style=" background-color:#111;" > 
+         <p style="text-align:center;"> FONCTIONS PERE </p>
+	     <object data="functions-pere.html"  class="chargerObjet onglet1-sujet"  ></object>
+		 <p style="text-align:center; color:red;"> FONCTIONS FILS </p>
+		 <object data="functions-fils.html"  class="chargerObjet onglet1-sujet"  ></object>
+
+	</div>
+	
+
+	<!-- ONGLET 5 -->
+	<div id="Cinq" class="tabcontent" style="background:black">
+	   	  <object data="pereTP2wp.html"  class="chargerObjet"  ></object>
+	</div>
+	
+	<!-- ONGLET 6 -->
+	<div id="Six" class="tabcontent" style="background:black">
+     <object data="childTP2wp.html"  class="chargerObjet "  ></object>
+		
+	</div>
+
+
+
+	<!-- CONCLUSION -->
+	<div class="conteneur-reponses" > </div>
+    <p class="numCours" style="background-color:#111" > <u>Conclusion</u>: La méthode <span class="G">add_theme_support()</span><br><br>
+		<small class="dateCours">
+			Elle est définie dans le fichier <span class="G">functions.php</span><br>
+			Quels sont ses 3 principaux paramètres ? <br>
+			&bull; <span style="color:#cc9900"> 'custom-background'</span><br>
+            &bull; <span style="color:#cc9900"> 'custom-header'</span><br>
+            &bull; <span style="color:#cc9900"> 'custom-logo'</span><br>			
+		</small>
+	</p>
+	<table>
+		  <tr>
+			<th>Enregistrement(définition de la fonction)</th>
+			<th>Affichage(appel de la fonction)</th>
+			<th>Description/Exemple</th>
+		  </tr>
+		  <tr>
+			<td>add_theme_support(<span style="color:#cc9900"> 'custom-background'</span>)</td>
+			<td>&lt;body &lt;?php <span style="color:#cc9900"> body_class();</span> ?&gt; &gt;</td>
+			<td>Change la couleur ou l'image d'arrière-plan</td>
+		  </tr>
+		  <tr>
+			<td>add_theme_support(<span style="color:#cc9900"> 'custom-header'</span>)</td>
+			<td>
+			  <span style="color:#cc9900">&bull; header_image()</span>: url de l'image<br>
+			  <span style="color:#cc9900">&bull; get_custom_header()</span>: dimensions
+			</td>
+			<td >
+			  <small><pre><code  class="language-markup">			    
+			    &lt;img src="<code  class="language-php">&lt;?php echo header_image(); ?></code>"
+				   <small style="font-size:0.8em">height="<code class="language-php">&lt;?php echo get_custom_header()->height;?></code>"</small>
+				   <small style="font-size:0.8em">width="<code class="language-php">&lt;?php echo get_custom_header()->width;?></code>"</small>				
+				/>
+			  </code></pre></small>
+			</td>
+		  </tr>
+		  <tr>
+			<td>add_theme_support(<span style="color:#cc9900"> 'custom-logo'</span>)</td>
+			<td><span style="color:#cc9900">the_custom_logo()</span></td>
+			<td>Ajouter un logo au site</td>
+		  </tr>
+		  <tr style="background-color:#111; color:white;">
+		    <td>Hors sujet : &nabla;</td>
+			<td></td>
+			<td>Hors sujet : &nabla;</td>
+		  </tr>
+		  <tr>
+		    <td style="color:#ddd">...</td>
+			<td></td>
+			<td></td>
+		  </tr>
+		  <tr>
+		    <td colspan="2">
+			   register_nav_menu(<span style="color:#cc9900">'main_menu'</span> , 'blabla')
+			</td>
+			<td>
+			  wp_nav_menu(array('theme_location' =><span style="color:#cc9900">'main_menu'</span>)) 
+			</td>
+		  </tr>
+		  <tr>
+		    <td colspan="2">
+			   register_sidebar(array('id'=><span style="color:#cc9900">'barre_laterale'</span>))
+			</td>
+			<td>
+			  dynamic_sidebar(<span style="color:#cc9900">'barre_laterale'</span>) dans index.php
+			</td>
+		  </tr>
+
+	</table>
+
+	<div class="conteneur-reponses" > </div> 
+</body>
+</html>

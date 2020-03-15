@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tp3 java tableau - moyenne des notes</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../style/fullPageTabs.css" media="screen" /> 
+    <script type="text/javascript" src="../../js/fullPageTabs.js"></script>		  
+</head>
+<body style="position:absolute; top:0; width:100%;" onload="openPage('Sujet', this, 'black')"  >
+
+	<!-- MENU FULL PAGE TABS -->
+	<button class="tablink" onclick="openPage('Sujet', this, 'black')" id="defaultOpen"  >Sujet</button>
+	<button class="tablink" onclick="openPage('Solution', this, 'black')"  >Solution</button>
+	<button class="tablink" onclick="openPage('Cours', this, 'purpule')">Rapport de TP</button>
+	<button class="tablink" onclick="openPage('Fiche', this, 'black')">Correction</button>
+	<!-- ONGLET 1 -->
+	<div id="Sujet" class="tabcontent">
+	  <object data="sujet-tp3java.pdf" type="application/pdf" class="chargerObjet"  ></object>
+	</div>
+	<!-- ONGLET 2 -->
+	<div id="Solution" class="tabcontent">
+	  <object data="solution-tp3java.pdf" type="application/pdf" class="chargerObjet"  ></object>
+	</div> 
+	<!-- ONGLET 3 -->
+	<div id="Cours" class="tabcontent" style=" padding:0;">
+	   	  <object data="rapport-tp3java.pdf" type="application/pdf" class="chargerObjet"  ></object>
+	</div>
+	<!-- ONGLET 4 -->
+	<div id="Fiche" class="tabcontent" style=" background-color:black;" > 
+         <object data="correction-tp3java.html"  class="chargerObjet onglet1-sujet"  ></object>
+	</div>
+		
+	
+	<!-- CONCLUSION -->
+	<div class="conteneur-reponses" > </div>  	
+    <p class="numCours " style="background-color:#111" > <u>Conclusion</u>: <span class="G">tableau</span> et variable <span class="G">static</span><br><br>
+		<small class="dateCours">
+		Un tableau c'est juste une liste. Il se déclare et s'instancie comme une classe : <br>
+		&emsp; &bull; &emsp; int &emsp; <span class="G">monTableau[ ]</span> =&emsp; new&emsp;&emsp; int[10];  &emsp;&emsp;&emsp; un tableau de 10 lignes<br>
+		&emsp; &bull; &emsp; <span class="G">int[ ]</span> &emsp; monTableau =&emsp; new&emsp;&emsp; int[11];  &emsp;&emsp;&emsp; un tableau de 11 lignes<br>	
+		</small>
+		<small><br>
+		 Les variables ou méthodes <span class="G">static</span> appartiennent à la classe elle-même.<br>
+		 On peut donc les utiliser <span class="G"> sans avoir une instance </span>créée
+		</small>
+	</p>
+	<div class="conteneur-reponses" > </div>  
+	
+</body>
+</html>

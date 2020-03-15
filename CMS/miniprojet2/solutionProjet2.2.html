@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TP3: Extension</title>
+	<!-- pluggins de coloration syntaxique -->
+	<link rel="stylesheet" href="../../style/fullPageTabs.css" media="screen" /> 
+	<link rel="stylesheet" href="../../style/prism.css" media="screen" /> 
+    <script type="text/javascript" src="../../js/prism.js"></script>
+    <style>
+	  .G, G2, ct2 {text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;}
+    </style>	 
+
+</head>
+<body >
+    <h3 class="G"><span class="ct2">Etape2: Les widgets</span></h3>
+	
+	<div class=" onglet1-sujet">
+	     <img src="img/widget-question.png" style="width:100%; height:100%;" />
+	</div>
+	
+	<h4 class="G">wordpress/wp-content/<span class="ct2">themes</span>/Mini-Projet2/<span class="G2">function.php &#916;&nabla;</span></h4>
+	<pre><code class="language-php" ><source lang="php" line>
+	function add_sidebar(){
+		register_sidebar(array(
+			'id' => 'barre_laterale',
+			'name' => 'Zone latérale Gauche',
+			'description' => 'Apparait sur la gauche du site'
+		));
+	}
+	add_action('widgets_init','add_sidebar');
+	</source></code></pre>
+	
+	<div class=" onglet1-sujet">
+	     <img src="img/widget-reponse.png" style="width:100%; height:100%;" />
+	</div>
+	
+	<h4 class="G">wordpress/wp-content/<span class="ct2">themes</span>/Mini-Projet2/<span class="G2">index.php &#916;&nabla; </span></h4>
+	
+	<pre><code class="language-markup"><source lang="markup" line>	
+&lt;?php get_header(); ?>
+&lt;div class="contenu">
+        &lt;div class="colonne_laterale">
+            &lt;aside >
+                 &lt;?php dynamic_sidebar('barre_laterale');?>
+            &lt;/aside>           
+        &lt;/div>
+        &lt;div class="colonne_contenu">               
+            ...      
+        &lt;/div>
+&lt;/div>     
+&lt;?php get_footer(); ?>
+	</source></code></pre>
+	
+
+
+
+</body>
+</html>

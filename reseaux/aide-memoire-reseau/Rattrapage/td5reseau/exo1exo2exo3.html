@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exerecices1, 2, et 3</title>
+	<link rel="stylesheet" href="../css/calcul.css" />
+	<!-- le p'tit bouton du drop down -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+</head>
+<body style="background-color:#c4c4c4">
+	<div id="content">
+		<h4>
+          <ul type="square">
+		    <li>Exo1: Classes d'adressage</li>
+			<li>Exo2: Identifiant réseau</li>
+			<li>Exo3: QCM-TCP/IP</li>
+		  </ul>
+        </h4>         
+   		
+		<div class="breakExo" style="height:2px;"></div>
+		
+		<div class="calcul siZ" style="border-radius:0;">
+	      <b><span class="R">Exo1:</span><span class="G "> Classement des @IP</span></b>
+	    </div>
+		 <p style="color:#c4c4c4">
+		   <span>...</span><br><span>...</span>
+	     </p>
+		<p class="question B">Que signifie le sigle IP ?<i class="fa fa-caret-down"></i></p>
+		<p class="reponse"><code >			
+		    <span class="idR"><span class="R"> Internet Protocol </span></span><br>
+	    </code><br></p>
+
+		<p class="question"> 
+		    <span class="B">Completer ce tableau <i class="fa fa-caret-down"></i></span><br><br>
+			<img src="img/exo1q1.png"/>	
+        </p>
+        <img class="reponse" src="img/exo1r1.png"/>							  
+	
+		<p class="B question ">Interpreter le tableau <i class="fa fa-caret-down"></i></p>
+		<p class="reponse" style="font-size:0.8em"><code >			
+		    <span class="idR">
+			    &bull; <span class="G">On retire 1bit sur chaque octet <br> 
+				&nbsp;&nbsp;de la partie réseau <br>&nbsp; &rArr; 2<sup class="R">7</sup>, 2<sup class="R">14</sup>, 2<sup class="R">21</sup></span><br><BR>
+				&bull; <span class="G">On retire 127.0.0.0(boucle local)</span><br>
+				&bull; <span class="G">On retire 127.0.0.1(LoopBack)</span><br>
+				&nbsp; <span class="G">&rArr; 2<sup class="R">7</sup> - 2</span>
+			
+			
+	    </code><br></p>
+
+		
+		<div class="breakExo"></div>
+	
+		<div class="calcul siZ" style="border-radius:0;">
+	      <b><span class="R">Exo2:</span><span class="G "> Identifiant S</span></b>
+	    </div>
+		Soit le masque <span class="G">255.255.255.0</span><br>
+		Soit l'ordi <span class="G">192.138.42.121</span><br>
+		Soit l'ordi <span class="G">192.138.42.1</span>
+
+		<p class="question B">Ces 2 PC peuvent-elles communiquer ?<i class="fa fa-caret-down"></i></p>
+		<p class="reponse"><code >			
+		    <span class="idR"><span class="R"> oui </span></span><br>
+	    </code><br></p>
+		
+		<p class="question B">Justifier votre réponse ...<i class="fa fa-caret-down"></i></p>	
+		<div class="reponse">
+			<code>
+			   Masque : regroupement des hôtes dans des sous-réseaux <span style="padding-right:9.6em;">où,</span><br>
+			   ils peuvent communiquer <span class="R">directement</span>.
+			</code>
+			<table  cellspacing="0" cellpadding="10" style="margin-bottom:0;">
+				  <tr>
+					<td style=" border:0; color:#115; " >Station A</td>
+					<td style="background-color:#8c8b81">192</td>
+					<td style="background-color:#8c8b61">138</td> 
+					<td style="background-color:#8c8b81">42</td>
+					<td style="background-color:#dddddd">121</td>
+				  </tr>
+				   <tr >
+					<td style=" border:0; color:#115;" >Station B</td>
+					<td style="background-color:#8c8b81">192</td>
+					<td style="background-color:#8c8b61" >138</td>
+					<td style="background-color:#8c8b81">42</td>
+					<td style="background-color:#dddddd">1</td>
+				  </tr>
+				  <tr style="border-top:2px solid #115;">
+					<td style="border:0; color:#115; border-top:5px solid #115;">Masque</td>
+					<td style="background-color:#8c8b81; border-top:5px solid #115;">255</td>
+					<td style="background-color:#8c8b61; border-top:5px solid #115;">255</td>
+					<td style="background-color:#8c8b81; border-top:5px solid #115;">255</td>
+					<td style="background-color:#dddddd; border-top:5px solid #115; ">0</td>
+				  </tr>
+			</table>
+			
+			<code style="border-radius:0 0 10px 0; margin-top:0;">
+			   Les valeurs face aux 255 sont &emsp;&emsp;&emsp; <span class="R" style="padding-right:15em; ">identiques </span><br><br>
+			</code>
+			
+			<code ><span class="idR " > &rArr;ils peuvent donc communiquer </span></code>		
+		     
+	    </code>
+			
+		</div>
+       
+	    <div class="breakExo" style="height:1px"></div>
+		<hr>
+
+	    <h5><u>Conlusion </u>: Identifiant <span class="R">S</span></h5>
+		<div class="calcul siZ" style="text-align:left; padding-left:2px; float:left; font-size:0.6;">
+		  <ul type="square" style="text-align:left;  padding-left:0;">			
+			<li>Deux machines peuvent communique(directement),<br> s'elles sont  dans le mm réseau <br><br></li>
+			<li>Deux machines sont ds le mm réseau,<br> s'elles ont en commun les bits <span class="B idS">R</span> et <span class="R idS">S</span></li>		
+		  </ul>
+	    </div>
+		<div style="clear:both;"></div>
+		
+		<div class="breakExo"></div>
+		
+		<div class="calcul siZ" style="border-radius:0;">
+	      <b><span class="R">Exo3:</span><span class="G "> QCM - TCP/IP</span></b>
+	    </div>
+		
+		<p>
+		   Soit un réseaux de: <span class="G">classe B</span><br>
+		   Masque: <span class="G">255.255.252.0</span><br>
+		</p>		
+		
+		<ol>
+		   <li>
+		      <p class="question B"><b>Combien de sous-réseaux ? <i class="fa fa-caret-down"></i></b></p>
+			  <p class="reponse"><code>
+			    &nbsp;Nb SR = 2<sup class="R">S&nbsp;</sup>&emsp;&emsp;&emsp;  <br>
+				<span class="infosDuMasque"><span class="B">R=16</span>, <span class="R">S=6</span>&nbsp;</span><br>
+				Nb SR = 2<sup class="R">6&nbsp;</sup> &emsp;&emsp;&emsp;  <br>
+				Nb SR = <b class="R">64</b> SR &emsp;&nbsp;
+			  </code><br></p>
+		   </li>
+           <li>
+		      <p class="question B"><b>@B</b> du reseau <b><span class="G">180.35.128.0</span>/20 ?<i class="fa fa-caret-down"></i></b></p>			  
+			  <p class="reponse"><code>
+			     On garde <b class="R">S</b>: On met H &agrave; 1 &emsp; <br>
+				<span class="infosDuMasque" style="padding-right:6.73em;"><span class="B">R=16</span>, <span class="R">S=4</span>, <span class="B">H=12</span> </span><br>
+				<img src="img/exo3q3.png"/><br>
+				@B = <span class="G">180</span>.<span class="G">35</span>.<span class="R">143</span>.255 &emsp;&emsp;&emsp;&emsp; 
+			  </code><br></p>
+		   </li>
+           <li>
+		    <p class="question B"><b>Nb @</b> du r&eacute;seau de masq:<b>/27 ?<i class="fa fa-caret-down"></i></b></p>
+			
+			<p class="reponse"><code>
+			    Nb @ = 2<sup class="B">H&nbsp;</sup> - 2 &emsp; &nbsp; <br>
+				<span class="infosDuMasque">R=24, S=3, <span class="B">H=5bit</span></span><br>
+				Nb @ = 2<sup class="B">5&nbsp;</sup> - 2 &emsp; &nbsp; <br>
+				Nb @ = 30 machines 
+			</code><br></p>		      
+           </li>
+           <li>
+		      <p class="question B"><b>@R</b> du host <span class="G">150.56.188.80</span><b>/20 ?<i class="fa fa-caret-down"></i></b></p>
+			  <p class="reponse"><code>
+			    On garde <b class="R">S</b>: On met H &agrave; 0 &emsp;&nbsp;&nbsp; <br>
+				<span class="infosDuMasque"><span class="B">R=16</span>, <span class="R">S=4</span>, <span class="B">H=12</span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span><br>
+				<img src="img/exo3q4.1.png"/><br>
+				@R = <span class="G">150</span>.<span class="G">56</span>.<span class="R">176</span>.0 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+			  </code><br></p>
+		   </li>
+           <li>
+		      <p class="question B"><b>Adresse Broadcast   ?</b><i class="fa fa-caret-down"></i></p>
+			  <p class="reponse"><code>
+			    On garde <b class="R">S</b>: On met H &agrave; 1 &emsp;&nbsp;&nbsp; <br>
+				<span class="infosDuMasque"><span class="B">R=16</span>, <span class="R">S=4</span>, <span class="B">H=12</span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span><br>
+				<img src="img/exo3q5.png"/><br>
+				@B = <span class="G">150</span>.<span class="G">56</span>.<span class="R">191</span>.255&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+			  </code></p>
+		   </li>		   
+
+		</ol>
+
+	</div><!-- div#content -->
+	<script type="text/javascript" src="../js/dropdown.js"></script><!-- Afficher/Cacher les réponses -->
+</body>
+</html>

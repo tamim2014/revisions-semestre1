@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TP8: Compte épargne</title>
+	<!-- pluggins de coloration syntaxique -->
+	<link rel="stylesheet" href="../../style/fullPageTabs.css" media="screen" /> 
+	<link rel="stylesheet" href="../../style/prism.css" media="screen" /> 
+    <script type="text/javascript" src="../../js/prism.js"></script>	
+
+</head>
+<body >
+    <!-- prisme n'a pas encore developé de coloration syntaxique pour PHP -->
+	<div class=" onglet1-sujet">
+	 <img src="resultat.png" style="width:100%; height:100%;" />
+	</div>
+	<h4 style="color:white">style.css</h4>
+	<pre><code class="language-css" ><source lang="css" line>
+	/*
+	Theme Name: TP2 Test2
+	Author:Andjib
+	Description: Revision TP2 test2 - IMPROUVEMENT( on vire les theme fils-pere pour simplifier les choses )
+	Version: 1.0
+	*/
+	</source></code></pre>
+	
+    <h4 style="color:white">functions.php</h4>
+	<pre><code class="language-php" ><source lang="php" line>	
+	&lt;?php
+	//Question1: CUSTOM FUNCTIONS
+	add_theme_support('custom-background');//............... Q1.1 s'appele avec body_class(); [COURS6/26]
+	add_theme_support('custom-header');//................... Q1.2 [ cours6/p34 ]
+	add_theme_support('custom-logo'); //.................... Q1.3 [ cours6/p39 ]
+	
+	//Préalable-Question4: Ajout de barre la terale( voir cours6)
+	wp_enqueue_style('template',get_template_directory_uri().'/css/template.css');
+	function add_sidebar(){
+		register_sidebar(array(
+			'id' => 'barre_laterale',
+			'name' => 'Barre Laterale',
+			'description' => 'Apparait dans la Barre Laterale a gauche.'
+		));
+	}
+	add_action('widgets_init','add_sidebar');
+	
+
+	// Question4: AJOUT  MENU sinon on peut pas voir la page no-sidebar
+	function add_menu(){
+		register_nav_menu('main_menu','Menu principal');
+	}
+	add_action('init','add_menu');
+	?>
+	</source></code></pre>
+	
+	<h4 style="color:white">header.php</h4>
+	<pre><code class="language-php" ><source lang="php" line>
+	/********Question2: AFFICHAGE (Appel des fonctions) ******/
+	&lt;!DOCTYPE html>
+	&lt;html lang="fr">
+	&lt;head>
+		&lt;meta charset="utf-8">
+		&lt;title>Master Handi Cours de CMS&lt;/title>
+		&lt;?php wp_head();  ?>
+	&lt;/head>
+
+	&lt;body &lt;?php body_class(); ?>>//...................................... Question2.1
+		&lt;header>	    
+			&lt;div id="en-tete">
+		
+				&lt;img src="&lt;?php header_image(); ?>"//.................... Question2.2
+					height="&lt;?php echo get_custom_header()->height ; ?>"
+					width="&lt;?php echo get_custom_header()->width ; ?>" 
+					style="height:70px; width:92%;"
+				 />
+				 
+				&lt;h1>
+				    &lt;?php
+					    if( function_exists('the_custom_logo'))
+				            the_custom_logo();//......................... Question2.3
+							bloginfo('name');
+					?>
+				&lt;/h1>
+				  
+		   	  
+			&lt;/div>
+			
+			
+			&lt;!-- Question4: i fo le menu sinon on peut pas voir la page no-sidebar.php -->
+			&lt;div id="menu" >						
+				&lt;?php 
+					wp_nav_menu(array('theme_location' => 'main_menu')); 
+				?>			
+			&lt;/div>
+
+		&lt;/header>
+	</source></code></pre>
+	
+	
+	<h4 style="color:white">index.php</h4>
+	<p style="color:white; ">
+	     &emsp; &bull; C'est la feuille css externe qui met le sidebar à sa place<br>
+		 &emsp; &bull; APPEL DE DE LA FONTION register_sidebar()<br>
+		 &emsp; &bull; PAR LA FONCTION dynamic_sidebar('barre_laterale') 	 
+	</p>
+	<pre><code class="language-php" ><source lang="php" line>
+	&lt;?php get_header(); ?>  
+		&lt;div id="contenu">
+			&lt;hr width="100%">
+			&lt;div id="barre-laterale" style="list-style:none; ">
+				 Barre laterale	    
+				 &lt;?php dynamic_sidebar('barre_laterale');?>
+			&lt;/div>
+			
+			&lt;div id="blog">
+				
+				 
+				 &lt;?php		 		     
+				 while(have_posts()){
+						 the_post();
+				?>
+						 &lt;h2 > &lt;?php the_title(); ?>&lt;/h2>
+						 &lt;p><?php the_content(); ?>&lt;/p>
+				&lt;?php
+					 }
+				?>		     		 
+			&lt;/div>
+		&lt;/div>   
+	&lt;?php get_footer(); ?>
+	</source></code></pre>
+	
+	<h4 style="color:white">footer.php</h4>
+	<pre><code class="language-php" ><source lang="php" line>
+		&lt;footer>
+			&lt;div id="essaifooter" >
+				Pied de Page
+			&lt;/div>
+			
+		&lt;/footer>
+		&lt;?php wp_footer() ?&gt;
+	&lt;/body>
+	&lt;/html>
+	</source></code></pre>
+	
+	<h4 style="color:white">templates/no-sidebar.php</h4>
+	<pre><code class="language-php" ><source lang="php" line>
+	&lt;?php
+	/*
+	Template Name: No Sidebar Template
+	*/
+	?>
+
+	&lt;?php get_header(); ?>
+	&lt;div id="contenu">
+		&lt;div id="page-no-sidebar"> &lt!-- VOIR COURS6/page13 pour l'aficher cette page -->
+			&lt;?php
+			  while(have_posts()){
+				the_post(); ?>
+				&lt;h2> &lt;?php the_title(); ?> &lt;/h2>
+				&lt;p> Publie par: &lt;?php the_author(); ?>(&lt;?php the_date(); ?>) &lt;/p>
+				&lt;p> &lt;?php the_content(); ?> &lt;/p>
+				&lt;?php
+
+			  }
+			?>
+			
+		&lt;/div>
+	&lt;/div>
+	&lt;?php get_footer(); ?>
+	</source></code></pre>
+	
+	<h4 style="color:white">css/template.css</h4>
+	<pre><code class="language-css" ><source lang="css" line>
+	#barre-laterale { float: left; width: 15%; padding-top:20px;}
+	#blog {
+		margin-left: 20%;	border:1px solid #000000;		
+		/* test */
+		height: 100%;	
+	}
+	#blog *:not(hr){ padding-left: 1%; }
+
+	#blog ul { padding-left: 4%; }
+
+	#barre-laterale li { list-style:none; }
+	
+	/* Hors sujet */
+	#barre-laterale, #blog, #page-no-sidebar {
+		background: #f2f2f2;  		
+		box-shadow:
+		  0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+		  0px 2px 2px 0px rgba(255, 255, 255, 0.5); 
+		border:1px solid black;		
+	}
+	hr{margin-bottom:2%;}
+
+	</source></code></pre>
+	
+	<h4 style="color:white">Resultat: Model  "no-sidebar"</h4>
+	<div class=" onglet1-sujet">
+	 <img src="no-sidebar.png" style="width:100%; height:100%;" />
+	</div>
+
+
+</body>
+</html>

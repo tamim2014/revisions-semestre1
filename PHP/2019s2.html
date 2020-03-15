@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Examen PHP 2019 Session2</title>
+	<link rel="stylesheet" href="../style/zoning.css" media="screen" />	
+    <link rel="stylesheet" href="../style/contenuAccueil.css" media="screen" />
+    <link rel="stylesheet" href="../style/calculatrice.css" media="screen" />
+    <link rel="stylesheet" href="../style/examen.css" media="screen" />
+    <link rel="stylesheet" href="../style/menu907.css" media="screen" />
+    <link rel="stylesheet" href="../style/top.css" media="screen">
+    <link rel="stylesheet" href="../style/prism.css" media="screen" />	
+    <script type="text/javascript" src="../js/menu907.js"></script>	     
+    <script type="text/javascript" src="../js/prism.js"></script>
+  </head>
+  <body>
+    <header>
+        <hr  id="fantaisieRELOU3">
+        <hr  id="fantaisieRELOU1">
+        <h1 style='text-align:center'>Master I MIASHS : PHP </h1>
+        <h3 style='text-align:center'>Examen terminal 2019: Session2  </h3>
+        <h5 style='text-align:center; font-style:italic;'>Durée 2h, aucun document autorisé </h5>
+ 
+        <h1 style='text-align:center'>---</h1>
+        <!-- <hr width=100%> -->
+        <button class="openbtn" onclick="openNav()">☰ </button>
+        <hr  id="fantaisieRELOU1" >
+        <hr  id="fantaisieRELOU3">
+    </header>
+    <div id="contenu">
+        <div id="barre-laterale" >
+            <div id="mySidepanel" class="sidepanel">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+              <a href="../index.html" id="iconAccueil"><img src="../photos/accueil.png" ></a>
+              <a href="2019s2.html">2019s2</a>
+              <a href="2019s1.html">2019s1</a>
+              <a href="2018s2.html">2018s2</a>
+              <a href="2018s1.html">2018s1</a>
+              <a href="2017.html">2017</a>
+            </div>
+        </div>
+        <div id="blog">    
+
+
+        <b class="partie">Partie n°1 : questions de cours (5 points)</b><br>
+        Barème : 1 points – 1 point – 1 point – 2 points <br>
+
+    	<p>Q1. Principe d’une architecture client/serveur </p>
+        Quel est le principe d’une architecture client/serveur ?
+        <ul>
+            <li>  Precisez bien ce qu’est un client ?</li><li>  Ce qu’est un serveur ?</li>
+        </ul>     
+    	<hr width=100% color=whitesmoke >
+
+       <p><u><i>SOLUTION 1.1</i></u></p>
+       <div class="conteneur-reponses" style=" float:left; width: 100%;  " >
+            <div class="reponses reponse1" style="height: 130px;margin-right: 20px;" >
+                <code>
+                    <ul type="square">
+                        <li>Le client envoie des requêtes </li>
+                        <li>Le serveur attend les requêtes des clients et y répond. </li>
+                    </ul>
+                </code>
+            </div>
+            <div class="reponses reponse2" style="height: 130px;" >
+                <!-- <code> -->
+        		<blockquote><cite>
+                    <ul type="square">
+                        <li>Client: ordinateur ou    machine virtuelle sur lequel est exécuté le logiciel client</li>
+                        <li>Serveur: ordinateur ou la machine virtuelle sur lequel est exécuté le logiciel serveur</li>
+                    </ul>
+                </cite></blockquote>
+                <!-- </code> -->
+            </div>
+
+        </div><!-- conteneur-reponses Q1.1 -->
+      
+        <hr  color="whitesmoke" width="100%" id="firefoxtnul">
+		
+        
+
+    	<p>Q2. Fonctionnement d’une architecture client/serveur </p>
+        Quand on utilise PHP pour faire un site Web; que se passe-t-il<b> 
+        <ul>
+            <li>  entre le traitement de texte(o&ugrave; est ecrit le PHP) </li>
+            <li> et le navigateur qui affiche le site web ? </li>
+        </ul>     
+    	<hr width=100% color=whitesmoke>
+
+       <p><u><i>SOLUTION 1.2</i></u></p>
+       <div class="conteneur-reponses" style="float:left; width: 100%;" >
+        <div class="reponses reponse1" style="height: 130px; margin-right: 20px;" >
+    	<ol>
+    	   <li>J’envoie mon code à un serveur web </li>
+    	   <li>Le serveur web génère une page réponse</li>
+    	   <li>La page reponse est retournée au navigateur </li>
+    	</ol>
+        </div>
+        <div class="reponses reponse2" style="height: 130px;" >
+            <!-- <code> -->
+    		<blockquote><cite>
+              Eventuelle interrogation d'une base de données<br> (  à l'étape2 ) .
+            </cite></blockquote>
+            <!-- </code> -->
+        </div>
+        </div><!-- conteneur-reponses -->
+        <hr size=20 color="whitesmoke" width="100%" id="firefoxtnul">
+
+
+    	<p>Q3.Variable superglobale </p>
+    	<ul >
+    	   <li>Qu’est-ce qu’une variable superglobale ?</li>
+    	   <li>&Agrave; quoi &ccedil;a sert ?</li>
+    	   <li>Donnez un exemple d’utilisation (en ecrivant le code PHP)</li>
+    	</ul> 	     
+    	<hr width=100% color=whitesmoke>
+
+       <p><u><i>SOLUTION 1.3</i></u></p>
+       <div class="conteneur-reponses" style="float:left; width: 100%;" >
+        <div class="reponses reponse1" style="height:350px; margin-right:20px;" >
+         
+    	<ul type="square">
+    	   <li> Variables prédéfinie à PHP</li>
+    	   <li> Sert à stocker des informations(sous forme de tableau associatif)</li>
+    	   <li>Elles sont disponibles dans tous les contextes d'exécution <br> (fonctions ou méthodes)</li>
+    	</ul> 
+        </div>
+        <div class="reponses reponse2" style="height:350px;" >
+            <span style="color:green"><i>&nbsp;Exemple: La variable superglobale $_POST[ ] </i></span><br>
+            <b>&nbsp;Client: formulaire.html</b><br>
+            <code class="language-markup" style="border-radius:0;"><source lang="html" >
+                &lt;form method="post" action="formulaire.php"><br>
+                  &emsp;  &lt;input type="text" name= "votreNom"> <br>
+                  &emsp;  &lt;input type="submit" name="submit"><br>
+                &lt;/form><br>
+            </source></code>
+            <b>&nbsp;Serveur: formulaire.php</b><br>
+            <code class="language-php" style="border-radius:0;"><source lang="php">
+			   &lt;?<br>
+                &nbsp; &nbsp; if(!isset(&dollar;_POST["votreNom"  ] )) {  <br>
+				&emsp; &dollar;nom = &dollar;_POST["votreNom"  ] ; <br> 
+				&nbsp; &nbsp; }<br>
+			  ?&gt;
+            </source></code><br>
+            Ainsi dans la table &dollar;_POST[ ]  on retrouve une  clef <u><i>'votreNom'</i></u> associée  à la <u><i>'valeur saisie par l'utilisateur'</i></u> dans le premier champ du formulaire precedent.
+        </div>
+        </div><!-- conteneur-reponses -->
+        <hr size=20 color="whitesmoke" width="100%" id="firefoxtnul">
+
+
+    	<p>Q4. Usage des variables superglobales ?</p>
+    	<ul >
+    	   <li>Quel mecanisme permet de recuperer des informations saisies par l’internaute ?</li>
+    	   <li>Donnez un exemple (code PHP) qui recupere des informations.</li>
+    	   <li>Justifiez et expliquez votre proposition.</li>
+    	</ul> 	     
+    	<hr width=100% color=whitesmoke>
+
+       <p><u><i>SOLUTION 1.4</i></u></p>
+       <div class="conteneur-reponses" style="float:left; width: 100%;"">
+        <div class="reponses reponse1" style="height: 150px; margin-right: 20px;" >
+    	<ul type="square">
+    	   <li>Mecanisme: Client/Serveur</li>
+    	   <li>Exemple: Stockage de valeurs des arguments passés par URL<br><br>
+            <code>
+                echo 'Bonjour'.htmlspcialchars(&dollar;_GET["name"]).'!';
+            </code>
+           </li>
+    
+    	</ul> 	
+        </div>
+        <div class="reponses reponse2" style="height: 150px;  " >
+            <!-- <code> -->
+    		<blockquote><cite>
+                Les clés (<i>des arguments passés a l'url</i>)<br>sont donc variables. <br>Pour illustrer,
+                imaginons que l'utilisateur ai entrée l'URL suivant : <i><code>http://example.com/?name=Toto</code></i><br>
+                L'exemple ci-contre va alors afficher : <br><code>Bonjour Toto</code>
+            </cite></blockquote>
+            <!-- </code> -->
+        </div>
+        </div><!-- conteneur-reponses -->
+        <hr size=20 color=#c3c3c3 width="99.88%" id="firefoxtnul">
+
+
+
+
+
+        <b class="partie">Partie 2 : probleme et algorithmique (5 points)</b><br>
+        Bareme : 2 points – 2 points – 3 points  <br><br>
+    	
+        <p>Acces (en lecture/&eacute;criture &agrave; une base de donn&eacute;s)</p>
+		Objectif de l'exercie:<br>
+		Reproduire ce tableau en utilisant PHP et MySql(on s'en fou de CSS !)<br>
+ 
+    	<img src="../photos/classement2018.png"  class="fotoquestion"
+        style="float:left; margin-left:0; margin-right:10%;">
+        
+        <!-- pour aligner horisontalement un elt bloc: witd:precise une valeur,; margin-left:auto; margin-right:auto; -->
+        <ol style="width:80%; margin-left:auto; margin-right:auto;">
+         <li>Expliquer comment est structure le tableau PHP qui stocke les infos ci-contre.</li>
+         <li>En respectant l’explication fournie dans la question 1,<br>                                                    Ecrire le code PHP qui permet de stocker les infos des 3 premieres lignes</li>
+         <li>Ecrire le code qui lit le tableau PHP decrit dans les question1 et 2<br> et qui produit le tableau HTML ci-contre.</li>
+        </ol>        
+    	<hr width=100% color=whitesmoke style="display:inline-block;">
+
+
+        <h1><u><i>Solution(Partie2) </i></u></h1>
+       <div class="conteneur-reponses" style="float:left; width: 100%;">
+        <div class="reponses reponse1" style="height: 1500px; margin-right: 20px;" >
+           <ol type="square">
+              <li> 
+              STRUCTURE DU TABLEAU <br>
+              C'est le resultat d'un ACCES EN LECTURE sur une base de donnee. Notamment sur une table composee de 7 cle/valeur:<br>- Chaque clef est representee par un champ(une colone ) de la table.<br>- Les valeurs ce sont les donnees qui remplissent les lignes.<br><br>
+              </li>
+              <li>
+                  STOCKAGE: ACCES EN ECRITURE A LA BASE DE DONNE classement(par exemple)<br>
+                   <span style="color:green;"><br>
+				     //Etape1:<small> Recup<span style="color:red">(dans &dollar;_POST[ ])</span> des saisies utilisateur</small>  <br>
+				   </span><br>
+
+                   <code class="language-php" style="border-radius:0;"><source lang="php">
+				   &lt;?php<br>
+                   if(!isset(&dollar;_POST["Language"])) { <br> &dollar;language=&dollar;_POST["Language "];}<br>
+                   if(!isset( &dollar;_POST["Web"] )) { <br> &dollar;web  =  &dollar;_POST["Web"] ; }<br>
+                   if(!isset( &dollar;_POST["Mobile"] )) { <br> &dollar;mobile  =  &dollar;_POST["Mobile"] ; }<br>
+                   if(!isset(&dollar;_POST["Entreprise"])){<br>&dollar;entreprise=&dollar;_POST["Entreprise"];}<br>
+                   if(!isset( &dollar;_POST["Embarque"] )){<br>&dollar;embarque=&dollar;_POST["  Embarque"];}<br>
+
+                   if(!isset( &dollar;_POST["Rang"] )) {<br>  &dollar;rand  =  &dollar;_POST["  Rang  "] ;}<br>
+                   if(!isset( &dollar;_POST["Rang2017"] )){<br> &dollar;rang2017=&dollar;_POST[" Rang2017"]; }<br>
+                </source></code><br>
+
+                <span style="color:green;">//Etape2: Connection &agrave; la base de donn&eacute;es <br></span><br>
+
+                <code class="language-php" style="border-radius:0;"><source lang="php">
+                     &dollar;user = "root";<br> 
+                     &dollar;pass= "123";<br>
+                     &dollar;cnx = new PDO('mysql:host=localhost;dbname=classement', <br> &dollar;user, &dollar;pass);<br>
+                </source></code><br>
+
+                <span style="color:green;">
+				//Etape3: Accès en écriture à la base<br>
+				//Insertion du contenu de &dollar;_POST[ ] <br>
+				//dans la table 'classement2018' <br></span><br>
+                <code class="language-php" style="border-radius:0;"><source lang="php">
+                        &dollar;sql1 = "INSERT INTO classement2018(Language, Web  , Mobile,  Entreprise,   
+                        Embarque,  Rang, Rang2017)<br>                   
+                        VALUES ('1.Python', 'X', '', 'X', 'X', '100.0', '100.0')";    
+                        &dollar;<br>
+                        cnx->exec(&dollar;sql1);<br><br>
+
+                        &dollar;sql2 = "INSERT INTO classement2018(Language, Web  , Mobile,  Entreprise,   
+                        Embarque,  Rang, Rang2017)<br>                                
+                        VALUES ('2.C++', '', 'X', 'X', 'X', '98.4', '97.4')";<br>    
+                        &dollar;cnx->exec($sql2);<br><br>
+
+                        &dollar;sql3 = "INSERT INTO classement2018(Language, Web  , Mobile,  Entreprise,   
+                        Embarque,  Rang, Rang2017)<br>                                                        VALUES ('3.C', '', 'X', 'X', 'X', '98.2', '99.7')"; <br>   
+                        &dollar;cnx->exec(&dollar;sql3);<br><br>
+
+                        ?&gt;<br>
+                 </source></code><br>
+              </li>             
+           </ol> 	
+        </div>
+        <div class="reponses reponse2" style="height: 1500px;" >
+            <ol start="3" type="square">
+                <li>
+                  AFFICHAGE: ACCES EN LECTURE A LA BASE DE DONNE  classement(par exemple)<br>
+             
+                   <span style="color:green;">//Etape1: Connexion &agrave; la base de donn&eacute;s <br></span><br>
+
+                   <code class="language-php" style="border-radius:0;"><source lang="php">
+				    &lt;?php<br>
+                       &dollar;user = "root"; <br>
+                       &dollar;pass= "123";<br>
+                       &dollar;conex = new PDO('mysql:host=localhost;dbname=classement',<br> &dollar;user, &dollar;pass);<br>
+                   </source></code><br><br>
+                    <span style="color:green;">
+                        //Etape2: Selection du contenu  de la table 'classement2018'<br>                
+                    </span><br>
+
+                    <code class="language-php" style="border-radius:0;"><source lang="php">
+                        foreach(&dollar;conex->query('SELECT * from classement2018') as &dollar;row) {
+                             print_r(&dollar;row);
+                        }<br>
+                        &dollar;conex = null;<br>
+                    </source></code><br>
+                    <span style="color:green;">
+                        //Etape3: Affichage<br>...
+                        888888888888888888888888888 
+
+
+
+
+
+
+                    </span><br>
+                </li>
+            </ol>    
+        </div>
+        </div><!-- conteneur-reponses -->
+        <hr size=20 color=#c3c3c3 width="99.88%" id="firefoxtnul">
+
+
+      	<b class="partie">Partie 3 : implementation de classes  </b>(8 points)<br>
+        Bareme : 5 points – 3 points <br>
+        <div class="diagramme-de-classe">
+        	<h3>Interimaire</h3>
+        	- prenom:chaine<br>
+        	- nom:chaine<br>
+            - telephone:chaine<br>
+            - adresse:chaine<br>
+        	<hr>
+        	+ Interimaire(prenom,nom,telephone,adresse)<br>
+        	+ ajouterPhotos(url_photo:chaine):void<br>
+        	+ getPrenom():chaine<br>
+        	+ getNom():chaine<br>
+        	+ getTelephone():chaine<br> 
+            + getAdresse():chaine<br>  	
+        </div>
+        <div class="diagramme-de-classe">
+        	<h3>Mission</h3>
+        	- interimaire:Interimaire<br>
+        	- date:LocalDate<br>
+        	- heureDebut:LocalTime<br>
+            - heureFin:LocalTime<br>
+            - commentaire:chaine<br>
+        	<hr>
+        	+ Mission(interimaire,date,heuredebut,heureFin,commentaire)<br>
+        	+ getInterimaire(): Interimaire<br>
+        	+ getDate(): LocalDate<br>
+        	+ getHeureDebut(): LocalTime <br>
+            + getHeureFin(): LocalTime <br>
+            + getCommentaire(): chaine <br>   	
+        </div>
+        <!-- <hr width=100% color=whitesmoke> -->
+		<div style="float:left; padding-left:0;" >
+        <p > 
+          Examen terminal de session 2 du 20 juin 2019 2/2 </p>
+          1. Ecrire le code PHP qui traduit <br> &emsp; le diagramme de classes ci-dessus. <br><br>
+          2. Ecrire le code PHP qui :
+       </div>
+
+
+        <div class="enonce3-2019s2" style="float:left;"   >
+        	<ul style="margin-left: 0;">
+        		<li>
+                    Instancie un interimaire avec des valeurs &agrave; choisir librement 
+                </li>
+        		<li>
+                    Lui affecte une mission (choisir librement  des valeurs) 
+                </li>
+        		<li>
+                    Affiche les informations suivantes :<br> - prenom, nom, telephone,<br>- date de la mission,<br>- heure de debut, heure de fin,<br>- commentaire<br>
+                    <i>( en faisant appel aux accesseurs des 2 classes. )</i>             
+                </li>
+
+        	</ul>
+        </div>	   
+        <hr width=100% color=whitesmoke style="display:inline-block;">
+
+
+        <h1><u><i>Solution(5 points + 3 points)</i></u></h1>
+       <div class="conteneur-reponses" >
+        <div class="reponses reponse1" style="height:1100px; margin-bottom:0;" >
+            <code>
+                class Interimaire<br>
+                {<br>
+                </code><br>
+
+                <span style="color:green"> 
+                    //Variables d'instance
+                </span><br>
+
+                <code>    
+                    &emsp; private $prenom;<br>
+                    &emsp; private $nom;<br>
+                    &emsp; private $telephone;<br>
+                    &emsp; private $adresse;<br> 
+                </code><br>
+
+                <span style="color:green"> 
+                    //Constructeurs
+                </span><br>
+
+                <code>     
+                    &emsp; public function Interimaire($prenom, $nom, $telephone, $adresse) {<br>   
+                        &emsp; &emsp; $this->prenom = $prenom;<br> 
+                        &emsp; &emsp; $this->nom = $nom;<br>
+                        &emsp; &emsp; $this->telephone = $telephone;<br> 
+                        &emsp; &emsp; $this->adresse = $adresse;<br>             
+                    &emsp; }<br><br>
+                </code>
+
+                <span style="color:green"> 
+                    //Accesseurs
+                </span><br>
+
+                <code>
+                    &nbsp;public function getPrenom(){return $this->prenom;}<br>
+                    &nbsp;public function getNom(){return $this->nom;}<br>
+                    &nbsp;public function getTelephone(){<br>&emsp;return $this->telephone;<br>}<br>
+                    &nbsp;public function getAdresse(){<br>&emsp;return $this->adresse;<br>&nbsp;}<br>
+                }
+
+            </code>
+        </div>
+        <div class="reponses reponse2" style="height:1100px; margin-bottom:0;"  >
+            <code>
+                class Mission<br>
+                {<br>
+                    &emsp; private <b>$interimaire;</b><br>
+                    &emsp; private $date;<br>
+                    &emsp; private $heureDebut;<br>
+                    &emsp; private $heureFin;<br>
+                    &emsp; private $commentaire;<br> 
+                    
+                    
+                    &emsp; public function Mission(<b>$interimaire</b>, $date, $heureDebut,$heureFin,$commentaire) {<br>   
+                        &emsp; &emsp; $this->interimaire = $interimaire;<span style="color:red">//?!</span><br> 
+                        &emsp; &emsp; $this->date = $date;<br>
+                        &emsp; &emsp; $this->heureDebut = $heureDebut;<br>
+                        &emsp; &emsp; $this->heureFin = $heureFin;<br>
+                        &emsp; &emsp; $this->commentaire = $commentaire;<br>             
+                    &emsp; }<br>
+
+                    &emsp; public function getInterimaire() { <br>&emsp; return $this->intermaire; }<span style="color:red">//?!</span><br>
+                    &emsp; public function geDate() {  return $this->date; }<br>
+                    &emsp; public function getHeureDebut() { <br>&emsp; return $this->heureDebut; }<br>
+                    &emsp; public function getHeureFin() { <br>&emsp; return $this->heureFin; }<br>
+                    &emsp; public function getCommentaire() { <br>&emsp; return $this->commentaire; }<br>
+                }<br>
+
+                
+                </code>
+
+                <span style="color:green"><br> 
+                    //2. Applications(Instantiation, Affectation, Affichage ).<br><br> 
+                    //2.1 Instancier un intermaire (avec des valeurs a choisir librement)
+
+                </span><br>
+
+                <code>
+                    $intrmr1 = new Interimaire(Toto,Jojo,0612345678, 27 Bd Pascal 75005 Paris);<br>
+                </code>
+
+                <span style="color:green"><br>             
+                    //2.2 lui affecter une mission (avec des valeurs a choisir librement)
+                </span><br>
+
+                <code>
+                   $mission1 = new Mission($intrmr1 ,09/12/19,07h00,12/12/19,17h00,urgent);
+                                   </code><br>
+
+                <span style="color:green"><br>             
+                    //2.3 Afficher les informations suivantes:<br>
+                </span>
+
+                <code>
+                $prenom =  $interm1 -> getPrenom() ;<br>
+                $nom =  $interm1 -> getNom() ;<br>
+                $telephone =  $interm1 -> getTelephone();<br><br>
+
+
+                $datemission =  $mission1 -> getDate() ;<br>
+                $hDebut =  $mission1 -> getHeureDebut() ;<br>
+                $hFin  =  $mission1 -> getHeureFin() ;<br>
+                $comment   =  $mission1 -> getCommentaire() ;<br><br>
+
+                <b style="font-size: 1.5em;">
+                    echo <br>$prenom." ".$nom." ".$telephone."<br>".$datemission." ".$hDebut." ".$hFin." ".$comment <br>;
+                </b>
+
+            </code>
+        </div>
+        </div><!-- conteneur-reponses -->
+
+		<hr width=100% color="whitesmoke" style="display:inline-block;">
+        <div class="conteneur-reponses"></div>   
+     </div><!-- <div id="blog">  -->
+	 <button onclick="topFunction()" id="myBtn" title="Go to top" >
+		<img  src="../photos/top.JPG" id="imageToTop">
+	 </button>
+   </div><!-- <div id="contenu">  -->
+   
+    <footer >     
+		Pied de page (footer)<br>
+	    <div class="content-footer"  >         
+            <div class="ndreda-footer" > 		  
+                <ul type="square">
+                    <li>Le client envoie des requêtes </li>
+                    <li>Le serveur attend les requêtes des clients et y répond. </li>
+                </ul>
+            </div>		
+			<span class="copyright_"><span style="color:gray;">2019 &copy; -</span> Master Handi</span>
+        </div><!-- conteneur-reponses Q1.1 -->
+	
+    </footer>
+    <!-- Back to top button -->
+    <script type="text/javascript" src="../js/top.js"></script>		  
+  </body>
+</html>

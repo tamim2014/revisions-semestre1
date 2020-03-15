@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RESEAUX - Revisions Masters MIASH 2019</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Trucsweb.com" />    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">  
+	
+    <link rel="stylesheet" href="style/zoning.css" media="screen" />
+    <link rel="stylesheet" href="CMS/table.css" media="screen" />	
+    <link rel="stylesheet" href="style/contenuAccueil.css" media="screen" />
+    <link rel="stylesheet" href="style/calculatrice.css" media="screen" />
+    <link rel="stylesheet" href="style/examen.css" media="screen" />
+    <link rel="stylesheet" href="style/menu907.css" media="screen" />   
+	<link rel="stylesheet" href="style/top.css"  media="screen"><!--  Bouton remonter en haut de page -->		
+    <link rel="stylesheet" href="style/menu_accordeon.css" media="all">
+	<script type="text/javascript" src="js/menu907.js"></script>
+	<script type="text/javascript" src="js/accesAuxPopUps.js"></script>
+    <style>
+	tr{
+	    background-color:#555;/* #dddddd|#c4c4c4 |  #555;*/
+	}
+	tr:nth-child(even) {
+	    background-color: #c4c4c4; /* #c4c4c4 |#555   | #115;*/
+	}
+	.NR{ color:red; font-weight:bold; font-size:1.2em; }
+    .NM{ color:#660033; font-weight:bold; font-size:1.2em;}
+    </style>	
+  </head>
+  <body>
+    <header>
+        <hr  id="fantaisieRELOU3">
+        <hr  id="fantaisieRELOU1">
+        <h1  style='text-align:center'>Master MIASHS : Paris8 </h1>
+        <h3  style='text-align:center'>Revisions - Session 2019/2020  </h3>
+        <h5  style='text-align:center; font-style:italic;'>TD, TP, Fiches-synthèse, Sujets corrigés </h5>
+        <h1  style='text-align:center'>---</h1>
+        <button class="openbtn" onclick="openNav()">☰ </button>
+        <hr  id="fantaisieRELOU1" >
+        <hr  id="fantaisieRELOU3">
+    </header>
+	<div id="contenair"  > <!-- contient: le menu, les 2 barre laterales, et le contenu main  -->
+	
+		<!-- Cacher le menu a gauche du header mais il doit sortie avec la mm hauteur que le header -->
+		<div id="barre-laterale" >
+			<div id="mySidepanel" class="sidepanel">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+				<a href="index.html" id="iconAccueil"><img src="photos/accueil.png" ></a>
+				<a href="index-php.html">PHP</a>
+				<a href="index-html.html">HTML</a>
+				<a href="index-reseau.html">R&eacute;seaux</a>
+				<a href="index-java.html">Java</a>
+				<a href="index-cms.html">CMS</a>
+				<a href="index-lsf.html">LSF</a>
+			</div>
+		</div>
+		
+		<!-- Barre laterale gauche  -->
+		<aside class="sidebarGauche" style="height:150%">
+			<div id="documenter_sidebar"  > 
+				<ol id="documenter_nav" style="width=400px;" >		
+					<li><a  href="#" onclick="pop_tpCinqHTML();" >###</a></li>	
+					<li><a  href="#" onclick="resauTpDeuxBis();" >TP2 Improuvement</a></li>
+                    <li><a  href="#" onclick="reseauTpSixBis();" >TP6 Improuvement</a></li>						
+				    <li><a  href="#" onclick="pop_tdReseauUn();" >QCM( TD1 )</a></li>						
+                    <li><a  href="#" onclick="pop_tdReseauDeux();" >Architecture( TD2 )</a></li>
+                    <li><a  href="#" onclick="pop_tdReseauTrois();" >Arithm&eacute;tique( TD3 )</a></li>
+					<li><a  href="#" onclick="reseauTdQuatre();" > Réseaux( TD4 )</a></li>	
+                    <li><a  href="#" onclick="aide_memoireReseau();" >Aide mémoire</a></li>					
+				</ol>
+			</div>
+		</aside> 
+		
+		<!-- Barre laterale droite  -->
+		<aside class="sidebarDroite saut ">
+			<div class="widget-asideD"  >
+				 &bull; B<sub>x&nbsp;&nbsp;&nbsp;</sub> &rArr; B<sub>10</sub> : Polyn&ocirc;me 
+			</div>			
+			<div class="widget-asideD" style=" clear:both;" >			
+				&bull; B<sub>10</sub> &rArr; B<sub>x</sub> : Division
+			</div>
+		</aside>
+		
+		<!-- Contenu: pricipal -->	
+		<main >		    
+			<section class="bordureSupSection1 " ></section>			
+			<section class="conteneurDesSujet"  >
+					<h2 class="matiere">R&Eacute;SEAUX</h2>	
+					<div class="danger  structureSujet"  >			  			  
+						<p><u><strong>Classes d'adressage</strong></u></p>
+						<p><table>						  
+						  <tr>
+							<td style="border:0;  color: #090; " >A</td>
+							<td style="border:0;  color: #090; "><code> <b style="color:#dd0000;"> 0 </b> &nbsp;&nbsp;| Network(<b style="color:#dd0000;"> &nbsp;7 bits </b>)</code></td>
+							<td style="border:0;  color: #090; "><code> Local Adress(<b style="color:#dd0000;">24 bits</b>)</code></td>
+						  </tr>
+						  <tr>
+							<td style="border:0;  color:#dd0000;" >B</td>
+							<td style="border:0;  color:#dd0000;"><code> <b style="color:#dd0000;"> 10 </b> &nbsp;| Network(<b style="color:#dd0000;"> 14 bits </b>)</code></td>
+							<td style="border:0;  color:#dd0000;"><code> Local Adress(<b style="color:#dd0000;">16 bits</b>)</code></td>
+						  </tr>
+						  <tr>
+							<td style="border:0;  color: #090;">C</td>
+							<td style="border:0;  color: #090; "><code> <b style="color:#dd0000;"> 110 </b> | Network(<b style="color:#dd0000;"> 21 bits </b>)</code></td>
+							<td style="border:0;  color: #090; "><code> Local Adress(<b style="color:#dd0000;">&nbsp;8 bits</b>)</code></td>
+						  </tr>  
+						</table></p>						
+					</div>
+					<div class="info  structureSujet"  >			  			  
+						<p><u><strong>Nombre de sous-réseaux</strong></u> :&emsp;<code>127.0.0.0(boucle local)<b class="NM"> | </b>127.0.0.1(LoopBack)</p>
+						<p><table style="border:0;">
+							  <tr>
+								<th style="border:0; background:#e7f3fe; "></th> 
+								<th style="border:0; background:#111; color:#f2f1f1;">1er octet</th>
+								<th style="border:0; background:#111; color:#f2f1f1;">Nb SR = 2<sup>S</sup></th>
+								<th style="border:0; background:#111; color:#f2f1f1;">Nb @ = 2<sup>H</sup> - 2</th>
+							  </tr>
+							  <tr>
+								<td style="border:0; background-color:#555; border:0; color:#115; " >Classe A</td>
+								<td>&nbsp; &nbsp; 0 - 127</td>
+								<td>2<sup class="NR">7&nbsp;</sup> - 2</td>
+								<td>2<sup class="NM">24</sup> - 2</td>
+							  </tr>
+							   <tr style="background-color:#dddddd">
+								<td style="border:0; background-color:#555; color:#115;" >Classe B</td>
+								<td>128 - 191</td>
+								<td>2<sup class="NR">14</sup> = 16 k</td>
+								<td>2<sup class="NM">16</sup> - 2</td>
+							  </tr>
+							  <tr>
+								<td style="border:0; background-color:#555; color:#115;">Classe C</td>
+								<td>192 - 223</td>
+								<td>2<sup class="NR">21</sup> = 2048 k</td>
+								<td>2<sup class="NM">8&nbsp;&nbsp; </sup> - 2</td>
+							  </tr>
+						</table></p>						
+					</div>
+					<div class="success  structureSujet"  >			  			  
+						<p><u><strong>Plage d'adressage</strong></u> :&emsp; <code> 2 @ &euro; au même réseau s'ils ont en commun <b class="NR"> "les bits S"</b></code></p>
+						<p><table style="moz-border-radius:6px;">
+						  <tr>
+							<td style="border:0;  border:0; color: #090; " >@R</td>
+							<td style="border:0;  border:0; color: #090; "><code  >On garde les <b style="color:#dd0000;">bits S</b> : On met les suivants(H) à 0 </code></td>
+						  </tr>
+						  <tr>
+							<td style="border:0;  color:#dd0000;" >@B</td>
+							<td style="border:0;  color:#dd0000;"><code >On garde les <b style=" color:#dd0000;">bits S</b> : On met les suivants(H) à 1</code></td>
+						  </tr>
+						  <tr>
+							<td style="border:0;  color: #090;">@Fast</td>
+							<td style="border:0;  color: #090;"><code >@R + 1&emsp;&emsp;&emsp;</code>&emsp;<code >@Fast = @Passerelle &emsp;&emsp;&nbsp; </code></td>
+						  </tr>
+						  <tr>
+							<td style="border:0;  color:#dd0000;" >@Last</td>
+							<td style="border:0;  color:#dd0000;"><code>@R + Nb d'@</code>&emsp;<code >@B - 1 (plage théorique)</code></td>
+						  </tr>   
+						</table></p>						
+					</div>
+					<div class="warning  structureSujet">
+						<p><u><strong>Masque de sous-réseaux</strong></u>:&emsp; <code> nv masque = ancien masque + S</code></p>
+						<p>
+							<table  >
+							  <tr >
+								<th colspan="2" rowspan="8" style=" padding:0; width:50%;"><img src="reseaux/img/octet.png"/></th>
+								<th style="border:0; background:#111; color:#f2f1f1; text-align:center;"> Masques </th> 
+								<th style="border:0; background:#111; color:#f2f1f1; text-align:center;"> S </th>
+							  </tr>
+							  <tr>
+								<td style="border:0; background-color:white; color: #090; text-align:right;" >255.255.255.<b style="font-weight:bold; font-size:1.2em;" >128</b></td>
+								<td style="border:0; background-color:#dddddd;  color: #090; text-align:center; "><span >1 bits</span></td>
+							  </tr>
+							  <tr>
+								<td style="border:0; background:white; color:#dd0000; text-align:right;" >255.255.255.<b style="font-weight:bold; font-size:1.2em;"  >192</b></td>
+								<td style="border:0; background-color:#8c8b81; color:#dd0000; text-align:center;"><span>2 bits</span></td>
+							  </tr>
+							  <tr>
+								<td style="border:0; background:white; color: #090; text-align:right;">255.255.255.<b style="font-weight:bold; font-size:1.2em; " >224</b></td>
+								<td style="border:0; background-color:#dddddd; color: #090; text-align:center;"><span>3 bits</span></td>
+							  </tr>
+							  <tr style="border: 2px solid #ffeb3b; border-left:0;">
+								<td style="border-left: 2px solid #ffeb3b; background:white; color:blue; text-align:right;" >255.255.255.<b style="font-weight:bold; font-size:1.2em;" >240</b></td>
+								<td style="border:0; background-color:#8c8b81; color:blue; text-align:center;"><span>4 bits</span></td>
+							  </tr> 
+							  <tr>
+								<td style="border:0; background:white; color: #090; text-align:right;">255.255.255.<b style="font-weight:bold; font-size:1.2em;" >248</b></td>
+								<td style="border:0; background-color:#dddddd; color: #090; text-align:center;"><span>5 bits</span></td>
+							  </tr>
+							  <tr>
+								<td style="border:0; background:white; color:#dd0000; text-align:right;" >255.255.255.<b style="font-weight:bold; font-size:1.2em;" >252</b></td>
+								<td style="border:0; background-color:#8c8b81; color:#dd0000; text-align:center;"><span>6 bits</span></td>
+							  </tr>
+							  <tr>
+								<td style="border:0; background:white; color: #090; text-align:right;">255.255.255.<b style="font-weight:bold; font-size:1.2em; " >254</b></td>
+								<td style="border:0; background-color:#dddddd; color: #090; text-align:center;"><span>7 bits</span></td>
+							  </tr>  
+							</table>							
+						</p>						
+					</div>
+					
+					<div class="danger  structureSujet"  >			  			  
+						<p><u><strong>TP:</strong> Travaux rendus</u></p>
+						<p><a   class="unset_"  href="#" onclick="pop_tpReseauDeux();" target="_self">						
+							<strong>TP2</strong> QCM & 8 Exos  :...................<strong>TCP/IP</strong>					
+						</a></p>
+						<p><a   class="unset_"  href="#" onclick="pop_tpSixReseau();" target="_self">						
+							<strong>TP6</strong> 3Exos - plage d'adresses: <b><i>D&eacute;coupage(par le nb de SR ou le nb de machines)</i></b>					
+						</a></p>
+					</div>	
+					
+					<div class="info  structureSujet" >
+						<p><u><strong>TD:</strong> Travaux perso</u> </p>			        					    
+						<p><a  id="addArticle" class="unset_"  href="#" onclick="pop_tdReseauSixPointUn();" target="_self">						
+							<strong>TD1</strong> Plages d'adressage:...................<strong>les fondamentaux</strong>					
+						</a></p>
+						<p><a  id="editArticle" class="unset_" href="#" onclick="pop_tdReseauSixPointDeux();" >		
+							  <strong>TD2</strong> Tutoriel m&eacute;thode magique:............................<strong>Nombre magique</strong>							
+						</a></p>
+					</div>					
+			  
+			</section> <!-- FIN section2 .conteneurDesSujet RESEAUX -->			
+			
+
+		</main>
+		
+		<button onclick="topFunction()" id="myBtn" title="Go to top" >
+		    <img  src="photos/top.JPG" id="imageToTop">
+	    </button>
+		
+		<hr width=100% color=whitesmoke style="display:inline-block;">
+		<div class="conteneur-reponses"></div> 
+	</div> <!-- div#contenair -->
+
+	           
+    <footer>     
+		Pied de page (footer)<br>
+	    <div class="content-footer"  >         
+                <div class="ndreda-footer" > 		  
+                <ul type="square">
+                    <li>Le client envoie des requêtes </li>
+                    <li>Le serveur attend les requêtes des clients et y répond. </li>
+                </ul>
+            </div>		
+			<span class="copyright_"><span style="color:gray;">2019 &copy; -</span> Master Handi</span>
+        </div><!-- conteneur-reponses Q1.1 -->	  
+    </footer>
+    <script type="text/javascript" src="js/top.js"></script>
+  </body>
+</html>

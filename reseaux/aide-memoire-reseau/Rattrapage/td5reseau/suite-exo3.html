@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8"> <!-- sinon tu peux pas écrire N° ni les accent-->
+ <title>Suite de l'exercice3</title>
+ <link rel="stylesheet" href="../css/calcul.css" />
+ <link rel="stylesheet" href="../css/no-sidebar.css" /> 
+	<!-- le p'tit bouton du drop down -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+
+</head>
+
+<body style="background-color:#74AFAD; position:relative; width:auto; " ><!-- Essayer cCe-ci  #f7f7f9;-->
+        <div id="menu_navigation" class="menu2" style="position:fixed" >
+           <span><a href="index-td5.html">&lArr;</a></span> 
+        </div>
+    	 
+        <div class="paragraphe1" style="height:50px; margin-top:50px; padding-top:0; "  >           	
+		   <a href="#" target="_self" class="button1"  >2<sup>10</sup> = 1024</a>            			
+           <a href="#" target="_self" class="button2"  >2<sup>16</sup> = 65 536</a>  			
+        </div>
+		
+	    <div class="paragraphe2" style="height:70px;"  >           	
+		   <b><i><u>TD5: Repeter 3 exos:</u></i></b><br><br>
+           &bull; Exo1: Classes<br>
+           &bull; Exo2: Plages<br>
+		   &bull; Exo3: masques		   
+        </div>
+		
+		<div class="paragraphe3" style=" background:#ECECEA; margin-bottom:4%; "  >           	
+			<DL>
+				<DT ><b>Q5.</b> On d&eacute;coupe un r&eacute;seau 255.255.224.0 en 16 sous-r&eacute;seaux.<br></DT>
+					<DD class="question R" style="padding-top:0.5em; padding-bottom:1em;"><span style="margin-left:-1em;">Quel est le nouveau masque ?</span> <i class="fa fa-caret-down" ></i></DD>
+					<DD class="reponse">
+					    <code>
+						     Nb SR = 2<sup class="R">S</sup><br>
+							 16 = 2<sup class="R">4</sup><br><br>
+							 &rArr; <span class="R">S=4</span><br><br>
+							 nv masque = ancien masque + <span class="R">S</span><br>
+							 nv masque = /19 + <span class="R">4</span>=/23<br>
+							 nv masque = 255.255.<span class="R">254</span>.0<br>
+						</code>
+					</DD>
+				<DT class="question"><p ><b>Q6. Lorsque le protocole IP est utilisé au dessus du protocole éthernet,<i class="fa fa-caret-down" ></i><br><span style="padding-left:2em"> l'adresse IP a-t-elle la même valeur que l'adresse éthernet ?</span></b></p></DT>
+					<DD class="reponse">NON. Car @IP=32bit  et @Ethernet=48bits</DD>
+				<DT class="question"><p><b>Q7. Le protocole IP permet d'interconnecter un réseau de classe A avec un réseau de classe C. <i class="fa fa-caret-down" ></i></b></p></DT>
+				   <DD class="reponse">VRAI. Car Internet Protocol connecte des r&eacute;seaux de taille variables</DD>
+			</DL>		   
+        </div>
+        <script type="text/javascript" src="../js/dropdown.js"></script><!-- Afficher/Cacher les réponses -->
+</body>
+</html>

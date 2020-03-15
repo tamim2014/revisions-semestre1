@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>bloc-zoning</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="shortcut icon" href="../../favicon.ico"  />  
+   <link rel="stylesheet" href="../../style/fullPageTabs.css" media="screen" /> 
+   <script type="text/javascript" src="../../js/fullPageTabs.js"></script>	
+
+       
+</head>
+<body onload="openPage('Solution', this, 'black')" >
+  <!-- MENU FULL PAGE TABS -->
+	<button class="tablink" onclick="openPage('Sujet', this, 'black')" id="defaultOpen">position:relative</button>
+	<button class="tablink" onclick="openPage('Solution', this, 'black')">position:absolute</button>	
+	<button class="tablink" onclick="openPage('Fiche', this, 'black')">position:fixed</button>
+	<button class="tablink" onclick="openPage('Cours', this, 'black')">position:sticky</button>
+	
+	<!-- ONGLET 1 -->
+	<div id="Sujet" class="tabcontent">
+	  <object data="positions/relative.html"  class="chargerObjet"  ></object>
+	</div>
+	
+	<!-- ONGLET 2 -->
+	<div id="Solution" class="tabcontent" style="background:black">	 
+       <object data="positions/absolue.html"  class="chargerObjet"  ></object>
+	</div>
+
+    <!-- ONGLET 3 -->	
+	<div id="Cours" class="tabcontent" style="background:black">
+	  <object data="positions/fixed.html"  class="chargerObjet"  ></object>
+	</div>
+	
+	<!-- ONGLET 4 -->
+	<div id="Fiche" class="tabcontent" style="background:red">
+	  <!--
+	  <object data="rappels1/index-rappels1.html"  class="chargerObjet"  ></object>
+	  -->
+	</div>
+	<div class="conteneur-reponses"> </div> <!-- c'est juste un separateur sujet/solution -->
+
+
+  
+</body>
+</html>

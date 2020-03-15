@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TP5: Magasin.java</title>
+	<!-- pluggins de coloration syntaxique -->
+	<link rel="stylesheet" href="../../style/prism.css" media="screen" /> 
+    <script type="text/javascript" src="../../js/prism.js"></script>	
+
+</head>
+<body >
+	<pre><code class="language-java" ><source lang="java" line>
+	public class Magasin
+	{
+	  public static void main(String[] args){
+	   
+		  // INSTANCIATION
+
+		  Livre livre1=new Livre("Les miserable",19.99, "Victor Hugo");
+		  Livre livre2=new Livre("L'aveuglement",7.8, "Jose Saramago");
+		  Dvd dvd1=new Dvd("Adieux Olympia",26.0, "Jacques Brel", 147.0);
+		  Dvd dvd2=new Dvd("Live Palais des sports",9.0,"Charles Aznavour",97.0);
+		  Cd cd1=new Cd("Essenciel",13.0,"Zazie",14);
+
+		  String[] e = new String[5];
+
+		  // AJOUT DES 5 PRODUITS
+
+		  e[0] = livre1.toString();
+		  e[1] = dvd1.toString();
+		  e[2] = cd1.toString();
+		  e[3] = livre2.toString();
+		  e[4] = dvd2.toString();
+		 
+		  // AFFICHAGE 
+
+		  System.out.println(livre1);   
+		  System.out.println("DVD: "+dvd1.getNom()+" - "+dvd1.getAuteur()+" - "+dvd1.getDuree()+" : "+dvd1.getPrix()+"euros");
+		  System.out.println("CD: "+cd1.getNom()+" - "+cd1.getAuteur()+" - "+cd1.getNbDePiste()+" : "+cd1.getPrix()+"euros");     
+		  System.out.println(livre2);
+		  System.out.println("DVD: "+dvd2.getNom()+" - "+dvd2.getAuteur()+" - "+dvd2.getDuree()+" : "+dvd2.getPrix()+"euros");     
+	  }
+	  
+	}	
+	</source></code></pre>
+
+</body>
+</html>

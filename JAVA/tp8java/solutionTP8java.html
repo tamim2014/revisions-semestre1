@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TP8: Compte épargne</title>
+	<!-- pluggins de coloration syntaxique -->
+	<link rel="stylesheet" href="../../style/prism.css" media="screen" /> 
+    <script type="text/javascript" src="../../js/prism.js"></script>	
+
+</head>
+<body >
+    <h4 style="color:white">Classe abstraite : Compte</h4>
+	<pre><code class="language-java" ><source lang="java" line>
+	public abstract class Compte
+	{
+	  abstract void crediter(double montant);
+	  abstract void debiter(double montant);
+	}
+	</source></code></pre>
+	<h4 style="color:white">CompteCourant: [ Condition de retrait :  solde > - decouvertMax ]</h4>
+	<pre><code class="language-java" ><source lang="java" line>
+	public class CompteCourant extends Compte
+	{
+	  protected int numeroCompte;
+	  protected String nomTitulaire;
+	  protected int debitAutorise; // 1000 euros par defaut;
+	  protected int decouvertMax; // 800 euros par defaut;
+	  protected double solde; // 0 si pas d'depot initial
+
+	  public CompteCourant(int num, String nom, int dba, int dcm, double solde){
+		this.numeroCompte = num;
+		this.nomTitulaire = nom;
+		this.debitAutorise = dba;
+		this.decouvertMax = dcm;
+		this.solde = solde;
+	  } 
+	  // Un 2ème constructeur: Pour l'heritage de CompteEpargne
+	  public CompteCourant(int num, String nom, int dba, double solde){
+		this.numeroCompte = num;
+		this.nomTitulaire = nom;
+		this.debitAutorise = dba;
+		this.solde = solde;
+	  } 
+	  	 
+	  public void crediter(double montant){ solde=solde+montant;}
+	  
+	  public void debiter(double montant){ 
+		 if(montant <= debitAutorise && solde >= -decouvertMax) 
+		   solde=solde-montant; 
+		 else 
+		  System.out.println("Montant trop eleve !") ;
+	  }  
+	   
+	  public String toString(){
+			String msg1 = "\nCompte N°: "+this.numeroCompte+" - "+this.nomTitulaire+"\n Decouvert autorise: "+this.decouvertMax+"\n Debit autorise: "+this.debitAutorise +"\n Solde:  "+solde;
+			String msg2 = "\nAttention "+this.nomTitulaire+"! Votre compte Numero "+this.numeroCompte+" est à découvert\nConsulter ci-dessous :  \n"+msg1;
+
+			 if(solde >= 0 ) return msg1;
+			 else return msg2;
+	  }
+	  
+	}
+	</source></code></pre>
+	<h4 style="color:white">CompteEpargne. [ Condition de retrait : solde > montant ]</h4>
+	<p style="color:white; ">
+	     &emsp; 1&bull; Re-défini la mthd debiter(double montant)<br>
+		 &emsp; 2&bull; Défini la mthd soldEpargneAnuel()<br>
+		 &emsp; 3&bull; Re-défini la mthd toString(): double solde = this.soldEpargneAnuel();<br>	 
+	</p>
+	<pre><code class="language-java" ><source lang="java" line>
+	public class CompteEpargne extends CompteCourant
+	{  
+	  private double tauxInteretAnnuel;
+	  // Pas d'attribut decouvertMax
+	  public CompteEpargne(int num, String nom, int dba, double solde, double TIA){
+		super(num, nom, dba, solde); // appel 2èm constructeur du CompteCourant
+		this.tauxInteretAnnuel = TIA;
+	  } 
+
+	  public void debiter(double montant){ 
+		 if(montant <= this.debitAutorise && this.solde>0 && solde >= montant) 
+		   this.solde=this.solde-montant; 
+		 else 
+		  System.out.println("\nCompte Numero "+this.numeroCompte+": Echec retrait!\nLe montant depasse votre solde("+this.solde+" Euros).") ;
+	  } 
+
+      // Attention! g fais une grosse bourde de calcul ici => je dois tout recommencer et envoyer une autre copie
+	  // ici le solde est:  solde=solde+solde*tauxInteretAnnuel;
+	  public double soldEpargneAnuel(){ 
+		  solde = solde + tauxInteretAnnuel; //solde=solde+solde*tauxInteretAnnuel;
+		  return solde;
+	  } 	  
+	   
+	  public String toString(){
+			double solde = this.soldEpargneAnuel();
+			String msg = "\nCompte N°: "+this.numeroCompte+" - "+this.nomTitulaire+"\n Debit autorise: "+this.debitAutorise +" Euros\n Solde:  "+solde+" Euros";
+			return msg;     
+	  }
+	  
+	  public static void main(String[] args){
+	  
+		CompteEpargne c3 = new CompteEpargne(3, "LOVELACE", 1000, 10, 1.25);
+		CompteEpargne c4 = new CompteEpargne(4, "CURIE", 2000, 7000, 0.75);
+
+		Virement v1 = new Virement();
+		
+		// ETATS INITIAL
+		System.out.println(c3); System.out.println(c4);
+		
+
+		// EVOLUTION DES COMPTES
+		c3.debiter(300);
+		c4.debiter(600); 
+		c3.crediter(500);
+		System.out.println(c3); System.out.println(c4);	
+		v1.transfert( c3, c4, 1000);
+		
+		
+		// ETATS FINAL
+		System.out.println(c3); System.out.println(c4);  
+	  }
+	  
+	}
+	</source></code></pre>
+	<h4 style="color:white">Classe: Virement</h4>
+	<pre><code class="language-java" ><source lang="java" line>
+	class Virement 
+	{
+	   public void transfert( CompteEpargne ce1, CompteEpargne ce2, double montant){
+		   if( ce1.solde > montant){ 
+				 ce1.debiter(montant);
+				 ce2.crediter(montant);		   
+		   }else{
+			   System.out.println("\nEchec virement: Solde insuffisant !");
+		   }
+	   
+	   }
+	}
+	</source></code></pre>
+
+</body>
+</html>

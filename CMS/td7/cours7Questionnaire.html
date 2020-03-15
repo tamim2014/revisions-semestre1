@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questionnaire cours7</title>
+	<style type="text/css">
+		.reponse{ color:green; font-weight: bold; font-size: 0.8em; font-family: Calibri Light; font-style: italic; float:right; }
+		.question{color:blue;}
+		.rrouge{color:#990033;}
+		.image-reponse{
+		  float: left; 
+		  max-width:50%;
+		  height: 90% ;  
+		  padding:20px;
+		  margin:2px;
+		  background-color:#555;   
+		  box-shadow:
+			0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+			0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+		  border:1px solid #8c8b8b;
+		  border-radius: 0px; 
+		  
+	
+		}
+		.bull { font-size:2em; padding-right:5px; }
+		     
+	    .vt {color:#00b36b;}
+		.gold {color: gold;}
+		h4{
+			  font-size: 48px;
+			  text-shadow: -1px -1px #f00, 1px 1px #a00, -3px 0 4px #000;
+			  font-family:"Segoe print", Arial, Helvetica, sans-serif;
+			  color: #dd0000;
+			  padding:64px 0 0 0;
+			  margin:16px auto;
+			  font-weight:lighter;
+			  -moz-box-shadow:none;  
+			  -webkit-box-shadow: none;  
+			  box-shadow:none;  
+			  text-align:center;
+			  display:block;
+			  min-height:172px;
+			  min-width:800;
+			  max-height:172px;
+			  max-width:800px;  		 
+		}	 
+	</style>
+</head>
+<body style="background-color: #c4c4c4;">
+	<h3 > Cours7: Les extensions </h3>
+	<h4  ><u> 7.1 Introduction </u></h4>
+	<p class="question"><span class="bull">&bull;</span>Que font les fonctions suivantes</p>
+	<div class="image-reponse" style="max-width:94%; margin-left:5%; margin-right:1%; background:white">
+	    <ol>
+			<li>add_menu_page($titre, $menu, $role, $slug)?  &emsp;&emsp;&emsp;<span class="reponse">Ajoute 1 onglet dans l'admin wp </span> <small style="color:purple; font-size:0.5em;">plugins/*/*.php</small></li>
+			<li>add_menu_page($titre, $menu, $role, $slug, <span style="color:#dd0000;">$fonction</span>)?  &emsp;<span class="reponse">Page(contenu de l'onglet)&emsp;</span> <small style="color:purple; font-size:0.5em;">plugins/*/*.php</small></li>
+			<li>add_menu_page($titre, $menu, $role, $slug, <span style="color:#dd0000;">$array($this,"fonction")</span>)?&emsp;<span class="reponse">idem en POO&emsp;</span><small style="color:purple; font-size:0.5em;">plugins/*/*.php</small></li>
+			<li></li>
+			<li>register_nav_menu($<span class="rrouge">identifiantMenu</span>, $description)? &emsp; <span class="reponse">Enregistrement du menu </span> <small style="color:purple; font-size:0.5em;">functions.php</small></li>
+			<li>wp_nav_menu(array('zone' &rArr; '<span class="rrouge">identifiantMenu</span>'))? &emsp;<small style="color:purple; font-size:0.5em;">header.php</small> <span class="reponse">Affiche le menu dans l'ADMIN wp</span> </li>
+			<li></li>
+			<li>register_sidebar(array('id' &rArr; 'barre_laterale')</li>
+			<li>dynamic_sidebar('barre_laterale')</li>
+
+		</ol>
+	</div>
+	<div style="clear:both"></div>
+	
+		
+	
+	<p class="question"><span class="bull">&bull;</span> C'est quoi une extension(plugins)? </p>
+	<ul style="list-style-type:none; ">
+		<li>
+			<img class="image-reponse"   src="img/plugins.png" style="max-width:45%;" />
+		</li>
+	</ul>	
+	<ul type="square" style="float:left; ">
+		<li>
+			Module  :<span style="color:#990033; font-size:1.4em;"> Pour ajouter des fonctionnalités à wp</span>
+			<ul type="disc">
+			   <li>Pour la partie visible du site(front office)</li>
+			   <li>Pour la partie administration Wordpress(back office)</li>
+			</ul>
+		</li>
+		<li>
+			Extension =<span style="color:#990033; font-size:1.4em;"> dossiers composés de fichiers PHP</span><p></p>
+		</li>
+		<li>
+			Exemple: Plugin <span class="vt">TinyMCE Widget</span>(mise en page WYSIWYG)
+		</li>
+		<li>
+			Exemple: Plugin <span class="vt">MailChimp</span>( ajout de newsletter )
+		</li>
+		<li>
+			Exemple: Plugin <span class="vt">PolyLang</span>( ajout d'un traducteur )
+		</li>
+		<li>
+			Exemple: Plugin <span class="vt">WooCommerce</span>(catalogue produits, e-commerce)
+		</li>
+		<li>
+			Exemple: Plugin <span class="vt">WP Accessibility</span>
+		</li>
+		<li>
+			Exemple: Plugin <span class="vt">Accessible Poetry(ENG)</span>
+		</li>
+		<li>
+			Exemple: Plugin <span class="rrouge">wA11y</span> - The web Accessibility Toolbox
+			<ul type="disc">
+			    <li>
+				    <span class="rrouge">Total11y</span> 
+			    </li>
+				<li>
+				    <span class="rrouge">WAVE</span> 
+			    </li>
+			</ul>
+		</li>
+	</ul>
+	</ul>
+	<div style="clear:both"></div>
+
+	
+	<p class="question"><span class="bull">&bull;</span> Comment ajouter une extension ? </p>
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/ajouter.png" style="max-width:45%;" />
+		</li>
+	</ul>
+	<ul type="square" style="float:left; ">
+		<li>
+			Soit téléverser  
+		</li>
+		<li>
+			Soit chercher 
+		</li>
+	</ul>
+	<div style="clear:both"></div>
+	
+	<p class="question"><span class="bull">&bull;</span> Exercice d'application1 </p>
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/exo1.png" style="max-width:90%;" />
+		</li>
+	</ul>
+	<div style="clear:both"></div>
+	
+	<h4  ><u> 7.2 Développement </u></h4>
+	
+	<p class="question"><span class="bull">&bull;</span> Dossier plugins  </p>
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/exo2.png" style="max-width:90%;" />
+		</li>
+	</ul>
+	<div style="clear:both"></div>
+	
+	<p class="question"><span class="bull">&bull;</span> <span style="color:#660033; font-size:1.2em; font-weight:bold;"> 7.2.1 Comment déclarer le plugin ?</span> 
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/exo3.png" style="max-width:90%;" />
+		</li>
+	</ul>
+    <div style="clear:both"></div>
+	
+	<p class="question"><span class="bull">&bull;</span> Résultat: </p>
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/resultat1.png" style="max-width:90%;" />
+		</li>
+	</ul>
+    <div style="clear:both"></div>
+	
+	<p class="question"><span class="bull">&bull;</span> Que se passe-il si on ajoute du code PHP sur <span class="rrouge">handipluging.php</span> ?  </p>
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/comportement.png" style="max-width:90%;" />
+		</li>
+	</ul>
+    <div style="clear:both"></div>
+	
+	<p class="question"><span class="bull">&bull;</span> <span style="color:#660033; font-size:1.2em; font-weight:bold;"> 7.2.2 Les 1ère fonctions: Comment rajouter un filtre simple ?</span> 
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/the_title.png" style="max-width:45%;" />
+		</li>
+	</ul>
+	<ul type="square" style="float:left; ">
+		<li>
+			Activer le pluging(pour appeler cette mthd)
+		</li>
+		<li>
+			 Onglet : Extension
+		</li>
+	</ul>
+    <div style="clear:both"></div>
+	
+	<p class="question"><span class="bull">&bull;</span> <span style="color:#660033; font-size:1.2em; font-weight:bold;"> 7.2.3 Les 1ère fonctions: Filtre simple [ <strong>Utiliser une structure d'objet</strong>] ?</span> 
+	
+	<p class="question"><span class="bull">&bull;</span> Mettre le filtre dans un contructeur   </p>
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/objet.png" style="max-width:90%;" />
+		</li>
+	</ul>
+    <div style="clear:both"></div>
+	
+	<p class="question"><span class="bull">&bull;</span> Exercice d'application2 ?   </p>
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/exo200.png" style="max-width:90%;" />
+		</li>
+	</ul>
+    <div style="clear:both"></div>
+	
+	<h4  ><u> 7.3 Ajouter un onglet (dans le menu d'admin wp)</u></h4>
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/onglet.png" style="max-width:90%;" />
+		</li>
+	</ul>
+	<div style="clear:both"></div>
+	
+	<p class="question"><span class="bull">&bull;</span> Résultat: </p>
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/resultat2.png" style="max-width:90%;" />
+		</li>
+	</ul>
+    <div style="clear:both"></div>
+	<h4  ><u> 7.4 Contenu de l'onglet (page d'administration du plugin)</u></h4>
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/page.png" style="max-width:90%;" />
+		</li>
+	</ul>
+	<div style="clear:both"></div>
+	<p class="question"><span class="bull">&bull;</span> Résultat: </p>
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/resultatfinal.png" style="max-width:90%;" />
+		</li>
+	</ul>
+	<div style="clear:both"></div>
+	
+	
+	
+	<p></p>
+	
+</body>
+</html>

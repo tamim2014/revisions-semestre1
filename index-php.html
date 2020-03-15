@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PHP - Revisions Masters MIASH 2019/2020</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Trucsweb.com" />    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">  
+	
+    <link rel="stylesheet" href="style/zoning.css" media="screen" />	
+    <link rel="stylesheet" href="style/contenuAccueil.css" media="screen" />
+    <link rel="stylesheet" href="style/calculatrice.css" media="screen" />
+    <link rel="stylesheet" href="style/examen.css" media="screen" />
+    <link rel="stylesheet" href="style/menu907.css" media="screen" />   
+	<link rel="stylesheet" href="style/top.css"  media="screen"><!--  Bouton remonter en haut de page -->		
+    <link rel="stylesheet" href="style/menu_accordeon.css" media="all">
+	<style>
+
+	</style>
+	
+	<script type="text/javascript" src="js/menu907.js"></script>
+    <script type="text/javascript" src="js/accesAuxPopUps.js"></script>	
+  </head>
+  <body>
+    <header>
+        <hr  id="fantaisieRELOU3">
+        <hr  id="fantaisieRELOU1">
+        <h1  style='text-align:center'>Master MIASHS : Paris8 </h1>
+        <h3  style='text-align:center'>Revisions - Session 2019/2020  </h3>
+        <h5  style='text-align:center; font-style:italic;'>TD, TP, Fiches-synthèse, Sujets corrigés </h5>
+        <h1  style='text-align:center'>---</h1>
+        <button class="openbtn" onclick="openNav()">☰ </button>
+        <hr  id="fantaisieRELOU1" >
+        <hr  id="fantaisieRELOU3">
+    </header>
+	<div id="contenair"  > <!-- contient: le menu, les 2 barre laterales, et le contenu main  -->
+		<div id="barre-laterale" >
+			<div id="mySidepanel" class="sidepanel">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+				<a href="index.html" id="iconAccueil"><img src="photos/accueil.png" ></a>
+				<a href="index-php.html">PHP</a>
+				<a href="index-html.html">HTML</a>
+				<a href="index-reseau.html">R&eacute;seaux</a>
+				<a href="index-reseau.html">Java</a>
+				<a href="index-lsf.html">LSF</a>
+				<a href="index-cms.html">CMS</a>
+			</div>
+		</div>
+		
+		<!-- Barre laterale gauche  -->
+		<aside class="sidebarGauche" style=" height:132.5%;">
+			<div id="documenter_sidebar"  > 
+				<ol id="documenter_nav" style="width=400px;" >		
+					<li><a  href="#" onclick="pop_tpSixPHP();" >TP6  Compte  bancaire</a></li>
+                    <li><a  href="#" onclick="pop_controlTroisPHP();" >Contrôle 3</a></li>							
+					<li><a  href="#" onclick="pop_tpQuatreTableau();" >#########</a></li>
+                    <li><a  href="#" onclick="pop_tpTroisFormulaire();" >########</a></li>						
+					<li><a  href="#" onclick="pop_tpDeuxFrame();" >#########</a></li>						
+                    <li><a  href="#" onclick="pop_tpQuatreCss();" >#######</a></li>
+                    <li><a  href="#" onclick="pop_tpUnCss();" >###########</a></li>                       					
+				</ol>
+			</div>
+		</aside> <!-- comment lui donner le mm height que <main> ? -->
+		
+		<!-- Barre laterale droite  -->
+		<aside class="sidebarDroite saut ">
+			<div class="widget-asideD"  >
+				 widget1
+			</div>			
+			<div class="widget-asideD" style=" clear:both;" >			
+				widget2
+			</div>
+		</aside>
+		
+		<!-- Contenu: pricipal -->	
+		<main >		    
+			<section class="bordureSupSection1 " ></section>			
+			<section class="conteneurDesSujet"  >
+            			
+				  <h2 class="matiere">PHP</h2>		  
+				  <div class="success  structureSujet"  >			  			  
+					<p><u><a href="PHP/2019s2.html"><strong>2019:</strong> Session2</a></u></p>
+					<p><strong>Partie1</strong> Questions cours(5 points-15mn):........<strong>Variable superglobale, Client/Serveur</strong></p>
+					<p><strong>Partie2</strong> Probleme( 5 points -30mn ):.................<strong>...</strong></p>
+					<p><strong>Partie3</strong> Implémentation de classe(8point - 1h15mn):......<strong>POO</strong></p>
+					<a href="PHP/2019s2.html" class="unset_">lire la suite ...</a>
+					<p></p>
+				  </div>
+				  
+				  <div class="danger  structureSujet" >
+					<p><u><a href="PHP/2019s1.html"><strong>2019:</strong> Session1</a></u></p>
+					<p><strong>Partie1</strong> Questions de cours (5 points -15mn):............................<strong>Variable superglobale</strong></p>
+					<p><strong>Partie2</strong> Probleme( 5 points -30mn ):.............................................<strong>Bataille Navale</strong></p>
+					<p><strong>Partie3</strong> Interprétation d’un code PHP (5point - 15 mn):..........<strong>Tableaux imbriques</strong></p>
+					<p><strong>Partie4</strong> Interprétation de classe ( 5points - 1H ):....................<strong> POO</strong></p>
+					<a href="PHP/2019s1.html" class="unset_">lire la suite ...</a>
+					<p></p>
+				  </div>
+
+
+				  <div class="success structureSujet ">
+					<p><u><a href="PHP/2018s2.html"><strong>2018:</strong> Session2</a></u></p>
+					<p><strong>Partie1</strong> Questions cours(5 points-15mn):..............<strong>Variable superglobale, Clnt/Srvr</strong></p>
+					<p><strong>Partie2</strong> Structuration de donnees(5 points -15mn):.................<strong> POO</strong></p>
+					<p><strong>Partie3</strong> Interprétation d’un code PHP (5point - 15 mn):..........<strong>Tableaux ,modulo</strong></p>
+					<p><strong>Partie4</strong> Interprétation de classe ( 5points - 1H ):....................<strong> POO</strong></p>
+					<a href="PHP/2018s2.html" class="unset_">lire la suite ...</a>
+					<p></p>		
+				  </div>
+
+				  <div class="danger structureSujet">
+					<p><u><a href="PHP/2018s1.html"><strong>2018:</strong> Session1</a></u></p>
+					<p><strong>Partie1</strong> Questions de cours (5 points -15mn):............................<strong>Variable superglobale</strong></p>
+					<p><strong>Partie2</strong> Structuration de donnees(5 points -15mn):......................................<strong>POO</strong></p>
+					<p><strong>Partie3</strong> Interprétation d’un code PHP (5point - 15 mn):..........<strong>Tableaux modulo</strong></p>
+					<p><strong>Partie4</strong> Interprétation de classe ( 5points - 1H ):....................<strong> POO</strong></p>
+					
+					<a href="PHP/2018s1.html" class="unset_">lire la suite ...</a>
+					<p></p>
+				  </div>
+
+				  <div class="success structureSujet">
+					<p><u><a href="PHP/2017.html"><strong>2017:</strong> Session1</a></u></p>
+					 ...
+					<a href="PHP/2017.html" class="unset_">lire la suite ...</a>
+					<p></p>
+				  </div>				  
+			</section> <!-- FIN section1- conteneurDesSujet - PHP -->
+		</main>
+		
+		<button onclick="topFunction()" id="myBtn" title="Go to top" >
+		    <img  src="photos/top.JPG" id="imageToTop">
+	    </button>
+		
+		<hr width=100% color=whitesmoke style="display:inline-block;">
+		<div class="conteneur-reponses"></div> 
+	</div> <!-- div#contenair -->
+
+	           
+    <footer>     
+		Pied de page (footer)<br>
+	    <div class="content-footer"  >         
+                <div class="ndreda-footer" > 		  
+                <ul type="square">
+                    <li>Le client envoie des requêtes </li>
+                    <li>Le serveur attend les requêtes des clients et y répond. </li>
+                </ul>
+            </div>		
+			<span class="copyright_"><span style="color:gray;">2019 &copy; -</span> Master Handi</span>
+        </div><!-- conteneur-reponses Q1.1 -->	  
+    </footer>
+    <script type="text/javascript" src="js/top.js"></script>
+  </body>
+</html>

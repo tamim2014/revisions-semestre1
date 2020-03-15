@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questionnaire cours6</title>
+	<style type="text/css">
+		.reponse{ color:green; font-weight: bold; font-size: 0.8em; font-family: Calibri Light; font-style: italic; float:right; }
+		.question{color:blue;}
+		.rrouge{color:#990033;}
+		.image-reponse{
+		  float: left; 
+		  max-width:50%;
+		  height: 90% ;  
+		  padding:20px;
+		  margin:2px;
+		  background-color:#555;   
+		  box-shadow:
+			0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+			0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+		  border:1px solid #8c8b8b;
+		  border-radius: 0px; 
+		  
+	
+		}
+		.bull { font-size:2em; padding-right:5px; }
+	</style>
+</head>
+<body style="background-color: #c4c4c4;">
+	<h3 > Cours6: Modèles de page, caractéristiques d'un thème, thème enfant </h3>
+	<h4 style="color:red;" ><u> 6.1 Model de page </u></h4>
+	<p class="question"><span class="bull">&bull;</span>Que font les fonctions suivantes</p>
+	<div class="image-reponse" style="max-width:94%; margin-left:5%; margin-right:1%; background:white">
+	    <ol>
+			<li>wp_head() ?  &emsp; &emsp; &emsp; &emsp;&emsp;&emsp;&emsp; <span class="reponse">Ajout de style CSS ou de script js </span> <span style="color:purple">functions.php</span></li>
+			<li>wp_footer() ?  &emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <span class="reponse">Ajout de style CSS ou de script js </span> <span style="color:purple">functions.php</span></li>
+			<li>wp_enqueue_style($clé, $valeur) ?  &emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <span class="reponse">Ajout de fichier CSS </span> <span style="color:purple">functions.php</span></li>
+			<li>register_nav_menu($<span class="rrouge">identifiantMenu</span>, $description)? &emsp; <span class="reponse">Enregistrement du menu </span> <span style="color:purple">functions.php</span></li>
+			<li>wp_nav_menu(array('zone' =>'<span class="rrouge">identifiantMenu</span>'))? &emsp;&emsp;<span style="color:purple">header.php</span> <span class="reponse">Affiche le menu dans l'ADMINISTRATION</span> </li>
+			<li>have_posts()? &emsp;&emsp;<span style="color:purple">index.php</span>  <span class="reponse">Teste s'il &ni; des articles</span> </li>
+			<li>the_posts()? &emsp; &emsp; <span style="color:purple">index.php</span> <span class="reponse"> Accès en lecture à la BD: stockage infos des articles sur une variable globale</span> </li>
+		</ol>
+	</div>
+	<div style="clear:both"></div>
+	
+		
+	
+	<p class="question"><span class="bull">&bull;</span> &Agrave; quoi sert un model de page? </p>
+	<ul style="list-style-type:none; ">
+		<li>
+			<img class="image-reponse"   src="img/6models.png" style="max-width:45%;" />
+		</li>
+	</ul>	
+	<ul type="square" style="float:left; ">
+		<li>
+			Affichage  :<span style="color:#990033; font-size:1.4em;"> Page personnalisée</span>
+		</li>
+		<li>
+			Mise en page :<span style="color:#990033; font-size:1.4em;"> disposition particulière</span>
+		</li>
+	</ul>
+	<div style="clear:both"></div>
+
+	
+	<p class="question"><span class="bull">&bull;</span> Où se situe un model de page ? </p>
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/structure.png" style="max-width:45%;" />
+		</li>
+	</ul>
+	<ul type="square" style="float:left; ">
+		<li>
+			Soit dans un fichier  :<span style="color:#990033; font-size:1.4em;"> &Agrave; la racine du thème</span>
+		</li>
+		<li>
+			Soit dans un dossier :<span style="color:#990033; font-size:1.4em;"> &Agrave; la racine du thème</span>
+		</li>
+	</ul>
+	<div style="clear:both"></div>
+	
+	<p class="question"><span class="bull">&bull;</span> Comment activer un model de page ? </p>
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/activation.png" style="max-width:45%;" />
+		</li>
+	</ul>
+	<ul type="square" style="float:left;  ">
+		<li>
+			<strong>Tableau de bord</strong>  
+		</li>
+		<li>
+			Menu  :<span style="color:#990033; font-size:1.4em;"> Pages</span><small>(pour afficher la page à modeler)</small>
+		</li>
+		<li >
+			Sous-menu :<span style="color:#990033; font-size:1.4em;"> Toutes les pages</span>
+		</li>
+	</ul>
+	<!-- j'utilise padding-top pour forcer cette liste à descendre en-dessous du liste precedent -->
+	<ul type="square" style="padding-top:22%; color:red; line-height:1.7em; font-size:1.2em; ">
+		<li>
+			Attributs de page  
+		</li>
+		<li>
+			Modèle  
+		</li>
+
+	</ul>
+	<div style="clear:both"></div>
+	
+		<p class="question"><span class="bull">&bull;</span> Comment enlever la barre laterale dans un modele ? </p>
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/commentaire.png" style="max-width:45%;" />
+		</li>
+	</ul>
+	<ul type="square" style="float:left; ">
+	    <li>
+			<strong>Exemple</strong>  
+		</li>
+	    <li>
+			Fichier  :<span style="color:#990033; "> templates/no-sidebar.php</span>
+		</li>
+		<li>
+			Code :<span style="color:#990033; "> &Eacute;crire le commentaire ci-contre</span>
+		</li>
+	</ul>
+	<div style="clear:both"></div>
+	
+	<p class="question"><span class="bull">&bull;</span> Comparer ce template avec le model par défaut ? <span style="color:#660033; font-size:1.2em; font-weight:bold;">  &emsp; index.php</span>&nbsp;/&nbsp;<span style="color:#660033; font-size:1.2em; font-weight:bold;">no-sidebar.php</span> </p>
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/index.png" style="max-width:45%;" />
+		</li>
+		<li>
+			<img class="image-reponse"   src="img/no-sidebar.png" style="max-width:45%;" />
+		</li>
+	</ul>
+    <div style="clear:both"></div>
+	
+	<p class="question"><span class="bull">&bull;</span> Comparer les codes de ces 2 models  <span style="color:#660033; font-size:1.2em; font-weight:bold;">  &emsp; index.php</span>&nbsp;/&nbsp;<span style="color:#660033; font-size:1.2em; font-weight:bold;">no-sidebar.php</span> </p>
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/indexC.png" style="max-width:45%;" />
+		</li>
+		<li>
+			<img class="image-reponse"   src="img/no-sidebarC.png" style="max-width:45%;" />
+		</li>
+	</ul>
+    <div style="clear:both"></div>
+	
+	<p class="question"><span class="bull">&bull;</span> Comment afficher le titre, l'auteur, la date , et l'article ?  </p>
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/affiche.png" style="max-width:45%;" />
+		</li>
+	</ul>
+    <div style="clear:both"></div>
+	
+	<p class="question"><span class="bull">&bull;</span> Donner le code CSS du model par défaut( page index.php)  </p>
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/css.png" style="max-width:45%;" />
+		</li>
+	</ul>
+    <div style="clear:both"></div>
+	
+	<h4 style="color:red;" ><u> 6.2 Caractéristiques du thème </u><small style="color:black"><i>[ cours6/page16 ]</i></small></h4>
+	
+	<p class="question"><span class="bull">&bull;</span> Quelless sont les 2 principaux caractéristiques d'un thème wp   </p>
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/caracteristiques.png" style="max-width:45%;" />
+		</li>
+	</ul>
+    <div style="clear:both"></div>
+	
+	<p class="question"><span class="bull">&bull;</span> Comment implementer un menu ?   </p>
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/caracteristique1.png" style="max-width:45%;" />
+		</li>
+	</ul>
+    <div style="clear:both"></div>
+	
+	<p class="question"><span class="bull">&bull;</span> Comment implementer un widget ? <span style="color:#660033; font-size:1.2em; font-weight:bold;">ça se fait dans un sidebar</span>  </p>
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/caracteristique2.png" style="max-width:45%;" />
+		</li>
+	</ul>
+    <div style="clear:both"></div>
+	
+	<h4 style="color:red;" ><u> 6.3 Thème enfant </u><small style="color:black"><i>[ cours6/page45 ]</i></small></h4>
+	
+	<p class="question"><span class="bull">&bull;</span> Comment construire un thème enfant ?  </p>
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/t-child.png" style="max-width:45%;" />
+		</li>
+	</ul>
+    <div style="clear:both"></div>
+	
+	<p class="question"><span class="bull">&bull;</span> Comment fonctionne un thème enfant ?  </p>
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/fnmt-child.png" style="max-width:45%;" />
+		</li>
+	</ul>
+	<ul type="square" style="float:left; ">
+		<li>
+			 Copier/coller les fichiers que tu veux modifier
+
+		</li>
+		<li>
+			Les fichiers enfants écrasent alors les fichiers parents
+		</li>
+		<li>
+			
+		</li>
+		<li>
+			Exeception: functions.php [voir cours6 page52/53]
+		</li>
+	</ul>
+    <div style="clear:both"></div>
+	
+	
+	<p class="question"><span class="bull">&bull;</span> Alors comment ça marche pour function.php ?  </p>
+
+	<ul type="square" style="float:left; ">
+		<li>
+			 <strong>Le fonctionnement est différent</strong>
+		</li>
+		<li> ?!</li>
+		<li>
+			Chargement: <a href="#">[voir cours6 page52/53]</a>
+		</li>
+		<li>
+			Implémentation : [voir cours6 page53/53]
+		</li>
+	</ul>
+    <div style="clear:both"></div>
+	
+	<p></p>
+	
+</body>
+</html>

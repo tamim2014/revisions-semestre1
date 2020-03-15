@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title> QCM TCP/IP</title>
+ <meta charset="utf-8"> <!-- sinon tu peux pas écrire N° ni les accent-->
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!--<link rel="stylesheet" href="../style/login.css" type="text/css" media="screen, projection"> -->	
+ <link rel="shortcut icon" href="../../favicon.ico"  />
+ <link rel="stylesheet" href="../../style/fullPageTabs.css" media="screen, projection" /> 
+ <script type="text/javascript" src="../../js/fullPageTabs.js"></script>
+</head>
+
+<body style="background-color:#f7f7f9;  " onload="openPage('Sujet', this, 'black')" >
+	<!-- MENU FULL PAGE TABS --> 
+	<button class="tablink" onclick="openPage('Sujet', this, 'black')" id="defaultOpen" >Resum&eacute;s</button>
+	<button class="tablink" onclick="openPage('Solution', this, 'black')">Sujet</button>
+	<button class="tablink" onclick="openPage('Cours', this, 'black')">Solution</button>
+	<button class="tablink" onclick="openPage('Fiche', this, 'black')">Focus & Cours</button>
+	
+	<!-- ONGLET 1    -->
+	<div id="Sujet" class="tabcontent" >
+	  <!-- Deco  amovible haut -->
+	  <div class="alert">
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+		<b class="captionHaut" > Nb de SR = 2<sup>Nb de 1 dans S</sup></b> <b > Nb d'@ = 2<sup>Nb de &empty; dans le masque </sup></b>
+      </div>	
+	  <!-- Contenu -->
+	  <object class="onglet1-1-resume"   data="resume1tp2.html" ></object>
+	  <object class="onglet1-2-resume"   data="resume2tp2.html" ></object>
+	  
+	  <!-- Deco amovible bas -->
+	  <div class="alert " style="margin-top:40%; margin-bottom:0;">
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+		<span class="captionBas" > S = Identifiant sous-r&eacute;seau = Nbre de 1 (<b style="color:blue">dans le Host-id</b>) vs masque</span> 
+      </div>
+	</div>
+	
+	<!-- ONGLET 2    -->
+	<div id="Solution" class="tabcontent"    >
+      <object data="tp2-sujet.pdf" type="application/pdf" class="chargerObjet"  ></object>
+	</div> 
+	
+	<!-- ONGLET 3    -->
+	<div id="Cours" class="tabcontent" style="background:black" >
+	    <object data="tp2-solution.pdf" type="application/pdf" class="chargerObjet"  ></object>
+	</div>
+	
+	<!-- ONGLET 4    -->
+	<div id="Fiche" class="tabcontent" style="background:black"  >
+         <img class="onglet1-sujet"  src="../img/focus2.png" style="margin-bottom:10px;" /> 
+		 <object data="../cours/cours5tcp-ip.pdf" type="application/pdf" class="chargerObjet" style="margin-top:10px"  ></object>
+	</div>
+    	 
+
+      
+</body>
+</html>

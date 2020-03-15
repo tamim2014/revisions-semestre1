@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TP5: classes Livre, Cd, et Dvd</title>
+	<!-- pluggins de coloration syntaxique -->
+	<link rel="stylesheet" href="../../style/prism.css" media="screen" /> 
+    <script type="text/javascript" src="../../js/prism.js"></script>	
+
+</head>
+<body >
+	<pre><code class="language-java" ><source lang="java" line>
+	public class Livre 
+	{
+		  private String nom;
+		  private double prix;
+		  private String auteur;
+		  
+		  public Livre(String n, double p, String auteur){
+			 this.nom = n;
+			 this.prix = p; 
+			 this.auteur = auteur;
+		  }
+
+		  public String getNom(){return this.nom;}
+		  public double getPrix(){return this.prix;}
+		  public String getAuteur(){ return this.auteur;}
+
+		  public String toString(){
+			 return "Livre: "+this.nom+" - "+this.auteur+" : "+this.prix+"euros";
+		  }
+	}
+	//..........................................................................
+	class Cd extends Livre
+	{
+		  private int nbDePiste;
+
+		  public Cd(String nom, double prix, String auteur, int nbPiste){
+			 super(nom, prix, auteur);
+			 this.nbDePiste = nbPiste;
+		  }
+
+		  public int getNbDePiste(){ return this.nbDePiste; }
+
+		  public String toString(){
+			 return "CD: "+getNom()+" - "+this.nbDePiste+" : "+getPrix()+"euros";
+		  } 
+	}
+	//.............................................................................
+	public class Dvd extends Livre
+	{
+		  private double duree;
+
+		  public Dvd(String nom, double prix, String auteur, double duree){
+			 super(nom, prix, auteur);
+			 this.duree = duree;
+		  }
+		  
+		  public double getDuree(){ return this.duree; }
+
+		  public String toString(){
+			 return "DVD: "+getNom()+" - "+this.duree+" : "+getPrix()+"euros";
+		  } 
+	}	
+	</source></code></pre>
+
+</body>
+</html>

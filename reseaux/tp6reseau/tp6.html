@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ 
+ <title>Decoupage d'un reseau tp6 - rendu</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="shortcut icon" href="../../favicon.ico"  />
+ <link rel="stylesheet" href="../../style/fullPageTabs.css" media="screen, projection" /> 
+ <script type="text/javascript" src="../../js/fullPageTabs.js"></script> 
+</head>
+
+<body style="background:#111; color:white;" onload="openPage('Sujet', this, 'black')">
+	<!-- MENU FULL PAGE TABS --> 
+	<button class="tablink" onclick="openPage('Sujet', this, 'black')" id="defaultOpen" >Sujets</button>
+	<button class="tablink" onclick="openPage('Solution', this, 'black')">Exercice1</button>
+	<button class="tablink" onclick="openPage('Cours', this, 'black')">Exercice2</button>
+	<button class="tablink" onclick="openPage('Fiche', this, 'black')">Exercice3</button>
+	
+	<!-- ONGLET 1    -->
+	<div id="Sujet" class="tabcontent" style="z-index:99;">
+		  <object data="tp6-subnetting-sujet.pdf" type="application/pdf" class="chargerObjet" ></object>
+		  <h3 style="padding-left:2%; " > Ebauche de solution </h3>
+		  <object data="tp6-subnetting-solution(already-sent).pdf" type="application/pdf" class="chargerObjet"  ></object><br>
+	</div>
+	
+	<!-- ONGLET 2    -->
+	<div id="Solution" class="tabcontent"    >
+      <object data="tp6-exo1-improuvement.pdf" type="application/pdf" class="chargerObjet"  ></object>
+	</div>
+
+	<!-- ONGLET 3    -->
+	<div id="Cours" class="tabcontent" style="background:black" >
+	    <object data="tp6-exo2-improuvement.pdf" type="application/pdf" class="chargerObjet"  ></object>
+	</div>
+
+    <!-- ONGLET 4    -->
+	<div id="Fiche" class="tabcontent" style="background:black"  >         
+		 <object data="tp6-exo3-improuvement.pdf" type="application/pdf" class="chargerObjet" style="margin-bottom:10px"  ></object>
+		 <img class="onglet1-sujet"  src="../img/focus2.png" style="margin-top:10px;" /> 
+		<p style=" padding-left:10px; ">Rebelote ! </p>
+        <div id="login" style=" padding:5px; " > 	
+            <table >			
+				 <tr><td style="float:right;"><a href="tp6-exo1-improuvement.pdf" target="_self" class="button"  >Zoom Exo1: Improuvement</a></td> </tr>  			
+				 <tr ><td style="float:right;"><a href="tp6-exo2-improuvement.pdf" target="_self" class="button"  >Zoom Exo2: Improuvement</a></td></tr>  
+				 <tr><td style="float:right;"><a href="tp6-exo3-improuvement.pdf" target="_self" class="button"  >Zoom Exo3: Improuvement</a></td></tr>  			   			   
+		    </table>              		             
+		</div>	
+	</div>	
+
+      
+</body>
+</html>

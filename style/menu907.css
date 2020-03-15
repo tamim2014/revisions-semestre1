@@ -1,0 +1,75 @@
+#iconAccueil {
+	background:white; 
+}
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 250px;
+  top: 0;
+  left: 0; 
+  background-color: #c3c3c3; /*  #111; =  black */
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  /* background-color: #111; */
+  background-color: #c3c3c3;
+  color: white;
+  padding: 10px 15px;
+  z-index: 3; /* j'veux pa ca mais chu oblige car IE m'fait des miseres */
+  border: none;
+  /*
+  box-shadow:
+   0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+   0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+   */
+
+
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+
+/* masquer le scroll du menu */
+
+#mySidepanel::-webkit-scrollbar { display: none; }
+#mySidepanel::-moz-scrollbar { display: none; }
+#mySidepanel::-webkit-scrollbar { display: none; }
+#mySidepanel::-o-scrollbar { display: none; }
+
+ 
+
+    
+
+
+	
+	
+
+
+

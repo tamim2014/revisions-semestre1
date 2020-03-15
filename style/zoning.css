@@ -1,0 +1,94 @@
+			    		
+		aside.sidebarGauche { position:absolute; left:1%; height:100%;  width:14.5%;  } /* Pourquoi le 100% est trop petit que <main> ? */
+        aside.sidebarDroite { position:absolute; right:1%; height:100%; width:20%;}		
+		main { position:relative; margin-left:17%;  width:auto; } /* width:60%;  */
+
+			
+	
+		footer {     
+		  clear:both; /* forcer l’affichage sous le contenu */
+		  background: #555; text-align:center; color:white;
+		  height:222px;
+		  padding:100px 0px 0px 0px;
+		 
+		}
+		.conteneur { max-width:100%; margin:20px auto; }
+		
+		
+
+		
+		/* precautions  pour les vieux navigateurs */ 
+		aside, footer, header, main {display: block;} 
+		
+       	/* Detail de style pour les 2 barres laterales */ 
+        .sidebarGauche {
+			border:2px solid whitesmoke;   
+			box-shadow:
+				0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+				0px 2px 2px 0px rgba(255, 255, 255, 0.5); 
+			 
+			 border-radius: 10px 0px 0px 10px;
+        }
+		
+	   /* j'essai ici d'appliquer le test bruno - mais sans sucess pour l'instant */
+		@media all and (max-width: 600px){ 
+		   #contenair {
+			   float: inherit;
+	           width: 100%;
+		
+		   }
+		   
+		   aside {
+	
+			   float:left;
+			   width:200px;
+			  
+			}
+
+		   aside.sidebarDroite {
+	
+			   display:none;
+			  
+			}
+	
+		   
+	
+            main {			   
+			   float:left;
+			   width:200px;
+			   padding:0;
+
+			  
+			}		   
+						
+			
+		}
+		
+		
+        .sidebardroit { 
+		
+			/*  border:2px solid gray; border-bottom: 0; border-right: 0; */			  			  		
+        }		
+
+		 		
+		/*   MEDIA QUERY */
+		
+		@media all and (max-width: 900px) {
+		  main  { width:100%; } 
+		  aside { width:100%;  } 
+          footer {padding-top:2px;}	
+          #links, #navBeta { top:75.2%; }	
+    	  
+		}
+		
+		@media all and (max-width: 600px) {
+		  main  { width:100%; } 
+		  aside { width:100%; } 
+          footer {padding-top:2px;}		  
+		}
+		@media all and (max-width: 801px) and (min-width: 601px) {
+		  main {  width:80%;  }
+		 .saut {  width:100%; }
+          footer {padding-top:2px;}		 
+		}
+   

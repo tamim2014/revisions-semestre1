@@ -1,0 +1,18 @@
+	  	table { width: 70%;	}
+	  	table#exo1 td, table#exo2 td  { padding-left:4px;}
+	  	table#exo1 td  { font-size: 2em; }
+		table#t1  {  border: 4px  ridge  #EFEFEF; }
+		table#t1 tr td.inset_  {  border: 2px  ridge  #EFEFEF; border-style: inset;}
+		table#t1 tr td.outset_  {  border: 2px  ridge  #EFEFEF; border-style: outset;}
+		table#t1 tr td.bb  {  border-bottom: 4px  ridge  #EFEFEF; }
+		
+		
+		
+	  	h1 { text-align: left; }
+		
+	  	.color-text { color: #ffffff; }
+	  	.marge-gauche {  padding-left:4px; }
+	  	.gauche-bas { padding-left:4px; padding-bottom: 4px; }
+	  	.gauche-haut { padding-left:4px; padding-top: 4px; }
+	  	.caption-bas {caption-side:bottom; padding: 4px;}
+		.indice-reponse { color: blue;  font-size: small; font-weight: bold; font-style:italic; }

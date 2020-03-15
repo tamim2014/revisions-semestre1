@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JAVA - Revisions Masters MIASH 2019</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Trucsweb.com" />    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">  
+	<link rel="shortcut icon" href="favicon.ico"  />
+    <link rel="stylesheet" href="style/zoning.css" media="screen" />	
+    <link rel="stylesheet" href="style/contenuAccueil.css" media="screen" />
+    <link rel="stylesheet" href="style/calculatrice.css" media="screen" />
+    <link rel="stylesheet" href="style/examen.css" media="screen" />
+    <link rel="stylesheet" href="style/menu907.css" media="screen" />   
+	<link rel="stylesheet" href="style/top.css"  media="screen"><!--  Bouton remonter en haut de page -->
+    <link rel="stylesheet" href="style/menu_accordeon.css" media="all">
+	<link rel="stylesheet" href="CMS/table.css" media="screen" />	
+	<style>
+		tr{
+			background-color:#555;/* #dddddd|#c4c4c4 |  #555;*/
+		}
+		tr:nth-child(even) {
+			background-color: #c4c4c4; /* #c4c4c4 |#555   | #115;*/
+		}
+		.NR{ color:red; font-weight:bold; font-size:1.2em; }
+		.NM{ color:#660033; font-weight:bold; font-size:1.2em;}
+		.idR{
+			color:#115; 
+			border:1px solid #8c8b8b; 
+			padding:1px 4px; 
+			border-radius:3px;
+			box-shadow:2px 2px 0.5px 0.5px #8c8b8b;
+            			
+		}
+		.R{color:#990033; font-weight:bold; }
+    </style>
+	<script type="text/javascript" src="js/menu907.js"></script>
+    <script type="text/javascript" src="js/popup-reseau.js"></script>
+	<script type="text/javascript" src="js/accesAuxPopUps.js"></script>
+
+  </head>
+  <body>
+    <header>
+        <hr  id="fantaisieRELOU3">
+        <hr  id="fantaisieRELOU1">
+        <h1  style='text-align:center'>Master MIASHS : Paris8 </h1>
+        <h3  style='text-align:center'>Revisions - Session 2019/2020  </h3>
+        <h5  style='text-align:center; font-style:italic;'>TD, TP, Fiches-synthèse, Sujets corrigés </h5>
+        <h1  style='text-align:center'>---</h1>
+        <button class="openbtn" onclick="openNav()">☰ </button>
+        <hr  id="fantaisieRELOU1" >
+        <hr  id="fantaisieRELOU3">
+    </header>
+	<div id="contenair"  > <!-- contient: le menu, les 2 barre laterales, et le contenu main  -->
+	
+		<!-- Cacher le menu a gauche du header mais il doit sortie avec la mm hauteur que le header -->
+		<div id="barre-laterale" >
+			<div id="mySidepanel" class="sidepanel">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+				<a href="index.html" id="iconAccueil"><img src="photos/accueil.png" ></a>
+				<a href="index-php.html">PHP</a>
+				<a href="index-html.html">HTML</a>
+				<a href="index-reseau.html">R&eacute;seaux</a>
+				<a href="index-java.html">Java</a>
+				<a href="index-lsf.html">LSF</a>
+				<a href="index-cms.html">CMS</a>
+			</div>
+		</div>
+		
+		<!-- Barre laterale gauche  -->
+		<aside class="sidebarGauche" style="height:142%">
+				<div id="documenter_sidebar" style=" padding-bottom:20%; height:auto;  " > <!-- height:30%; pour 4 items -->
+					<ol id="documenter_nav" style="width=400px; margin:auto; " >		
+						<li><a  href="#" onclick="tpUnWP();">TP1: Menu et titre</a></li>	
+						<li><a  href="#" onclick="tpDeuxWP();">TP2: Modèle de page</a></li>
+                        <li><a  href="#" onclick="miniprojetUn();" onmouseover="this.style.color='gold';" onmouseout="this.style.color='#f44336';  " style="color:#f44336; " >Mini-projet1</a></li><!-- danger -->						
+                        <li><a  href="#" onclick="tdCoursCinqWP();" >TD5: Cours5</a></li>
+                        <li><a  href="#" onclick="tdCoursSixWP();" >TD6: Cours6</a></li>
+                        <li><a  href="#" onclick="tdCoursSeptWP();" >TD7: Extensions</a></li>
+                        <li><a  href="#" onclick="miniprojetDeux();"  onmouseover="this.style.color='#ff1';" onmouseout="this.style.color='#2196F3';" style="color:#2196F3;">Mini-projet2</a></li><!-- info -->
+                        <li><a  href="#" onclick="formulaire_wp();" >Aide-mémoire</a></li>						
+					</ol>
+				</div>
+		</aside> 
+		
+		<!-- Barre laterale droite  -->
+		<aside class="sidebarDroite saut ">
+			<div class="widget-asideD"  >
+				 widget1
+			</div>			
+			<div class="widget-asideD" style=" clear:both;" >			
+				widget2
+			</div>
+		</aside>
+		
+		<!-- Contenu: pricipal -->	
+		<main >		    
+			<section class="bordureSupSection1 " ></section>			
+			<section class="conteneurDesSujet"  >
+				<h2 class="matiere">CMS: Programmation WordPress</h2>
+           		<div class="success  structureSujet"  >			  			  
+					<p>
+					   <strong>Add_theme_support()</strong>:[cours6]&emsp; 			
+				       <code style="float:right" ><span class="idR"><span class="R"> Couleur, image, en-tête, et logo </span></span></code><br>
+			        </p>
+					<p><table style="moz-border-radius:6px;">
+						  <tr>
+							<td style="border:0;  border:0; color: #090; " >Fonction</td>
+							<td style="border:0;  border:0; color: #090; "><code  >add_theme_support('<b style="color:#dd0000;">custom-background</b>')</code></td>
+						  </tr>
+						  <tr>
+							<td style="border:0;  color:#dd0000;" >Affichage</td>
+							<td style="border:0;  color:#dd0000;"><code ><b style=" color:#dd0000;">body_class()</b> </code> &emsp; <small style="color:gray">couleur et image de fond</small></td>
+						  </tr>
+					</table></p>
+                    <p><table style="moz-border-radius:6px;">
+						  <tr>
+							<td style="border:0;  color: #090;">Fonction</td>
+							<td style="border:0;  color: #090;"><code >add_theme_support('<b style=" color:#dd0000;">custom-header</b>')</code></td>
+						  </tr>
+						  <tr>
+							<td style="border:0;  color:#dd0000;" >Affichage</td>
+							<td style="border:0;  color:#dd0000;"><code><b style=" color:#dd0000;">header_image()</b></code>&emsp;<code ><span class="R">the_custom_header()</span></code> &emsp; <small style="color:gray">image d'en-tête</small></td>
+						  </tr>
+					</table></p>
+                    <p><table style="moz-border-radius:6px;">
+						  <tr>
+							<td style="border:0;  border:0; color: #090; " >Fonction</td>
+							<td style="border:0;  border:0; color: #090; "><code  >add_theme_support('<b style="color:#dd0000;">custom-logo</b>')</code></td>
+						  </tr>
+						  <tr>
+							<td style="border:0;  color:#dd0000;" >Affichage</td>
+							<td style="border:0;  color:#dd0000;"><code ><b style=" color:#dd0000;">the_custom_logo()</b> </code></td>
+						  </tr>						  
+					</table></p>						
+				</div>
+           		<div class="danger  structureSujet"  >			  			  
+					<p>
+					   <strong>Menu et Widget</strong>:[cours6]&emsp; 			
+				       <code style="float:right" ><span class="idR"><span class="R"> Menu, barre latérale et ses widgets </span></span></code><br>
+			        </p>
+					<p><table style="moz-border-radius:6px;">
+						  <tr>
+							<td style="border:0;  border:0; color: #090; " >Fonction</td>
+							<td style="border:0;  border:0; color: #090; "><code  >register_nav_menu('<b style="color:#dd0000;">main_menu</b>', 'blabla')</code>&emsp;<code>add_action('<b style="color:#dd0000;">init</b>','f°')</code></td>
+						  </tr>
+						  <tr>
+							<td style="border:0;  color:#dd0000;" >Affichage</td>
+							<td style="border:0;  color:#dd0000;"><code ><b style=" color:#dd0000;">wp_nav_menu(<span class="R"> array( 'theme_location' &rArr; '<b style="color:#dd0000;">main_menu</b>' )</span> ) </b> </code></td>
+						  </tr>
+					</table></p>
+                    <p><table style="moz-border-radius:6px;">						  
+						  <tr>
+							<td style="border:0;  color: #090;">Fonction</td>
+							<td style="border:0;  color: #090; font-size:0.9em;"><code >register_sidebar(aray('id'&rArr;'<b style=" color:#dd0000;">barre_laterale</b>'))</code>&nbsp;<code >add_action('<b style="color:#dd0000;">widget_init</b>','f°')</code></td>
+						  </tr>
+						  <tr>
+							<td style="border:0;  color:#dd0000;" >Affichage</td>
+							<td style="border:0;  color:#dd0000;"><code><b style=" color:#dd0000;">dynamic_sidebar('<b style=" color:#dd0000;">barre_laterale</b>')</b></code>&emsp;</td>
+						  </tr>					  
+					</table></p>						
+				</div>
+           		<div class="info  structureSujet"  >			  			  
+					<p>
+					   <strong>Plugins</strong>:[cours7]&emsp; 			
+				       <code style="float:right" ><span class="idR"><span class="R"> Editer les titre, Ajouter un item menu </span></span></code><br>
+			        </p>
+					<p><table style="moz-border-radius:6px;">
+						  <tr>
+							<td style="border:0;  border:0; color: #090; " >Fonction</td>
+							<td style="border:0;  border:0; color: #090; "><code> add_menu_page(titre, item, rôle, slug, fonction)</code></td>
+						  </tr>
+						  <tr>
+							<td style="border:0;  color:#dd0000;" >Hook</td>
+							<td style="border:0;  color:#990033;" ><code >add_action('<b style=" color:#dd0000;">admin_menu</b>', 'fonction') </code></td>
+						  </tr>
+					</table></p>
+                    <p><table style="moz-border-radius:6px;">												  
+						  <tr>
+							<td style="border:0;  color: #090;">Fonction</td>
+							<td style="border:0;  color: #090; "><code >xxx_init(&dollar;title)</code></td>
+						  </tr>
+						  <tr>
+							<td style="border:0;  color:#dd0000;" >Filtre</td>
+							<td style="border:0;  color:#990033;"><code>add_filter('<b style=" color:#dd0000;">the_title</b>', 'fonction') </code>&emsp;</td>
+						  </tr>					  
+					</table></p>						
+				</div>				
+		  
+			</section> 
+			<section class="conteneurDesSujet"  >
+                    <h2 class="matiere">Cours</h2>
+					<div class="success structureSujet ">
+			          <p></p>
+
+					  <p>
+					    <strong>Installation WordPress</strong>
+						<a class="unset_" href="#" onclick="coursWP();" >Les 4 premiers cours</a>	
+					  </p>
+					</div>						
+					<div class="info structureSujet ">
+					  <p></p>
+                      <p>
+					    <strong>Développement d'un thème</strong>
+						<a class="unset_" href="#" onclick="coursWPsuite();" >Les 4 derniers cours</a>	
+					  </p>
+					</div>			  
+			</section> 			
+		</main>
+		
+		<button onclick="topFunction()" id="myBtn" title="Go to top" >
+		    <img  src="photos/top.JPG" id="imageToTop">
+	    </button>
+	</div> <!-- div#contenair -->
+	
+	<hr width=100% color=whitesmoke style="display:inline-block;">
+	<div class="conteneur-reponses"></div> 
+
+	           
+    <footer>     
+		Pied de page (footer)<br>
+	    <div class="content-footer"  >         
+                <div class="ndreda-footer" > 		  
+                <ul type="square">
+                    <li>Feulle de style: <b style="color:gray">wp-content/theme/nomDuThème/function.php </b> </li>
+                    <li>wp_enqueue_style( <span style="color:#25fde9;">'template'</span>, <b style="color:gray">get_template_directory_uri().</b><span style="color:#25fde9;">'/css/template.css'</span> ); </li>
+                </ul>
+            </div>		
+			<span class="copyright_"><span style="color:gray;">2019 &copy; -</span> Master Handi</span>
+        </div><!-- conteneur-reponses Q1.1 -->	  
+    </footer>
+    <script type="text/javascript" src="js/top.js"></script>
+  </body>
+</html>

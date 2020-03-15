@@ -1,0 +1,26 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <header>... </header>
+       
+        <div id="contenaire">
+            <div id="barre-laterale"> ici le menu </div>
+
+            <aside class="sidebarGauche"> vide </aside>
+            <aside class="sidebarDroite saut"> des widget </aside>
+            <main> une suite de sections       </main>
+        </div>
+
+        <footer>...</footer>
+    </body>
+</html>
+
+IMPORTANT
+---------------------------------------------------------------
+Probleme : Je perds tout mont temps  a coder les sujets-corriges
+Solution1 : L'attributs download 
+source: 
+https://www.alsacreations.com/astuce/lire/1603-html5-attribut-download.html
+Solution2 : La balise object et le template de laeticia
+----------------------------------------------------------------

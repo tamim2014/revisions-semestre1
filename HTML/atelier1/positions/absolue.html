@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test3 zoning</title>
+	<link rel="stylesheet" href="css/test3-zoning.css" >
+	<link rel="stylesheet" href="css/test3-dropdown.css" >
+	<style>
+	  .entete-fixe{
+	     position:fixed;  top:0; width:100%;
+	  }
+	  .menu-fixe{
+	     position:fixed;  top:200px; width:100%;
+	  }
+	  .colone-gauche-fixe{
+	    position:fixed; left:0em; top:15.7em;
+	  }
+	  .colone-droite-fixe{
+         position:fixed; right:0em; top:15.7em;
+	  }
+
+	  .nouveau-top-contenu{
+         margin-left:25%; margin-top: 17.7em;
+	  }
+	  
+
+	</style>
+
+</head>
+<body>
+
+	<div id="entete" class="entete-fixe" style="padding:2em; color:#ECECEA;">
+	 <h3>How To make a Sticky Navbar ?</h3>
+	 <p >
+	   <b class="img" style="padding:2px; margin:0 2em;">&nbsp; &#8718; Le sticky du nav bar est possible avec ce model:</b>
+     	<b class="img" style="padding:2px; margin:0 2em;">&emsp;&emsp;   https://www.w3schools.com/howto/howto_js_navbar_sticky.asp </b>
+	 </p>
+	 <p>
+	   <b class="img" style="padding:2px; margin:0 2em;">&nbsp; &#8718; Mais j'arrive pas à faire un <span style="color:red">sticky</span>  pour les colones latérale( très compliqué ! )</b>
+	 </p>
+	</div>
+	<div id="menu" class="menu-fixe">
+		<a href="#" style="background-color: #111; color:#ECECEA;">Accueil</a>
+		<a href="dropdown.html">.dropdown-content</a>
+		
+		<div class="dropdown">
+			<button class="dropdown-btn">Exemple1</button>
+			<div class="dropdown-content">
+			    <a href="#">Link1</a>
+				<a href="#">Link2</a>						
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropdown-btn">Exemple2</button>
+			<div class="dropdown-content">
+			    <a href="#">Link1</a>
+				<a href="#">Link2</a>
+				<a href="#">Link3</a>									
+			</div>
+		</div>
+		<a href="../rappels1/index-rappels1.html">Display( Hors sujet)</a>
+	</div>
+	<div id="contenu">
+	    
+		<div class="colone-laterale colone-gauche-fixe" ><!-- top: 250px; -->
+			<p class="paragraphe">
+					&#9203; Début:20h<br>
+					&#8987; Fin HTML: 20h10<br>
+					&#8987; Fin CSS et test:21h05 <br>
+				
+					&#8986; Durée totale: 55mn
+              
+			</p>
+			
+			<p class="paragraphe">
+				 .paragraphe{<br><br>
+				 &emsp;border: 1px solid #8c8b8b;<br>
+				 &emsp;border-radius: 2px;<br>
+				 &emsp;margin: 0.5em;<br>
+				 &emsp;padding: 0.5em;<br><br>
+				 }
+			</p>
+		</div>
+		<div class="colone-contenu nouveau-top-contenu" ><!-- margin-top: 280px; -->
+            <h1 class="img" ><span  class="box-shadow-titre" > Zoning </span></h1>
+            <img src="img/z1.png">
+			<img src="img/z2.png">
+			<img src="img/z3.png">
+		</div>
+		<div class="colone-laterale colone-droite-fixe" ><!-- top: 250px; -->
+			<p class="paragraphe">
+					&#9203; Début:20h<br>
+					&#8987; Fin HTML: 20h10<br>
+					&#8987; Fin CSS et test:21h05 <br>
+				
+					&#9200; Durée totale: 55mn
+			</p>
+		</div>
+	</div>
+	<div style="clear:both"></div>
+	<div id="footer"></div>
+
+</body>
+</html>

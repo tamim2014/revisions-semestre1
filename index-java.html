@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JAVA - Revisions Masters MIASH 2019</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Trucsweb.com" />    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">  
+	<link rel="shortcut icon" href="favicon.ico"  />
+    <link rel="stylesheet" href="style/zoning.css" media="screen" />	
+    <link rel="stylesheet" href="style/contenuAccueil.css" media="screen" />
+    <link rel="stylesheet" href="style/calculatrice.css" media="screen" />
+    <link rel="stylesheet" href="style/examen.css" media="screen" />
+    <link rel="stylesheet" href="style/menu907.css" media="screen" />   
+	<link rel="stylesheet" href="style/top.css"  media="screen"><!--  Bouton remonter en haut de page -->
+    <link rel="stylesheet" href="style/menu_accordeon.css" media="all">
+	<script type="text/javascript" src="js/menu907.js"></script>
+    <script type="text/javascript" src="js/popup-reseau.js"></script>
+	<script type="text/javascript" src="js/accesAuxPopUps.js"></script>
+
+  </head>
+  <body>
+    <header>
+        <hr  id="fantaisieRELOU3">
+        <hr  id="fantaisieRELOU1">
+        <h1  style='text-align:center'>Master MIASHS : Paris8 </h1>
+        <h3  style='text-align:center'>Revisions - Session 2019/2020  </h3>
+        <h5  style='text-align:center; font-style:italic;'>TD, TP, Fiches-synthèse, Sujets corrigés </h5>
+        <h1  style='text-align:center'>---</h1>
+        <button class="openbtn" onclick="openNav()">☰ </button>
+        <hr  id="fantaisieRELOU1" >
+        <hr  id="fantaisieRELOU3">
+    </header>
+	<div id="contenair"  > <!-- contient: le menu, les 2 barre laterales, et le contenu main  -->
+	
+		<!-- Cacher le menu a gauche du header mais il doit sortie avec la mm hauteur que le header -->
+		<div id="barre-laterale" >
+			<div id="mySidepanel" class="sidepanel">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+				<a href="index.html" id="iconAccueil"><img src="photos/accueil.png" ></a>
+				<a href="index-php.html">PHP</a>
+				<a href="index-html.html">HTML</a>
+				<a href="index-reseau.html">R&eacute;seaux</a>
+				<a href="index-java.html">Java</a>
+				<a href="index-lsf.html">LSF</a>
+				<a href="index-cms.html">CMS</a>
+
+				<a href="#">...</a>
+			</div>
+		</div>
+		
+		<!-- Barre laterale gauche  -->
+		<aside class="sidebarGauche" style="height:57%">
+				<div id="documenter_sidebar" style=" padding-bottom:30%; height:auto;  " > <!-- height:30%; pour 4 items -->
+					<ol id="documenter_nav" style="width=400px; margin:auto; " >		
+						<li><a  href="#" onclick="tpUnJava();">TP1: Op. arithmétique</a></li>	
+						<li><a  href="#" onclick="tpDeuxJava();">TP2: Somme d'un tableau</a></li>
+                        <li><a  href="#" onclick="tpTroisJava();">TP3: Tableau &amp; Moyenne</a></li>						
+						<li><a  href="#" onclick="tpQuatreJava();">TP4: Autoportage</a></li>
+                        <li><a  href="#" onclick="abstraction();" >Interface &amp; abstract class</a></li>
+                        <li><a  href="#" onclick="tpCinqJava();">TP5: Magasin</a></li>
+                        <li><a  href="#" onclick="tpSixJava();">TP6: Autoportage</a></li>
+                        <li><a  href="#" onclick="tpSeptJava();">TP7: Compte bancaire</a></li>
+                        <li><a  href="#" onclick="tpHuitJava();">TP8: Compte épargne</a></li>						
+					</ol>
+				</div>
+		</aside> 
+		
+		<!-- Barre laterale droite  -->
+		<aside class="sidebarDroite saut ">
+			<div class="widget-asideD"  >
+				 widget1
+			</div>			
+			<div class="widget-asideD" style=" clear:both;" >			
+				widget2
+			</div>
+		</aside>
+		
+		<!-- Contenu: pricipal -->	
+		<main >		    
+			<section class="bordureSupSection1 " ></section>			
+			<section class="conteneurDesSujet"  >
+					<h2 class="matiere">JAVA</h2>	
+					<div class="danger  structureSujet"  >			  			  
+						<p><u><strong>Programmes:</strong> 5cours + une sc&eacute;ance de r&eacute;vision</u></p>
+						<p><a   class="unset_"  href="#" onclick="pop_coursUnJava();" target="_self">						
+							<strong>Cours1</strong> &Eacute;l&eacute;ment de syntaxe:...................<b></b>					
+						</a></p>
+						<p><a   class="unset_"  href="#" onclick="pop_coursDeuxJava();" target="_self">						
+							<strong>Cours2</strong> &Eacute;l&eacute;ment de syntaxe:...................<b><i>Suite</i></b>					
+						</a></p>
+						<p><a   class="unset_"  href="#" onclick="pop_coursTroisJava();" target="_self">						
+							<strong>Cours3</strong> &Eacute;l&eacute;ment de syntaxe:...................<b><i>Fin</i></b>					
+						</a></p>
+						<p>...</p>
+						<p><a   class="unset_"  href="#" onclick="pop_coursQuatreJava();" target="_self">						
+							<strong>Cours4</strong> Notion d'objet:...................<b><i></i></b>					
+						</a></p>
+						<p><a   class="unset_"  href="#" onclick="pop_coursCinqJava();" target="_self">						
+							<strong>Cours5</strong> Concepts de base:..............<b><i></i></b>					
+						</a></p>
+						<p><a   class="unset_"  href="#" onclick="pop_coursSixJava();" target="_self">						
+							<strong>Cours6</strong> <span class="bleu">R&eacute;visions</span><b><i></i></b>					
+						</a></p>
+					</div>		  
+					<div class="danger structureSujet ">
+			          <p></p>
+					  <p>
+					     <strong>Cours7&amp;8</strong>
+					     <a class="unset_" href="#" onclick="coursHuit();" >Polymorphisme &amp; Abstraction ...</a>	
+					  </p>
+					  <p>
+					     <strong>Exercice de r&eacute;vision</strong>
+					     <a class="unset_" href="#" onclick="exoCompteBjava();" >Compte bancaire</a>	
+					  </p>
+					</div>			  
+			</section> <!-- FIN section2 .conteneurDesSujet JAVA -->		
+		</main>
+		
+		<button onclick="topFunction()" id="myBtn" title="Go to top" >
+		    <img  src="photos/top.JPG" id="imageToTop">
+	    </button>
+	</div> <!-- div#contenair -->
+	
+	<hr width=100% color=whitesmoke style="display:inline-block;">
+	<div class="conteneur-reponses"></div> 
+
+	           
+    <footer>     
+		Pied de page (footer)<br>
+	    <div class="content-footer"  >         
+                <div class="ndreda-footer" > 		  
+                <ul type="square">
+                    <li>Le client envoie des requêtes </li>
+                    <li>Le serveur attend les requêtes des clients et y répond. </li>
+                </ul>
+            </div>		
+			<span class="copyright_"><span style="color:gray;">2019 &copy; -</span> Master Handi</span>
+        </div><!-- conteneur-reponses Q1.1 -->	  
+    </footer>
+    <script type="text/javascript" src="js/top.js"></script>
+  </body>
+</html>

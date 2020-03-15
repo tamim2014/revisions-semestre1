@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8"> <!-- sinon tu peux pas écrire N° ni les accent-->
+ <title>TD6(Suite exercice3)</title>
+
+ <link rel="stylesheet" href="../css/calcul.css" />
+ <link rel="stylesheet" href="../css/no-sidebar.css" />
+	<!-- le p'tit bouton du drop down -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+
+<body style="background-color:#74AFAD; position:relative;   " ><!-- Essayer cCe-ci  #f7f7f9;-->
+        <div id="menu_navigation" class="menu2" style="position:fixed" >
+           <span><a href="index-td6.html">&lArr;</a></span> 
+        </div>
+    	 
+        <div class="paragraphe1" style="height:50px; margin-top:50px; padding-top:0; " >           	
+		   <a href="#" target="_self" class="button1"  >2<sup>10</sup> = 1024</a>            			
+           <a href="#" target="_self" class="button2"  >2<sup>16</sup> = 65 536</a>  			
+        </div>
+		
+	    <div class="paragraphe2" style="height:70px; "  >           	
+		   <b><i><u>TD6: Suite Exo3</u></i></b><br>
+		  <p><code>
+			Classe C &emsp;&emsp;&emsp; &rArr;  R = <span class="idR" style="padding:0">24</span> bits<br>
+			3 sous-réseaux &rArr; S = <span class="idR " style="padding:0; color:#990033;">3&nbsp;</span> bits<br><br>
+		  </code></p>   
+        </div>
+		
+		<div class="paragraphe3" style=" background: #ECECEA; margin-bottom:4%; position:relative;  "  >           	
+			<DL>
+				<DT class="question R-light" ><p><b>Q5. Calculer les adresses des premières et dernières machines réellement installées dans chaque département.<i class="fa fa-caret-down"></i></b></p></DT>
+				<div class="reponse">
+					<DD style="color:blue">@SR1: 192.X.Y.Z ( 21 hosts) </DD>
+					<DD>
+						  <p><code>
+							@R:  &emsp;&emsp;&emsp; Z &rArr;   <span class="idR" style="padding:0; color:#990033;">001</span> | 00000 = 32<br>
+							@B:  &emsp;&emsp;&emsp; Z &rArr;   <span class="idR" style="padding:0; color:#990033;">001</span> | 11111 = 63<br><br>
+					
+							&nbsp;@Fast = 192.X.Y.<b class="R">33</b> &nbsp;  <br>										
+							<span class="idReponse">@Fast = 192.X.Y.<b class="R">53</b></span>
+						  </code></p>
+					</DD>
+					
+					<DD style="color:blue">@SR2: 192.X.Y.64 ( 29 hosts) </DD>
+					<DD>
+						  <p><code>
+							@R:  &emsp;&emsp;&emsp; 64 &rArr;   <span class="idR" style="padding:0; color:#990033;">010</span> | 00000 = 64<br>
+							@B:  &emsp;&emsp;&emsp; 64 &rArr;   <span class="idR" style="padding:0; color:#990033;">010</span> | 11111 = 95<br><br>
+					
+							&nbsp;@Fast = 192.X.Y.<b class="R">65</b> &nbsp;  <br>										
+							<span class="idReponse">@Fast = 192.X.Y.<b class="R">93</b></span>
+						  </code></p>
+					</DD>
+					<DD style="color:blue">@SR3: 192.X.Y.96 ( 23 hosts) </DD>
+					<DD>
+						  <p><code>
+							@R:  &emsp;&emsp;&emsp; 96 &rArr;   <span class="idR" style="padding:0; color:#990033;">011</span> | 00000 = 96&nbsp;<br>
+							@B:  &emsp;&emsp;&emsp; 96 &rArr;   <span class="idR" style="padding:0; color:#990033;">011</span> | 11111 = 127<br><br>
+					
+							&nbsp;@Fast = 192.X.Y.<b class="R">97&nbsp;</b> &nbsp;  <br>										
+							<span class="idReponse">@Fast = 192.X.Y.<b class="R">119</b></span>
+						  </code></p>
+						 
+					</DD>
+					</div>
+					<DD>
+						    <h5 style="color:blue; font-size:1.2em;"><u>Rappel </u>: </h5>
+							<div class="calcul siZ" style="text-align:left; padding-left:2px; width:40%;">
+							&nbsp; &nbsp; Pour les machines <b>réellement</b> installées :
+							  <ul type="square" style="text-align:left; line-height:1.2em;">				
+								<li><code><span class="idR" ><b>@Fast = @R + 1</b></span></code></li>
+								<li><code><span class="idR" ><b>@Last = Nb @</b></span></code></li>			
+							  </ul>
+							&nbsp; &nbsp; Pour les machines <b>possibles</b> :
+							  <ul type="square" style="text-align:left; line-height:1.2em;">				
+								<li><code><span class="idR" ><b>@Fast = idem</b></span></code></li>
+								<li><code><span class="idR" ><b>@Last = @B - 1</b></span></code></li>			
+							  </ul>
+							  <p>&nbsp; &nbsp; <code>L'<b><u>@R</u></b> donne <span class="idR" ><b>R</b></span></code><br> &nbsp; &nbsp; <code>Le <b><u>masque</u></b> donne <span class="R idS" ><b>S</b></span> et <span class="B idS" ><b>@B&nbsp;</b></span> </code></p>
+							</div>
+				    </DD>
+				
+			</DL>		   
+        </div>
+		<script type="text/javascript" src="../js/dropdown.js"></script><!-- Afficher/Cacher les réponses -->
+      
+</body>
+</html>

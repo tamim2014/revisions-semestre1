@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LSF alphabet</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../style/fullPageTabs.css" media="screen" /> 
+	<link rel="stylesheet" href="../../style/Lightbox.css" media="screen" />
+	<link rel="stylesheet" href="../../style/playlist.css" />
+    <script type="text/javascript" src="../../js/fullPageTabs.js"></script>
+    <script type="text/javascript" src="../../js/Lightbox.js"></script>	
+	
+    <!--  Lightbox style -->
+    <style>  body { font-family: Verdana, sans-serif; margin: 0; background:#c4c4c4;} </style>	
+</head>
+<body style="position:absolute; top:0; width:100%;"   >
+
+	<!-- MENU FULL PAGE TABS -->
+	<button class="tablink" onclick="openPage('Sujet', this, '#c4c4c4')" id="defaultOpen"   >Alphabet</button>
+	<button class="tablink" onclick="openPage('Solution', this, 'gray')" >Playlist</button>
+	<button class="tablink" onclick="openPage('Cours', this, 'purpule')">Resum&eacute;</button>
+	<button class="tablink" onclick="openPage('Fiche', this, '#c4c4c4')">Les nombres</button>
+	
+	
+	<!-- 1er onglet onglet : Alphabet -->
+	
+	
+	<div id="Sujet" class="tabcontent" style="background:#c4c4c4">
+	  <!-- <object data="sujet-tp4java.pdf" type="application/pdf" class="chargerObjet"  ></object> -->
+	  	     <!-- LIGHTBOX -->
+	    <div style=" postition:absolute; height:70%;  padding:50px; ">
+			<h2 style="text-align:center; padding-left:0;">LSF Fran&ccedil;ais</h2> 
+
+			<div class="row">
+			  <div class="column">
+				<img src="img/F.png" style="width:100%" onclick="openModal(); currentSlide(1)" class="hover-shadow cursor">
+			  </div>
+			  <div class="column">
+				<img src="img/K.png" style="width:100%" onclick="openModal(); currentSlide(2)" class="hover-shadow cursor" >
+			  </div>
+			  <div class="column">
+				<img src="img/P.png" style="width:100%" onclick="openModal(); currentSlide(3)" class="hover-shadow cursor">
+			  </div>
+			  <div class="column">			
+			    <img src="img/T.png" style="width:100%" onclick="openModal(); currentSlide(4)" class="hover-shadow cursor"   >  
+			  </div>
+
+			</div>
+
+			<div id="myModal" class="modal" style= "height:90%; " >
+			  <span class="close cursor" onclick="closeModal()">&times;</span>
+			  <div class="modal-content" style="width:50%;" >
+
+				<div class="mySlides">
+				  <div class="numbertext">1 / 4</div>
+				  <img src="img/F.png" style="width:100%; ">
+				</div>
+
+				<div class="mySlides">
+				  <div class="numbertext">2 / 4</div>
+				  <img src="img/K.png" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+				  <div class="numbertext">3 / 4</div>
+				  <img src="img/P.png" style="width:100%">
+				</div>
+				
+				<div class="mySlides">
+		
+				  <img src="img/T.png" style="width:100%"> 
+				</div>
+				
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				<div class="caption-container">
+				  <P id="caption"></P>
+				</div>
+
+
+				<div class="column" >
+				  <img class="demo cursor" src="img/F.png" style="width:100%" onclick="currentSlide(1)" alt="F">
+				</div>
+				<div class="column">
+				  <img class="demo cursor" src="img/K.png" style="width:100%" onclick="currentSlide(2)" alt="K">
+				</div>
+				<div class="column">
+				  <img class="demo cursor" src="img/P.png" style="width:100%" onclick="currentSlide(3)" alt="P">
+				</div>
+				<div class="column">				  
+				  <img class="demo cursor" src="img/T.png" style="width:100%" onclick="currentSlide(4)" alt="T" > 
+				</div>
+			  </div>
+			</div>
+	    </div>  <!-- FIN LIGHBOX -->
+		<div class="conteneur-reponses"> </div> <!-- separateur-->	
+		<div id="alphabet" style=" width:600px; height:400px; padding: 2% 30%;  " >
+			<video  style=" width:400px; height:300px; " controls>
+				 <source src="videos/alphabet.mp4" type="video/mp4"  >		
+			</video>
+		</div>
+
+	</div> <!-- fin Onglet1 -->
+	
+	
+	
+	<!-- 2emme onglet : Marie -->
+	
+	
+	
+	<div id="Solution" class="tabcontent" style="background:gray;">
+
+        <div id="conteneurPlaylist"  >
+			<div id="ligne01" class="row">
+			    <!-- bloc1 -->
+				<div  class="box column" id="box1" onclick="lectureUn()"  >										
+					<video id="video1" controls   > <!-- PROBLEME !!! la balise video ne repond pas a l'evenement onclick (sauf si j'enleve controls)-->
+				        <source   src="videos/chiffres.mp4" type="video/mp4"  >		
+			        </video>
+					<p class="titreVideo"> Les Nombres </p>										
+				</div>
+				
+                <!-- bloc2 -->
+				<div class="box column">
+					<video   controls>
+				        <source src="videos/dates.mp4" type="video/mp4"  >		
+			        </video>
+					<p class="titreVideo"> Les dates </p>
+				</div>
+				
+				<!-- bloc3 -->
+				<div class="box column ">
+					<video   controls>
+				        <source src="videos/300mots.mp4" type="video/mp4"  >		
+			        </video>
+					<p class="titreVideo"> Les mots quotidiens </p>
+				</div>
+				
+				<!-- bloc4 -->
+				<div class="box column">
+					<video   controls>
+				        <source src="videos/presentation.mp4" type="video/mp4"  >		
+			        </video>
+					<p class="titreVideo"> Se pr&eacute;senter </p>
+				</div>
+				
+			    <!-- bloc5 -->
+				<div class="box column">
+					<video   controls>
+				        <source src="videos/couleurs.mp4" type="video/mp4"  >		
+			        </video>
+					<p class="titreVideo"> Les couleurs </p>
+				</div>
+				
+				<!-- bloc6 -->
+				<div class="box column">
+					<video   controls>
+				        <source src="videos/politesse.mp4" type="video/mp4"  >		
+			        </video>
+					<p class="titreVideo"> Les formules de politesse </p>
+				</div>
+				
+				
+				<!-- bloc6 PROBLEME AVEC iframe-->
+				<div class="box column">
+					<iframe class="video" 				
+					   src="https://www.youtube.com/watch?v=t4aThZY_zDA">
+                    </iframe>
+					<p class="titreVideo"> blem iframe </p>
+				</div>
+				
+			</div>
+        </div> <!--  fin #conteneurPlaylist   -->
+
+	</div> <!-- fin  Onglet2 -->
+	
+	
+	
+	<!-- 3emme onglet : Divers-->
+	
+	
+	
+	<div id="Cours" class="tabcontent" style=" padding:0;">
+	   	  <object data="resume-alphabet-chiffres.pdf" type="application/pdf" class="chargerObjet"  ></object>
+	</div> <!-- fin Onglet3 -->
+	
+	
+	
+	<!-- 4emme onglet : Les nombres -->
+	
+	
+	
+	<div id="Fiche" class="tabcontent" style="background:#c4c4c4;" >
+	     <!-- FIN LIGHBOX des chiffres -->
+	    <div style=" postition:absolute; height:70%;  padding:50px; ">
+			<h2 style="text-align:center; padding-left:0;"> Les chiffres</h2> 
+
+			<div class="row">
+			  <div class="column">
+				<img src="img/0-9.png" style="width:100%" onclick="openModalChiffres(); currentSlideChiffres(5)" class="hover-shadow cursor">
+			  </div>
+			  <div class="column">
+				<img src="img/10-15.png" style="width:100%" onclick="openModalChiffres(); currentSlideChiffres(6)" class="hover-shadow cursor" >
+			  </div>
+			  <div class="column">
+				<img src="img/16-19.png" style="width:100%" onclick="openModalChiffres(); currentSlideChiffres(7)" class="hover-shadow cursor">
+			  </div>
+			  <div class="column">			
+			    <img src="img/20-50.png" style="width:100%" onclick="openModalChiffres(); currentSlideChiffres(8)" class="hover-shadow cursor"   >  
+			  </div>
+
+			</div>
+
+			<div id="myModal2" class="modal" style= "height:90%; " >
+			  <span class="close cursor" onclick="closeModalChiffres()">&times;</span>
+			  <div class="modal-content" style="width:50%;" >
+
+				<div class="mySlides">
+				  <div class="numbertext">1 / 4</div>
+				  <img src="img/0-9.png" style="width:100%; ">
+				</div>
+
+				<div class="mySlides">
+				  <div class="numbertext">2 / 4</div>
+				  <img src="img/10-15.png" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+				  <div class="numbertext">3 / 4</div>
+				  <img src="img/16-19.png" style="width:100%">
+				</div>
+				<div class="mySlides">
+				  <div class="numbertext">4 / 4</div>
+				  <img src="img/20-50.png" style="width:100%">
+				</div>
+
+				
+				<a class="prev" onclick="plusSlidesChiffres(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlidesChiffres(1)">&#10095;</a>
+
+				<div class="caption-container">
+				  <P id="caption2"></P>
+				</div>
+
+
+				<div class="column" >
+				  <img class="demo cursor" src="img/0-9.png" style="width:100%" onclick="currentSlideChiffres(5)" alt="0 &agrave; 9">
+				</div>
+				<div class="column">
+				  <img class="demo cursor" src="img/10-15.png" style="width:100%" onclick="currentSlideChiffres(6)" alt="10 &agrave; 15">
+				</div>
+				<div class="column">
+				  <img class="demo cursor" src="img/16-19.png" style="width:100%" onclick="currentSlideChiffres(7)" alt="16 &agrave; 19">
+				</div>
+				<div class="column">				  
+				  <img class="demo cursor" src="img/20-50.png" style="width:100%" onclick="currentSlideChiffres(8)" alt="20 &agrave; 50" > 
+				</div>
+
+			  </div>
+			</div>
+	    </div>  <!-- FIN LIGHBOX -->
+		<div class="conteneur-reponses"> </div> <!-- separateur-->	
+		<div id="alphabet" style=" width:600px; height:400px; padding: 2% 30%;  " >
+			<video  style=" width:400px; height:300px;  " controls>
+				 <source src="videos/chiffres.mp4" type="video/mp4"  >		
+			</video>
+		</div>
+	</div> <!-- fin Onglet4 -->
+	
+	<script>
+		function lectureUn(){
+			
+			initial:document.getElementById("box1").style.width = "650px";
+			initial:document.getElementById("box1").style.height = "430px";
+			
+			initial:document.getElementById("video1").style.videoWidth = "600px";
+			initial:document.getElementById("video1").style.videoHeight = "400px";
+		}
+		// j'ajoute ce-ci car la balise video ne repond a le fonction lectureUn sous firfox(sauf si j'enleve control)
+		document.getElementById("video1").addEventListener("click", function(){            
+			 lectureUn();		
+        });
+		
+	</script>
+
+
+
+</body>
+</html>

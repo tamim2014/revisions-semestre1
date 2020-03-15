@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Examen PHP 2018 Session1</title>
+    <link rel="stylesheet" href="style/calculatrice.css" media="screen" />
+    <link rel="stylesheet" href="style/examen.css" media="screen" />
+    <link rel="stylesheet" href="style/menu907.css" media="screen" />
+    <link rel="stylesheet" href="style/buttonToTop.css" media="screen" />
+    <script type="text/javascript" src="js/menu907.js"></script>
+    <script type="text/javascript" src="js/buttonToTop.js"></script>
+
+  </head>
+  <body>
+    <header>
+        <hr  id="fantaisieRELOU3">
+        <hr  id="fantaisieRELOU1">
+        <h1 style='text-align:center'>Master I MIASHS : PHP </h1>
+        <h3 style='text-align:center'>Examen terminal 2018: Session1  </h3>
+        <h5 style='text-align:center; font-style:italic;'>Durée 2h, aucun document autorisé </h5>
+ 
+        <h1 style='text-align:center'>---</h1>
+     
+        <button class="openbtn" onclick="openNav()">☰ </button>
+        <hr  id="fantaisieRELOU1" >
+        <hr  id="fantaisieRELOU3">
+    </header>
+    <div id="contenu">
+        <div id="barre-laterale" >
+            <div id="mySidepanel" class="sidepanel">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+              <a href="index.html" id="iconAccueil"><img src="photos/accueil.png" ></a>
+              <a href="2019s2.html">2019s2</a>
+              <a href="2019s1.html">2019s1</a>
+              <a href="2018s2.html">2018s2</a>
+              <a href="2018s1.html">2018s1</a>
+              <a href="2017.html">2017</a>
+            </div>
+        </div>
+        <div id="blog"> 
+	
+            <p></p>	
+			<b class="partie">Partie1 : questions de cours</b>(5 points -15mn) <br>
+			Barème: 2 point + 2 points + 1point <br><br>
+
+			
+			<div class="enonce1-p4-2018s1" >
+                <ol type="A">
+				    <li>
+					   <p>FORMULAIRE</p>
+					   Quelles sont, et à quoi servent, les 3 types d’informations qu’il faut repérer dans un formulaire HTML pour pouvoir exploiter ses données à l’aide de PHP ?<br><br>  
+                    </li>
+					<li>
+					   <p>ARCHITECTURE CLIENT/SERVEUR </p>
+					   Entre le moment où j’écris du code PHP dans un traitement de texte sur mon ordinateur et le moment où j’affiche le résultat dans le navigateur, que s’est-il passé ?<br><br>
+					   
+					<li>
+					   <p>VARIABLE SUPERGLOBALE </p>
+					   <ol>
+					       <li>Qu’est-ce que la session ?       </li>
+						   <li>&Agrave; quoi peut-elle servir ? </li>
+						   <li>Donnez un exemple d’utilisation.<br><br> </li>
+					   </ol>
+					</li>
+				</ol>			
+	
+			</div>
+	 
+	   
+			<div class=" enonce2-p4-2018s1" >
+		
+			    <ul type="square">
+				    <li>
+					    <span class="bleu">method:</span> Méthode d'envoie des données au script( GET ou POST )
+					</li>
+					<li><span class="bleu">action:</span> Url du fichier PHP qui va recevoir les informations</li>
+					<li>
+					   <span class="bleu">name:</span> Un attribut rempli par une valeur <i>(Le nom du champ sera ensuite considéré par le script PHP comme une variable contenant la valeur saisie.)</i>
+                    </li>
+					<li>
+					  <span class="bleu">enctype="multipart/form-data":</span> en cas de formulaire d'upload de fichiers
+					</li>
+				</ul>
+			</div>
+			
+			<div class=" enonce3-p4-2018s1 " style="margin-top:5%;" >
+			    <ul type="square">
+				    <li>
+					    <span class="bleu">D'abord </span> j’envoie mon code a un serveur web. Ce, en utilisant le protocole HTTP
+					</li>
+					<li>
+					    <span class="bleu">Ensuite </span> le serveur web genere une page reponse
+					</li>
+					<li>
+					   <span class="bleu">Enfin </span> le serveur retourne la page reponse à mon navigateur(tjrs par HTTP)</i>
+                    </li>
+				</ul>  
+			</div>
+			<div class=" enonce3-p4-2018s1"  style="margin-top:3%;" >
+			    <ul type="square">
+				    <li>
+					    <b>C.1</b> Conteneur de variables qui restent stockées sur le serveur le temps de la présence d'un visiteur
+					</li>
+					<li>
+					    <b>C.2</b> Elle sert au passage de variables entre les pages
+					</li>
+					<li>
+					    <b>C.3</b> Page1 : <code>$_SESSION['login'] = 'Dupond';</code> <br>&emsp;&nbsp;&nbsp; Page2 : <code> echo $_SESSION['login']; </code>                  
+                    </li>
+				</ul>   
+			</div>
+			<hr width=100% color=whitesmoke style="display:inline-block;">
+			<div class="conteneur-reponses"></div> 
+
+            <p></p>				
+			<b class="partie">Partie2: Structuration des donnees</b>(5 points -15mn) <br>
+			Barème: 4 point + 1point <br><br>
+
+	
+			
+			<div class="enonce1-p4-2018s1" >
+			     Je veux stocker les notes obtenues par mes étudiants dans chacune de leur matière.<br>
+			     Pour chaque étudiant, je vais donc stocker<br>- son numéro d’étudiant,<br>- le nom des matières qu’il suit<br>- 
+                 ainsi que les notes obtenues dans chaque matière.
+			     <p>Je veux stocker toutes ces informations dans la variable <span class="bleu">&dollar;notes</span> à l’aide d’un tableau.</p>
+                 <ol type="A">
+				    <li>
+					   <p>STRUCTURE</p>
+					   Déterminez une structure de tableau qui permet de stocker toutes ces informations
+                      <i>(vous pouvez faire un schéma évidemment)</i>.<br><br>  
+                    </li>
+					<li>
+					   <p>IMPLEMENTATION </p>
+					   Ecrivez l’instruction qui permet de récupérer vos notes de PHP dans <span class="bleu">&dollar;notesPHP</span><br><br>
+				</ol>			
+			    <!-- <img src="photos/partie4-2018s1.png" > -->
+			</div>
+	 
+	   
+			<div class=" enonce2-p4-2018s1" >
+		
+			    <ul type="square">
+				    <li>
+					    <span class="bleu">method:</span> Méthode d'envoie des données au script( GET ou POST )
+					</li>
+					<li>
+					  <span class="bleu">action:</span> Url du fichier PHP qui va recevoir les informations
+					</li>
+					<li>
+					   <span class="bleu">name:</span> Un attribut rempli par une valeur <i>(Le nom du champ sera ensuite considéré par le script PHP comme une variable contenant la valeur saisie.)</i>
+                    </li>
+					<li>
+					  <span class="bleu">enctype="multipart/form-data":</span> en cas de formulaire d'upload de fichiers
+					</li>
+				</ul>
+			</div>
+			
+			<div class=" enonce3-p4-2018s1 " style="margin-top:5%;" >
+			    <ul type="square">
+				    <li>
+					    <span class="bleu">D'abord </span> j’envoie mon code a un serveur web. Ce, en utilisant le protocole HTTP
+					</li>
+					<li>
+					    <span class="bleu">Ensuite </span> le serveur web genere une page reponse
+					</li>
+					<li>
+					   <span class="bleu">Enfin </span> le serveur retourne la page reponse à mon navigateur(tjrs par HTTP)</i>
+                    </li>
+				</ul>  
+			</div>
+			<div class=" enonce3-p4-2018s1"  style="margin-top:3%;" >
+			    <ul type="square">
+				    <li>
+					    <b>C.1</b> Conteneur de variables qui restent stockées sur le serveur le temps de la présence d'un visiteur
+					</li>
+					<li>
+					    <b>C.2</b> Elle sert au passage de variables entre les pages
+					</li>
+					<li>
+					    <b>C.3</b> Page1 : <code>$_SESSION['login'] = 'Dupond';</code> <br>&emsp;&nbsp;&nbsp; Page2 : <code> echo $_SESSION['login']; </code>                  
+                    </li>
+				</ul>   
+			</div>
+			<hr width=100% color=whitesmoke style="display:inline-block;">
+			<div class="conteneur-reponses"></div> 
+
+            <p></p>				
+			<b class="partie">Partie3: Interprétation d’un code PHP </b>(5 points -15mn) <br>
+			Barème: 3point + 2point 
+            <p><u><i>Tableau( structure  et modulo )</i></u></p>			
+			<div class="enonce1-p4-2018s1" >			
+			    <img src="photos/partie3-2018s1.png" >
+			</div>
+	 
+	   
+			<div class=" enonce2-p4-2018s1" >
+		
+			    <ul type="square">
+				    <li>
+					    Ecrire le resultat de l’interpretation de ce code  . 
+					</li>
+					<li>
+					   Ecrire ce que affiche le navigateur
+					</li>
+				</ul>
+			</div>
+	
+			<div class=" enonce3-p4-2018s1"  style="margin-top:3%;" >
+			    <img src="photos/solution-partie3-2018s1.png" id="solution-partie3-2018s1"> 
+			</div>
+			<hr width=100% color=whitesmoke style="display:inline-block;">
+			<div class="conteneur-reponses"></div> 
+
+
+		<p></p>	 
+		<b class="partie">Partie4: interprétation de classe  </b>(5points - 1H)<br>
+        Bareme : 3points + 2points  <br>
+
+        <p><u><i>Diagramme de classes</i></u></p>
+        <div class="enonce1-p4-2018s1" >			
+          <img src="photos/partie4-2018s1.png" >
+        </div>
+ 
+   
+        <div class=" enonce2-p4-2018s1" >
+         <p><span style="padding-left:15px; "><i>4.A:</i>Ecrire le code PHP qui traduit exactement ce diagramme de classes </span></p>
+            <img src="photos/5-7.png"  class="foto5-7" >
+        </div>
+        <div class=" enonce3-p4-2018s1 " >
+         <p><span style="padding-left:15px;"><i>4.B:</i>Ecrire le code PHP qui effectue les actions suivantes </span></p>
+         <ul type="square" style="margin-left: 0; font-size: 1em;">
+            <li>Instanciation d’un Joueur $joueur1</li>
+            <li>Instanciation d’un Joueur $joueur2</li>
+            <li>Instanciation d’un joueur $joueur3 </li>
+            <li>Instanciation d’un classement $classement dans lequel sont les trois joueurs.</li>
+            <li>Affichage : " Le joueur [pseudo] est le premier de la comptition avec un niveau de [niveau]. " </li>        
+          </ul>  
+        </div>
+        <hr width=100% color=whitesmoke style="display:inline-block;">
+	
+	
+	
+	
+	
+	   <p><u><i>SOLUTION PARTIE4</i></u></p>
+       <div class="conteneur-reponses" style=" float:left; width: 100%;  " >
+            <div class="reponses reponse1  "  style="height: 580px; ">
+              <code>
+                <ol >
+                  <li > 
+                    UTILIT&Eacute;<br><br>
+                    &dollar;_POST[]: Contient les infos qui viennent d'être envoyées par un formulaire . C'est une methode d'envoie de donnees au script PHP<br><br>
+                    &dollar;_SESSION[]: Contient des variables qui restent stockées sur le serveur le temps de la présence d'un visiteur<br><br>  
+                  </li>
+                  <li>
+                    USAGE<br><br>
+                    &dollar;_POST[] : Utilis&eacute; dans le traitement PHP d'un formulaire<br>
+                    &dollar;_SESSION[]: Utilis&eacute; pour le passage de variables entre les pages<br><br>
+                  </li>
+                  <li>
+                    COMPARAISON<br><br>
+                    Leurs points communs?
+                    <ul type="square">
+                      <li>
+                        Elles font partie des variables superglobales de PHP</li>
+                      <li>
+                        Elles fournissent des variables au  script  PHP
+                      </li>
+                      <li>
+                        Ce sont donc des mecanismes d'entree
+                      </li>
+                    </ul>
+                     Leurs differences?
+                    <ul type="square">
+                      <li>&dollar;_POST[]  Récupere <i>seulement</i> les variables passées par un formulairePOST</li>
+                      <li>$_POST[]  Récupere  <i>toutes</i> les variables de session</li>
+                    </ul>
+                  </li>
+                </ul>
+              </code>
+            </div>
+            <div class="reponses reponse2" style="height: 580px; color:blue;" >
+                <span class="rouge">&Agrave; quoi sert &nbsp; &dollar;_REQUEST[ ] &nbsp;?  </span>
+            <blockquote><cite>
+                $_REQUEST fait partie des variables superglobales de PHP.<br><span class="gris"> Elle permet de récupérer des variables fournies au script par n'importe quel <u>mécanisme d'entrée</u></span>.<br> <i>Elle peut donc remplacer <span class="gris"> &dollar;_POST,  &dollar;_GET,  &dollar;_ENV, &dollar;_COOKIE, et &dollar;_SESSION.<br></span></i> <br>
+
+                Cependant les données sont récupérées selon un certain ordre, celui prédéfini par la directive <span class="gris">php.ini</span>, vous pouvez par exemple avoir ceci:<br>
+                <code> variables_order = "<span class="gris">EGPCS</span>"</code> &emsp; avec:<br>
+
+
+                    <ul type="square">
+                        <li>
+                          <span class="gris">E</span> pour les variables d'<span class="gris">E</span>nvironnement
+                        </li>
+                        <li>
+                          <span class="gris">G</span> pour les variables provenant de la méthode <span class="gris">G</span>ET
+                        </li>
+                        <li>
+                          <span class="gris">P</span> pour les variables provenant de la méthode <span class="gris">P</span>OST
+                        </li>
+                        <li>
+                          <span class="gris">C</span> pour les variables provenant d'un <span class="gris">C</span>ookie
+                        </li>
+                        <li>
+                          <span class="gris">S</span> pour les variables de <span class="gris">S</span>ession<br>
+                        </li>
+                    </ul>               
+                Dans ce cas les données seront traitées dans cette ordre:
+                <ol>
+                  <li>variable d'Environnement</li>
+                  <li>variables GET</li>
+                  <li>variables POST</li>
+                  <li>Cookies</li>                       
+                  <li>variables de Sessions</li>
+                </ol>
+                <i>Il vous est bien sûr possible de changer l'ordre comme vous le souhaitez, mais ce n'est à mon sens pas ce qu'il y a de mieux à faire.<br></i>            
+              </cite></blockquote>
+                  <span class="rouge">    
+                  Pourquoi ne pas utiliser cette superglobale ?<br></span> 
+              <cite><blockquote>
+                Tout simplement à cause de l'ordre des variables cité ci-dessus.
+              </cite></blockquote>
+              <!-- </code> -->
+            </div>
+
+        </div><!-- conteneur-reponses Q1.1 -->      
+        <hr size=20 color=#555 width="100%" id="firefoxtnul">
+		     
+
+    
+		
+        <div class="conteneur-reponses"></div>     
+        <hr size=20 color=#555 width="100%" id="firefoxtnul">
+		
+
+		
+		
+		
+   
+       </div><!-- <div id="blog">  -->
+   </div><!-- <div id="contenu">  -->
+
+   
+  </body>
+</html>

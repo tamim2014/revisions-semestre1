@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tp5 java Magasin</title>
+
+	<link rel="stylesheet" href="../../style/fullPageTabs.css" media="screen" />
+	<script type="text/javascript" src="../../js/fullPageTabs.js"></script>		
+    	
+</head>
+<body style="position:absolute; top:0; width:100%;" onload="openPageCinq('Sujet', this, 'black')"  >
+
+	<!-- MENU FULL PAGE TABS -->
+	<button class="tablink5" onclick="openPageCinq('Sujet', this, 'black')" id="defaultOpen"  >Sujet</button>	
+	<button class="tablink5" onclick="openPageCinq('Diagram', this, 'black')">Rapport</button>	
+	<button class="tablink5" onclick="openPageCinq('Solution', this, '#993300')">Livre.java</button>
+	<button class="tablink5" onclick="openPageCinq('Cours', this, 'purple')">Produit.java</button>
+	<button class="tablink5" onclick="openPageCinq('Fiche', this, '#006600')">Magasin.java</button>
+
+	<!-- ONGLET 1 -->
+	<div id="Sujet" class="tabcontent">
+	  <object data="sujetTP5.pdf" type="application/pdf" class="chargerObjet"  ></object>
+	</div>
+	
+	<!-- ONGLET 2 -->
+	<div id="Diagram" class="tabcontent" style=" background-color:black;" > 
+         <object data="rapportTP5.pdf" type="application/pdf" class="chargerObjet" ></object>		 
+	</div>
+
+	<!-- ONGLET 3 -->
+	<div id="Solution" class="tabcontent" style="background-color:#993300;"> 
+	   <!-- <object  data="Livre.html"  class="chargerObjet onglet1-sujet "  ></object>  -->
+	   <object  data="Livre.html"  class="chargerObjet "  ></object> 
+	</div>
+	<!-- ONGLET 4 -->
+	<div id="Cours" class="tabcontent" style=" padding:0;">
+	   	  <object  data="Produits.html"  class="chargerObjet "  ></object> 
+	</div>
+	<!-- ONGLET 5 -->
+	<div id="Fiche" class="tabcontent" style=" background-color:#006600;" > 	
+        <object  data="Magasin.html"  class="chargerObjet "  ></object> 
+	</div>
+
+
+
+
+	
+	<!-- CONCLUSION -->
+	<div class="conteneur-reponses" > </div>  	
+    <p class="numCours " style="background-color:#111" > <u>Conclusion</u>: Classe <span class="G">Conducteur</span><br><br>
+	<small class="dateCours">
+	Deux méthodes importantes à retenir : <br><br>
+	&emsp; &bull; &emsp;  &emsp; public void prendreVehicule(Vehicule vehicule){<br>
+	&emsp;&emsp; &emsp;&emsp;&emsp;&emsp; this.setVehiculeEnCours(vehicule); <br>
+	&emsp;&emsp; &emsp;&emsp;&emsp;&emsp; this.getVehiculeEnCours().<span class="G">setEnUtilisation(true)</span>; <br>
+	&emsp; &nbsp; &emsp;  &emsp;} <br><br>
+	
+	&emsp; &bull; &emsp;  &emsp; public void rendreVehicule(){<br>
+	&emsp;&emsp; &emsp;&emsp;&emsp;&emsp; this.getVehiculeEnCours().<span class="G">setEnUtilisation(false)</span>; <br>
+	&emsp;&emsp; &emsp;&emsp;&emsp;&emsp; this.setVehiculeEnCours(null); <br>
+	&emsp; &nbsp; &emsp;  &emsp;} <br>
+	                      
+	
+	</small></p>
+	<div class="conteneur-reponses" > </div>  
+
+</body>
+</html>

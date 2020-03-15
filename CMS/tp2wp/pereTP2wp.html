@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TP8: Compte épargne</title>
+	<!-- pluggins de coloration syntaxique -->
+	<link rel="stylesheet" href="../../style/prism.css" media="screen" /> 
+    <script type="text/javascript" src="../../js/prism.js"></script>	
+
+</head>
+<body >
+    <!-- prisme n'a pas encore developé de coloration syntaxique pour PHP -->
+	<h4 style="color:white">style.css</h4>
+	<pre><code class="language-css" ><source lang="css" line>
+	/*
+	Theme Name: Image-en-tete
+	Author:Andjib
+	Description: Mon prmier theme wordpress
+	Version: 1.0
+	*/
+	</source></code></pre>
+	
+    <h4 style="color:white">functions.php</h4>
+	<pre><code class="language-php" ><source lang="php" line>	
+	&lt;?php
+		
+		/********Question1: CUSTOM FUNCTIONS (Enregistrement des fonctionnalités) ******/
+		
+		add_theme_support('custom-background');//COURS6: 
+		add_theme_support('custom-header');//COURS6:
+		//add_theme_support('custom-logo'); // COURS6 
+		
+		
+		/******** HORS SUJETS ******/
+		
+		wp_enqueue_style('template',get_template_directory_uri().'/css/template.css');
+		
+		function add_menu(){
+			register_nav_menu('main_menu','Menu principal');
+		}
+		add_action('init','add_menu');//hook de la f°
+		
+		function add_sidebar(){
+			register_sidebar(array(
+				'id' => 'barre_laterale',
+				'name' => 'Barre Laterale',
+				'description' => 'Apparait dans la Barre Laterale a gauche.'
+			));
+		}
+		add_action('widgets_init','add_sidebar');//hook de la f°
+	
+	?>
+	</source></code></pre>
+	
+	<h4 style="color:white">header.php</h4>
+	<pre><code class="language-php" ><source lang="php" line>
+	/********Question2: AFFICHAGE (Appel des fonctions) ******/
+	&lt;!DOCTYPE html>
+	&lt;html lang="fr">
+	&lt;head>
+		&lt;meta charset="utf-8">
+		&lt;title>Master Handi Cours de CMS&lt;/title>
+		&lt;?php wp_head();  ?>
+	&lt;/head>
+
+	&lt;body &lt;?php body_class(); ?&gt;>	
+		&lt;header>
+			&lt;div id="en-tete">
+			   &lt;div id="image-en-tete">
+				  &lt;img src="&lt;?php header_image() ?&gt;"
+					 height="&lt;?php echo get_custom_header()->height ; ?&gt;"
+					 width="&lt;?php echo get_custom_header()->width ; ?&gt;" 
+				  />   
+				&lt;/div> 		   	  
+			&lt;/div>
+			
+			
+			&lt;!-- HORS SUJET: AFFICHER LES MENUS DANS L'ADMINISTRATION -->
+			&lt;div id="menu" >			
+				&lt;?php 
+					wp_nav_menu(array('theme_location' => 'main_menu')); 
+				?&gt;			
+			&lt;/div>
+		&lt;/header>
+	</source></code></pre>
+	
+	
+	<h4 style="color:white">index.php</h4>
+	<p style="color:white; ">
+	     &emsp; &bull; Normalement l'index devrait rester vide<br>
+		 &emsp; &bull; HORS SUJET: APPEL DE DE LA FONTION register_sidebar()<br>
+		 &emsp; &bull; HORS SUJET: Rien n'est demandé( ni the_post(), ni the_title(), ni the_content() 	 
+	</p>
+	<pre><code class="language-php" ><source lang="php" line>
+	&lt;?php get_header(); ?>  
+    &lt;div id="contenu">
+	
+		&lt;div id="barre-laterale" style="list-style:none; ">		    
+		     &lt;?php dynamic_sidebar('barre_laterale');?> // Appel la f° register_sidebar()   
+		&lt;/div>
+		
+		&lt;div id="blog">
+		     &lt;h1>
+		     &lt;?php
+		     if(is_home()) {
+		     ?>
+		     	 Bienvenue sur mon site!  	    
+		     	 &lt;/h1>&lt;hr>
+		     &lt;?php
+		     } 		 		     
+		     while(have_posts()){
+		  	         the_post(); //f° prédéfini wp
+		  	?>
+		  	         &lt;h2 > &lt;?php the_title(); //f° prédéfini wp ?>&lt;/h2>
+		  	         &lt;p>&lt;?php the_content(); //f° prédéfini wp ?>&lt;/p>
+		  	&lt;?php
+		  	     }
+		  	?>		     		 
+		&lt;/div>
+		
+	&lt;/div>   
+    &lt;?php get_footer(); ?>
+	</source></code></pre>
+	
+	<h4 style="color:white">footer.php</h4>
+	<pre><code class="language-php" ><source lang="php" line>
+		&lt;footer>
+			&lt;div id="essaifooter" >
+				Pied de Page
+			&lt;/div>
+			
+		&lt;/footer>
+		&lt;?php wp_footer() ?&gt;
+	&lt;/body>
+	&lt;/html>
+	</source></code></pre>
+	
+	<h4 style="color:white">templates/no-sidebar.php</h4>
+	<pre><code class="language-php" ><source lang="php" line>
+	&lt;?php
+	/*
+	Template Name: No Sidebar Template
+	*/
+	?>
+
+	&lt;?php get_header(); ?>
+	&lt;div id="contenu">
+		&lt;div id="page-no-sidebar">
+			&lt;?php
+			  while(have_posts()){
+				the_post(); ?>
+				&lt;h2> &lt;?php the_title(); ?> &lt;/h2>
+				&lt;p> Publie par: &lt;?php the_author(); ?>(&lt;?php the_date(); ?>) &lt;/p>
+				&lt;p> &lt;?php the_content(); ?> &lt;/p>
+				&lt;?php
+
+			  }
+			?>
+			
+		&lt;/div>
+	&lt;/div>
+	&lt;?php get_footer(); ?>
+	</source></code></pre>
+
+</body>
+</html>

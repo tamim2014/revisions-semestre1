@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cours8 Interface</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- pluggins de coloration syntaxique -->
+	<link rel="stylesheet" href="../../../style/prism.css" media="all" /> 
+    <script type="text/javascript" src="../../../js/prism.js"></script>	
+</head>
+<body  >
+
+<pre><code class="language-java" ><source lang="java" line>
+	public class Carre extends Rectangle
+	{
+	  private int cote;
+
+	  public Carre(int cte){
+		super(cte , cte); // !!!
+		this.cote = cte;
+	  }
+
+	  public int getCote(){ 
+		return this.cote; 
+	  }
+	  
+	  public void setCote(int c){ 
+		this.cote = c; 
+	  }
+
+	  public String toString(){
+		return "Carre : "+this.cote;
+	  }
+
+	}
+
+	/*************************
+	Appel du constructeur de 
+	la classe Rectangle:
+
+		• super(cte , cte);
+
+	*************************/	
+	</source></code></pre>
+
+</body>
+</html>

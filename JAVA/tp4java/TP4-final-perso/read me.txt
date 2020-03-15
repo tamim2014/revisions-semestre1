@@ -1,0 +1,25 @@
+* L'application se lance avec la commande
+ 
+    java autoportage
+
+########################################################
+
+* Pour la reservation et le retour d'une voiture
+   
+    le code vehicule est : v1, v2, v3, ...etc
+
+* Pour la reservation et le retour d'un camion
+   
+    le code vehicule est : cam1, cam2, cam3, ...etc
+
+########################################################
+
+* Notre parc de vehicule est constitue de
+    11 voitures
+    10 camion
+  ils sont repartis sur 4 sites d'autoportage
+
+    
+
+
+   

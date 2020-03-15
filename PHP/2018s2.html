@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+	<meta name="description" content="Trucsweb.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Examen PHP 2018s2</title>
+	<link rel="stylesheet" href="../style/zoning.css" media="screen" />	
+    <link rel="stylesheet" href="../style/contenuAccueil.css" media="screen" />
+    <link rel="stylesheet" href="../style/calculatrice.css" media="screen" />
+    <link rel="stylesheet" href="../style/examen.css" media="screen" />
+    <link rel="stylesheet" href="../style/menu907.css" media="screen" />
+    <link rel="stylesheet" href="../style/top.css" media="screen">
+    <script type="text/javascript" src="../js/menu907.js"></script>
+	<style>
+	 .div1 { position:relative; left:0;  width:36.6%; padding-right:3em; }
+	 .div2 {
+	          margin-left:auto; margin-right:auto; width:40%; /* ALIGNEMENT HORIZONTAL */ 
+		   }
+	</style>
+  </head>
+  <body>
+    <header>
+        <hr  id="fantaisieRELOU3">
+        <hr  id="fantaisieRELOU1">
+        <h1 style='text-align:center'>Master I MIASHS : PHP </h1>
+        <h3 style='text-align:center'>Examen terminal 2018: Session2  </h3>
+        <h5 style='text-align:center; font-style:italic;'>Durée 1h30, aucun document autorisé </h5>
+ 
+        <h1 style='text-align:center'>---</h1>
+        <!-- <hr width=100%> -->
+        <button class="openbtn" onclick="openNav()">☰ </button>
+        <hr  id="fantaisieRELOU1" >
+        <hr  id="fantaisieRELOU3">
+    </header>
+    <div id="contenu">
+        <div id="barre-laterale" >
+            <div id="mySidepanel" class="sidepanel">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+              <a href="../index.html" id="iconAccueil"><img src="../photos/accueil.png" ></a>
+              <a href="2019s2.html">2019s2</a>
+              <a href="2019s1.html">2019s1</a>
+              <a href="2018s2.html">2018s2</a>
+              <a href="2018s1.html">2018s1</a>
+              <a href="2017.html">2017</a>
+            </div>
+        </div>
+        <div id="blog">    
+       
+        <p></p>	
+        <b class="partie">Partie n°1 : questions de cours (5 points) (maximum 15 minutes)</b><br>
+        Barème : 2 points – 1 point – 2 points <p></p>
+		
+		<div class="enonce1-p4-2018s1" >
+			<p>Q1. Par défaut, quelle est la durée de vie d’une session ?</p>
+			<ol type="A">
+				<li>Rechargement de la page Web</li>
+				<li>Redémarrage navigateur</li>
+				<li>Redémarrage ordinateur</li>
+				<li>Une autre durée</li>
+			</ol><br> 
+        </div>		
+        <div class=" enonce2-p4-2018s1 div2" style="padding-bottom:9px; ">
+			<code>
+				<ol type="A">
+				   <li><s>Rechargement de la page Web</s></li>
+				   <li>Redémarrage navigateur</li>
+				   <li>Redémarrage ordinateur</li>
+				   <li>Une autre durée</li>
+				</ol> 
+			</code>
+			<blockquote><cite>
+                   Une session démarre lorsque l'utilisateur commence à interagir avec un programme logiciel, qu'il s'agisse<br> d'un système d'exploitation (OS),<br> d'une application lourde, <br> ou à travers un site internet.
+            </cite></blockquote>
+        </div><p></p>		
+		<!-- SEPARATEUR ENTRE Q1.1 et Q1.2 -->
+		<hr width=100% color=whitesmoke>
+		<div style="float:left;">
+			<div class="enonce1-p4-2018s1" >
+				<p>Q2. Entre l’écriture du code PHP dans un éditeur de texte et l’affichage dans le navigateur,</p>
+				<ol type="A">
+				   <li>j’enregistre mon code en page HTML et je l’ouvre avec le navigateur</li>
+				   <li>j’enregistre mon code en page PHP et je l’ouvre avec le navigateur</s></li>
+				   <li>j’envoie mon code à un serveur qui génère une page PHP envoyée au navigateur</li>
+				   <li>j’envoie mon code à un serveur qui génère une page HTML envoyée au navigateur</li>
+				</ol> 
+			</div>
+			<div class=" enonce2-p4-2018s1" style="padding-bottom:60px; margin-left:auto; margin-right:auto; width:40%; " >
+				<p style="margin-left:8%;" ><u><i>SOLUTION 1.2</i></u></p>
+				<ol type="A">
+				   <li><s>j’enregistre mon code en page HTML et je l’ouvre avec le navigateur</s></li>
+				   <li><s>j’enregistre mon code en page PHP et je l’ouvre avec le navigateur</s></li>
+				   <li><s>j’envoie mon code à un serveur qui génère une page PHP envoyée au navigateur</s></li>
+				   <li>j’envoie mon code à un serveur qui génère une page HTML envoyée au navigateur</li>
+				</ol>
+			</div>
+		</div>
+		<p></p>		
+		<!-- SEPARATEUR ENTRE Q1.2 et Q1.3 -->
+		<hr width=100% color=whitesmoke>
+		<div style="float:left;">
+			<div class="enonce1-p4-2018s1 div1"  >
+				<p>Q3. Où sont stockées les informations qui viennent d’un formulaire HTML reçues via le
+				protocole POST ?</p>
+				<ol type="A">
+				   <li>&dollar;_GET</li>
+				   <li>&dollar;_SERVER</li>
+				   <li>&dollar;_POST</li>
+				   <li>&dollar;_REQUEST</li>
+				   <li>&dollar;_FILES</li>
+				</ol>  
+			</div>
+			<div class=" enonce2-p4-2018s1 div2" style="padding-bottom:5em;" >
+				<p style="margin-left:8%;"><u><i> SOLUTION 1.3</i></u></p>
+				<ol type="A">
+				   <li><s>&dollar;_GET</s></li>
+				   <li><s>&dollar;_SERVER</s></li>
+				   <li>&dollar;_POST</li>
+				   <li><s>&dollar;_REQUEST</s></li>
+				   <li><s>&dollar;_FILES</s></li>
+				</ol> 
+			</div>
+		</div>
+		<p></p>		
+		<!-- SEPARATEUR ENTRE Q1.3 et Q1.4 -->
+		<hr width=100% color=whitesmoke>
+		
+		<div style="float:left;">
+			<div class="enonce1-p4-2018s1 div1" style="width:41%; left:0.5em; margin-right:5em;"  >
+				<p>Q4. Qui est l’intrus ?</p>
+				<ol type="A">
+				   <li>&dollar;i = &dollar;i+1 </span> <u>Post-incrémente</u>:	Retourne &dollar;i, puis incrémente &dollar;i de 1.</li>
+				   <li>&dollar;i++</li>
+				   <li>++&dollar;i &emsp;&emsp;<u>Pre-incrémente</u>:	Incrémente &dollar;i de 1, puis retourne &dollar;i.</li>
+				   <li>&dollar;i+=1</li>
+				</ol>
+			</div>		
+			<div class=" enonce2-p4-2018s1 div2" style="   width:35%;" >
+				<p style="margin-left:4%;"><u><i>SOLUTION1.4</i></u></p>
+				<ol type="A">
+				   <li><span style='color:green'>&dollar;i = &dollar;i+1 </span> <u>Post-incrémente</u>: <br>  Retourne &dollar;i, puis incrémente &dollar;i de 1.</li>
+				   <li><span style='color:green'>&dollar;i++</span></li>
+				   <li><span style='color:red'>++&dollar;i </span>&emsp;&emsp;<u>Pre-incrémente</u>: <br> Incrémente &dollar;i de 1, puis retourne &dollar;i.</li>
+				   <li><span style='color:green'>&dollar;i+=1</span></li>
+				</ol> 
+			</div>
+		</div>
+		<p></p>		
+		<!-- SEPARATEUR ENTRE Q1.4 et Q1.5 -->
+		<hr width=100% color=whitesmoke>
+		<div style="float:left;">
+			<p style="margin-left:6%;">Q5. Complétez le code suivant avec les éléments manquants.</p>
+			<img  src="../photos/2018q5.png" class="fotoquestion enonce1-p4-2018s1" style="position:relative;  height:400px; width:67%; ">
+			
+		
+			<div class=" enonce2-p4-2018s1" style=" position:absolute; margin-top:0; right:0.5%; width:30%; height:auto; " >
+				<p style="margin-left:8%;" ><u><i>SOLUTION 1.5</i></u></p>
+				<ol>
+				   <li>method</li>
+				   <li>action</li>
+				   <li>name</li>
+				   <li>name</li>
+				   <li>name</li>
+				   <li>&dollar;[POST]</li>
+				   <li>&dollar;[POST]</li>
+				   <li>&dollar;[POST]</li>
+				   <li>&dollar;[POST]</li>
+				   <li>&dollar;[POST]</li><br>
+				 </ol> 	
+			</div>
+		</div>
+		<p></p>	
+        		
+		<!-- SEPARATEUR ENTRE Q1.5 et Partie2 -->
+		<hr width=100% color=whitesmoke>
+		
+		
+		<!--
+		
+		<div class="enonce1-p4-2018s1" ></div>
+		<div class=" enonce2-p4-2018s1" ></div><p></p>
+		
+		-->
+       
+	    <!-- SEPARATEUR Partie1-Partie2 -->
+	    <hr width=100% color=whitesmoke style="display:inline-block;">
+		<div class="conteneur-reponses"></div><p></p>
+       	
+
+        <b class="partie">Partie n°3 : interprétation d’un code PHP (5 points) (maximum 15 minutes)</b><br>
+        Barème : 3 points – 2 points <br><br>
+    	
+        <p style="margin-left:6%; margin-bottom:0;">Ecrire le résultat de l’interprétation du code PHP suivant</p>
+    	<img src="../photos/2018p3.png"  class="fotoquestion">
+    	
+		
+		<div class=" enonce2-p4-2018s1" style="padding-bottom:9px" >
+			<p style="margin-left:8%;"><u><i>SOLUTION  (Partie3)</i></u></p>
+            <img src="../photos/2018p3reponse.png"> 
+		</div><p></p>
+		
+	    <!-- SEPARATEUR Partie3-Partie4 -->
+	    <hr width=100% color=whitesmoke style="display:inline-block;">
+		<div class="conteneur-reponses"></div><p></p>
+        
+		
+		
+
+
+      	<b class="partie">Partie n°4.A : implémentation de classes (10 points) (maximum 1h)</b><br>
+        Barème : 6 points/10 <br>
+        <div class="diagramme-de-classe">
+        	<h3>Produit</h3>
+        	- nom:chaine<br>
+        	- reference:chaine<br>
+        	- photos:chaine[]<br>
+        	<hr>
+        	+ Produit(nom,reference)<br>
+        	+ ajouterPhotos(url_photo:chaine):void<br>
+        	+ getNom():chaine<br>
+        	+ getReference():chaine<br>
+        	+ getPhotos():chaine[]<br>   	
+        </div>
+        <div class="diagramme-de-classe">
+        	<h3>Panier</h3>
+        	- client:chaine<br>
+        	- date:chaine<br>
+        	- produits:Produit[]<br>
+        	<hr>
+        	+ Panier(client:chaine,date:chaine)<br>
+        	+ ajouterProduit(produit:Produits):void<br>
+        	+ getClient():chaine<br>
+        	+ getDate():chaine<br>
+        	+ getProduits():Produit[]<br>   	
+        </div>
+        <!-- <hr width=100% color=whitesmoke> -->
+        
+        <div class=" enonce2-p4-2018s1 div2" style="padding-top:0; padding-bottom:0; width:35%;" >
+		    <p style="margin-bottom:0;" >4.A : Ecrire le code PHP qui traduit exactement le diagramme de classes ci-contre, sachant que :</p>
+        	<ul>
+        		<li>La fonction ajouterPhotos(url_photo:chaine) ajoute url_photo à photos.</li>
+        		<li>La fonction ajouterProduit(produit:Produit) ajoute produit à produits.</li>
+        		<li>Le format date est jour/mois/annee. Exemple:<br> $datePanier = date("d/m/Y", strtotime("2018-09-28"));</li>
+
+        	</ul>
+        </div>
+        <hr width=100% color=whitesmoke style="display:inline-block;">
+		
+		
+	   
+        <div class="conteneur-reponses" style="float:left; width: 100%;">
+		    <!-- Solution partie4.A  a gauche -->
+			<div class="reponses reponse1" style="height:500px; margin-bottom:50px; margin-top:40px;" >
+				<code>
+					class Produit<br>
+					{<br>
+						&emsp; private $nom;<br>
+						&emsp; private $reference;<br>
+						&emsp; private $photos = array();<br> 
+						
+						
+						&emsp; public function Produit($nom, $reference) {<br>   
+							&emsp; &emsp; $this->nom = $nom;<br> 
+							&emsp; &emsp; $this->reference = $reference;<br>             
+						&emsp; }<br>
+						&emsp;<span style="color:green"> //Ajouter un fichier</span><br>
+						&emsp; public function ajouterPhotos($url_photo) { <br>  
+							&emsp; &emsp; $lsFichier = $url_photo;<br>
+							&emsp; &emsp; if(!file_exists($lsFichier)) echo "Photo introuvable";<br>
+							&emsp; &emsp; else $fichier = fopen($lsFichier,"r");<br>
+						&emsp; }<br>
+						&emsp;<span style="color:green"> //Accesseurs</span><br>
+						&emsp; public function getNom() {  return $this->nom; }<br>
+						&emsp; public function geReference() {  return $this->reference; }<br>
+						&emsp;<span style="color:red"> //FAUX: Comment construire l accesseur d un attribut tableau ??</span><br>
+						&emsp; public function gePhotos() {  return $this->photos; }<br>
+					}
+
+				</code>	
+			</div>
+			<!-- Solution partie4.A  a droite -->
+			<div class="reponses reponse2" style="height:500px; margin-bottom:50px; margin-top:40px; " >
+            <code>
+                class Panier<br>
+                {<br>
+                    &emsp; private $client;<br>
+                    &emsp; private $date;<br>
+                    &emsp; private $Produit = array();<br> 
+                    
+                    
+                    &emsp; public function Panier($client, $date) {<br>   
+                        &emsp; &emsp; $this->client = $client;<br> 
+                        &emsp; &emsp; $this->date = $date;<br>             
+                    &emsp; }<br>
+
+                    &emsp;<span style="color:red"> //Ajouter un Objet ; FAUX ! How to do ?</span><br>
+                    &emsp; public function ajouterProduit($produit) { <br>
+                        &emsp; &emsp; <span style="color:green">//$this->$Produit = $produit;</span><br>                
+                        &emsp; &emsp; $nom=$produit->getNom();<br>
+                        &emsp; &emsp; $reference=$produit->getReference();<br>
+                        &emsp; &emsp; <span style="color:green">//$Produit = new Produit($nom, $reference);</span><br>
+                        &emsp; &emsp; $Produit = array($nom, $reference);<br>
+                        &emsp; &emsp; array_push( $Produit, $nom, $reference );<br>
+                    &emsp;}<br>      
+                    &emsp;<span style="color:green"> //Accesseurs</span><br>
+                    &emsp; public function getClient() {  return $this->client; }<br>
+                    &emsp; public function geDate() {  return $this->date; }<br>
+                    &emsp;<span style="color:red"> //FAUX: Comment construire l accesseur d un attribut Objet ??</span><br>
+                    &emsp; public function geProduits() {  return $this->produits; }<br>
+                }
+
+            </code>
+			</div>
+        </div><!-- conteneur-reponses -->
+        	
+	    <!-- SEPARATEUR Partie4.A et Partie4.B -->
+	    <hr width=100% color=whitesmoke style="display:inline-block;">
+		<div class="conteneur-reponses"></div><p></p>
+		
+	
+		<p></p>	
+        <b class="partie">Partie n°4.B : Instantiation des objets </b><br>
+        Barème : 4 points/10<br><p></p>
+        
+		
+		<div class="enonce1-p4-2018s1" >
+			<p>4.B : Ecrire le code PHP qui effectue les actions suivantes :</p>
+			<ul >
+				<li>Instanciation d’un Produit $produit1 qui contient "Perceuse" et "A034412219"</li>
+				<li>Instanciation d’un Produit $produit2 qui contient "Vis" et "B47184427"</li>
+				<li>Instanciation d’un Produit $produit3 qui contient "Forêt" et "A04421789"</li>
+				<li>Ajout de la chaine "photos/perceuse01.png" à $produit1</li>
+				<li>Ajout de la chaine "photos/perceuse02.png" à $produit1</li>
+				<li>Instanciation d’un panier $panier dans lequel sont les trois produits pour le client<br>
+				"Jacques Brogniard" en date du 26 septembre 2018.</li>
+			</ul>
+        </div>		
+        <div class=" enonce2-p4-2018s1 div2" style="padding-right:0; padding-bottom:5px;" > <!-- utiliser des p'tits padding pour ajuster la taille -->
+		    <p style="padding: 40px;">Ecrivez le code qui permet l’affichage suivant sur l’écran :</p>
+            <span style="padding-left: 40px;">Panier de Jacques Brogniard<br> </span>
+			<span style="padding-left: 40px;">Commande effectuée le 26/09/2018<br> </span>
+			<span style="padding-left: 40px;">Contenu : </span>				
+            <ul style="padding-bottom: 25px;">
+                <li>A034412219 : Perceuse (photos/perceuse01.png photos/perceuse02.png )</li>
+                <li>B47184427 : Vis</li>
+                <li>A04421789 : Forêt</li>
+            </ul>
+        </div><p></p>		
+		<!-- SEPARATEUR ENTRE Partie4.B et sa solution -->
+		<hr width=100% color=whitesmoke>
+		
+
+
+        <div class="conteneur-reponses" style="float:left; width: 100%;">
+		    <!-- Solution partie4.B  a gauche -->
+			<div class="reponses reponse1" style="height:600px; margin-bottom:50px; margin-top:40px;" >
+				<code style="font-weight:bold; font-size:1.2em;">
+					<span style="color:green">//Instanciation d’un Produit $produit1 qui contient "Perceuse" et "A034412219"</span><br>
+					$produit1 = new Produit("Perceuse", "A034412219");<br>
+					<span style="color:green">//Instanciation d’un Produit $produit2 qui contient "Vis" et "B47184427"</span><br>
+					$produit2 = new Produit("Vis", "B47184427");<br>
+					<span style="color:green">//Instanciation d’un Produit $produit3 qui contient "Forêt" et "A04421789"</span><br>
+					$produit3 = new Produit("Forêt", "A04421789");<br>
+					<span style="color:green">//Ajout de la chaine "photos/perceuse01.png" à $produit1</span><br>
+					<small>$produit1->ajouterPhotos("photos/perceuse01.png");</small><br>
+					<span style="color:green">//Ajout de la chaine "photos/perceuse02.png" à $produit1</span><br>
+					<small>$produit1->ajouterPhotos("photos/perceuse02.png");</small><br>
+					<span style="color:green">//Instanciation d’un panier $panier dans lequel sont les trois produits pour le client</span><br>
+					<span style="color:green">//"Jacques Brogniard" en date du 26 septembre 2018.</span><br>
+					$panier = new Panier("Jacques Brogniard" , "26 septembre 2018");<br>
+					$panier->ajouterProduit($produit1);<br>
+					$panier->ajouterProduit($produit2);<br>
+					$panier->ajouterProduit($produit3);<br>
+
+				</code>
+			</div>
+			<!-- Solution partie4.B  a droite -->
+			<div class="reponses reponse2" style="height:600px; margin-bottom:50px; margin-top:40px;" >
+				<code>
+					echo "Panier de Jacques Brogniard&lt;br&gt;";      <br>
+					echo "Commande effectuée le 26/09/2018&lt;br&gt;"; <br>
+					echo "Contenu :&lt;br&gt;";  <br><br>
+
+					echo $produit1->getReference().":".$produit1->getNom()."(".$produit1->getPhotos().")&lt;br&gt;";<br>
+					echo $produit2->getReference().":".$produit2->getNom()."&lt;br&gt;";  <br>
+					echo $produit3->getReference().":".$produit3->getNom();  <br>
+
+				</code>
+			</div>
+        </div><!-- conteneur-reponses -->
+		<hr width=100% color=whitesmoke style="display:inline-block;">
+		<!-- FIN PARTIE 4 -->
+	
+      </div><!-- <div id="blog">  -->
+	   
+	  <button onclick="topFunction()" id="myBtn" title="Go to top" >
+		<img  src="../photos/top.JPG" id="imageToTop">
+	  </button>
+	   
+   </div><!-- <div id="contenu">  -->
+    <footer >     
+		Pied de page (footer)<br>
+	    <div class="content-footer"  >         
+            <div class="ndreda-footer" > 		  
+                <ul type="square">
+                    <li>Le client envoie des requêtes </li>
+                    <li>Le serveur attend les requêtes des clients et y répond. </li>
+                </ul>
+            </div>		
+			<span class="copyright_"><span style="color:gray;">2019 &copy; -</span> Master Handi</span>
+        </div><!-- conteneur-reponses Q1.1 -->
+	
+    </footer>
+    <!-- Back to top button --> 
+    <script type="text/javascript" src="../js/top.js"></script>	
+  </body>
+</html>

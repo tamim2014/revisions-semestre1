@@ -1,0 +1,99 @@
+
+.bordureSupSection1 {
+	
+	border-top:1px solid #8c8b8b;
+	height:10px; 		           			
+	background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc); 
+	float:left; 
+	margin-right:10px;
+	padding: 0px 23px 0px 10px; 		
+}
+
+
+section {
+  width: 70%;	
+}
+.conteneurDesSujet {
+  float:left; 
+  border:2px solid gray ; /* border:1px solid #8c8b8b;   */
+  margin-right:10px;
+  margin-bottom: 40px;
+  padding: 0px 20px 20px 10px; 
+  /* width:58%; */
+  background:white;  
+}
+
+
+.widget-asideD{ 
+  width:90%; height:100px;
+  margin:0px 0px 20px 0px;
+  border:2px solid gray;
+  background-color: white; 
+  border-radius: 10px; 
+  border-bottom: 0; 
+  border-right: 0;
+  float: right;
+  padding: 2px; 
+  border-radius: 0px 10px 10px 10px;
+
+}
+
+
+div.structureSujet {
+  margin-left:3%;
+  margin-bottom: 15px;
+  padding: 4px 12px;
+  width: 90%;
+  line-height:0.1; /* Attention ! un interligne aussi etroit ne permet le responsive design*/ 
+}
+
+h2.matiere {
+  margin-left:3%;
+}
+
+.danger {
+  background-color: #ffdddd;
+  border-left: 6px solid #f44336;
+}
+
+.success {
+  background-color: #ddffdd;
+  border-left: 6px solid #4CAF50;
+}
+
+.info {
+  background-color: #e7f3fe;
+  border-left: 6px solid #2196F3;
+}
+
+
+.warning {
+  background-color: #ffffcc;
+  border-left: 6px solid #ffeb3b;
+}
+.unset_ {
+  text-decoration: unset;
+  font-style: italic;
+}
+
+
+
+.success, .danger, .info, .warning {
+	   font-size:0.8em;
+    } 
+    
+
+/* Ecran inferieur 900 px */
+@media all and (max-width: 900px){ 
+
+   .success, .danger, .info, .warning {
+	   font-size:0.5em;
+    } 
+
+    
+}
+
+
+
+
+

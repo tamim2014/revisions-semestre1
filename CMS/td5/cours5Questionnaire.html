@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questionnaire cours5</title>
+	<style type="text/css">
+		.reponse{ color:green; font-weight: bold; font-size: 0.8em; font-family: Calibri Light; font-style: italic; float:right; }
+		.question{color:blue;}
+		.rrouge{color:#990033;}
+		.image-reponse{
+		  float: left; 
+		  max-width:50%;
+		  height: 90% ;  
+		  padding:20px;
+		  margin:2px;
+		  background-color:#555;   
+		  box-shadow:
+			0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+			0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+		  border:1px solid #8c8b8b;
+		  border-radius: 0px; 
+		  
+	
+		}
+		.bull { font-size:2em; padding-right:5px; }
+	</style>
+</head>
+<body style="background-color: #c4c4c4;">
+	<h3 > Cours5: Développement d'un thème </h3>
+	<p class="question"><span class="bull">&bull;</span>Que font les fonctions suivantes</p>
+	<div class="image-reponse" style="max-width:94%; margin-left:5%; margin-right:1%; background:white">
+	    <ol>
+			<li>wp_head() ?  &emsp; &emsp; &emsp; &emsp;&emsp;&emsp;&emsp; <span class="reponse">Ajout de style CSS ou de script js </span> <span style="color:purple">functions.php</span></li>
+			<li>wp_footer() ?  &emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <span class="reponse">Ajout de style CSS ou de script js </span> <span style="color:purple">functions.php</span></li>
+			<li>wp_enqueue_style($clé, $valeur) ?  &emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <span class="reponse">Ajout de fichier CSS </span> <span style="color:purple">functions.php</span></li>
+			<li>register_nav_menu($<span class="rrouge">identifiantMenu</span>, $description)? &emsp; <span class="reponse">Enregistrement du menu </span> <span style="color:purple">functions.php</span></li>
+			<li>wp_nav_menu(array('zone' =>'<span class="rrouge">identifiantMenu</span>'))? &emsp;&emsp;<span style="color:purple">header.php</span> <span class="reponse">Affiche le menu dans l'ADMINISTRATION</span> </li>
+			<li>have_posts()? &emsp;&emsp;<span style="color:purple">index.php</span>  <span class="reponse">Teste s'il &ni; des articles</span> </li>
+			<li>the_posts()? &emsp; &emsp; <span style="color:purple">index.php</span> <span class="reponse"> Accès en lecture à la BD: stockage infos des articles sur une variable globale</span> </li>
+		</ol>
+	</div>
+	<div style="clear:both"></div>
+	
+		
+	<p class="question"><span class="bull">&bull;</span> Par quels noms WordPress designe les ZONES des menus et de widgets </p>
+	<ul type="square">
+		<li>
+			Zonne de menu :<span style="color:#990033; font-size:1.4em;"> main_menu</span>
+		</li>
+		<li>
+			Zonne de widget :<span style="color:#990033; font-size:1.4em;"> barre_laterale</span>
+		</li>
+	</ul>
+	
+	<p class="question"><span class="bull">&bull;</span> Où sont situés ces 2 zones </p>
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/zones.png" style="max-width:45%;" />
+		</li>
+	</ul>
+	<div style="clear:both"></div>
+	
+	<p class="question"><span class="bull">&bull;</span> Comment implementer un menu ?  <span style="color:#660033; font-size:1.2em; font-weight:bold;"> &emsp; register_nav_menu()</span>&nbsp;/&nbsp;<span style="color:#660033; font-size:1.2em; font-weight:bold;">wp_nav_menu()</span></p>
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/def-menu.png" style="max-width:45%;" />
+		</li>
+		<li>
+			<img class="image-reponse"   src="img/appel-menu.png" style="max-width:45%;" />
+		</li>
+	</ul>
+	<div style="clear:both"></div>
+	
+	<p class="question"><span class="bull">&bull;</span> Comment implementer une barre laterale ? <span style="color:#660033; font-size:1.2em; font-weight:bold;">  &emsp; register_sidebar()</span>&nbsp;/&nbsp;<span style="color:#660033; font-size:1.2em; font-weight:bold;">dynamic_sidebar()</span> </p>
+	<ul style="list-style-type: none">
+		<li>
+			<img class="image-reponse"   src="img/def-bar.png" style="max-width:45%;" />
+		</li>
+		<li>
+			<img class="image-reponse"   src="img/appel-bar.png" style="max-width:45%;" />
+		</li>
+	</ul>
+    <div style="clear:both"></div>
+	
+	<p class="question"><span class="bull">&bull;</span>Comment implementer un menu  </p>
+	<ul type="square">
+		<li>
+			register_nav_menu() : &emsp;&emsp;&emsp;<span style="color:purple">function.php</span><span class="reponse">Définition(enregistrement) du menu</span>
+		</li>
+		<li>
+			wp_nav_menu() : &emsp; &emsp;<span style="color:purple">header.php</span><span class="reponse">Appel(Affichage) du menu dans la zone d'administration</span>
+		</li>
+	</ul>
+	<ul style="list-style-type: none">
+	   <li>Avant d'<b>appler</b> wp_nav_menu() dans <span style="color:purple">header.php</span>, il faut le définir dans: <span style="color:purple">functions.php</span></li>
+	   <li> 
+	      <img class="image-reponse"   src="img/register_nav_menu().png" style="max-width:45%;" />
+	    </li>
+		<li>
+		 <img class="image-reponse"   src="img/wp_nav_menu().png" style="max-width:45%;" />
+		</li>
+	</ul>	
+	<div style="clear:both"></div>
+	
+	<!-- Comment implementer une barre latérale -->
+	<p class="question"><span class="bull">&bull;</span>Comment implementer une barre latérales  </p>
+	<ul type="square">
+		<li>
+			register_sidebar( array('id' => 'barre_laterale') ) : &emsp;&emsp;&emsp;<span style="color:purple">function.php</span><span class="reponse">Définition(enregistrement) de la barre latérale</span>
+		</li>
+		<li>
+			dynamic_sidebar('barre_laterale') : &emsp; &emsp;<span style="color:purple">index.php</span><span class="reponse">Appel(Affichage) de la barre latérale dans la zone d'administration</span>
+		</li>
+	</ul>
+	<ul style="list-style-type: none">
+	   <li>Avant d'<b>appler</b> dynamic_sidebar() dans <span style="color:purple">index.php</span>, il faut le définir dans: <span style="color:purple">functions.php</span></li>
+	   <li> 
+	      <img class="image-reponse"   src="img/register_sidebar().png" style="max-width:45%;" />
+	    </li>
+		<li>
+		 <img class="image-reponse"   src="img/dynamic_sidebar().png" style="max-width:45%;" />
+		</li>
+	</ul>	
+	<div style="clear:both"></div>
+	
+	<!-- Comment implémenter un arrière-plan personnalisé(custom backgrounds) ? -->
+	<p class="question"><span class="bull">&bull;</span>Comment implémenter un arrière-plan personnalisé(custom backgrounds)  </p>
+	<ul type="square">
+		<li>
+			add_theme_support( 'custom-background', $defaults ) : &emsp;&emsp;&emsp;<span style="color:purple">function.php</span><span class="reponse">Définition(enregistrement) de la couleur d'arrière-plan</span>
+		</li>
+		<li>
+			body_class() : &emsp; &emsp;<span style="color:purple">header.php</span><span class="reponse">Appel(Affichage) de l'arrière-plan dans la zone d'administration</span>
+		</li>
+	</ul>
+	<ul style="list-style-type: none">
+	   <li>Avant d'<b>appler</b> body_class() dans <span style="color:purple">header.php</span>, il faut le définir dans: <span style="color:purple">functions.php</span></li>
+	   <li> 
+	      <img class="image-reponse"   src="img/add_theme_support().png" style="max-width:45%;" />
+	    </li>
+		<li>
+		 <img class="image-reponse"   src="img/body_class().png" style="max-width:45%;" />
+		</li>
+	</ul>	
+	<div style="clear:both"></div>
+	
+	<!-- Comment implémenter un entete personnalisé(IMAGE D'ENTETE) ? -->
+	<p class="question"><span class="bull">&bull;</span>Comment implémenter un en-tête personnalisé(custom header)  </p>
+	<ul type="square">
+		<li>
+			add_theme_support( 'custom-header' ) : &emsp;&emsp;&emsp;<span style="color:purple">function.php</span><span class="reponse">Définition(enregistrement) de l'image d'en-tête</span>
+		</li>
+		<li>
+			header_image() : &emsp; &emsp;<span style="color:purple">header.php</span><span class="reponse">Appel(Affichage) de l'image d'entête dans la zone d'administration</span>
+		</li>
+	</ul>
+	<ul style="list-style-type: none">
+	   <li>Avant d'<b>appler</b> body_class() dans <span style="color:purple">header.php</span>, il faut le définir dans: <span style="color:purple">functions.php</span></li>
+	   <li> 
+	      <img class="image-reponse"   src="img/custom-header.png" style="max-width:45%;" />
+	    </li>
+		<li>
+		 <img class="image-reponse"   src="img/header_image().png" style="max-width:45%;" />
+		</li>
+	</ul>	
+	<div style="clear:both"></div>
+	
+	<!-- Comment implémenter un logo ? -->
+	<p class="question"><span class="bull">&bull;</span>Comment implémenter un logo(custom logo)  </p>
+	<ul type="square">
+		<li>
+			add_theme_support( 'custom-logo' ) : &emsp;&emsp;&emsp;<span style="color:purple">function.php</span><span class="reponse">Définition(enregistrement) du logo</span>
+		</li>
+		<li>
+			the_custom_logo() : &emsp; &emsp;<span style="color:purple">header.php</span><span class="reponse">Appel(Affichage) du logo dans la zone d'administration</span>
+		</li>
+	</ul>
+	<ul style="list-style-type: none">
+	   <li>Avant d'<b>appler</b> body_class() dans <span style="color:purple">header.php</span>, il faut le définir dans: <span style="color:purple">functions.php</span></li>
+	   <li> 
+	      <img class="image-reponse"   src="img/custom-logo.png" style="max-width:45%;" />
+	    </li>
+		<li>
+		 <img class="image-reponse"   src="img/the_custom_logo().png" style="max-width:45%;" />
+		</li>
+	</ul>	
+	<div style="clear:both"></div>
+	
+	
+	<p class="question"><span class="bull">&bull;</span>&Agrave; quoi sert les hooks? </p>
+	 Accroche les fonctions au core de WordPress
+	 <p class="question"><span class="bull">&bull;</span>Quels sont les 2 type de hooks?   </p>
+	<ul type="square">
+		<li>hooks action : <span class="rrouge">add_action($nomduhook, $fonction)</span> <span class="reponse">Pour écrire vos propres foncion | ne renvois pas de valeur</span></li>
+		<li>hooks filtre :<span class="rrouge"> add_filter($nomduhook, $fonction)</span>  <span class="reponse">Modif f° qui &ni;  | renvois une valeur</span></li>
+	</ul>
+	<p class="question"><span class="bull">&bull;</span>Donner 2 exemples de hooks d'action  </p>
+	<ul type="square">
+		<li>
+			wp_head() : &emsp;&emsp;&emsp;<span style="color:purple">header.php</span><span class="reponse">insertion de code (css, javascript) dans &lt;head&gt; ... &lt;/head&gt;</span>
+		</li>
+		<li>
+			wp_footer() : &emsp; &emsp;<span style="color:purple">footer.php</span><span class="reponse">...</span>
+		</li>
+	</ul>
+	<ul style="list-style-type: none">
+	   <li>Avant d'<b>appler</b>  ces fonctions il faut les definir dans: <span style="color:purple">functions.php</span></li>
+	   <li> 
+	      <img class="image-reponse"   src="img/hooks1.png" />
+	    </li>
+		<li>
+		 <span class="image-reponse" style="color:white; "> Ainsi on met le style ou le script sans recours à une feuille externe</span>
+		</li>
+	</ul>	
+	<div style="clear:both"></div>
+	
+	
+	<p class="question"><span class="bull">&bull;</span>Inserer le style "template.css" dans votre thème ( usage d'une feuille externe) </p>
+	<ul type="square">
+		<li>wp_enqueue_style($clé, $valeur)</li>
+		<li>
+			wp_enqueue_style("template",<span style="color:#990033"> get_template_directory_ury()</span>."css/template.css")
+		</li>
+		<li>
+			get_template_directory_ury()? &emsp;<span class="reponse">renvoie le repertoire du thème</span>(wp-content/thème/masterhandi)
+		</li>
+	</ul>
+	
+
+	
+	<!-- resumes -->
+	
+	<p class="question"><span class="bull">&bull;</span>Resumer ces fonctionnalités  </p>
+	<ul style="list-style-type: none">
+	   <li> 
+	      <img class="image-reponse"   src="img/resume1.png" style="max-width:45%;" />
+	    </li>
+		<li>
+		 <img class="image-reponse"   src="img/resume2.png" style="max-width:45%;" />
+		</li>
+	</ul>	
+	<div style="clear:both"></div>
+	<p></p>
+	
+
+</body>
+</html>

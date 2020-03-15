@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ 
+ <title>TD1 Culture </title>
+ <meta charset="utf-8"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="shortcut icon" href="../../favicon.ico"  />
+ <link rel="stylesheet" href="../../style/fullPageTabs.css" media="screen, projection" /> 
+ <script type="text/javascript" src="../../js/fullPageTabs.js"></script>
+</head>
+
+<body style="background:#74AFAD; " onload="openPage('Sujet', this, 'black'); " >
+	<!-- MENU FULL PAGE TABS --> 
+	<button class="tablink" onclick="openPage('Sujet', this, 'black')" id="defaultOpen" >Questionnaires</button>
+	<button class="tablink" onclick="openPage('Solution', this, '#558C89')">R&eacute;ponses</button>
+	<button class="tablink" onclick="openPage('Cours', this, 'black')"  >QCM</button>
+	<button class="tablink" onclick="openPage('Fiche', this, '#558C89')">Focus</button>
+	
+	<!-- ONGLET 1    -->
+	<div id="Sujet" class="tabcontent" >
+		  <object data="td1-sujet-questionnaire.pdf" type="application/pdf" class="chargerObjet" ></object>
+	</div>
+	
+	<!-- ONGLET 2    -->
+	<div id="Solution" class="tabcontent" style="background:#74AFAD; color:#115;"   >
+	   <p style="padding-left:7%;"> Question 1 à 5:</p>
+	   <img class="onglet1-sujet" src="questionnaire1.1.png" />
+	   <p style="padding-left:7%;"> Question 6 à 8:</p>
+	   <img class="onglet1-sujet" src="q6-q8.png" />
+	   <p style="padding-left:7%;"> Question 9 à 12:</p>
+	   <img class="onglet1-sujet" src="q9-q12.png" />
+	</div>
+	</div>
+	
+	<!-- ONGLET 3    -->
+	<div id="Cours" class="tabcontent" style="background:black" >
+	    <object data="td1-solution-qcm.pdf" type="application/pdf" class="chargerObjet"  ></object> 
+	</div>
+	
+	<!-- ONGLET 4    -->
+	<div id="Fiche" class="tabcontent" style="background:#74AFAD; color:#115;"  >
+       <p style="padding-left:7%;"> Question 12: Quel est l'ordre d'encapsulage ?</p>	
+	   <img class="onglet1-sujet"src="osi1.png" />
+	   <ul type="square" style="padding-left:8%; padding-top:0; padding-bottom:0; color:#111; ">
+	     <li>Les données des 3 couches supérieures(7, 6 et 5) sont intégrées dans des segments de couche 4.</li>
+		 <li>Les segments de couche 4 sont encapsulés dans des paquets de couche3.</li>
+		 <li>Les paquets de couche 3 sont placés dans des trames de couche 2.</li>
+		 <li>Les trames de couche 2 circulent dans un média physique(câble réseau, fibre optique, air,...)sous forme d’une série de bits.</li>
+		 <li>Les en-têtes et en-queues sont ajoutésau fur et à mesure que les données descendent dans les couches du modèle OSI.</li>		 
+	   </ul>
+	   <img class="onglet1-sujet" src="osi2.png" />	
+	</div>
+
+      
+</body>
+</html>

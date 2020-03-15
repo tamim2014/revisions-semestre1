@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Revisions Masters MIASH 2019-2020</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Trucsweb.com" />    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">     
+
+    <link rel="shortcut icon" href="favicon.ico"  />
+	<link rel="stylesheet" href="style/zoning.css" media="screen" />
+    <link rel="stylesheet" href="style/spot.css" media="screen" /> <!-- message d'accueil -->	
+    <link rel="stylesheet" href="style/contenuAccueil.css" media="screen" />
+    <link rel="stylesheet" href="style/calculatrice.css" media="screen" />
+    <link rel="stylesheet" href="style/examen.css" media="screen" />
+    <link rel="stylesheet" href="style/menu907.css" media="screen" />   
+	<link rel="stylesheet" href="style/top.css"  media="screen"><!--  Bouton remonter en haut de page -->
+	<style>
+	    .sidebarGauche { height:50%; }
+	    @media all and (max-width: 900px) {   
+             .sidebarGauche{ height:92%;}                      
+        }
+	</style>
+
+    <script type="text/javascript" src="js/menu907.js"></script>
+    <script type="text/javascript" src="js/popup-reseau.js"></script>
+	<script type="text/javascript" src="js/top.js"></script>
+	
+   <script type="text/javascript" src="js/jquery3.4.1.min.js"></script>
+   <script type="text/javascript" src="js/spot.js"></script>
+   
+
+  </head>
+  <body style="max-height:700px">
+    <header>
+        <hr  id="fantaisieRELOU3">
+        <hr  id="fantaisieRELOU1">
+        <h1  style='text-align:center'>Master MIASHS : Paris8   </h1>
+        <h3  style='text-align:center'>Revisions - Session 2019/2020  </h3>
+        <h5  style='text-align:center; font-style:italic;'>TD, TP, Fiches-synthèse, Sujets corrigés </h5>
+        <h1  style='text-align:center'>---</h1>
+		<button class="openbtn" onclick="openNav()">☰ </button> 
+        <hr  id="fantaisieRELOU1" >
+        <hr  id="fantaisieRELOU3">
+    </header>
+	<div id="contenair"  > <!-- contient: le menu, les 2 barre laterales, et le contenu main  -->
+	
+		<!-- Cacher le menu a gauche du header mais il doit sortie avec la mm hauteur que le header -->
+		<div id="barre-laterale" >
+			<div id="mySidepanel" class="sidepanel">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+				<a href="index.html" id="iconAccueil"><img src="photos/accueil.png" ></a>
+				<a href="index-php.html">PHP</a>
+				<a href="index-html.html">HTML</a>
+				<a href="index-reseau.html">R&eacute;seaux</a>
+				<a href="index-java.html">Java</a>
+				<a href="index-lsf.html">LSF</a>
+				<a href="index-cms.html">CMS</a>
+			</div>
+		</div>
+		
+		<!-- Barre laterale gauche  -->
+		<aside class="sidebarGauche" style="display:none; height:67%;  @media all and (max-width: 900px){ height:92%;}"></aside> <!-- comment lui donner le mm height que <main> ? -->
+		
+		<!-- Barre laterale droite  -->
+		<aside class="sidebarDroite saut "  style="display:none;">
+			<div class="widget-asideD"  >
+				 widget1
+			</div>			
+			<div class="widget-asideD" style=" clear:both;" >			
+				widget2
+			</div>
+		</aside>
+		
+		<!-- Contenu: pricipal -->	
+		<main >		    
+			<section class="bordureSupSection1 " style="width:116.5%; margin-left:-20.5%;" ></section>
+			<section class="spot1 " >
+			        <h2 class="matiere" style="margin-left:-31%;">Master Handi</h2>
+		
+					<div id="div01"  > <img id="img2" src="LSF/alphabet/img/img2.png"  />
+						  <div id="div02" style="padding-top:8%;" >
+						    <ul class="winners ">
+							    <li > Un milliard de personnes ont un handicap et 19% de ces personnes ont des difficultés importantes pour se déplacer</li>							
+								<li > Quel défi ! Dans nombre de pays , Seuls 15 à 25% des personnes connaissant une perte fonctionnelle ont accès aux aides techniques!!!</li>	
+								<li > Améliorer les dispositifs d’aide à la mobilité destinés aux personnes handicapées et aux aînés.</li>             							
+                                <li > &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Fauteuils roulants, prothèses, aides à la mobilité, aides auditives et visuelles sont plus ou moins abordables</li>
+								<li > Les logiciels et systèmes informatiques sont tout aussi importants. </li> 
+								<li > &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Un engagement s'impose  pour les rendre accessibles ...</li> 
+                                <li > Améliorent la mobilité, l’audition, la vision, mais aussi et surtout  les capacités de communication </li>								
+							</ul>
+						 
+						  </div>
+					</div>											
+					<div id="div03" >
+					     <b id="lampe1">&bull;</b><b id="lampe2">&bull;</b><br>	    
+						 <b id="lampe3">&bull;</b><b id="lampe4">&bull;</b>
+						 <div id="div04"  >Master Handi </div>
+				    </div>										
+			</section>	
+		
+		</main>
+		
+		<button onclick="topFunction()" id="myBtn" title="Go to top" >
+		    <img  src="photos/top.JPG" id="imageToTop">
+	    </button>
+		
+		<hr width=100% color=whitesmoke style="display:inline-block;">
+		<div class="conteneur-reponses"></div> 
+	</div> <!-- div#contenair -->
+
+	           
+    <footer >     
+		Pied de page (footer)<br>
+	    <div class="content-footer"  >         
+                <div class="ndreda-footer" > 		  
+                <ul type="square">
+                    <li>Le client envoie des requêtes </li>
+                    <li>Le serveur attend les requêtes des clients et y répond. </li>
+					
+                </ul>
+            </div>		
+			<span class="copyright_"><span style="color:gray;">2019 &copy; -</span> Master Handi</span>
+        </div><!-- conteneur-reponses Q1.1 -->	  
+    </footer>
+   
+
+  </body>
+</html>

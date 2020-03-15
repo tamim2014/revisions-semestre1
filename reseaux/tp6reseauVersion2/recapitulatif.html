@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/recapitulatif.css">
+	<link rel="stylesheet" href="css/top.css"  media="screen">
+    <title>Master Handi Cours de CMS</title>
+	<style>
+	.height_{
+	   height:1250px;
+	}
+	.colonne_laterale {
+		width: 33%;
+		float: left;
+		padding: 0 20px 25px 20px;
+		list-style-type: none;
+		
+	}
+
+	.colonne_contenu {
+		width: 34%;
+		float: left;
+		padding: 25px 20px;
+		/* background: white; */
+		background: #ECECEA;
+	}
+	.en-tete{
+	    margin-bottom:0;
+	}
+	.menu{
+	   padding:1% 2%;
+	   text-align: left;
+	}
+	.item-menu{
+	   padding-right:2em;
+	}
+
+	</style>
+</head>
+<body>
+
+<div class="en-tete">
+        <h1> TP6 - Réseaux</h1>
+        <h2> <b>Plage d'adressage:</b> @Réseau, @Broadcast, @Fast, @Last   </h2>
+        <div id="menu_navigation" class="menu">
+           <span class="item-menu" ><a href="focus.html">Focus</a></span>
+           <span class="item-menu" ><a href="suite-exo3.html">Suite-Exo3(Question5)</a></span> 		   
+        </div>
+</div>
+
+
+
+<div class="contenu">
+        <div class="colonne_laterale">
+            <b style="color:#ECECEA;"> Les 3 premiers exercices </b>
+			<p>
+			   <object class="height_"  data="exo1.html" ></object>
+			</p>           
+        </div>
+        <div class="colonne_contenu">
+			<p>
+			   <object class="height_"  data="exo2.html" ></object>
+			</p>            
+        </div>
+
+        <div class="colonne_laterale">
+		    <b style="color:#ECECEA;">> Les 3 derniers </b>
+			<p>
+			  <object class="height_"  data="exo3.html"  ></object>
+			</p>
+        </div>
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" >
+ <img  src="img/top.png" id="imageToTop">
+</button>
+<div class="footer">
+	Date Prochain examen : ?
+</div>
+<script type="text/javascript" src="js/top.js"></script>
+</body>
+</html>

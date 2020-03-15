@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exerecices6, 7, et 8</title>
+	<link rel="stylesheet" href="../css/calcul.css" />
+	<!-- le p'tit bouton du drop down -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+</head>
+<body style="background-color:#c4c4c4">
+	<div id="content">
+		<h4>
+          <ul type="square">
+		    <li>Exo6: nv masque !!!</li>
+			<li>Exo7: Identifiant S</li>
+			<li>Exo8: Masque et Nb hosts</li>
+		  </ul>
+        </h4>         
+		
+		<div class="breakExo" style="height:2px;"></div>
+	    
+		<div class="calcul siZ" style="border-radius:0;">
+	      <b><span class="R">Exo6:</span><span class="G "> Nouveau masque</span></b>
+	    </div>
+		 <p>
+		     Soit un ordinateur X <br> 
+			 <span class="G">@IP: 134.214.107.72</span><span class="B">/18</span> 
+	     </p>
+        
+        &emsp; <div class="infosDuMasque">m =/18  &rArr; <span class="B">&emsp; R=16</span> &nbsp;  &emsp;&emsp; <span class="R">S=2</span>, <span class="B">&nbsp;H=14</span></div>   		
+		
+		<ol style="line-height:2em; margin-top:0;">
+		   <li><span class="B"><b>Classe de X ?</b></span><span class="idReponse" style="background-color:#8c8b81; border-radius: 0 0 20px 0;"> B </span></li>		   
+		   <li><span class="B"><b>Nb @ ?</b></span> 2<sup>14</sup>-2 = <span class="idReponse" style="padding-top:0;">16382hosts</span></li>		   
+		   <li><span class="B"><b>Nb SR ?</b></span> 2<sup class="R">2</sup> = <span class="idReponse" style="padding-top:0">4 SR</span><br><br></li>		   
+		   <li style="line-height:1em;">
+		     <p class="question R" ><b>Nb @ par sous-réseau ?<i class="fa fa-caret-down"></i></b></p>
+			 <p class="reponse"><code >nw masq = old masq+<span class="R">S</span><br>
+				 nw masq = <span class="B">/18</span>+2=<span class="B">/20</span><br>
+				 <span class="infosDuMasque"><span class="B">R=16</span>, <span class="R">S=4</span>, <span class="B">H=12</span> </span><br><br>
+				 &nbsp;&nbsp; Nb @ = 2<sup>H</sup>-2 = 2<sup>12</sup>-2<br> 
+				 <span class="idReponse">&nbsp; Nb @ = 4096hosts &emsp;</span><br>
+			 </code></p>
+		   </li>
+		   <li style="line-height:1em;">
+		    <p class="question B"><b>Passerelle de X ?<i class="fa fa-caret-down"></i></b></p>
+			<p class="reponse">
+				<code>@P = @Fast = @R+1<br>
+					@R: On met H à 0<br>
+				</code>			
+					<img class="calcul" src="img/paradigme1.png" /><br>
+				<code style="border-radius:0;">
+					&nbsp; @R = <span class="G">134</span>.<span class="G">214</span>.<span class="R">64</span>.<span class="B">0</span><br>
+					<span class="idReponse">&nbsp;@P = <span class="G">134</span>.<span class="G">214</span>.<span class="R">64</span>.1&emsp;</span>
+				</code>
+            </p>				
+		   </li>
+		   <li>
+		     <p class="question B"><b>Adresse de Broadcast ?<i class="fa fa-caret-down"></i></b></p>
+			 <p class="reponse">
+			   <code>@B: On met H à 1</code><br>		
+			   <img class="calcul" src="img/paradigme2.png" /><br>
+			   <span class="idReponse" style="padding-top:0">@B = <span class="G">134</span>.<span class="G">214</span>.<span class="R">127</span>.<span class="B">255</span></span><br>
+			 </p>
+		   </li>
+		   <li>
+		    <p class="question B"><b>Plage d'@ ?<i class="fa fa-caret-down"></i></b></p>
+            <p class="reponse" style="font-size:0.9em">			   
+			    <code><span class="idR">@Fast = @R+1&emsp; : <span class="G">134.214.</span><b class="R">64</b>.1&nbsp;&nbsp;&nbsp;</span></code><br>             		   
+				<code><span class="idR">	@Last = @B-1&emsp; : <span class="G">134.214.</span><b class="R">127</b>.254</span></code>             
+			</p>
+		   </li>
+		</ol>
+		
+		<div class="breakExo"></div>
+	
+		<div class="calcul siZ" style="border-radius:0;">
+	      <b><span class="R">Exo7:</span><span class="G "> Identifiant S</span></b>
+	    </div>
+		<p>On donne le Nb de SR | On demande <span class="R"><b>S</b></span></p>
+		<span class="idReponse" style="padding-top:0">Nb SR = 2<sup><span class="R"><b>S</b></span></</sup></span>
+		<ol style="line-height:2em; padding-left:1em;">
+		   <li><span class="B">84 sous-réseaux ?</span> 84 <= 2<sup class="R">7</sup> &rArr; <sup class="R">S=7bits</sup></li>		   
+		   <li><span class="B">145 sous-réseaux ?</span>145<=2<sup class="R">8</sup> &rArr; <sup class="R">S=8bits</sup></li>		   
+		   <li><span class="B">7 sous-réseaux ?</span> 7 <= 2<sup class="R">3</sup> &rArr; <sup class="R">S=3bits</sup></li>
+		   <li><span class="B">1 sous-réseaux ?</span>1<=2<sup class="R">0</sup> &rArr; <sup class="R">S= je sais pas</sup></li>
+		   <li><span class="B">15 sous-réseaux ?</span> 15 <= 2<sup class="R">4</sup> &rArr; <sup class="R">S=4bits</sup></li>
+		</ol>
+		
+	    <div class="breakExo"></div>
+		
+		<div class="calcul siZ" style="border-radius:0;">
+	      <b><span class="R">Exo8:</span><span class="G "> Masque et Nb @</span></b>
+	    </div>
+		<p>On donne: L'@R, et le Nb SR <br> On demande: Le masque, et le Nb @</p>
+		 <code>
+		    <b> Host-id</b><br>
+			classe A: <span class="R">S</span> + H = 24 <br>
+            classe B: <span class="R">S</span> + H = 16 <br>
+            classe C: <span class="R">S</span> + H = 8 <br>			
+		 </code>
+
+		<ol>
+		   <li>
+		     <p class="question B">@R:148.25.0.0 | 37 sous-réseaux <i class="fa fa-caret-down"></i></p>
+			 <p class="reponse">
+				 <code>
+					37 &le; 2<sup class="R">6</sup> &rArr; <span class="R">S=6</span>, H=10 <br>
+					Masque =  <span class="B">/22</span><br>
+				 </code><br>
+				 
+				<code><span class="idR">Nb @ = 2<sup>10</sup> -  2 = 1022 Hosts</span></code> 
+            </p>				
+			 
+		   </li>
+		   <li>
+		     <p class="question B">@R:198.63.24.0 | 2 sous-réseaux <i class="fa fa-caret-down"></i></p>
+			 <p class="reponse">
+				<code>
+					2 &le; 2<sup class="R">1</sup> &rArr; <span class="R">S=1</span>, H=7 <br>
+					Masque =  <span class="B">/25</span><br>
+				</code><br>
+				<code><span class="idR">Nb @ = 2<sup>7</sup> -  2 = 126 Hosts</span></code> 						 
+			</p>
+		   </li>
+		   <li>
+		     <p class="question B">@R:110.0.0.0 | 1000 SR<i class="fa fa-caret-down"></i></p>
+			 <p class="reponse">
+				 <code>
+					1000 &le; 2<sup class="R">10</sup> &rArr; <span class="R">S=10</span>, H=14 <br>
+					Masque =  <span class="B">/18</span><br>
+				 </code><br>
+				 <code><span class="idR">Nb @ = 2<sup>14</sup> -  2 = 16 382 Hosts</span></code>  					 
+			 </p>
+		   </li>
+		   <li>
+		     <p class="question B">@R:175.23.0.0 | 550 SR<i class="fa fa-caret-down"></i></p>
+			 <p class="reponse">
+				 <code>
+					550 &le; 2<sup class="R">10</sup> &rArr; <span class="R">S=10</span>, H=6 <br>
+					Masque =  <span class="B">/26</span><br>
+				 </code><br>
+				 <code><span class="idR">Nb @ = 2<sup>6</sup> -  2 = 62 Hosts</span></code> 		
+			
+			 </p>
+		   </li>
+		   <li>
+		    <p class="question B">@R:209.206.202.0 | 60 SR <i class="fa fa-caret-down"></i></p>
+			<p class="reponse">
+				<code>
+					60 &le; 2<sup class="R">6</sup> &rArr; <span class="R">S=6</span>, H=2 <br>
+					Masque =  <span class="B">/30</span><br>
+				</code><br>
+				<code><span class="idR">Nb @ = 2<sup>2</sup> -  2 = 2 Hosts</span></code><br> 					
+			</p>
+		   </li>
+		</ol>
+        <div class="breakExo" style="height:2px"></div>
+        <hr>
+	    <h5><u>Conlusion </u>: Bref, ici on demande <span class="B">H</span> </h5>
+		<div class="calcul siZ" style="text-align:left; padding-left:2px;">
+		&bull; &nbsp;<span class="R">S</span> et <span class="B ">H</span>: Donnent <u><b>toutes les réponses</b></u>
+		  <ul type="square" style="text-align:left">				
+			<li>L'<b>@R</b> (sa classe): Donne <span class="G">R</span></li>
+			<li>
+			     Le <b>Nb SR</b>:  Donne <span class="R">S</span><br><br>
+				 &rArr;&emsp;<span class="G">R</span> et  <span class="R">S</span>: Donnent <span class="B">H</span><br><br> 
+			</li>
+			<li><span class="B">H</span>: Donne la solution( masque et Nb @ )</li>
+			
+		  </ul>
+	    </div>
+	</div><!-- div#content -->
+	<script type="text/javascript" src="../js/dropdown.js"></script><!-- Afficher/Cacher les réponses -->
+</body>
+</html>

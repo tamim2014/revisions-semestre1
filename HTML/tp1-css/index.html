@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tp1 css</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../style/fullPageTabs.css" media="screen" /> 
+    <script type="text/javascript" src="../../js/fullPageTabs.js"></script>		  
+</head>
+<body style="position:absolute; top:0; width:100%;" >
+
+<!-- MENU FULL PAGE TABS -->
+<button class="tablink" onclick="openPage('Sujet', this, 'black')" id="defaultOpen"  >Sujet</button>
+<button class="tablink" onclick="openPage('index.html', this, 'black')"  >Solution</button>
+<button class="tablink" onclick="openPage('Cours', this, 'purpule')">Cours</button>
+<button class="tablink" onclick="openPage('Fiche', this, 'green')">Fiche synth&egravese;</button>
+<div id="Sujet" class="tabcontent">
+  <object data="tp1-css.pdf" type="application/pdf" class="chargerObjet"  ></object>
+</div>
+<div id="Solution" class="tabcontent"></div> 
+<div id="Cours" class="tabcontent">
+  <object data="cours3-css4.pdf" type="application/pdf" class="chargerObjet"  ></object>
+</div>
+<div id="Fiche" class="tabcontent">
+  <h3>Fiche</h3>
+  <p>Mettre ici juste l'essenciel du cours</p>
+</div>
+<div class="conteneur-reponses"> </div> <!-- c'est juste un separateur sujet/solution -->
+
+<!-- CONTENU DE LA SOLUTION SOLUTION -->	
+	<h2 >1.1 Changer le type de police :</h2>
+
+	Un ouvrage des <span style="font-family: arial;">Editions Eni </span>
+
+	<h2>1.2 Changer la famille de police :</h2>
+
+	Un ouvrage des <span style="font-family: fantasy;">Editions Eni </span>
+
+	<h2>1.3 afficher un texte en gras et en italique :</h2>
+
+	Un ouvrage des <span style="font-style: italic; font-weight: bold;">Editions Eni </span>
+
+	<h2>1.4 changer la taille de police :</h2>
+
+	Un ouvrage des <span style="font-size: 24px;">Editions Eni </span>
+
+	<h2>1.5 utiliser un effet de lettrine :</h2>
+	Un ouvrage des <span style= 'font-size:24px'>E</span>ditions <span style= 'font-size:24px'>E</span>ni
+	
+	<h2> 1.6 afficher en petite majuscules : </h2>
+	
+	Un ouvrage des <span style='font-variant:small-caps'>Editions Eni </span>
+	
+	<h2> 1.7 utiliser un raccourci font:  </h2>
+	
+	Un ouvrage des 
+	<span style='font: italic bold small-caps 18pt arial ;'>Editions Eni </span>
+	
+
+</body>
+</html>

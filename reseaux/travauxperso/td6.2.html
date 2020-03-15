@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title> Complement TD6</title>
+ <meta charset="utf-8"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="shortcut icon" href="../../favicon.ico"  />
+ <link rel="stylesheet" href="../../style/fullPageTabs.css" media="screen, projection" /> 
+ <script type="text/javascript" src="../../js/fullPageTabs.js"></script>
+
+</head>
+
+<body style="background:#111; color:white;" onload="openPage('Cours', this, 'black');  "  >
+    	
+	<!-- MENU FULL PAGE TABS --> 
+	<button class="tablink" onclick="openPage('Sujet', this, 'black')"  >Sujet</button>
+	<button class="tablink" onclick="openPage('Solution', this, 'black')">Solution</button>
+	<button class="tablink" onclick="openPage('Cours', this, 'black')" id="defaultOpen" >Tutoriel</button>
+	<button class="tablink" onclick="openPage('Fiche', this, 'black')">Focus</button>
+	
+	<!-- ONGLET 1    -->
+	<div id="Sujet" class="tabcontent" >
+		  <object data="td6.1-sujet.pdf" type="application/pdf" class="chargerObjet" ></object>
+	</div>
+	
+	<!-- ONGLET 2    -->
+	<div id="Solution" class="tabcontent"    >
+      <object data="td6.1-solution.pdf" type="application/pdf" class="chargerObjet"  ></object>
+	</div>
+	
+	<!-- ONGLET 3    -->
+	<div id="Cours" class="tabcontent" style="background:black" >
+	    <object data="td6.2-tuto.pdf" type="application/pdf" class="chargerObjet"  ></object>
+	</div>
+	<!-- ONGLET 4    -->
+	<div id="Fiche" class="tabcontent" style="background:black"  >         
+		 <img class="onglet1-sujet"  src="../img/focus2.png" style="margin-top:10px;" /> 	
+	</div>
+	
+</body>
+</html>

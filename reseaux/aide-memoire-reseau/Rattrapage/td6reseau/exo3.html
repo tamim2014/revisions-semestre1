@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exerecices6, 7, et 8</title>
+	<link rel="stylesheet" href="../css/calcul.css" />		
+	<!-- le p'tit bouton du drop down -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body style="background-color:#c4c4c4">
+	<div id="content">
+		<h4>
+          <ul type="square">
+		    <li>Adressage IP d'entreprise</li>
+		  </ul>
+        </h4>         
+    
+		
+		<div class="breakExo" style="height:2px;"></div>
+	    
+		<div class="calcul siZ" style="border-radius:0;">
+	      <b><span class="R">Exo3</b>
+	    </div>
+		 <p>
+		   Une societé possède 73 machines qu'elle souhaite repartir en 3 sous-réseaux:<br>
+		   
+		   <ul type="disc" style="padding:0 1em; margin:0;">
+		     <li>SR1: 21 Machines(Département com)</li>
+			 <li>SR2: 29 Machines(Département R&D)</li>
+			 <li>SR3: 23 Machines(Direction)</li>
+		   </ul>
+		 </p>
+		 <div class="breakExo" style="height:2px;"></div>
+
+		 <ol>
+		   <li>
+		      <p class="B question"><b  >Choisir la classe optimale <i class="fa fa-caret-down"></i> </b></p>				  
+			  <p class="reponse" ><code >
+			    Classe C: Nb @ = 2<sup>8</sup>-2 = 254 h<br>
+				254 hosts > 29 hosts <br>
+				
+                <span class="idReponse"  >La classe <b class="idR" style="color:blue">C&nbsp;</b> est optimale&nbsp;</span>
+			    <div class="breakExo" style="height:0.01em;"></div>
+			  </code></p>
+			 	
+		   </li>
+		   <li>
+		      <p class="B question"><b>Identifiant sous-réseaux ? <i class="fa fa-caret-down"></i></b></p>			  
+			  <p class="reponse"><code cl>
+			    Nb SR = 2<sup class="R">S</sup> - 2 ( si RFC 950)<br>
+				3 &le; 2<sup class="R">3</sup>-2 <br>
+				
+                <span class="idReponseRouge" > S = 3bits</span>
+				<div class="breakExo" style="height:0.01em;"></div>
+			  </code></p>
+			   
+           		   
+		   </li>
+		   <li>
+		      <p class="B question"><b>Masque de sous-réseaux ? <i class="fa fa-caret-down"></i></b></p>			  
+			  <p class="reponse"><code>
+			    Classe C &emsp;&emsp;&emsp; &rArr;  R = <span class="idR" style="padding:0">24</span> bits<br>
+				3 sous-réseaux &rArr; S = <span class="idR " style="padding:0; color:#990033;">3&nbsp;</span> bits<br>
+				Masque = /27 &nbsp;  <br>			
+                <span class="idReponse">Masque=255.255.255.<b class="R">224</b></p>
+			    <div class="breakExo" style="height:0.01em;"></div>	
+			
+			  </code></p>
+			  
+		   </li>
+		   <li>
+		      <p class="B question"><b>Nb de machines par sous-réseau<i class="fa fa-caret-down"></i></b></p>			  
+			  <p class="reponse"><code>
+			    Masque = /27 &emsp; &rArr;  H = <span class="idR" style="padding:0">5&nbsp;</span> bits<br>
+				Nb @ = 2<sup>5&nbsp;</sup> - 2&nbsp;<br>			
+                <span class="idReponse">Nb @ = 30 machines/SR</span>
+			  </code></p>
+
+		   </li>
+		</ol>
+		 
+		 
+
+		
+		<div class="breakExo"></div>
+	
+
+        <hr>
+	    <h5><u>Pré-réquis Question5 </u>: </h5>
+		<div class="calcul siZ" style="text-align:left; padding-left:2px;">
+		&nbsp; &nbsp; Pour les machines <b>réellement</b> installées :
+		  <ul type="square" style="text-align:left; line-height:1.2em;">				
+			<li><code><span class="idR" ><b>@Fast = @R + 1</b></span></code></li>
+			<li><code><span class="idR" ><b>@Last = Nb @</b></span></code></li>			
+		  </ul>
+		&nbsp; &nbsp; Pour les machines <b>possibles</b> :
+		  <ul type="square" style="text-align:left; line-height:1.2em;">				
+			<li><code><span class="idR" ><b>@Fast = idem</b></span></code></li>
+			<li><code><span class="idR" ><b>@Last = @B - 1</b></span></code></li>			
+		  </ul>
+		  <p>&nbsp; &nbsp; <code>L'<b><u>@R</u></b> donne <span class="idR" ><b>R</b></span></code><br> &nbsp; &nbsp; <code>Le <b><u>masque</u></b> donne <span class="R idS" ><b>S</b></span> et <span class="B idS" ><b>@B&nbsp;</b></span> </code></p>
+	    </div>
+
+	</div><!-- div#content -->
+	
+	<script type="text/javascript" src="../js/dropdown.js"></script><!-- Afficher/Cacher les réponses -->
+
+</body>
+</html>

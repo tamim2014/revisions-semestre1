@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tp2 java  somme tableau - nombre paire</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../style/fullPageTabs.css" media="screen" /> 
+    <script type="text/javascript" src="../../js/fullPageTabs.js"></script>		  
+</head>
+<body style="position:absolute; top:0; width:100%;" onload="openPage('Sujet', this, 'black')"  >
+
+	<!-- MENU FULL PAGE TABS -->
+	<button class="tablink" onclick="openPage('Sujet', this, 'black')" id="defaultOpen"  >Sujet</button>
+	<button class="tablink" onclick="openPage('Solution', this, 'black')"  >Solution</button>
+	<button class="tablink" onclick="openPage('Cours', this, 'purpule')">Rapport de TP</button>
+	<button class="tablink" onclick="openPage('Fiche', this, 'black')">Correction</button>
+	<!-- ONGLET 1 -->
+	<div id="Sujet" class="tabcontent">
+	  <object data="sujet-tp2java.pdf" type="application/pdf" class="chargerObjet"  ></object>
+	</div>
+	<!-- ONGLET 2 -->
+	<div id="Solution" class="tabcontent">
+	  <object data="solution-tp2java.pdf" type="application/pdf" class="chargerObjet"  ></object>	
+	</div> 
+	<!-- ONGLET 3 -->
+	<div id="Cours" class="tabcontent" style=" padding:0;">
+	   	  <object data="rapport-tp2java.pdf" type="application/pdf" class="chargerObjet"  ></object>
+	</div>
+	<!-- ONGLET 4 -->
+	<div id="Fiche" class="tabcontent" style=" background-color:#111;" > 
+         <object data="correction-tp2java.html"  class="chargerObjet onglet1-sujet"  ></object>
+	</div>
+
+
+
+	<!-- CONCLUSION -->
+	<div class="conteneur-reponses" > </div>
+    <p class="numCours" style="background-color:#111" > <u>Conclusion</u>: La méthode <span class="G">toString()</span><br><br>
+	<small class="dateCours">
+	Elle est définie dans la classe <span class="G">Object</span> ; 
+	en conséquence toutes les classes Java en hérite. <br>
+	Elle  ne fait pas grand-chose : <br>
+	&bull; Elle renvoie juste <span class="G">le nom de la classe</span> de l'objet concerné [<small>suivi de l'adresse de cet objet </small>].<br> 
+	&bull; Lorsqu'on définit une classe, il est très utile de <span class="G"><u>redéfinir</u></span> la méthode toString() afin de donner une <b><u>description satisfaisante</u></b> des objets de cette classe
+	
+	</small></p>
+	<div class="conteneur-reponses" > </div> 
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TD7 - Extensions</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../table.css" media="screen" />
+	<link rel="stylesheet" href="../../style/pagination.css" media="screen" /> 
+	<link rel="stylesheet" href="../../style/fullPageTabs.css" media="screen" /> 
+    <script type="text/javascript" src="../../js/fullPageTabs.js"></script>
+    <script type="text/javascript" src="../../js/jquery3.4.1.min.js"></script> <!-- pour la pagination -->	
+    <script type="text/javascript" src="../../js/pagination.js"></script>
+	<style> #cible { padding:4px; height:84%; margin-bottom:0.5%; } </style>
+</head>
+<body style="position:absolute; top:0; width:100%;" onload="openPageSix('Sujet', this, 'black')"  >
+
+	<!-- MENU FULL PAGE TABS -->
+	<button class="tablink6" onclick="openPageSix('Sujet', this, 'black')" id="defaultOpen"  >Questionnaire</button>
+	<button class="tablink6" onclick="openPageSix('Solution', this, 'black')"  >Exos</button>
+	<button class="tablink6" onclick="openPageSix('Cours', this, '#222327')">Solutions</button>
+	<button class="tablink6" onclick="openPageSix('Fiche', this, 'black')">Cours7</button>
+	<button class="tablink6" onclick="openPageSix('Cinq', this, 'black')">###</button>
+	<button class="tablink6" onclick="openPageSix('Six', this, 'black')">###</button>
+	<!-- ONGLET 1 -->
+	<div id="Sujet" class="tabcontent">
+	  <object data="cours7Questionnaire.html"  class="chargerObjet"  ></object>
+	</div>
+	<!-- ONGLET 2 -->
+	<div id="Solution" class="tabcontent">
+	  <object data="sujetTD7wp.html"  class="chargerObjet onglet1-sujet"  ></object>	       	  	  
+	</div> 
+	<!-- ONGLET 3 -->
+	<div id="Cours" class="tabcontent" style="background:#222327; #404040; ">
+	   	  <object id="cible" data="img/td5page2.jpeg"  class="chargerObjet onglet1-sujet"   ></object>
+		  <section class="container">
+			<nav class="pagination">
+			  <a href="#" class="prev">&laquo;</a>
+			  <span>1</span>
+			  <a id="td5page2wp"  href="#">2</a>
+			  <a id="td5page3wp"  href="#">3</a>
+			  <a id="td5page4wp"  href="#">4</a>
+			  <a id="td5page5wp"  href="#">5</a>
+			  <a href="#" class="next">&raquo;</a>
+			</nav>
+			<nav class="pagination pagination-blue">
+			  <a href="#" class="prev">&laquo;</a>
+			  <a href="#">1</a>
+			  <a href="#">2</a>
+			  <a href="#">3</a>
+			  <span>4</span>
+			  <a href="#">5</a>
+			  <a href="#" class="next">&raquo;</a>
+			</nav>
+		  </section>
+	</div>
+	<!-- ONGLET 4 -->
+	<div id="Fiche" class="tabcontent" style=" background-color:#111;" > 
+		<object data="../cours-wp/cms-cours7.pdf" type="application/pdf" class="chargerObjet"  ></object>
+	</div>
+	<!-- ONGLET 5 -->
+	<div id="Cinq" class="tabcontent" style="background:black">
+	   	<object data="../cours-wp/img/clavier.png"  class="chargerObjet onglet1-sujet"></object>
+	</div>
+		<!-- ONGLET 5 -->
+	<div id="Six" class="tabcontent" style="background:black">
+        <object data="../cours-wp/img/img4.png"  class="chargerObjet onglet1-sujet"></object>
+	</div>
+
+
+
+	<!-- CONCLUSION -->
+	<div class="conteneur-reponses" > </div>
+    <p class="numCours" style="background-color:#111" > <u>Conclusion</u>: Caractéristiques d'un thème<br><br>  
+		 &bull; &emsp; Menu<br>
+		 &bull; &emsp; Widget( dans sidebar )<br>
+		 &bull; &emsp; Custom background( voir TP1 )<br>
+		 &bull; &emsp; Custom header<br>
+		 &bull; &emsp; Custom logo<br>	
+	</p>
+	<table>
+		  <tr >
+			<th style="text-align:center;">Les hooks d'action</th>
+			<th style="text-align:center;">Description</th>
+		  </tr>
+		  <tr>
+			<td style="color:#6600ff; font-weight:bold;">init</td>
+			<td>Add menu</td>
+		  </tr>
+		  <tr>
+		  	<td style="color:#6600ff; font-weight:bold;">widget_init</td>
+			<td>Add sidebar</td>
+		  </tr>
+		  <tr>
+		  	<td style="color:#6600ff; font-weight:bold;">wp_head</td>
+			<td></td>
+		  </tr>
+		  <tr>
+		  	<td style="color:#6600ff; font-weight:bold;">wp_footer</td>
+			<td></td>
+		  </tr>
+		  <tr>
+		  	<td style="color:#6600ff; font-weight:bold;">admin_enqueue_scripts</td>
+			<td></td>
+		  </tr>
+		  <tr>
+		  	<td style="color:#6600ff; font-weight:bold;">publish_post</td>
+			<td>Ajoute des fonctionnalités exécutées à chq publicatiob d'un article</td>
+		  </tr>
+		  <tr>
+		  	<td class="th2"> Les Filtres ( pour modif)</td>
+			<td class="th2">Description</td>
+		  </tr>
+		  <tr>
+		  	<td style="color:#006600; font-weight:bold;">the_content</td>
+			<td>Modif l'affichage du contenu des articles</td>
+		  </tr>
+		  <tr>
+		  	<td style="color:#006600; font-weight:bold;">the_title</td>
+			<td>Pour ajuster l'affichage des titres </td>
+		  </tr>
+		  <tr>
+		  	<td style="color:#006600; font-weight:bold;">wp_title</td>
+			<td> ?!</td>
+		  </tr>
+		  <tr>
+		  	<td style="color:#006600; font-weight:bold;">body_class</td>
+			<td> ?!</td>
+		  </tr>
+	</table>
+	<div class="conteneur-reponses" > </div> 
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cours8 Interface</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="../../favicon.ico"  />
+	<link rel="stylesheet" href="../../style/fullPageTabs.css" media="screen" />
+    <style>
+	 #s1:hover, #s2:hover{width:50%; }
+	 #s3:hover {margin-left:-30%; width:60%; }
+    </style>	
+
+    <script type="text/javascript" src="../../js/fullPageTabs.js"></script>
+
+
+	
+	
+</head>
+<body style="position:absolute; top:0; width:100%; " onload="openPage('Sujet', this, 'black')"  >
+
+	<!-- MENU FULL PAGE TABS --> 
+	<button class="tablink" onclick="openPage('Sujet', this, 'black')" id="defaultOpen">Exo1: Interface</button>
+	<button class="tablink" onclick="openPage('Solution', this, 'black')">Solution Interface</button>
+	<button class="tablink" onclick="openPage('Cours', this, 'black')">Exo2: Abstract</button>
+	<button class="tablink" onclick="openPage('Fiche', this, 'black')">Solution Abstract</button>
+	
+	<!-- ONGLET 1    -->
+	<div id="Sujet" class="tabcontent">
+	  <img class="onglet1-sujet"  src="img/exo1-interface.png" />
+	</div>
+	
+	<!-- ONGLET 2    -->
+	<div id="Solution" class="tabcontent" onclick="myFunction()" >
+
+	  <div class="alert">
+		  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+		  <b><span class="N">Une classe implementant une interface doit implementer toutes ses mthds</span></b> <small><i> [ Cours8 - Page15/47 ] </i></small>
+      </div>
+	  <object id="s1" class="onglet2-1-solution"  data="exo1-interface/Rectangle2.html"  style=" padding-left:0; "></object>
+	  <object id="s2" class="onglet2-2-solution"  data="exo1-interface/Carre.html" ></object>
+	  <object id="s3" class="onglet2-3-solution"  data="exo1-interface/MainForme.html" ></object>
+	
+	</div> 
+	
+	<!-- ONGLET 3    -->
+	<div id="Cours" class="tabcontent" style="background:black" >
+	    <img class="onglet1-sujet"  src="img/exo2-abstract.png" /> 
+	</div>
+	
+	
+	<!-- ONGLET 4    -->
+	<div id="Fiche" class="tabcontent" style="background:black" >
+	
+	  <div class="alert">
+		  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+		  <b><span class="N">Une classe heritant d'une classe abstraite doit implementer toutes ses mthds</span> ou <span class="N"> être elle-même abstraite</span> </b> <small><i> [ Cours8 - Page30/47 ] </i></small>
+      </div>
+	  <object class="onglet2-1-solution"  type="text/javascript" data="exo2-abstract/Rectangle2.java" style="padding-left:0;" ></object>
+	  <object class="onglet2-2-solution"  type="text/javascript" data="exo2-abstract/Carre.java" ></object>
+	  <object class="onglet2-3-solution"  type="text/javascript" data="exo2-abstract/MainFormesA.java" style="padding-left:0;" ></object>
+		
+	</div>
+
+	<div class="conteneur-reponses" > </div> <!-- separateur-->
+
+	<!-- Cours relatifs au sujet ci-haut -->
+	<p class="numCours " > Cours8: Abstraction  Java <small class="dateCours">(Lundi 06 Janvier 2020)</small> &nabla; </p>
+	<object data="cours8.pdf" type="application/pdf" class="chargerObjet"  ></object>
+    <div class="conteneur-reponses" > </div> <!-- separateur-->	
+		<p class="numCours"  > Cours7: Polymorphisme  Java <small class="dateCours">(Lundi 06 Janvier 2020)</small> &nabla; </p>
+	<object data="cours7.pdf" type="application/pdf" class="chargerObjet"  ></object>
+	
+	<!-- CONCLUSION -->
+	<div class="conteneur-reponses" > </div>
+	<p class="numCours conclusion " style="background-color:#111; text-align:center;">
+		<u>Conclusion</u><br><br>
+		<small class="dateCours" >
+		  public <span class="G">interface</span> Forme{<span class="N"> ..............................................</span>  public <span class="G">abstract class</span> Forme {  <br>
+		  &emsp; <span class="G">public</span> int surface();<span class="N"> ................................................................</span>  <span class="G">abstract</span> int surface();  <br>
+		  &emsp; <span class="G">public</span> int perimetre();<span class="N"> ............................................................</span>  <span class="G">abstract</span> int perimetre();  <br>
+		  ...<br><br>
+		  
+		  &emsp;&emsp;&emsp;public class Rectangle <span class="G">implements</span> Forme{<span class="N"> ............</span> public class Rectangle <span class="G">extends</span> Forme { <br>
+		  ...<br><br>
+		</small>	
+	</p>
+	<div class="conteneur-reponses" > </div> <!-- separateur-->
+	
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title> QCM TCP/IP</title>
+ <meta charset="utf-8"> <!-- sinon tu peux pas écrire N° ni les accent-->
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!--<link rel="stylesheet" href="../style/login.css" type="text/css" media="screen, projection"> -->	
+ <link rel="shortcut icon" href="../../favicon.ico"  />
+ <link rel="stylesheet" href="../../style/fullPageTabs.css" media="screen, projection" />
+ <style>
+    /*
+	#s1:hover, #s2:hover{width:50%; }
+	#s3:hover {margin-left:-30%; width:60%; }
+    */
+    #s1:hover{width:86%; }
+    #s2:hover {margin-left:-30%; width:86%; } 	
+	#s3:hover {margin-left:-30%; width:60%; }
+  	
+	/******** Pour feuilleter les exos comme dans un livre *******************
+	     #s2:hover {margin-left:-25%; width:86%; }
+	     #s3:hover {margin-left:-56%; width:86%; } 
+	*************************************************************************/
+		
+ </style>
+ <script type="text/javascript" src="../../js/fullPageTabs.js"></script>
+</head>
+
+<body style="background-color:#f7f7f9;  " onload="openPage('Sujet', this, 'black')" >
+	<!-- MENU FULL PAGE TABS --> 
+	<button class="tablink" onclick="openPage('Sujet', this, '#558C89')" id="defaultOpen" >Resum&eacute;s</button>
+	<button class="tablink" onclick="openPage('Solution', this, 'black')">Sujet</button>
+	<button class="tablink" onclick="openPage('Cours', this, '#558C89')">Solution</button>
+	<!-- <button class="tablink" onclick="openPage('Fiche', this, 'black')">Focus </button> -->
+	<button class="tablink" onclick="openPage('Fiche', this, '#558C89')" style="font-family:Calibri">مراجعة</button>
+	
+	<!-- ONGLET 1    -->
+	<div id="Sujet" class="tabcontent" style="background:#74AFAD;">
+	  <!-- Deco  amovible haut -->
+	  <div class="alert" style="background:#558C89;">
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+		<b class="captionHaut" > Nb de SR = 2<sup>Nb de 1 dans S</sup></b> <b > Nb d'@ = 2<sup>Nb de &empty; dans le masque </sup></b>
+      </div>	
+	  <!-- Contenu -->
+	  <object class="onglet1-1-resume"   data="resume1tp2.html" style="background-color:#555" ></object>
+	  <object class="onglet1-2-resume"   data="resume2tp2.html" style="background-color:#555" ></object>
+	  
+	  <!-- Deco amovible bas -->
+	  <div class="alert " style="margin-top:40%; margin-bottom:0; background:#558C89;">
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+		<span class="captionBas" > S = Identifiant sous-r&eacute;seau = Nbre de 1 (<b style="color:blue">dans le Host-id</b>) vs masque</span> 
+      </div>
+	</div>
+	
+	<!-- ONGLET 2    -->
+	<div id="Solution" class="tabcontent"   >
+      <object data="tp2-sujet.pdf" type="application/pdf" class="chargerObjet"  ></object>
+	</div> 
+	
+	<!-- ONGLET 3    -->
+	<div id="Cours" class="tabcontent" style="background:#74AFAD" >
+	    <!--
+	    <object data="tp2-solution.pdf" type="application/pdf" class="chargerObjet"  ></object>
+		-->		
+	  <div class="alert" style="background:#558C89;">
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+		<b><span class="N">Blablabla blablabla Blablabla blablabla</span></b> <small><i> [ CoursX - PageYY/ZZ ] </i></small>
+      </div>
+	  <object id="s1" class="onglet2-1-solution"  data="exo1exo2exo3.html" style="background-color:#ECECEA;" ></object>
+	  <object id="s2" class="onglet2-2-solution"  data="exo4exo5.html" style="padding:2%; background-color:#ECECEA;"></object>
+	  <object id="s3" class="onglet2-3-solution"  data="exo6exo7exo8.html" style="background-color:#ECECEA;" ></object>		
+	</div>
+	
+	<!-- ONGLET 4    -->
+	<div id="Fiche" class="tabcontent" style="background-color:#74AFAD"  > <!-- background: #5fcf80; pour le le Focus -->
+         <!-- <object data="focus.html"  class="chargerObjet" style="margin-top:2px" ></object> -->
+         <object data="recapitulatif.html"  class="chargerObjet" style="margin-top:2px" ></object> 		 
+	</div>
+    	 
+
+      
+</body>
+</html>

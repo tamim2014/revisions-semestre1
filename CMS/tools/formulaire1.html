@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid #8c8b8b;
+  padding: 5px;
+  
+}
+td {background:white; text-align:center;}
+table {
+  border-spacing: 15px;
+  width:100%; 
+  border:1px solid #8c8b8b;
+  background:#8c8b81;
+}
+
+code, span {
+  font-size: 24px;
+  padding:8px;
+  margin:8px;
+  display:inline;
+  
+  font-weight:lighter;
+  text-align:center;
+  font-family:Arial, Helvetica, sans-serif;
+  box-shadow:2px 2px 6px #888;
+  -moz-box-shadow: 2px 2px 6px #888;  
+  -webkit-box-shadow: 2px 2px 6px #888;  
+    
+}
+
+code { 
+  text-shadow: -1px -1px #f00, 1px 1px #a00, -3px 0 4px #000;
+  color: #dd0000;
+}
+span{
+  text-shadow: -1px -1px #4d94ff, 1px 1px #4d94ff, -3px 0 4px #000;
+  color: :#4d94ff;  
+}
+</style>
+</head>
+<body style="background-color:#ddd; ">
+
+<h2>Add_theme_support()</h2>
+<p>Couleur de fond, image de fond, image d'en-tête, et logo</p>
+
+<table >
+
+  <tr>
+    <th style="border:0; background:#111; color:#f2f1f1;">Tasks</th> 
+    <th style="border:0; background:#111; color:#f2f1f1;">Functions</th>
+  </tr>
+  <tr>
+    <td style="border:0; background-color: #555; color:#4d94ff;">Image/couleur de fond</td>
+    <td ><span>add_theme_support('custom-background') </span></td>
+  </tr>
+  <tr>
+    <td style="border:0; background-color:#555; color:#dd0000;" >Affichage</td>
+    <td style=" background-color:#555;" ><code>body_class()</code></td>
+  </tr>
+  <tr>
+    <td style="border:0; background-color: #555; color:#4d94ff;">Image d'en-tête</td>
+    <td><span>add_theme_support('custom-header') </span></td>
+  </tr>
+  <tr>
+    <td style="border:0; background-color:#555; color:#dd0000;" >Affichage</td>
+    <td style=" background-color:#555;"><code>header_image()</code>&emsp;<code></code>&emsp;<code>the_custom_header()</code></td>
+  </tr>
+  <tr>
+    <td style="border:0; background-color: #555; color:#4d94ff;">Logo</td>
+    <td><span>add_theme_support('custom-logo')</span></td>
+  </tr>
+  <tr>
+    <td style="border:0; background-color:#555; color:#dd0000;" >Affichage</td>
+    <td style=" background-color:#555;"><code>the_custom_logo()</code></td>
+  </tr>
+  
+
+</table>
+
+
+
+
+</body>
+</html>

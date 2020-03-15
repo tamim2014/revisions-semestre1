@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Examen PHP 2017 Session1</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Trucsweb.com" />   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<link rel="stylesheet" href="../style/zoning.css" media="screen" />
+    <link rel="stylesheet" href="../style/contenuAccueil.css" media="screen" />
+    <link rel="stylesheet" href="../style/calculatrice.css" media="screen" />
+    <link rel="stylesheet" href="../style/examen.css" media="screen" />
+    <link rel="stylesheet" href="../style/menu907.css" media="screen" />
+	<link rel="stylesheet" href="../style/top.css" media="screen">	
+    <script type="text/javascript" src="../js/menu907.js"></script>   
+  </head>
+  <body>
+    <header>
+        <hr  id="fantaisieRELOU3">
+        <hr  id="fantaisieRELOU1">
+        <h1  style='text-align:center'>Master I MIASHS : PHP </h1>
+        <h3  style='text-align:center'>Examen terminal 2017: Session1  </h3>
+        <h5  style='text-align:center; font-style:italic;'>Durée 2h, aucun document autorisé </h5>
+        <h1  style='text-align:center'>---</h1>
+        <button class="openbtn" onclick="openNav()">☰ </button>
+        <hr  id="fantaisieRELOU1" >
+        <hr  id="fantaisieRELOU3">
+    </header>
+	<div id="contenair" > <!-- contient les 2 barre laterale et le contenu main - aucun style ne lui est appliquee sur cette page -->
+		<!-- Cacher le menu a gauche du header mais il doit sortie avec la mm hauteur que le header -->
+		<div id="barre-laterale" >
+			<div id="mySidepanel" class="sidepanel">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+				<a href="../index.html" id="iconAccueil"><img src="../photos/accueil.png" ></a>
+				<a href="../index.html">PHP</a>
+				  <a href="2019s2.html">2019s2</a>
+				  <a href="2019s1.html">2019s1</a>
+				  <a href="2018s2.html">2018s2</a>
+				  <a href="2018s1.html">2018s1</a>
+				  <a href="2017.html">2017</a>
+			</div>
+		</div>
+        <!-- Barre laterale gauche  -->
+		<aside class="sidebarGauche"></aside>
+		<!-- Barre laterale droite  -->
+		<aside class=" sidebarDroite saut ">
+			<div class="widget-asideD"  >
+				 widget1
+			</div>			
+			<div class="widget-asideD" style=" clear:both;" >			
+				widget2
+			</div>
+		</aside>
+		 
+		<!-- Contenu: listes des sujets d'examens-corriges avec le saommaire des questions -->	
+		<main>
+
+			<section class="bordureSupSection1 " ></section>
+			<section class="conteneurDesSujet"  >							
+				<p class="bleu">
+					Partie n°1: questions de cours(5 points ) 
+				</p> 
+				<p>FORMULAIRE, CLIENT/SERVEUR,  PASSAGE DE PARAMETTRES</p>
+				<p><u><i>1.A : FORMULAIRE</i></u></p>
+				<b class="rouge">Quelles sont, et à quoi servent, les 3 types d’informations qu’il faut repérer dans un formulaire HTML pour pouvoir exploiter ses données à l’aide de PHP ? </b>
+
+				<ul type="square">
+					<li>
+						<span class="bleu">method:</span> Méthode d'envoie des données au script( GET ou POST )
+					</li>
+					<li>
+						<span class="bleu">action:</span>    Url du fichier PHP qui va recevoir les informations
+					</li>
+					<li>
+						<span class="bleu">name:</span>    un attribut rempli par une valeur ( Le nom du champ sera ensuite considéré par le script PHP comme une variable contenant la valeur saisie. )
+					</li>
+				</ul>
+				<b><i><u>Remarque:</u></i></b><br>
+				<i>Si l'on a affaire à un formulaire d'upload de fichiers, la balise &lt;form&gt; doit comporter l'attribut <span class="rouge">enctype</span>
+				et la valeur <span class="rouge">multipart/form-data</span> multipart/form-data .</i><br>
+
+				<p><u><i>1.B : ARCHITECTURE  CLIENT/SERVEUR </i></u></p>
+				<b class="rouge">Qu’est-ce qu’une architecture client-serveur ? <br></b><br>
+
+	            C'est un mode de communication à travers un réseau entre plusieurs programmes :<br>
+	            <ul type="square">
+	            	<li>
+	            		L'un, qualifié de client, envoie des requêtes  
+	                </li>
+	            	<li>
+	            		L'autre(ou les autres), qualifiés de serveurs, attendent les requêtes des clients et y répondent.
+	            	</li>
+	            </ul>
+	            <b class="rouge">Où se situent le navigateur et le PHP dans cette architecture ?  <br></b><br>
+	            <ul type="square">
+	            	<li>
+	            		Le navigateur : Se trouve cote client  
+	                </li>
+	            	<li>
+	            		Le moteur PHP: Se trouve cote serveur
+	            	</li>
+	            </ul>
+
+	            <b class="rouge">Entre le moment où j’écris du code PHP dans un traitement de texte sur mon ordinateur et le moment où j’affiche le résultat dans le navigateur, que s’est-il passé ?  <br></b><br>
+	            <ul type="square">
+	            	<li>
+	            		D'abord  j’envoie mon code a un serveur web( Apache,Nginx,IIS, ou Tomcat, ...etc). Ce, en utilisant le protocole HTTP.  
+	                </li>
+	            	<li>
+	            		Ensuite  le serveur web genere une page reponse( eventuelle interrogation de se la base d'une data base)
+	            	</li>
+	            	    Enfin le serveur retourne la page reponse à mon navigateur en utilisant le même protocole.
+	            	<li>
+	            		
+	            	</li>
+	            </ul>
+
+	            <p><u><i>1.C : À QUOI SERVENT  LES    FONCTIONS isset()   et  empty() ?   </i></u></p>
+	                  
+	            <ul type="square">
+	            	<li>
+	            		<span class="bleu">isset():</span>...  
+	                </li>
+	            	<li>
+	            		<span class="bleu">empty():</span>... 
+	            	</li>
+	            </ul> 
+
+	            <p><u><i>1.D: Quels sont les 2 types de passage de parametres d'une fonction? Expliquez-les  </i></u></p>
+	                  
+	            <ul type="square">
+	            	<li>
+	            		<span class="bleu">Par valeur:</span>...  
+	                </li>
+	            	<li>
+	            		<span class="bleu">Par reference:</span>...(Voir le cours7 php)
+	            	</li>
+	            </ul>
+
+	            <p><u><i>1.E: Qu'est-ce que la serealisation ?   </i></u></p>
+	                  
+	            <ul type="square">
+	            	<li>
+	            		<span class="bleu">serealisation:</span>...  
+	                </li>
+	            </ul>				  
+			</section> <!-- FIN section1- conteneurDesSujet - PHP -->
+			
+			
+			
+			
+			
+			
+			<section class="conteneurDesSujet" >
+
+				<p class="bleu">
+					Partie n°2 : interpretation d’un code PHP(4 points)  
+				</p> 
+				<p>FORMULAIRE, CLIENT/SERVEUR,  PASSAGE DE PARAMETTRES</p>
+				<!-- <p><u><i>1.A : FORMULAIRE</i></u></p> -->
+				<b class="rouge"><i> Ecrire le resultat (code HTML) de l’interpretation du code PHP suivant.</i>  </b>
+				<img src="../photos/2017p2.png"><br>
+				...
+
+
+			</section> <!-- FIN section2 .conteneurDesSujet JAVA -->
+			<section class="conteneurDesSujet" >
+				<p class="bleu">
+					Partie n°3 : comprehension d’erreurs(5 points)   
+				</p>
+			</section>
+			
+			
+			<section class="conteneurDesSujet" >
+				<p class="bleu">
+					Partie n°4 : implémentation de classes(6 points)   
+				</p>
+			</section>
+		</main>
+		<button onclick="topFunction()" id="myBtn" title="Go to top" >
+		  <img  src="../photos/top.JPG" id="imageToTop">
+	    </button>
+
+
+	</div> <!-- div#contenair -->
+	
+    <footer>     
+		Pied de page (footer)<br>
+	    <div class="content-footer"  >         
+                <div class="ndreda-footer" > 		  
+                <ul type="square">
+                    <li>Le client envoie des requêtes </li>
+                    <li>Le serveur attend les requêtes des clients et y répond. </li>
+                </ul>
+            </div>		
+			<span class="copyright_"><span style="color:gray;">2019 &copy; -</span> Master Handi</span>
+        </div><!-- conteneur-reponses Q1.1 -->	  
+    </footer>
+	<!-- Back to top button --> 
+	<script type="text/javascript" src="../js/top.js"></script>
+  </body>
+</html>

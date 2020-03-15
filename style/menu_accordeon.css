@@ -1,0 +1,118 @@
+/*!
+ * MyTemplate 4 : 
+ * https://github.com/tamim2014/;
+ *
+ * Copyright 2019, Ahamada Mze Andjib
+ * http://master-handi.univ-paris8.fr/
+ *
+ */
+
+ 
+
+/*  Sous menu accoredeon  -Hoverable Dropdown*/
+     			
+.dropdown-content {
+    display: none;		  
+    min-width:100%;			  
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index:1;               				
+}
+
+div.dropdown-content a#addArticle, div.dropdown-content #editArticle  { 
+    background-color : black; 
+    color:white; text-shadow:none; 
+    text-decoration:none;
+}
+div.dropdown-content a#addArticle:hover, div.dropdown-content a#editArticle:hover { 
+    background:silver; /* #f7f7f9; */
+    color:#000000;
+}
+
+/* Derouler les sous-menus item1 ...item10 */
+	div.dropdown-content #item1, div.dropdown-content #item2, div.dropdown-content #item3, div.dropdown-content #item4, div.dropdown-content #item5, div.dropdown-content #item6, div.dropdown-content #item7, div.dropdown-content #item8, div.dropdown-content #item9, div.dropdown-content #item10, div.dropdown-content #item11, div.dropdown-content #item12{
+    background-color : black; 
+    color:white; text-shadow:none; 
+    text-decoration:none;
+   }
+
+   div.dropdown-content a#item1:hover, div.dropdown-content a#item2:hover, div.dropdown-content a#item3:hover, div.dropdown-content a#item4:hover, div.dropdown-content a#item5:hover, div.dropdown-content a#item6:hover, div.dropdown-content a#item7:hover, div.dropdown-content a#item8:hover, div.dropdown-content a#item9:hover, div.dropdown-content a#item10:hover, div.dropdown-content a#item11:hover, div.dropdown-content a#item12:hover {
+    background:silver; /* #f7f7f9;  */
+    color:#000000;
+   }
+
+.dropdown:hover .dropdown-content {  display: block; }
+
+.last-item { box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); }
+
+/* CONTENEUR DU MENU ACCORDEON*/
+
+#documenter_sidebar{
+    -moz-box-shadow:0 0 6px rgba(3,3,3,0.6);
+    -webkit-box-shadow:0 0 6px rgba(3,3,3,0.6);
+    box-shadow:0 0 6px rgba(3,3,3,0.6);    
+    width:96%;
+    margin-left:2%; 
+    margin-top:40%;
+    /* height:100%; Essayer car resultat interessant */      
+}
+#documenter_sidebar ol{
+    margin:18px 0 ;
+    padding: 0; /* tres important- sinon tu casses tout */
+    line-height:1.5em;
+}
+
+#documenter_sidebar, #documenter_sidebar ol a{background-color:#f7f7f9; color:#222222;}
+#documenter_sidebar ol a{-webkit-text-shadow:1px 1px 0px #EEEEEE;-moz-text-shadow:1px 1px 0px #EEEEEE; text-shadow:1px 1px 0px #EEEEEE; }
+#documenter_sidebar ol{border-top:1px solid #AAAAAA;}
+#documenter_sidebar ol a{border-top:1px solid #EEEEEE; border-bottom:1px solid #AAAAAA; color:#444444;}
+#documenter_sidebar ol a:hover{background:#444444; color:#f7f7f9;border-top:1px solid #444444;}
+#documenter_sidebar li{ list-style:none; }
+    
+#documenter_sidebar ol{
+    font-size:12px;
+    font-weight:700;
+    min-height:150px;
+    height:75%;
+    overflow:auto;
+}
+#documenter_sidebar ol a{
+    display:block;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #aaa;
+    padding:6px 15px 7px 0;
+    text-align:right;
+    text-decoration:none; 
+    color:#6F6F6F;     
+    cursor:pointer;
+}
+#documenter_sidebar ol a:hover, #documenter_sidebar {
+    -webkit-text-shadow:none;
+    -moz-text-shadow:none;
+    text-shadow:none;
+    text-decoration:none;
+}
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+    
+    
+
+    
+
+
+
+
+
+
+

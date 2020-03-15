@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tp2 java  somme tableau - nombre paire</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- pluggins de coloration syntaxique -->
+	<link rel="stylesheet" href="../../style/prism.css" media="all" /> 
+    <script type="text/javascript" src="../../js/prism.js"></script>		  	  
+</head>
+<body   >
+<pre><code class="language-java" ><source lang="java" line>
+/******************************************************************
+* EXERCICE1: Pair.java
+* Ecrivez un programme pour determiner si un nombre est pair. 
+* Si c'est le cas:
+*  Afficher tous les nombres pairs plus petits que lui (jusqu'a  0)
+********************************************************************/
+
+public class Pair{
+
+	public static void main(String[] args){
+		
+		int nombre = Integer.pareInt(args[0]);//int nombre = 8 ou int nombre = 9;
+		      
+		if((nombre % 2) == 0) {
+			System.out.println(nombre+ " est pair");
+			for(int i = 0;  i <= nombre; i++){			
+				if( i%2 == 0) System.out.println(i);
+			}
+		}
+		else
+			System.out.println(nombre + " n'est pas pair");				
+	}
+}
+
+/***************************************************
+ * EXERCICE2: SommeTableau.java
+ * Réaliser la mm chose( somme d'une liste de nbre ) 
+ * avec while
+ **************************************************/
+
+public class SommeTableau {
+
+	public static void main(String args[]){
+
+		int[] tb = {5, 10, 15, 20, 25, 30};	
+		int som = 0;
+		int i = 0;			  
+		while( i < tb.length ){
+			som = som + tb[i]; //som += tb[i];
+			System.out.println("Somme partielle: " + som);	
+			i++;
+		}  
+		System.out.println("Somme finale: " + som);
+	}
+}
+	</source></code></pre>
+
+
+</body>
+</html>

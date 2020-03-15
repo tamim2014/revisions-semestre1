@@ -1,0 +1,114 @@
+body{
+	counter-reset: h2;
+	background-color: whitesmoke;
+}
+
+h1, h2{
+	/*text-align: center;*/
+	color: purple;
+	margin-bottom : 20px;
+}
+
+p, form, fieldset{
+	/*text-align: center;*/
+	margin-bottom : 25px;
+	font-family: "Bradley Hand", cursive, sans-serif;
+	color : purple;
+}
+
+fieldset{
+    width: 90%
+	padding : 30px;
+	margin:auto;
+	border-style: dashed;
+	border-color : purple;
+}
+
+
+input#nombre1, input#nombre2, select#operateur {
+
+	padding: 10px 5px 10px 5px;
+	background-color: white;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 20px;
+	color: purple;
+	text-align : center;
+	margin-bottom : 50px;	
+}
+
+
+button#calculer{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+	padding: 10px 25px 10px 25px;
+	background: -moz-linear-gradient(
+		top,
+		#a30d8c 0%,
+		#ff82ec 25%,
+		#380231);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#a30d8c),
+		color-stop(0.25, #ff82ec),
+		to(#380231));
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
+	border: 0px solid #ffffff;
+	-moz-box-shadow:
+		0px 3px 11px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,000,217,1);
+	-webkit-box-shadow:
+		0px 3px 11px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,000,217,1);
+	box-shadow:
+		0px 3px 11px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,000,217,1);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.2),
+		0px 1px 0px rgba(255,255,255,0.3);
+}
+
+button#calculer:hover{
+	cursor:pointer;
+	background: -moz-linear-gradient(
+		top,
+		#ffffff 0%,
+		#000000);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#ffffff),
+		to(#000000));
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
+	border: 0px solid #ffffff;
+	-moz-box-shadow:
+		0px 3px 11px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(3,3,3,1);
+	-webkit-box-shadow:
+		0px 3px 11px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(3,3,3,1);
+	box-shadow:
+		0px 3px 11px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(3,3,3,1);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.2),
+		0px 1px 0px rgba(255,255,255,0.3);	
+}
+
+input#nombre1:focus, input#nombre2:focus, button#calculer:focus {
+	outline:none;
+}
+
+div#reponse{
+	float:left; clear:none; margin-left:50px; padding-top:18px;
+}
+
+
+

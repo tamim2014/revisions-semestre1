@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mises en page en colonnes sans tableau</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	
+	   #entete {	 
+	     width:auto;  margin: 1% 0;  height:65px; padding-top:35px;		
+			 
+		 background-color:#ff9933;
+	   }
+	   
+	   #main { 
+	     margin:auto;     
+		 max-width:90%; /* max-width:940px; */		
+	   }
+		
+	   
+	   #menu {
+	     height:600px; /* ici  POUR UTILISER DES % IL FAUT FAIRE position:absolute;*/
+         padding:1px 0;	
+         float:left;		 
+         
+         width:240px;		 
+	     background-color:#ff0066;
+		
+	   }
+	   
+	   #contenu {
+	     height:600px;
+         margin-left:250px;
+         padding:1px 0;	
+		 
+	     background-color:#9966ff;
+		 overflow: auto;/* hidden; visible; auto; scroll;  */
+		 
+	   }
+	   
+
+	   #footer { height:65px; padding-top:35px; margin:1% 0; background-color:#009933; text-align:center}   
+	   #content-menu {padding-left:10px;}
+	   #content-contenu {padding:20px 0 0 20px;}
+	   
+	    /************************************************************************/
+	   /******* Cette mise en page qui ne conserne pas l'exercice **************/
+	  /************************************************************************/
+	   .responsive { max-width: 94%; height: auto; }
+	   .essentiel{
+	      width:auto; height:100%;
+		  margin: 0 20px 0 0;
+		  padding:5px;
+		  border:2px solid gray;
+		  background-color: white; 
+		  border-radius: 10px; 
+		  border-bottom: 0; 
+		  border-right: 0;
+		  /* float: left; */
+		  line-height:4px;
+		
+		  border-radius: 0px ;
+		  
+	   }
+	   code {
+		background-color: #F7F7F9;
+		border: 1px solid #E1E1E8;
+	
+		color: #DD1144;
+		padding: 2px 2px 0 2px;
+		white-space: nowrap;
+       }
+	   p{font-size:1.2em; }
+	</style>
+</head>
+
+
+<body>
+
+	<div id="entete" style="text-align:center;" >			 
+		<span class="essentiel"><code>width:auto;</code></span>			 
+		<span class="essentiel"><code>margin: 1% 0;</code></span>
+        <span class="essentiel"><code>height:65px;</code></span>			 
+		<span class="essentiel"><code>padding-top:35px;</code></span>		
+	</div>
+
+	<div id="main">
+		<div id="menu"  >	   
+		    <div id="content-menu" style="padding-top:30px"  >
+				<span class="essentiel" ><code>float:left;</code></span><br><br> 			 
+				<span class="essentiel" ><code>padding:1px 0;	</code></span><br><br>			 
+				<span class="essentiel"><code>margin: 1% 0;</code></span><br><br>
+				<span class="essentiel"><code>width:240px;</code></span><br><br>
+				<span class="essentiel"><code>height:600px;</code></span><br><br>				
+				<hr style="margin-right:5%;">				
+				<h5>1) Pourquoi<span style="color:white"> heigth: X% </span> ne marche pas ici?</h5>
+				&bull; Car le<span style="color:white"> % </span> est defini par rapport au <u><i><b>conteneur parent</b></i></u>. 
+				<hr style="margin-right:5%;">
+				<h5>2) Pourquoi <span style="color:white"> heigth: X% </span>fonctionne en position:absolute; ?</h5>
+				&bull; Car dans ce cas le <u><i><b>conteneur parent</b></i></u> c'est l'ecran<small>.<br>(Donc la hauteur du bloc est defini par rapport &agrave; la hauteur de l'&Eacute;cran)</small>		    
+		    </div>			
+		</div>
+		
+		
+		<div id="contenu"  >
+		    <div id="content-contenu" style="padding-top:30px">
+			    <span class="essentiel" ><code>margin-left:250px;</code></span><br><br> 			 
+				<span class="essentiel" ><code>padding:1px 0;	</code></span><br><br>			 			
+				<span class="essentiel"><code>height:600px;</code></span><br><br>
+				<img class="responsive" src="img/menu-float.png">
+				<figcaption style="font-size:0.5em">Image &#916;</figcaption>
+				<p class="responsive">
+					
+					Pour que le contenu ne se "rabatte" pas vers le bord gauche sitôt la hauteur du menu dépassée:<br>
+					 &bull; On donne au contenu, une marge gauche &ge; 240px<small>(Largeur du menu)</small>
+				</p>
+				<p class="responsive">
+					Pour pas que le <span style="color:red">footer</span> soit concerné par ce phénomène de flottaison<br> <small> (ce qui risque de le faire anormalement remonter)</small>:<br>					 
+					 &bull; Il faut  attribuer &agrave; <b style="color:#f0f2f2;">#main</b> un <span style="color:red">clear</span><small>( qui remet à zérola sortie du flux)</small>.
+				</p>
+				<p class="responsive">
+					Pour finir, les écrans ayant tendance à devenir de plus en plus grands, <br> et une zone de lecture étant
+					pénible à lire si elle trop large:<br>
+					 &bull; On peut aussi attribuer &agrave; <b style="color:#f0f2f2">#main</b> une largeur maximum<span style="color:blue">(940px)</span> à ne pas dépasser.<br>
+					 &bull; On peut le centrer à l'aide de <span style="color:red"> margin:auto </span>.
+				</p>
+			</div><!-- #content-contenu -->
+		</div><!-- #contenu -->
+		
+		
+		 <div style="clear:both;"></div> 
+	</div><!-- #main -->
+
+	<div id="footer">    
+	    <span class="essentiel"><code>margin:1% 0;</code></span>
+		<span class="essentiel"><code>height:65px;</code></span>			 
+		<span class="essentiel"><code>padding-top:35px;</code></span> 
+	</div>
+
+</body>
+</html>

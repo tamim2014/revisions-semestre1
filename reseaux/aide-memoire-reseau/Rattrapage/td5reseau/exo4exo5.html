@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exerecices4 et 5</title>
+	<link rel="stylesheet" href="../css/calcul.css" />
+	<!-- le p'tit bouton du drop down -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+</head>
+<body style="background:whitesmoke">
+	<div id="content">
+		<h4>
+          <ul type="square" style="padding-bottom:1.1em;">
+		    <li>Exo4: Nb nets/Nb hosts</li>
+			<li>Exo5: Nv Masque</li>
+		  </ul>
+        </h4>
+
+        <div class="breakExo" style="height:2px;"></div>        
+
+		<div class="calcul siZ" style="border-radius:0; border:2px solid #ECECEA;" >
+	 	
+	      <b><span class="R">Exo4:</span><span class="G "> Nb d'hôtes/Nb de sous-réseaux</span></b>
+	    </div>
+		<p>
+		   Soit un réseaux de classe: <span class="B">B</span><br> 
+		   Masque: <span class="G">255.255.240.0</span>
+		</p>		
+		
+		<ol>
+		   <li>
+		      <p class="B question "><b>Combien d'hôtes par SR ? <i class="fa fa-caret-down"></i></b></p>			  
+			  <p class="reponse"><code>
+			    Nb @ = 2<sup>H&nbsp;</sup> - 2 <br>
+				<span class="infosDuMasque"><span class="B">R=16</span>, <span class="R">S=4</span>, <span class="B">H=12</span> </span><br><br>
+				&nbsp;Nb @ = 2<sup>12</sup> - 2 <br>
+				<span class="idReponse">Nb @ = 4094 hosts</span><br><br>
+			  </code></p>
+		   </li>
+           	<li>
+		      <p class="B question "><b>Combien de sous-réseaux ?<i class="fa fa-caret-down"></i></b></p>
+			  <p class="reponse"><code>
+			    Nb SR = 2<sup class="R">S&nbsp;</sup> <br>
+				&nbsp;Nb SR = 2<sup class="R">4&nbsp;</sup> <br>
+				<span class="idReponse">Nb SR = 16 sous-réseaux</span>
+			  </code></p>
+		   </li>		   
+
+		</ol>
+		
+		<div class="breakExo"></div>
+	
+		<div class="calcul siZ" style="border-radius:0; border:2px solid #ECECEA;" >
+	      <b><span class="R">Exo5:</span><span class="G "> Nouveau masque</span></b>
+	    </div>
+		<p>
+		     Soit le réseaux <span class="G">192.168.90.0</span><br>
+			 On veut: <span class="G">4 SR</span> de <span class="G">25 hosts/SR</span>
+		</p>
+		<ol>
+		   <li>
+		      <p class="B question" ><b>Quel masque utiliser? <i class="fa fa-caret-down"></i></b></p>
+			  <p class="reponse">
+				  <code>
+					 25 <= 2<sup>H&nbsp;</sup> - 2<br>
+					<span class="infosDuMasque"><span class="B">H=5</span>, <span class="R">S=3</span> </span><br>				 
+				  </code>
+				  
+				  <code>
+					nv masque = ancien masque + <span class="R">S</span><br>
+					nv masque = ancien masque + <span class="R">3</span><br>
+					&nbsp;nv masque =  /24 + <span class="R">3</span> = /27<br>
+					<span class="idReponse">nv masque = 255.255.255.<span class="R">224</span></span>
+				  </code>
+			  </p>
+		   </li>
+		</ol>
+		 <div class="breakExo" style="height:2px"></div>
+        <hr>
+	    <h5><u>Conlusion: </u>Calcul du masque</h5>
+		<div class="calcul siZ" style="border:2px solid #ECECEA;" >
+		  <ul type="square" style="text-align:left">
+		    <li>La classe donne <span class="G">R</span></li>
+		    <li>Sion on a <span class="R">S</span> et H: On utilse H</li>
+		  </ul>
+	    </div>
+		
+		<div class="breakExo"></div>
+	</div><!-- div#content -->
+	<script type="text/javascript" src="../js/dropdown.js"></script><!-- Afficher/Cacher les réponses -->
+</body>
+</html>
