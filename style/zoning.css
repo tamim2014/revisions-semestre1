@@ -25,43 +25,31 @@
 			border:2px solid whitesmoke;   
 			box-shadow:
 				0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
-				0px 2px 2px 0px rgba(255, 255, 255, 0.5); 
-			 
-			 border-radius: 10px 0px 0px 10px;
+				0px 2px 2px 0px rgba(255, 255, 255, 0.5); 			 
+			border-radius: 10px 0px 0px 10px;
         }
 		
 	   /* j'essai ici d'appliquer le test bruno - mais sans sucess pour l'instant */
 		@media all and (max-width: 600px){ 
 		   #contenair {
 			   float: inherit;
-	           width: 100%;
-		
+	           width: 100%;		
 		   }
 		   
-		   aside {
-	
+		   aside {	
 			   float:left;
-			   width:200px;
-			  
+			   width:200px;			  
 			}
 
-		   aside.sidebarDroite {
-	
-			   display:none;
-			  
+		   aside.sidebarDroite {	
+			   display:none;			  
 			}
-	
-		   
 	
             main {			   
 			   float:left;
 			   width:200px;
-			   padding:0;
-
-			  
-			}		   
-						
-			
+			   padding:0;			  
+			}		   			
 		}
 		
 		

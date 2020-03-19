@@ -18,8 +18,21 @@
     <script type="text/javascript" src="js/menu907.js"></script>
     <script type="text/javascript" src="js/accesAuxPopUps.js"></script>
 	<style>
+	/* nw zoning : à mettre dans zonng.css */
+	aside.sidebarGauche { 
+	    position:static; 
+		margin-left:1%; 
+		width:15%; 
+		float:left;  
+		} 
+	main { 
+	    position:static; 
+		margin-left:17%;
+        width:70em;  /* width:83%; */		
+		} 
+
 	
-    /*  MENU ACCORDEON DI COLONE LATERALE  */
+    /*  MENU ACCORDEON DU COLONE LATERALE : à mettre dans menu_accordeon.css */
 	
 	.dropdown-btn {
 
@@ -99,7 +112,7 @@
 		</div>
 		
 		<!-- Barre laterale gauche  -->
-		<aside class="sidebarGauche" style="height:76%">
+		<aside class="sidebarGauche" style="height:76%;  ">
 				<div id="documenter_sidebar" style=" padding-bottom:0%; height:auto;  "  > 
 					<ol id="documenter_nav" style="width=400px; height:100%; margin-bottom:0; padding-bottom:0;" >
 					    <li><a  href="#" onclick="atelierPosition();" >ATELIER 1: position</a></li>
@@ -132,20 +145,9 @@
 					</div>
 				</div>
 		</aside> 		
-		<!-- Barre laterale droite  -->
-		<!--
-		<aside class="sidebarDroite saut ">
-			<div class="widget-asideD"  >
-				 widget1
-			</div>			
-			<div class="widget-asideD" style=" clear:both;" >			
-				widget2
-			</div>
-		</aside>
-		-->
 		
 		<!-- Contenu: pricipal -->	
-		<main >		    
+		<main  >		    
 			<section class="bordureSupSection1 " ></section>			
 			<section class="conteneurDesSujet"  >			
 				  <h2 class="matiere">HTML</h2>		  
