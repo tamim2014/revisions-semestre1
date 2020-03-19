@@ -18,13 +18,32 @@
     <script type="text/javascript" src="js/menu907.js"></script>
     <script type="text/javascript" src="js/accesAuxPopUps.js"></script>
 	<style>
-	/* nw zoning : à mettre dans zonng.css */
+	
+	
+	
+	/* new zoning : à mettre dans zonng.css */
+	
 	aside.sidebarGauche { 
 	    position:static; 
 		margin-left:1%; 
 		width:15%; 
 		float:left;  
-		} 
+		}
+	/* Ajout d'un menu horizontal */
+	#menu {
+	    height:48px;
+		background:whitesmoke; 
+	}
+	#menu a {
+	    float:left;
+		padding:14px 41px ; /* 14px 16px ; */	
+		text-decoration:none;
+		font-size:17px;
+	}
+	#menu a:hover {
+	     background:#ccf;
+	}
+		
 	main { 
 	    position:static; 
 		margin-left:17%;
@@ -55,6 +74,7 @@
 		color:#f7f7f9;
 		border-top:1px solid #444444;
 	}
+	
 	.dropdown-container a:hover{		  
 		background:#ccf;
 		color:#115;
@@ -77,9 +97,11 @@
 	.dropdown-container {
 	  display:none;
 	}
+	
 	.dropdown:hover .dropdown-container {
 	  display:block;
 	}
+	
 	</style>
 	
   </head>
@@ -94,7 +116,14 @@
         <button class="openbtn" onclick="openNav()">☰ </button>
         <hr  id="fantaisieRELOU1" >
         <hr  id="fantaisieRELOU3">
+        
     </header>
+			<div id="menu">
+		  <a href="#" >item1</a>
+		  <a href="#" >item2</a>
+		  <a href="#" >item3</a>
+		  <a href="#" >item4</a>
+		</div>	
 	<div id="contenair"  > <!-- contient: le menu, les 2 barre laterales, et le contenu main  -->
 	
 		<!-- Cacher le menu a gauche du header mais il doit sortie avec la mm hauteur que le header -->
