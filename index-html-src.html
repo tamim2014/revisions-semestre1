@@ -17,57 +17,6 @@
 
     <script type="text/javascript" src="js/menu907.js"></script>
     <script type="text/javascript" src="js/accesAuxPopUps.js"></script>
-	<style>
-	
-    /*  MENU ACCORDEON DI COLONE LATERALE  */
-	
-	.dropdown-btn {
-
-	  display: block; 
-	  
-	  padding-right:1em; 
-	  font-size: inherit;
-	  text-decoration: none;
-	  color: #818181; 
-
-	  border: none;
-	  outline: none;
-	  background: none; 
-	  text-align: right;
-	  width: 100%;  
-	}
-
-	#documenter_sidebar ol a:hover, .dropdown-btn:hover{
-		background:#444444;
-		color:#f7f7f9;
-		border-top:1px solid #444444;
-	}
-	.dropdown-container a:hover{		  
-		background:#ccf;
-		color:#115;
-		border-top:1px solid #ccf;
-	}
-
-	.dropdown-btn, .dropdown-container a{
-		display:block;
-		border-top:1px solid #ddd;
-		border-bottom:1px solid #aaa;
-		padding:6px 15px 7px 0;
-		text-align:right;
-		text-decoration:none; 
-		color:#6F6F6F;     
-		cursor:pointer;
-        font-size:12px;
-        font-weight:bold; 		 
-	}
-    
-	.dropdown-container {
-	  display:none;
-	}
-	.dropdown:hover .dropdown-container {
-	  display:block;
-	}
-	</style>
 	
   </head>
   <body>
@@ -101,39 +50,22 @@
 		<!-- Barre laterale gauche  -->
 		<aside class="sidebarGauche" style="height:76%">
 				<div id="documenter_sidebar" style=" padding-bottom:0%; height:auto;  "  > 
-					<ol id="documenter_nav" style="width=400px; height:100%; margin-bottom:0; padding-bottom:0;" >
+					<ol id="documenter_nav" style="width=400px;" >
 					    <li><a  href="#" onclick="atelierPosition();" >ATELIER 1: position</a></li>
-						<li><a  href="#" onclick="#" >ATELIER 2</a></li>
-						<li><a  href="#" onclick="#" >ATELIER 3</a></li>                          					
+                        <li><a  href="#" onclick="webUn();" >WEB1: Les bases</a></li>					
+						<li><a  href="#" onclick="pop_tpCinqHTML();" >TP5 Zoning</a></li>
+                        <li><a  href="#" onclick="pop_tdSix();" >TD6 Zoning2</a></li>							
+						<li><a  href="#" onclick="pop_tpQuatreTableau();" >TP4 Tableaux</a></li>
+                        <li><a  href="#" onclick="pop_tpTroisFormulaire();" >TP3 Formulaire</a></li>						
+						<li><a  href="#" onclick="pop_tpDeuxFrame();" >TP2 Frame URGENT</a></li>						
+                        <li><a  href="#" onclick="pop_tpQuatreCss();" >TP4 CSS</a></li>
+                      	<li><a  href="#" onclick="pop_tpUnCss();" >TP1 CSS</a></li>
+                        <li><a  href="#" onclick="formulaire_HTML();" >Aide-mémoire</a></li>						
 					</ol>
-					<div class="dropdown" style="margin-top:0;">
-					  <button class="dropdown-btn">Semestre2:Web2 
-						<i class="fa fa-caret-down"></i>
-					  </button>
-					  <div class="dropdown-container">
-					    <a  href="#"  >cours</a> 
-					  </div>
-					</div>
-					<div class="dropdown" style="margin-top:0;">
-					  <button class="dropdown-btn">Semestre1:Web1 
-						<i class="fa fa-caret-down"></i>
-					  </button>
-					  <div class="dropdown-container">
-					    <a  href="#" onclick="webUn();" >WEB1: Les bases</a> 
-						<a  href="#" onclick="pop_tpCinqHTML();" >TP5 Zoning</a>
-                        <a  href="#" onclick="pop_tdSix();" >TD6 Zoning2</a>							
-						<a  href="#" onclick="pop_tpQuatreTableau();" >TP4 Tableaux</a>
-                        <a  href="#" onclick="pop_tpTroisFormulaire();" >TP3 Formulaire</a>						
-						<a  href="#" onclick="pop_tpDeuxFrame();" >TP2 Frame URGENT</a>						
-                        <a  href="#" onclick="pop_tpQuatreCss();" >TP4 CSS</a>
-                      	<a  href="#" onclick="pop_tpUnCss();" >TP1 CSS</a>
-                        <a  href="#" onclick="formulaire_HTML();" >Aide-mémoire</a>
-					  </div>
-					</div>
 				</div>
-		</aside> 		
+		</aside> 
+		
 		<!-- Barre laterale droite  -->
-		<!--
 		<aside class="sidebarDroite saut ">
 			<div class="widget-asideD"  >
 				 widget1
@@ -142,7 +74,6 @@
 				widget2
 			</div>
 		</aside>
-		-->
 		
 		<!-- Contenu: pricipal -->	
 		<main >		    
@@ -198,11 +129,13 @@
 	</div> <!-- div#contenair -->
 	
 	<hr width=100% color=whitesmoke style="display:inline-block;">
-	<div class="conteneur-reponses"></div> 	           
+	<div class="conteneur-reponses"></div> 
+
+	           
     <footer>     
 		Pied de page (footer)<br>
 	    <div class="content-footer"  >         
-            <div class="ndreda-footer" > 		  
+                <div class="ndreda-footer" > 		  
                 <ul type="square">
                     <li>Le client envoie des requêtes </li>
                     <li>Le serveur attend les requêtes des clients et y répond. </li>

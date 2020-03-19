@@ -71,7 +71,7 @@ div.dropdown-content a#addArticle:hover, div.dropdown-content a#editArticle:hove
 #documenter_sidebar ol{
     font-size:12px;
     font-weight:700;
-    min-height:150px;
+    /* min-height:150px;*/
     height:75%;
     overflow:auto;
 }
