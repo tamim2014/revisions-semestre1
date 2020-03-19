@@ -34,9 +34,24 @@
 	    height:48px;
 		background:whitesmoke; 
 	}
+	/* Boutons ouverture/fermeture de la barre laterale*/
+	
+	.closebtn2 {
+	 float:right;
+	 padding:0.4em;
+	 text-decoration:none;
+	 color:red;
+	 font-size:1.2em;
+	 font-weight:bold;
+	}
+	.openbtn2{
+	     float:left;
+	}
+	
+	/*************************************************/
 	#menu a {
 	    float:left;
-		padding:14px 41px ; /* 14px 16px ; */	
+		padding:14px 41px 12.5px 41px; /* 14px 16px ; */	
 		text-decoration:none;
 		font-size:17px;
 	}
@@ -105,7 +120,7 @@
 	</style>
 	
   </head>
-  <body>
+  <body onload="openBarreGauche();">
     <header>
         <hr  id="fantaisieRELOU3">
         <hr  id="fantaisieRELOU1">
@@ -118,7 +133,8 @@
         <hr  id="fantaisieRELOU3">
         
     </header>
-			<div id="menu">
+		<div id="menu">
+		  <button class="openbtn openbtn2" onclick="openBarreGauche()">☰ </button>
 		  <a href="#" >item1</a>
 		  <a href="#" >item2</a>
 		  <a href="#" >item3</a>
@@ -141,9 +157,10 @@
 		</div>
 		
 		<!-- Barre laterale gauche  -->
-		<aside class="sidebarGauche" style="height:76%;  ">
-				<div id="documenter_sidebar" style=" padding-bottom:0%; height:auto;  "  > 
-					<ol id="documenter_nav" style="width=400px; height:100%; margin-bottom:0; padding-bottom:0;" >
+		<aside class="sidebarGauche" id="sidebarGauche" style="height:76%;  ">
+		        <a href="javascript:void(0)" class="closebtn closebtn2" onclick="closeBarreGauche()">×</a>
+				<div id="documenter_sidebar" style="padding-bottom:0%; height:auto;"  > 
+					<ol id="documenter_nav" style=" height:100%; margin-bottom:0; padding-bottom:0;" >
 					    <li><a  href="#" onclick="atelierPosition();" >ATELIER 1: position</a></li>
 						<li><a  href="#" onclick="#" >ATELIER 2</a></li>
 						<li><a  href="#" onclick="#" >ATELIER 3</a></li>                          					
@@ -176,7 +193,7 @@
 		</aside> 		
 		
 		<!-- Contenu: pricipal -->	
-		<main  >		    
+		<main id="main" >		    
 			<section class="bordureSupSection1 " ></section>			
 			<section class="conteneurDesSujet"  >			
 				  <h2 class="matiere">HTML</h2>		  
@@ -243,5 +260,24 @@
         </div><!-- conteneur-reponses Q1.1 -->	  
     </footer>
     <script type="text/javascript" src="js/top.js"></script>
+	<script>
+	var barre = document.getElementById("sidebarGauche");
+	var main = document.getElementById("main")
+
+	function openBarreGauche(){
+	  barre.style.display = "block";
+	  barre.style.width = "15%";
+	  main.style.marginLeft = "17%";
+	  barre.style.marginLeft= "0";
+	  barre.style.borderRadius= "0";
+	}
+
+	function closeBarreGauche(){
+	
+	  barre.style.display = "none"; /*   barre.style.width = "0";  */
+	  main.style.marginLeft= "0";
+	
+	}
+</script>
   </body>
 </html>
