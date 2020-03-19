@@ -49,13 +49,13 @@
 	}
 	
 	/*************************************************/
-	#menu a {
+	#menu a, #menu object {
 	    float:left;
 		padding:14px 41px 12.5px 41px; /* 14px 16px ; */	
 		text-decoration:none;
 		font-size:17px;
 	}
-	#menu a:hover {
+	#menu a:hover, #menu object:hover {
 	     background:#ccf;
 	}
 		
@@ -118,6 +118,14 @@
 	}
 	
 	</style>
+	<script type="text/javascript" src="js/jquery3.4.1.min.js"></script> <!-- pour la pagination -->	
+	<script>
+	$(document).ready(function(){
+	   $("#coursDeux").click(function(){			  	
+			$('#section2').replaceWith('<object id="section2" data="cours2web2.html" type="text/html" style="width:73%; height:1000px; margin-bottom:0; padding:0;" ></object>'); 
+       });
+	});
+	</script>
 	
   </head>
   <body onload="openBarreGauche();">
@@ -135,8 +143,8 @@
     </header>
 		<div id="menu">
 		  <button class="openbtn openbtn2" onclick="openBarreGauche()">☰ </button>
-		  <a href="#" >item1</a>
-		  <a href="#" >item2</a>
+		  <a href="#" >item1</a>		  
+		  <a href="#" id="coursDeux" >Cours2</a>
 		  <a href="#" >item3</a>
 		  <a href="#" >item4</a>
 		</div>	
@@ -193,9 +201,9 @@
 		</aside> 		
 		
 		<!-- Contenu: pricipal -->	
-		<main id="main" >		    
-			<section class="bordureSupSection1 " ></section>			
-			<section class="conteneurDesSujet"  >			
+		<main id="main" >	
+			<section class="bordureSupSection1 " id="section1" ></section>			
+			<section class="conteneurDesSujet" id="section2"   >			
 				  <h2 class="matiere">HTML</h2>		  
 				  <div class="success  structureSujet"  >			  			  
 					<p><u><strong>Travaux Pratiques:</strong> Travaux rendus</u></p>
@@ -252,8 +260,8 @@
 	    <div class="content-footer"  >         
             <div class="ndreda-footer" > 		  
                 <ul type="square">
-                    <li>Le client envoie des requêtes </li>
-                    <li>Le serveur attend les requêtes des clients et y répond. </li>
+                    <li>Convertisseur en ligne:&emsp;rtf &rArr; html </li>
+                    <li>Lien:&emsp;<a href="https://convertio.co/fr/download/c5eba97c63aa7512996b5320c5bf789ed72c2e/" style="color:#f7f7f9; text-decoration:none">convertico.co</a> </li>
                 </ul>
             </div>		
 			<span class="copyright_"><span style="color:gray;">2019 &copy; -</span> Master Handi</span>
@@ -266,16 +274,19 @@
 
 	function openBarreGauche(){
 	  barre.style.display = "block";
-	  barre.style.width = "15%";
-	  main.style.marginLeft = "17%";
+	  barre.style.width = "15%";	  
 	  barre.style.marginLeft= "0";
 	  barre.style.borderRadius= "0";
+	  
+	  main.style.marginLeft = "17%";
+      main.style.width = "114%"; 	  
 	}
 
 	function closeBarreGauche(){
 	
 	  barre.style.display = "none"; /*   barre.style.width = "0";  */
 	  main.style.marginLeft= "0";
+	  main.style.width= "138%";
 	
 	}
 </script>
