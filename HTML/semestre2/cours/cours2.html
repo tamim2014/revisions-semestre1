@@ -7,16 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">  
 	
-    <link rel="stylesheet" href="style/zoning.css" media="screen" />	
-    <link rel="stylesheet" href="style/contenuAccueil.css" media="screen" />
-    <link rel="stylesheet" href="style/calculatrice.css" media="screen" />
-    <link rel="stylesheet" href="style/examen.css" media="screen" />
-    <link rel="stylesheet" href="style/menu907.css" media="screen" />   
-	<link rel="stylesheet" href="style/top.css"  media="screen"><!--  Bouton remonter en haut de page -->
-    <link rel="stylesheet" href="style/menu_accordeon.css" media="all">
+    <link rel="stylesheet" href="../../../style/zoning.css" media="screen" />	
+    <link rel="stylesheet" href="../../../style/contenuAccueil.css" media="screen" />
+    <link rel="stylesheet" href="../../../style/calculatrice.css" media="screen" />
+    <link rel="stylesheet" href="../../../style/examen.css" media="screen" />
+    <link rel="stylesheet" href="../../../style/menu907.css" media="screen" />   
+	<link rel="stylesheet" href="../../../style/top.css"  media="screen"><!--  Bouton remonter en haut de page -->
+    <link rel="stylesheet" href="../../../style/menu_accordeon.css" media="all">
 
-    <script type="text/javascript" src="js/menu907.js"></script>
-    <script type="text/javascript" src="js/accesAuxPopUps.js"></script>
+    <script type="text/javascript" src="../../../js/menu907.js"></script>
+    <script type="text/javascript" src="../../../js/accesAuxPopUps.js"></script>
 	<style>
 	
 	
@@ -118,13 +118,55 @@
 	}
 	
 	</style>
-	<script type="text/javascript" src="js/jquery3.4.1.min.js"></script> <!-- pour la pagination -->	
+	<script type="text/javascript" src="../../../js/jquery3.4.1.min.js"></script> <!-- pour la pagination -->	
 	<script>
-	$(document).ready(function(){
-	   $("#coursDeux").click(function(){			  	
-			$('#section2').replaceWith('<object id="section2" data="cours2web2.html" type="text/html" style="width:73%; height:1000px; margin-bottom:0; padding:0;" ></object>'); 
-       });
-	});
+		$(document).ready(function(){
+		   $("#coursDeux").click(function(){			  	
+				$('#section2').replaceWith('<object id="section2" data="cours2web2.html" type="text/html" style="width:73%; height:1000px; margin-bottom:0; padding:0;" ></object>'); 
+		   });
+		});
+		
+	    // mise à jour liens pop du semestre1
+		function atelierPosition() 
+		{                 
+		    window.open("../../../HTML/atelier1/index.html", 'Popup', 'scrollbars=1, Menubar=1, resizable=1, height=510, width= 808 ,  top=125, left=227,  toolbar=1  '); return false;          
+		}		
+		function webUn()
+		{                  
+		    window.open("../../../HTML/coursHTML/index.html", 'Popup', 'scrollbars=1, Menubar=1, resizable=1, height=510, width= 808 ,  top=125, left=227,  toolbar=1  '); return false;          
+		}
+		function pop_tpCinqHTML()
+		{           
+		    window.open("../../../HTML/tp5-zoning/index.html", 'Popup', 'scrollbars=1, Menubar=1, resizable=1, height=510, width= 808 ,  top=125, left=227,  toolbar=1  '); return false;          
+		}
+		function pop_tdSix()
+        {           
+		    window.open("../../../HTML/td6-zoning2/myTemplatePop.html", 'Popup', 'scrollbars=1, Menubar=1, resizable=1, height=510, width= 808 ,  top=125, left=227,  toolbar=1  '); return false;          
+		}
+		function pop_tpQuatreTableau()
+        {           
+		    window.open("../../../HTML/tp4-tableau/index.html", 'Popup', 'scrollbars=1, Menubar=1, resizable=1, height=510, width= 808 ,  top=125, left=227,  toolbar=1  '); return false;          
+		}
+		function pop_tpTroisFormulaire()
+        {           
+		    window.open("../../../HTML/tp3-formulaire/index.html", 'Popup', 'scrollbars=1, Menubar=1, resizable=1, height=510, width= 808 ,  top=125, left=227,  toolbar=1  '); return false;          
+		}
+		function pop_tpDeuxFrame()
+        {           
+		    window.open("../../../HTML/tp2-frame/index.html", 'Popup', 'scrollbars=1, Menubar=1, resizable=1, height=510, width= 808 ,  top=125, left=227,  toolbar=1  '); return false;          
+		}
+		function pop_tpQuatreCss()
+        {           
+		    window.open("../../../HTML/tp4-css/index.html", 'Popup', 'scrollbars=1, Menubar=1, resizable=1, height=510, width= 808 ,  top=125, left=227,  toolbar=1  '); return false;          
+		}
+		function pop_tpUnCss()
+        {           
+		    window.open("../../../HTML/tp1-css/index.html", 'Popup', 'scrollbars=1, Menubar=1, resizable=1, height=510, width= 808 ,  top=125, left=227,  toolbar=1  '); return false;          
+		}
+		function formulaire_HTML()
+        {           
+		    window.open("../../../HTML/tools/index.html", 'Popup', 'scrollbars=1, Menubar=1, resizable=1, height=510, width= 808 ,  top=125, left=227,  toolbar=1  '); return false;          
+		}
 	</script>
 	
   </head>
@@ -134,7 +176,7 @@
         <hr  id="fantaisieRELOU1">
         <h1  style='text-align:center'>Master MIASHS : Paris8 </h1>
         <h3  style='text-align:center'>Revisions - Session 2019/2020  </h3>
-        <h5  style='text-align:center; font-style:italic;'>TD, TP, Fiches-synthèse, Sujets corrigés </h5>
+        <h5  style='text-align:center; font-style:italic;'>Semestre2 - Web2 : Cours2( Web accessible ) </h5>
         <h1  style='text-align:center'>---</h1>
         <button class="openbtn" onclick="openNav(); openBarreGauche();">☰ </button>
         <hr  id="fantaisieRELOU1" >
@@ -142,28 +184,27 @@
         
     </header>
 		<div id="menu">
-		  <!--
-			  <button class="openbtn openbtn2" onclick="openBarreGauche()">☰ </button>
-			  <!--
-			  <a href="#" >item1</a>		  
-			  <a href="#" id="coursDeux" >Cours2</a>
-			  <a href="#" >item3</a>
-			  <a href="#" >item4</a>
-		  -->
+		  
+		  <!-- <button class="openbtn openbtn2" onclick="openBarreGauche()">☰ </button> -->
+		  <a href="#" id="coursUn">Cours1</a>		  
+		  <a href="#" id="coursDeux" >Cours2</a>
+		  <a href="#" id="coursTrois">Cours3</a>
+		  <a href="#" id="coursQuatre">Referencement web</a>
+		  <a href="#" id="coursCinq">Raccourci clavier</a>
 		</div>	
 	<div id="contenair"  > <!-- contient: le menu, les 2 barre laterales, et le contenu main  -->
 	
 		<!-- Cacher le menu a gauche du header mais il doit sortie avec la mm hauteur que le header -->
-		<div id="barre-laterale" >
-			<div id="mySidepanel" class="sidepanel">
+		<div id="barre-laterale"  >
+			<div id="mySidepanel" class="sidepanel" >
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-				<a href="index.html" id="iconAccueil"><img src="photos/accueil.png" ></a>
-				<a href="index-php.html">PHP</a>
-				<a href="index-html.html">HTML</a>
-				<a href="index-reseau.html">R&eacute;seaux</a>
-				<a href="index-java.html">Java</a>			
-				<a href="index-lsf.html">LSF</a>
-				<a href="index-cms.html">CMS</a>
+				<a href="../../../index.html" id="iconAccueil"><img src="../../../photos/accueil.png" ></a>
+				<a href="../../../index-php.html">PHP</a>
+				<a href="../../../index-html.html">HTML</a>
+				<a href="../../../index-reseau.html">R&eacute;seaux</a>
+				<a href="../../../index-java.html">Java</a>			
+				<a href="../../../index-lsf.html">LSF</a>
+				<a href="../../../index-cms.html">CMS</a>
 			</div>
 		</div>
 		
@@ -181,7 +222,7 @@
 						<i class="fa fa-caret-down"></i>
 					  </button>
 					  <div class="dropdown-container">
-					    <a  href="HTML/semestre2/cours/cours2.html"  >Cours: Web accssible</a> 
+					    <a  href="#"  >Cours: Web accssible</a> 
 					  </div>
 					</div>
 					<div class="dropdown" style="margin-top:0;">
@@ -207,43 +248,47 @@
 		<main id="main" >	
 			<section class="bordureSupSection1 " id="section1" ></section>			
 			<section class="conteneurDesSujet" id="section2"   >			
-				  <h2 class="matiere">HTML</h2>		  
+				  <h2 class="matiere">Semestre2: Web2</h2>		  
 				  <div class="success  structureSujet"  >			  			  
-					<p><u><strong>Travaux Pratiques:</strong> Travaux rendus</u></p>
+					<p><u><strong>Les types de handicaps:</strong> Les mieux connus</u></p>
 					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpUnCss();" target="_self">						
-							<strong>TP1</strong> CSS:...................<b></b>					
+							<strong>Handicap visuel:</strong> Aveugle et malvoyant<b></b>					
 					</a></p>
 					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpQuatreCss();" target="_self">						
-							<strong>TP4</strong> CSS:...................<b></b>					
+							<strong>Handicap auditif;</strong> Sourd et malentendant<b></b>					
 					</a></p>
 					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpTroisFormulaire();" target="_self">						
-							<strong>TP3</strong> Formulaire:...................<b></b>					
+							<strong>Handicap moteur:</strong> Pas d’accès aux perif d'entrée(souris clavier)<b></b>					
 					</a></p>
 					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpQuatreTableau();" target="_self">						
-							<strong>TP4</strong> Tableaux:...................<b></b>					
+							<strong>Handicap cognitif:</strong> Troubles du langage et d’apprentissage(dyslexie)  <b></b>					
 					</a></p>
-					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpCinqHTML();" target="_self">						
-							<strong>TP5</strong> Zoning:...................<b></b>					
-					</a></p>
+		
 					<a href="#"  class="unset_"  onclick="pop_menuHTML();">lire la suite( Cours / &Eacute;nonc&eacute;s des sujets ) ...</a>	
 					<p></p>
 				  </div>
 		         <div class="info  structureSujet"  >			  			  
-					<p><u><strong>Travaux Pratiques:</strong> Travaux rendus</u></p>
+					<p><u><strong>Les aides techniques:</strong> Pour le web</u></p>
 					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpUnCss();" target="_self">						
-							<strong>TP1</strong> CSS:...................<b></b>					
+							<strong>Mode graphiques:</strong> Chrome, IE , Firefox, Safari<b></b>					
+					</a></p>
+					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpUnCss();" target="_self">						
+							<strong>Mode texte:</strong> Lynx<b></b>					
+					</a></p>
+					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpUnCss();" target="_self">						
+							<strong>lecteurs d'écran:</strong> Jaws pour Microsoft windows<b></b>					
 					</a></p>
 					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpQuatreCss();" target="_self">						
-							<strong>TP4</strong> CSS:...................<b></b>					
+							<strong>Navigateurs vocaux:</strong> Home Page Reader pour IBM et Jaws<b></b>					
 					</a></p>
 					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpTroisFormulaire();" target="_self">						
-							<strong>TP3</strong> Formulaire:...................<b></b>					
+							<strong>Logiciels d'agrandissement:</strong> ZoomText, Lynx<b></b>					
 					</a></p>
 					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpQuatreTableau();" target="_self">						
-							<strong>TP4</strong> Tableaux:...................<b></b>					
+							<strong>Logicils de reconnaissance vocales:</strong> IBM Via Voice, Dragon Naturally Speaking <b></b>					
 					</a></p>
 					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpCinqHTML();" target="_self">						
-							<strong>TP5</strong> Zoning:...................<b></b>					
+							<strong>La navigation au clavier:</strong> handler, accesskey, tabindex <b></b>					
 					</a></p>
 					<a href="#"  class="unset_"  onclick="pop_menuHTML();">lire la suite( Cours / &Eacute;nonc&eacute;s des sujets ) ...</a>	
 					<p></p>
@@ -252,7 +297,7 @@
 		</main>
 		
 		<button onclick="topFunction()" id="myBtn" title="Go to top" >
-		    <img  src="photos/top.JPG" id="imageToTop">
+		    <img  src="../../../photos/top.JPG" id="imageToTop">
 	    </button>
 	</div> <!-- div#contenair -->
 	
@@ -270,7 +315,7 @@
 			<span class="copyright_"><span style="color:gray;">2019 &copy; -</span> Master Handi</span>
         </div><!-- conteneur-reponses Q1.1 -->	  
     </footer>
-    <script type="text/javascript" src="js/top.js"></script>
+    <script type="text/javascript" src="../../../js/top.js"></script>
 	<script>
 	var barre = document.getElementById("sidebarGauche");
 	var main = document.getElementById("main")
@@ -282,6 +327,7 @@
 	  barre.style.borderRadius= "0";
 	  
 	  main.style.marginLeft = "17%";
+	
       //main.style.width = "114%"; 
       main.style.width = "113%"; 	  
 	}
