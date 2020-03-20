@@ -90,6 +90,7 @@
 		border-top:1px solid #444444;
 	}
 	
+
 	.dropdown-container a:hover{		  
 		background:#ccf;
 		color:#115;
@@ -106,7 +107,8 @@
 		color:#6F6F6F;     
 		cursor:pointer;
         font-size:12px;
-        font-weight:bold; 		 
+        font-weight:bold; 	
+   		
 	}
     
 	.dropdown-container {
@@ -170,15 +172,15 @@
 	</script>
 	
   </head>
-  <body onload="openBarreGauche();">
-    <header>
+  <body onload="openBarreGauche();" >
+    <header id="entete">
         <hr  id="fantaisieRELOU3">
         <hr  id="fantaisieRELOU1">
         <h1  style='text-align:center'>Master MIASHS : Paris8 </h1>
         <h3  style='text-align:center'>Revisions - Session 2019/2020  </h3>
         <h5  style='text-align:center; font-style:italic;'>Semestre2 - Web2 : Cours2( Web accessible ) </h5>
         <h1  style='text-align:center'>---</h1>
-        <button class="openbtn" onclick="openNav(); openBarreGauche();">☰ </button>
+        <button class="openbtn" onclick="openNav(); openBarreGauche(); topFunction(); ">☰ </button>
         <hr  id="fantaisieRELOU1" >
         <hr  id="fantaisieRELOU3">
         
@@ -212,12 +214,8 @@
 		<aside class="sidebarGauche" id="sidebarGauche" style="height:76%;  ">
 		        <a href="javascript:void(0)" class="closebtn closebtn2" onclick="closeBarreGauche(); closeNav();">×</a>
 				<div id="documenter_sidebar" style="padding-bottom:0%; height:auto;"  > 
-					<ol id="documenter_nav" style=" height:100%; margin-bottom:0; padding-bottom:0;" >
-					    <li><a  href="#" onclick="atelierPosition();" >ATELIER 1: position</a></li>
-						<li><a  href="#" onclick="#" >ATELIER 2</a></li>
-						<li><a  href="#" onclick="#" >ATELIER 3</a></li>                          					
-					</ol>
-					<div class="dropdown" style="margin-top:0;">
+
+					<div class="dropdown" style="margin-top:0; ">
 					  <button class="dropdown-btn">Semestre2:Web2 
 						<i class="fa fa-caret-down"></i>
 					  </button>
@@ -225,6 +223,11 @@
 					    <a  href="#"  >Cours: Web accssible</a> 
 					  </div>
 					</div>
+					<ol id="documenter_nav" style=" height:100%; margin-bottom:0; padding-bottom:0;  margin-top:0;" >
+					    <li><a  href="#" onclick="atelierPosition();" >ATELIER 1: position</a></li>
+						<li><a  href="#" onclick="#" >ATELIER 2</a></li>
+						<li><a  href="#" onclick="#" >ATELIER 3</a></li>                          					
+					</ol>
 					<div class="dropdown" style="margin-top:0;">
 					  <button class="dropdown-btn">Semestre1:Web1 
 						<i class="fa fa-caret-down"></i>
