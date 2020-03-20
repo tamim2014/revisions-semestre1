@@ -1,0 +1,54 @@
+    /*  MENU ACCORDEON DU COLONE LATERALE  */
+	
+	.dropdown-btn {
+
+	  display: block; 
+	  
+	  padding-right:1em; 
+	  font-size: inherit;
+	  text-decoration: none;
+	  color: #818181; 
+
+	  border: none;
+	  outline: none;
+	  background: none; 
+	  text-align: right;
+	  width: 100%;  
+	}
+
+	#documenter_sidebar ol a:hover, .dropdown-btn:hover{
+		background:#444444;
+		color:#f7f7f9;
+		border-top:1px solid #444444;
+	}
+	
+
+	.dropdown-container a:hover{		  
+		background:#ccf;
+		color:#115;
+		border-top:1px solid #ccf;
+	}
+
+	.dropdown-btn, .dropdown-container a{
+		display:block;
+		border-top:1px solid #ddd;
+		border-bottom:1px solid #aaa;
+		padding:6px 15px 7px 0;
+		text-align:right;
+		text-decoration:none; 
+		color:#6F6F6F;     
+		cursor:pointer;
+        font-size:12px;
+        font-weight:bold; 	
+   		
+	}
+    
+	.dropdown-container {
+	  display:none;
+	  background-color: #ddd; /* j'hesite entre #ddd et #ccc, PAS #8c8b81; */
+
+	}
+	
+	.dropdown:hover .dropdown-container {
+	  display:block;
+	}
