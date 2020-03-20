@@ -1,0 +1,65 @@
+	body{
+	  width:auto;
+	  overflow-x:hidden;
+	}
+	
+	
+	/* new zoning : à mettre dans zonng.css */
+	
+	aside.sidebarGauche { 
+	    position:static; 
+		margin-left:1%; 
+		width:15%; 
+		float:left;  
+		}
+	/* Ajout d'un menu horizontal */
+	#menu {
+	    height:48px;
+		background:whitesmoke; 
+	}
+	/* Boutons ouverture/fermeture de la barre laterale*/
+	
+	.closebtn2 {
+	 float:right;
+	 padding:0.4em;
+	 text-decoration:none;
+	 color:red;
+	 font-size:1.2em;
+	 font-weight:bold;
+	}
+	.openbtn2{
+	     float:left;
+	}
+	
+	/*************************************************/
+	#menu a, #menu object {
+	    float:left;
+		padding:14px 41px 12.5px 41px; /* 14px 16px ; */	
+		text-decoration:none;
+		font-size:17px;
+	}
+	#menu a:hover, #menu object:hover {
+	     background:#ccf;
+	}
+	
+	.sidebarGauche {
+		border:2px solid whitesmoke;   
+		box-shadow:
+			0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+			0px 2px 2px 0px rgba(255, 255, 255, 0.5); 			 
+		border-radius: 10px 0px 0px 10px;
+    }
+		
+	main { 
+	    position:static; 
+		margin-left:17%;
+        width:70em;  /* width:83%; */		
+	}
+
+		footer {     
+		  clear:both; /* forcer l’affichage sous le contenu */
+		  background: #555; text-align:center; color:white;
+		  height:222px;
+		  padding:100px 0px 0px 0px;
+		 
+		}	
