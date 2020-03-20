@@ -118,6 +118,23 @@
 	.dropdown:hover .dropdown-container {
 	  display:block;
 	}
+	/* Sticky header */
+	
+	.sticky-ejectBtn{
+	  position:fixed;
+	  top:0px;		 
+      text-align:left;
+	  margin-right:16px;	  
+	}
+
+	.sticky-menu{
+	  position:fixed;
+	  top:0;
+      width:95.5%;
+	  padding-left:32px;
+
+	  background:#ddd !important;   	  
+	}
 	
 	</style>
 	<script type="text/javascript" src="../../../js/jquery3.4.1.min.js"></script> <!-- pour la pagination -->	
@@ -179,21 +196,21 @@
         <h1  style='text-align:center'>Master MIASHS : Paris8 </h1>
         <h3  style='text-align:center'>Revisions - Session 2019/2020  </h3>
         <h5  style='text-align:center; font-style:italic;'>Semestre2 - Web2 : Cours2( Web accessible ) </h5>
-        <h1  style='text-align:center'>---</h1>
-        <button class="openbtn" onclick="openNav(); openBarreGauche(); topFunction(); ">☰ </button>
+        <h1  style='text-align:center' >---</h1>
+        <button class="openbtn" id="ejectBtn" onclick="openNav(); openBarreGauche(); topFunction(); ">☰ </button>
         <hr  id="fantaisieRELOU1" >
         <hr  id="fantaisieRELOU3">
         
     </header>
-		<div id="menu">
-		  
-		  <!-- <button class="openbtn openbtn2" onclick="openBarreGauche()">☰ </button> -->
-		  <a href="#" id="coursUn">Cours1</a>		  
-		  <a href="#" id="coursDeux" >Cours2</a>
-		  <a href="#" id="coursTrois">Cours3</a>
-		  <a href="#" id="coursQuatre">Referencement web</a>
-		  <a href="#" id="coursCinq">Raccourci clavier</a>
-		</div>	
+	<div id="menu">
+	  
+	  <!-- <button class="openbtn openbtn2" onclick="openBarreGauche()">☰ </button> -->
+	  <a href="#" id="coursUn">Cours1</a>		  
+	  <a href="#" id="coursDeux" >Cours2</a>
+	  <a href="#" id="coursTrois">Cours3</a>
+	  <a href="#" id="coursQuatre">Referencement web</a>
+	  <a href="#" id="coursCinq">Raccourci clavier</a>
+	</div>	
 	<div id="contenair"  > <!-- contient: le menu, les 2 barre laterales, et le contenu main  -->
 	
 		<!-- Cacher le menu a gauche du header mais il doit sortie avec la mm hauteur que le header -->
@@ -341,6 +358,24 @@
 	  main.style.marginLeft= "0";
 	  main.style.width= "138%";	
 	}
+	// sticky top menu
+		window.onscroll = function(){ remonter() };
+
+		var ejectBtn = document.getElementById("ejectBtn");
+        var menu = document.getElementById("menu"); 		
+		var positionInitiale = ejectBtn.offsetTop;
+	
+
+		function remonter() {
+		  if (window.pageYOffset > positionInitiale){
+			ejectBtn.classList.add("sticky-ejectBtn");
+			menu.classList.add("sticky-menu");
+		  } else {
+			ejectBtn.classList.remove("sticky-ejectBtn");
+			menu.classList.remove("sticky-menu");
+		  }
+		}
+	
 </script>
   </body>
 </html>
