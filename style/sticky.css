@@ -1,0 +1,39 @@
+	
+	/* Sticky header */
+	
+	.sticky-ejectBtn{
+	  position:fixed;
+	  top:2px;
+      left: 1.2%;	  
+      text-align:left;
+	  margin-right:16px;
+	  height:44px;
+      box-shadow:
+		0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+		0px 2px 2px 0px rgba(255, 255, 255, 0.5) !important;
+  
+    }	
+	
+   /* sticky top menu */
+ 
+	.sticky-menu{
+	  position:fixed;
+	  top:0;
+	  left:1.2%;
+      width:92.7%;
+	  padding-left:48px;
+	  height:46px !important;
+      background-color:#ddd !important;   
+	  box-shadow:
+		0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+		0px 2px 2px 0px rgba(255, 255, 255, 0.5) !important; 
+	}
+	
+   /* sticky barre laterale */
+   
+  .stickySidebar {
+	  position: fixed !important;
+	  top: 10% !important;
+	  left:1.2% !important;
+	  height:auto !important; 
+	}
