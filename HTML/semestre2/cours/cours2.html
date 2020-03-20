@@ -147,6 +147,14 @@
 		0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
 		0px 2px 2px 0px rgba(255, 255, 255, 0.5) !important; 
 	}
+	
+  /* sticky barre laterale */
+  .stickySidebar {
+	  position: fixed !important;
+	  top: 10% !important;
+	  left:0; !important;
+	  height:auto !important;     
+	}
 
 	
 	</style>
@@ -376,7 +384,9 @@
 	window.onscroll = function(){ remonter() };
 
 	var ejectBtn = document.getElementById("ejectBtn");
-	var menu = document.getElementById("menu"); 		
+	var menu = document.getElementById("menu");
+
+    	
 	var positionInitiale = ejectBtn.offsetTop;
 
 
@@ -384,11 +394,15 @@
 	  if (window.pageYOffset > positionInitiale){
 		ejectBtn.classList.add("sticky-ejectBtn");
 		menu.classList.add("sticky-menu");
+		barre.classList.add("stickySidebar");
 	  } else {
 		ejectBtn.classList.remove("sticky-ejectBtn");
 		menu.classList.remove("sticky-menu");
+		barre.classList.remove("stickySidebar");
 	  }
 	}
+	
+
 	
 </script>
   </body>
