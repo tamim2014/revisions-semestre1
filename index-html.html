@@ -120,6 +120,32 @@
 	  display:block;
 	}
 	
+    /* Sticky header */
+	
+	.sticky-ejectBtn{
+	  position:fixed;
+	  top:2px;		 
+      text-align:left;
+	  margin-right:16px;
+	  height:44px;
+      box-shadow:
+		0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+		0px 2px 2px 0px rgba(255, 255, 255, 0.5) !important;
+  
+    }	  
+
+	.sticky-menu{
+	  position:fixed;
+	  top:0;
+      width:93%;
+	  padding-left:48px;
+	  height:46px !important;
+      background-color:#ddd !important;   
+	  box-shadow:
+		0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+		0px 2px 2px 0px rgba(255, 255, 255, 0.5) !important; 
+	}
+	
 	</style>
 	<script type="text/javascript" src="js/jquery3.4.1.min.js"></script> <!-- pour la pagination -->	
 	<script>
@@ -139,7 +165,7 @@
         <h3  style='text-align:center'>Revisions - Session 2019/2020  </h3>
         <h5  style='text-align:center; font-style:italic;'>TD, TP, Fiches-synthèse, Sujets corrigés </h5>
         <h1  style='text-align:center'>---</h1>
-        <button class="openbtn" onclick="openNav(); openBarreGauche(); topFunction();">☰ </button>
+        <button class="openbtn" id="ejectBtn" onclick="openNav(); openBarreGauche(); topFunction();">☰ </button>
         <hr  id="fantaisieRELOU1" >
         <hr  id="fantaisieRELOU3">
         
@@ -295,6 +321,24 @@
 	  barre.style.display = "none"; /*   barre.style.width = "0";  */
 	  main.style.marginLeft= "0";
 	  main.style.width= "137%";	
+	}
+	
+	// sticky top menu
+	window.onscroll = function(){ remonter() };
+
+	var ejectBtn = document.getElementById("ejectBtn");
+	var menu = document.getElementById("menu"); 		
+	var positionInitiale = ejectBtn.offsetTop;
+
+
+	function remonter() {
+	  if (window.pageYOffset > positionInitiale){
+		ejectBtn.classList.add("sticky-ejectBtn");
+		menu.classList.add("sticky-menu");
+	  } else {
+		ejectBtn.classList.remove("sticky-ejectBtn");
+		menu.classList.remove("sticky-menu");
+	  }
 	}
 </script>
   </body>

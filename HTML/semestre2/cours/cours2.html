@@ -121,6 +121,7 @@
 	.dropdown:hover .dropdown-container {
 	  display:block;
 	}
+	
 	/* Sticky header */
 	
 	.sticky-ejectBtn{
@@ -370,23 +371,24 @@
 	  main.style.marginLeft= "0";
 	  main.style.width= "137%";	
 	}
-	// sticky top menu
-		window.onscroll = function(){ remonter() };
-
-		var ejectBtn = document.getElementById("ejectBtn");
-        var menu = document.getElementById("menu"); 		
-		var positionInitiale = ejectBtn.offsetTop;
 	
+	// sticky top menu
+	window.onscroll = function(){ remonter() };
 
-		function remonter() {
-		  if (window.pageYOffset > positionInitiale){
-			ejectBtn.classList.add("sticky-ejectBtn");
-			menu.classList.add("sticky-menu");
-		  } else {
-			ejectBtn.classList.remove("sticky-ejectBtn");
-			menu.classList.remove("sticky-menu");
-		  }
-		}
+	var ejectBtn = document.getElementById("ejectBtn");
+	var menu = document.getElementById("menu"); 		
+	var positionInitiale = ejectBtn.offsetTop;
+
+
+	function remonter() {
+	  if (window.pageYOffset > positionInitiale){
+		ejectBtn.classList.add("sticky-ejectBtn");
+		menu.classList.add("sticky-menu");
+	  } else {
+		ejectBtn.classList.remove("sticky-ejectBtn");
+		menu.classList.remove("sticky-menu");
+	  }
+	}
 	
 </script>
   </body>
