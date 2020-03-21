@@ -22,11 +22,22 @@
 	<script type="text/javascript" src="../../../js/jquery3.4.1.min.js"></script> <!-- pour la pagination -->	
 	<script>
 		$(document).ready(function(){
+		
+		   $("#coursUn").click(function(){			  	
+				$('#section2').replaceWith('<object id="section2" data="cours1web2.html" type="text/html" style="width:73%; height:490em; margin-bottom:0; padding:0;" ></object>'); 
+		   });
+		   
 		   $("#coursDeux").click(function(){			  	
 				$('#section2').replaceWith('<object id="section2" data="cours2web2.html" type="text/html" style="width:73%; height:707em; margin-bottom:0; padding:0;" ></object>'); 
 		   });
 		   $("#coursTrois").click(function(){			  	
 				$('#section2').replaceWith('<object id="section2" data="cours3web2.html" type="text/html" style="width:73%; height:1660px; margin-bottom:0; padding:0;" ></object>'); 
+		   });
+		   $("#coursQuatre").click(function(){			  	
+				$('#section2').replaceWith('<object id="section2" data="cours4web2.html" type="text/html" style="width:73%; height:870em; margin-bottom:0; padding:0;" ></object>'); 
+		   });
+		   $("#coursCinq").click(function(){			  	
+				$('#section2').replaceWith('<object id="section2" data="cours5web2.html" type="text/html" style="width:73%; height:1660px; margin-bottom:0; padding:0;" ></object>'); 
 		   });
 		});
 		
@@ -120,7 +131,7 @@
 					<div class="dropdown" style="margin-top:0; ">
 					  <button class="dropdown-btn">Semestre2:Web2</button> 					  
 					  <div class="dropdown-container">
-					    <a  href="#"  >Cours: Web accssible</a> 
+					    <a  href="#"  >Cours: Web accessible</a> 
 						<a  href="#"  >TD: Web2</a>
 						<a  href="#"  >TP: Web2</a>						
 					  </div>
