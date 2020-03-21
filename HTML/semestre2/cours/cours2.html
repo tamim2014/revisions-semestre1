@@ -23,7 +23,10 @@
 	<script>
 		$(document).ready(function(){
 		   $("#coursDeux").click(function(){			  	
-				$('#section2').replaceWith('<object id="section2" data="cours2web2.html" type="text/html" style="width:73%; height:1000px; margin-bottom:0; padding:0;" ></object>'); 
+				$('#section2').replaceWith('<object id="section2" data="cours2web2.html" type="text/html" style="width:73%; height:707em; margin-bottom:0; padding:0;" ></object>'); 
+		   });
+		   $("#coursTrois").click(function(){			  	
+				$('#section2').replaceWith('<object id="section2" data="cours3web2.html" type="text/html" style="width:73%; height:1660px; margin-bottom:0; padding:0;" ></object>'); 
 		   });
 		});
 		
@@ -115,15 +118,15 @@
 				<div id="documenter_sidebar" style="padding-bottom:0%; height:auto;"  > 
 
 					<div class="dropdown" style="margin-top:0; ">
-					  <button class="dropdown-btn">Semestre2:Web2 
-						<i class="fa fa-caret-down"></i>
-					  </button>
+					  <button class="dropdown-btn">Semestre2:Web2</button> 					  
 					  <div class="dropdown-container">
 					    <a  href="#"  >Cours: Web accssible</a> 
+						<a  href="#"  >TD: Web2</a>
+						<a  href="#"  >TP: Web2</a>						
 					  </div>
 					</div>
 					<ol id="documenter_nav" style=" height:100%; margin-bottom:0; padding-bottom:0;  margin-top:0;" >
-					    <li><a  href="#" onclick="atelierPosition();" >ATELIER 1: position</a></li>
+					    <li><a  href="#" onclick="atelierPosition();" >ATELIER 1</a></li>
 						<li><a  href="#" onclick="#" >ATELIER 2</a></li>
 						<li><a  href="#" onclick="#" >ATELIER 3</a></li>                          					
 					</ol>
@@ -262,9 +265,6 @@
 		barre.classList.remove("stickySidebar");
 	  }
 	}
-
-	 
-
 	
 </script>
   </body>
