@@ -1,4 +1,52 @@
-    /*  MENU ACCORDEON DU COLONE LATERALE  */
+    
+	/* Suite du Menu vertical: Dropdown topnav(#main) */
+
+	
+	.dropdown2{
+		float:left;
+		overflow:hidden;
+	}
+	.dropdown2-btn{
+		border:none;
+		outline:none;
+		background: none; 
+		margin:0;
+		/* recopier ici les proprieté du #menu a ( voir zoning2.css) sauf le float:left */
+		padding:14px 41px 12.5px 41px; /* 14px 16px ; */	
+		text-decoration:none;
+		font-size:17px;
+		color:purple;  
+        transition: all 0.8s;  		
+	}
+	.dropdown2-btn:hover{
+		/* recopier ici les proprieté du #menu a ( voir zoning2.css) */
+		 background:#ccf;
+		 color:white;
+		 font-weight:bold;
+         box-shadow:
+			0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+			0px 2px 2px 0px rgba(255, 255, 255, 0.5) !important; 		 
+	}
+	.dropdown2-container{
+		position:absolute;
+		min-width:14.188em; /* max-width:227px; */
+		background:#ddd;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+		display:none;
+		
+	}
+	.dropdown2:hover  .dropdown2-container { display: block;}/* ouverture du sous-menu */ 
+	
+	/* ATTENTION !!!!! la selection commence depuis #menu. sinon ça marche pas */
+	#menu .dropdown2-container a{
+		display:block;
+		float:none;		
+	}
+	
+	
+	
+	/*  MENU VERTICAL: Dropdown sidebar(#documenter_sidebar)  */
 	
 	.dropdown-btn {
 
@@ -52,3 +100,5 @@
 	.dropdown:hover .dropdown-container {
 	  display:block;
 	}
+	
+	
