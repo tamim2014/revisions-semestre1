@@ -20,6 +20,7 @@
     <script type="text/javascript" src="../../../js/menu907.js"></script>
     <script type="text/javascript" src="../../../js/accesAuxPopUps.js"></script>
 	<script type="text/javascript" src="../../../js/jquery3.4.1.min.js"></script> <!-- pour la pagination -->	
+	<script type="text/javascript" src="../../../js/sidebar.js"></script>
 	<script>
 		$(document).ready(function(){
 		
@@ -137,7 +138,9 @@
 					  </div>
 					</div>
 					<ol id="documenter_nav" style=" height:100%; margin-bottom:0; padding-bottom:0;  margin-top:0;" >
-					    <li><a  href="#" onclick="atelierPosition();" >ATELIER 1</a></li>
+					    <li><a  href="#" onclick="#" >Display</a></li>
+						<li><a  href="#" onclick="#" >Position</a></li>
+						<li><a  href="#" onclick="atelierPosition();" >ATELIER 1</a></li>
 						<li><a  href="#" onclick="#" >ATELIER 2</a></li>
 						<li><a  href="#" onclick="#" >ATELIER 3</a></li>                          					
 					</ol>
@@ -232,51 +235,6 @@
         </div><!-- conteneur-reponses Q1.1 -->	  
     </footer>
     <script type="text/javascript" src="../../../js/top.js"></script>
-	<script>
-	var barre = document.getElementById("sidebarGauche");
-	var main = document.getElementById("main")
-
-	function openBarreGauche(){
-	  barre.style.display = "block";
-	  barre.style.width = "15%";	  
-	  barre.style.marginLeft= "0";
-	  barre.style.borderRadius= "0";
-	  
-	  main.style.marginLeft = "17%";
-	
-      //main.style.width = "114%"; 
-      main.style.width = "113%"; 	  
-	}
-
-	function closeBarreGauche(){
-	
-	  barre.style.display = "none"; /*   barre.style.width = "0";  */
-	  main.style.marginLeft= "0";
-	  main.style.width= "137%";	
-	}
-	
-	// sticky top menu
-	window.onscroll = function(){ remonter() };
-
-	var ejectBtn = document.getElementById("ejectBtn");
-	var menu = document.getElementById("menu");
-
-    	
-	var positionInitiale = ejectBtn.offsetTop;
-
-
-	function remonter() {
-	  if (window.pageYOffset > positionInitiale){
-		ejectBtn.classList.add("sticky-ejectBtn");
-		menu.classList.add("sticky-menu");
-		barre.classList.add("stickySidebar");
-	  } else {
-		ejectBtn.classList.remove("sticky-ejectBtn");
-		menu.classList.remove("sticky-menu");
-		barre.classList.remove("stickySidebar");
-	  }
-	}
-	
-</script>
+	<script type="text/javascript" src="../../../js/sticky.js"></script>
   </body>
 </html>
