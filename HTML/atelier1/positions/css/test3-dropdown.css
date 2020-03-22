@@ -19,6 +19,7 @@
 			min-width: 160px;
 			background: whitesmoke;
 			box-shadow: 0px 1px 2px 0px #ccf;
+			z-index:99;
 
 		}
 

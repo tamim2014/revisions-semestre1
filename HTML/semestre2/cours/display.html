@@ -17,6 +17,34 @@
 	<link rel="stylesheet" href="../../../style/top.css"  media="screen"><!--  Bouton remonter en haut de page -->
     <link rel="stylesheet" href="../../../style/menu_accordeon.css" media="all">
 	<link rel="stylesheet" href="../../../style/info-Bulle.css" media="screen" /> 
+	<!-- display -->
+	<style>
+	/* section2: contient .colonne1, .colonne2, .colone3 */ 
+	.conteneurDesSujet{
+			font-family: "Open Sans", sans-serif;
+			line-height: 1.5;
+			background: #ECECEA;
+	}
+	.height_{
+		   height:70em; /* taille contenu des colonne */
+	}
+	.colone1, .colone3 {
+	    float: left;
+		padding: 0 ;
+		list-style-type: none;
+
+    }
+	.colone1{width:32%;}
+    .colone3 { margin-right:0; padding-right:0; width:31%;}
+	.colone2 {
+	    float: left;
+		padding: 35px 0px;
+		width: 34%;  /* 50%; */
+        margin-right:0.5em;
+		background: #ECECEA; /* white; */		
+	}
+	</style>
+	
 
     <script type="text/javascript" src="../../../js/menu907.js"></script>
     <script type="text/javascript" src="../../../js/accesAuxPopUps.js"></script>
@@ -100,7 +128,7 @@
         <hr  id="fantaisieRELOU1">
         <h1  style='text-align:center'>Master MIASHS : Paris8 </h1>
         <h3  style='text-align:center'>Revisions - Session 2019/2020  </h3>
-        <h5  style='text-align:center; font-style:italic;'>Semestre2 - Web2 : Cours2( Web accessible ) </h5>
+        <h5  style='text-align:center; font-style:italic;'>La proprieté <strong>display</strong> </h5>
         <h1  style='text-align:center' >---</h1>
         <button class="openbtn" id="ejectBtn" onclick="openNav(); openBarreGauche(); topFunction(); ">☰ </button>
         <hr  id="fantaisieRELOU1" >
@@ -109,12 +137,11 @@
     </header>
 	<div id="menu">
 	  
-	  <!-- <button class="openbtn openbtn2" onclick="openBarreGauche()">☰ </button> -->	
+	  <!--  	
 	  <a href="#" id="coursUn">Cours1</a>	  
 	  <a href="#" id="coursDeux" >Cours2</a>
 	  <a href="#" id="coursTrois">Cours3</a>
 	  <a href="#" id="coursQuatre">Referencement web</a>
-	  <!-- <a href="#" id="coursCinq">Raccourci clavier</a> -->
 	  <div class="dropdown2" >
 		<button class="dropdown2-btn">Raccourci clavier</button> 					  
 		<div class="dropdown2-container">
@@ -122,8 +149,6 @@
 			<a  href="#" id="anis-R2" >Anis Rojbi2</a>						
 		</div>
 	  </div>
-	  
-	  <!-- les  info bull: détaillent les 3 premiers les item du menu horizontal  -->
 	  <p class="bubble-cours1" id="infoUn">
 		<span> &Eacute;tapes de conception d'un site web &emsp; &emsp; &emsp;</span>
 	  </p>
@@ -133,6 +158,7 @@
 	  <p class="bubble-cours3" id="infoTrois">
 		<span> Responsive Design&emsp;&emsp;&emsp;</span>
 	  </p>
+	  -->	
 	</div><!-- fin #menu (topmenu)	-->
 	<div id="contenair"  > <!-- contient: le menu, les 2 barre laterales, et le contenu main  -->
 	
@@ -158,14 +184,13 @@
 					<div class="dropdown" style="margin-top:0; ">
 					  <button class="dropdown-btn">Semestre2:Web2</button> 					  
 					  <div class="dropdown-container">
-					    <a  href="#"  >Cours: Web accessible</a> 
+					    <a  href="cours.html"  >Cours: Web accessible</a> 
 						<a  href="#"  >TD: Web2</a>
 						<a  href="#"  >TP: Web2</a>						
 					  </div>
 					</div>
 					<ol id="documenter_nav" style=" height:100%; margin-bottom:0; padding-bottom:0;  margin-top:0;" >
-					    <!-- <li><a  href="../rappels1/index-rappels1.html" onclick="#" >Display</a></li> -->
-						<li><a  href="display.html" onclick="#" >Display</a></li>
+					    <li><a  href="#" onclick="#" >Display</a></li>
 						<li><a  href="#" onclick="#" >Position</a></li>
 						<li><a  href="#" onclick="atelierPosition();" >ATELIER 1</a></li>
 						<li><a  href="#" onclick="#" >ATELIER 2</a></li>
@@ -193,52 +218,25 @@
 		<!-- Contenu: pricipal -->	
 		<main id="main" >	
 			<section class="bordureSupSection1 " id="section1" ></section>			
-			<section class="conteneurDesSujet" id="section2"   >			
-				  <h2 class="matiere">Semestre2: Web2</h2>		  
-				  <div class="success  structureSujet"  >			  			  
-					<p><u><strong>Les types de handicaps:</strong> Les mieux connus</u></p>
-					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpUnCss();" target="_self">						
-							<strong>Handicap visuel:</strong> Aveugle et malvoyant<b></b>					
-					</a></p>
-					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpQuatreCss();" target="_self">						
-							<strong>Handicap auditif;</strong> Sourd et malentendant<b></b>					
-					</a></p>
-					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpTroisFormulaire();" target="_self">						
-							<strong>Handicap moteur:</strong> Pas d’accès aux perif d'entrée(souris clavier)<b></b>					
-					</a></p>
-					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpQuatreTableau();" target="_self">						
-							<strong>Handicap cognitif:</strong> Troubles du langage et d’apprentissage(dyslexie)  <b></b>					
-					</a></p>
-		
-					<a href="#"  class="unset_"  onclick="pop_menuHTML();">lire la suite( Cours / &Eacute;nonc&eacute;s des sujets ) ...</a>	
-					<p></p>
-				  </div>
-		         <div class="info  structureSujet"  >			  			  
-					<p><u><strong>Les aides techniques:</strong> Pour le web</u></p>
-					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpUnCss();" target="_self">						
-							<strong>Mode graphiques:</strong> Chrome, IE , Firefox, Safari<b></b>					
-					</a></p>
-					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpUnCss();" target="_self">						
-							<strong>Mode texte:</strong> Lynx<b></b>					
-					</a></p>
-					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpUnCss();" target="_self">						
-							<strong>lecteurs d'écran:</strong> Jaws pour Microsoft windows<b></b>					
-					</a></p>
-					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpQuatreCss();" target="_self">						
-							<strong>Navigateurs vocaux:</strong> Home Page Reader pour IBM et Jaws<b></b>					
-					</a></p>
-					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpTroisFormulaire();" target="_self">						
-							<strong>Logiciels d'agrandissement:</strong> ZoomText, Lynx<b></b>					
-					</a></p>
-					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpQuatreTableau();" target="_self">						
-							<strong>Logicils de reconnaissance vocales:</strong> IBM Via Voice, Dragon Naturally Speaking <b></b>					
-					</a></p>
-					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpCinqHTML();" target="_self">						
-							<strong>La navigation au clavier:</strong> handler, accesskey, tabindex <b></b>					
-					</a></p>
-					<a href="#"  class="unset_"  onclick="pop_menuHTML();">lire la suite( Cours / &Eacute;nonc&eacute;s des sujets ) ...</a>	
-					<p></p>
-				  </div>				  
+			<section class="conteneurDesSujet" id="section2" style=""   >			
+				<div class="colone1">
+					<b style="color:#ECECEA;"> Les 3 premiers exercices </b>
+					<p >
+					   <object class="height_"  data="display/1.display.html" ></object>
+					</p>           
+				</div>
+				<div class="colone2">
+					<p>
+					   <object class="height_"  data="display/2.alignementHorizontal.html" ></object>
+					</p>            
+				</div>
+
+				<div class="colone3" style="padding-left:0;">
+					<b style="color:#ECECEA;"> Les 3 derniers </b>
+					<p>
+					  <object class="height_"  data="display/3.testBruno.html"  ></object>
+					</p>
+				</div>			
 			</section> <!-- FIN section1- conteneurDesSujet - HTML -->			
 		</main>
 		

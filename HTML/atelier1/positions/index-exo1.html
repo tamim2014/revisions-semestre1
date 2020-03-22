@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercice dropdown</title>
+	<link rel="stylesheet" href="css/test3-zoning.css" >
+	<link rel="stylesheet" href="css/test3-dropdown.css" >
+	<style>
+	 /*
+	  img, .img{
+	     margin-left:0; 
+	     margin-right:0;
+		 
+	  }
+	  */
+	  
+	  div.colone-laterale p.reponse img { margin-left:0;}
+
+	</style>
+</head>
+<body>
+
+	<div id="entete"></div>
+	
+	<!-- topmenu -->
+	
+	<div id="menu">
+		<a href="absolue.html" style="background-color: #111; color:#ECECEA;">Accueil</a>
+		<a href="dropdown.html" >Dropdown</a>
+		<div class="dropdown">
+			<button class="dropdown-btn">Exemple1</button>
+			<div class="dropdown-content">
+			    <a href="#">Link1</a>
+				<a href="#">Link2</a>						
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropdown-btn">Exemple2</button>
+			<div class="dropdown-content">
+			    <a href="#">Link1</a>
+				<a href="#">Link2</a>
+				<a href="#">Link3</a>									
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropdown-btn">Exercice</button>
+			<div class="dropdown-content">
+			    <!--
+			    <a href="../rappels1/index-exo1.html">Sujet: Dropdown</a>
+				<a href="../rappels1/solution-exo1.html">Solution: Dropdown</a>
+                -->				
+                <a href="index-exo1.html">Sujet: Dropdown</a>
+				<a href="solution-exo1.html">Solution: Dropdown</a>					
+			</div>
+		</div>
+	</div>
+	
+	<!-- contenu -->
+	
+	<div id="contenu">
+		<div class="colone-laterale">
+			<p class="paragraphe" style="padding-top:1.4em; padding-bottom:1.4em;">
+				  SANS UTILISER L'ATTRIBUT <b>POSITION</b> (absolute, relative) <br><br>
+				  Ecrire <b style="color:red">en 10mn</b> une page HTML composée des elts suivant:<br><br>
+				  <span style="font-size:0.9em;">
+					&nbsp;1. Une en-tête<br>
+					&emsp;&emsp; - hauteur:200px;<br>
+					&emsp;&emsp; - couleur:#555;<br>
+					&nbsp;2. Un menu<br>
+					&emsp;&emsp; - hauteur:50px;<br>
+					&emsp;&emsp; - couleur:#555;<br>
+					&nbsp;3. Un contenu<br>
+					&emsp;&emsp; - trois div horizontal<br>
+					&nbsp;4. Un footer<br>
+					&emsp;&emsp; - hauteur:50px;<br>
+					&emsp;&emsp; - couleur:#555;<br>
+				  </span>
+			</p>
+		</div>
+		<div class="colone-contenu" style="width:45%;" >
+		    <h1 class="img" ><span  class="box-shadow-titre" >Enoncé </span></h1>
+			 <span style="padding-left:2em">La page doit ressembler à ça:</span><br>
+            <img src="img/page.png" >			
+		</div>
+		
+		<div class="colone-laterale" style="width:30%;" >
+			<p class="paragraphe">
+					&#9203; Début:20h<br>
+					&#8987; Fin HTML: 20h10<br>
+					&#8987; Fin CSS et test:21h05 <br>
+				
+					&#8986; Durée totale: 55mn
+			</p>
+			<b style="color:#ECECEA;"> Les 3 derniers </b>
+			<p class="Question">
+			   Quels sont les attributs CSS de la classe .divH 
+			</p>
+			<p class="reponse">
+			  <img src="img/head.png" style="width:100%; height: 62%;" />
+			</p>
+			<p class="Question">
+			   Quelle est la structure HTML de la bage( les fils de &lt;body&gt;)?
+			</p>
+			<p class="reponse">
+			  <img src="img/body.png" style="width:100%; height: 62%;" />
+			</p>
+			<p>
+			 Ajouter un menu  avec dropdown et l'apprendre par coeur(voir examen HTML)
+			</p>
+			
+			<p class="question">
+			  Pourquoi le menu n'a pas de width ?
+			</p>
+			<p class="reponse">
+			  car si on fixe une largeur au menu, <br>
+			  il faudrait tenir compte  de la somme des padding des items menus  <br>
+			  perte de temps inutile
+			  
+			</p>
+			
+			<p class="question">
+			  J'ai viré les width de l'en-tete et du footer<br>
+ 			  et ça marche tjrs pourquoi?
+			</p>
+			<p class="reponse">
+              ICI la largeur de la div#contenu est fixé(30%*3 + 0.5%*6 + 10px *6)<br>
+			  Le flux de la page suit cette largeur  
+			</p>
+		</div>
+	</div>
+	
+	<!-- fin contenu -->
+	
+	
+	<div style="clear:both"></div>
+	<div id="footer"></div>
+
+</body>
+</html>
