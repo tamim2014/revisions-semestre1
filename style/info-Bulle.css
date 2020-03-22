@@ -1,0 +1,23 @@
+	/* info-bulle( informations sur le sujet du cours) */
+	
+	.bubble-cours1, .bubble-cours2, .bubble-cours3{
+		background: #ddd;/* #15F3CF; #139ee0; */
+		color:purple;
+        font:italic bold 1em calibri light;		
+		padding:7px; 
+		border-radius:3px; 
+		width:80px;
+		position:absolute;
+		display:none;
+	}
+	.bubble-cours1{left:4em; top:12.9em;}
+	.bubble-cours2{left:11.1em; top:15em;}
+	.bubble-cours3{left:19.3em; top:15em;}
+
+	.bubble-cours1::after, .bubble-cours2::after, .bubble-cours3::after{
+		content:""; 
+		border-left:20px solid transparent;
+		border-right:20px solid transparent;
+		border-top: 20px solid #ddd; /* #15F3CF; #139ee0; */
+		position: absolute;
+	}

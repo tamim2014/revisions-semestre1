@@ -16,11 +16,13 @@
     <link rel="stylesheet" href="../../../style/sticky.css" media="screen" />  	
 	<link rel="stylesheet" href="../../../style/top.css"  media="screen"><!--  Bouton remonter en haut de page -->
     <link rel="stylesheet" href="../../../style/menu_accordeon.css" media="all">
+	<link rel="stylesheet" href="../../../style/info-Bulle.css" media="screen" /> 
 
     <script type="text/javascript" src="../../../js/menu907.js"></script>
     <script type="text/javascript" src="../../../js/accesAuxPopUps.js"></script>
 	<script type="text/javascript" src="../../../js/jquery3.4.1.min.js"></script> <!-- pour la pagination -->	
 	<script type="text/javascript" src="../../../js/sidebar.js"></script>
+
 	<script>
 		$(document).ready(function(){
 		
@@ -48,7 +50,7 @@
 		   });
 		});
 		
-	    // mise à jour liens pop du semestre1
+	    // mise à jour liens pop du semestre1: PAS DE POP AU SEMESTRE2 ( WAI oblige ! )
 		function atelierPosition() 
 		{                 
 		    window.open("../../../HTML/atelier1/index.html", 'Popup', 'scrollbars=1, Menubar=1, resizable=1, height=510, width= 808 ,  top=125, left=227,  toolbar=1  '); return false;          
@@ -107,8 +109,8 @@
     </header>
 	<div id="menu">
 	  
-	  <!-- <button class="openbtn openbtn2" onclick="openBarreGauche()">☰ </button> -->
-	  <a href="#" id="coursUn">Cours1</a>		  
+	  <!-- <button class="openbtn openbtn2" onclick="openBarreGauche()">☰ </button> -->	
+	  <a href="#" id="coursUn">Cours1</a>	  
 	  <a href="#" id="coursDeux" >Cours2</a>
 	  <a href="#" id="coursTrois">Cours3</a>
 	  <a href="#" id="coursQuatre">Referencement web</a>
@@ -120,7 +122,18 @@
 			<a  href="#" id="anis-R2" >Anis Rojbi2</a>						
 		</div>
 	  </div>
-	</div>	
+	  
+	  <!-- les  info bull: détaillent les 3 premiers les item du menu horizontal  -->
+	  <p class="bubble-cours1" id="infoUn">
+		<span> &Eacute;tapes de conception d'un site web &emsp; &emsp; &emsp;</span>
+	  </p>
+	  <p class="bubble-cours2" id="infoDeux">
+		<span> Web accessible&emsp; </span>
+	  </p>
+	  <p class="bubble-cours3" id="infoTrois">
+		<span> Responsive Design&emsp;&emsp;&emsp;</span>
+	  </p>
+	</div><!-- fin #menu (topmenu)	-->
 	<div id="contenair"  > <!-- contient: le menu, les 2 barre laterales, et le contenu main  -->
 	
 		<!-- Cacher le menu a gauche du header mais il doit sortie avec la mm hauteur que le header -->
@@ -249,5 +262,7 @@
     </footer>
     <script type="text/javascript" src="../../../js/top.js"></script>
 	<script type="text/javascript" src="../../../js/sticky.js"></script>
+    <script type="text/javascript" src="../../../js/info-Bulle.js"></script>
+
   </body>
 </html>
