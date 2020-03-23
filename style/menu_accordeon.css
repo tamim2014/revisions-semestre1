@@ -53,7 +53,8 @@ div.dropdown-content a#addArticle:hover, div.dropdown-content a#editArticle:hove
     width:96%;
     margin-left:2%; 
     margin-top:40%;
-    /* height:100%; Essayer car resultat interessant */      
+    /* height:100%; Essayer car resultat interessant */ 
+
 }
 #documenter_sidebar ol{
     margin:18px 0 ;
