@@ -30,6 +30,11 @@
        });
 	});
 	</script>
+	<style>
+	 /* exporter ce code vers "style/menu_accrdeon.css" 
+	 #documenter_sidebar a, #documenter_sidebar  .dropdown-btn{ height:2em; }
+	 */
+	</style>
 	
   </head>
   <body onload="openBarreGauche();">
@@ -45,17 +50,8 @@
         <hr  id="fantaisieRELOU3">
         
     </header>
-		<div id="menu">
-		  <!--
-			  <button class="openbtn openbtn2" onclick="openBarreGauche()">☰ </button>
-			  <!--
-			  <a href="#" >item1</a>		  
-			  <a href="#" id="coursDeux" >Cours2</a>
-			  <a href="#" >item3</a>
-			  <a href="#" >item4</a>
-		  -->
-		</div>	
-	<div id="contenair"  > <!-- contient: le menu, les 2 barre laterales, et le contenu main  -->
+	<div id="menu"></div>	
+	<div id="contenair"  > 
 	
 		<!-- Cacher le menu a gauche du header mais il doit sortie avec la mm hauteur que le header -->
 		<div id="barre-laterale" >
@@ -76,7 +72,7 @@
 		        <a href="javascript:void(0)" class="closebtn closebtn2" onclick="closeBarreGauche(); closeNav();">×</a>
 				<div id="documenter_sidebar" style="padding-bottom:0%; height:auto;"  > 
 
-					<div class="dropdown" style="margin-top:0;">
+					<div class="dropdown" >
 					  <button class="dropdown-btn">Semestre2:Web2 </button> 					 
 					  <div class="dropdown-container">
 					    <a  href="HTML/semestre2/cours/cours.html"  >Cours: Web accessible</a>
@@ -84,10 +80,8 @@
 						<a  href="#"  >TP: Web2</a>						
 					  </div>
 					</div>
-					<div class="dropdown" style="margin-top:0;">
-					  <button class="dropdown-btn">Semestre1:Web1 
-						<i class="fa fa-caret-down"></i>
-					  </button>
+					<div class="dropdown" >
+					  <button class="dropdown-btn" >Semestre1:Web1 </button>	  
 					  <div class="dropdown-container">
 					    <a  href="#" onclick="webUn();" >WEB1: Les bases</a> 
 						<a  href="#" onclick="pop_tpCinqHTML();" >TP5 Zoning</a>

@@ -66,6 +66,7 @@ div.dropdown-content a#addArticle:hover, div.dropdown-content a#editArticle:hove
 #documenter_sidebar ol{border-top:1px solid #AAAAAA;}
 #documenter_sidebar ol a{border-top:1px solid #EEEEEE; border-bottom:1px solid #AAAAAA; color:#444444;}
 #documenter_sidebar ol a:hover{background:#444444; color:#f7f7f9;border-top:1px solid #444444;}
+#documenter_sidebar .dropdown-btn:hover{background:#444444; color:#f7f7f9;border-top:1px solid #444444;}
 #documenter_sidebar li{ list-style:none; }
     
 #documenter_sidebar ol{
@@ -75,15 +76,23 @@ div.dropdown-content a#addArticle:hover, div.dropdown-content a#editArticle:hove
     height:75%;
     overflow:auto;
 }
-#documenter_sidebar ol a{
+#documenter_sidebar ol a, #documenter_sidebar .dropdown-btn{
     display:block;
     border-top:1px solid #ddd;
     border-bottom:1px solid #aaa;
-    padding:6px 15px 7px 0;
+    /* padding:6px 15px 7px 0; */
+	padding:16px 15px 17px 0;
     text-align:right;
     text-decoration:none; 
     color:#6F6F6F;     
     cursor:pointer;
+	background:#eee;
+}
+#documenter_sidebar a{
+	background:white;
+}
+#documenter_sidebar a:hover{
+	background:#ccf;
 }
 #documenter_sidebar ol a:hover, #documenter_sidebar {
     -webkit-text-shadow:none;
