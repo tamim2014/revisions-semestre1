@@ -4,7 +4,7 @@
 
 	var positionInitiale = ejectBtn.offsetTop;
 
-	// gestion (spécifique) des info-bull lors d'un sticky
+    // gestion (spécifique) des info-bull lors d'un sticky
 	  var courUn = document.getElementById('coursUn');
 	  var infoUn = document.getElementById('infoUn');
 	  var courDeux = document.getElementById('coursDeux');
