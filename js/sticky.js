@@ -1,6 +1,7 @@
 	window.onscroll = function(){remonter();}
     var ejectBtn = document.getElementById("ejectBtn");
 	var menu = document.getElementById("menu");
+	var mybutton = document.getElementById("myBtn");// GO TO TOP
 
 	var positionInitiale = ejectBtn.offsetTop;
 
@@ -24,6 +25,8 @@
 		coursUn.onmouseover = function(){infoUn.style.display = "none";}
 		coursDeux.onmouseover = function(){infoDeux.style.display = "none";}
 		coursTrois.onmouseover = function(){infoTrois.style.display = "none";}
+		// GO TO TOP
+		mybutton.style.display = "block";
 	  } else {
 		ejectBtn.classList.remove("sticky-ejectBtn");
 		menu.classList.remove("sticky-menu");
@@ -33,5 +36,7 @@
 		coursUn.onmouseover = function(){infoUn.style.display = "block";}
 		coursDeux.onmouseover = function(){infoDeux.style.display = "block";}
 		coursTrois.onmouseover = function(){infoTrois.style.display = "block";}
+		// inverse GO TO TOP
+		mybutton.style.display = "none";
 	  }
 	} 
