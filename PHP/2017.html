@@ -11,7 +11,14 @@
     <link rel="stylesheet" href="../style/calculatrice.css" media="screen" />
     <link rel="stylesheet" href="../style/examen.css" media="screen" />
     <link rel="stylesheet" href="../style/menu907.css" media="screen" />
-	<link rel="stylesheet" href="../style/top.css" media="screen">	
+	<link rel="stylesheet" href="../style/dropdown.css" media="screen" />	
+    <link rel="stylesheet" href="../style/sticky.css" media="screen" /> 	
+	<link rel="stylesheet" href="../style/top.css" media="screen">
+	<style>
+	    #menu .dropdown2-container{min-width:11.76em !important; }
+		#menu{ padding-left:20%; }
+		#menu a, #menu .dropdown2-btn{ font-weight:normal; }
+	</style>	
     <script type="text/javascript" src="../js/menu907.js"></script>   
   </head>
   <body>
@@ -22,12 +29,31 @@
         <h3  style='text-align:center'>Examen terminal 2017: Session1  </h3>
         <h5  style='text-align:center; font-style:italic;'>Durée 2h, aucun document autorisé </h5>
         <h1  style='text-align:center'>---</h1>
-        <button class="openbtn" onclick="openNav()">☰ </button>
+        <button class="openbtn" id="ejectBtn" onclick="openNav();  topFunction();">☰ </button>
         <hr  id="fantaisieRELOU1" >
         <hr  id="fantaisieRELOU3">
     </header>
+	<!-- TOP MENU -->
+	<div id="menu">	  
+        <a href="2017.html">Session 2017</a>	  
+		<div class="dropdown2" >
+			<button class="dropdown2-btn">Sessions 2018</button> 					  
+			<div class="dropdown2-container">
+				<a href="2018s1.html">2018s1</a>
+				<a href="2018s2.html">2018s2</a>						
+			</div>
+		</div>
+		
+		<div class="dropdown2" >
+			<button class="dropdown2-btn">Sessions 2019</button> 					  
+			<div class="dropdown2-container">
+				<a href="2019s1.html">2019s1</a>
+				<a href="2019s2.html">2019s2</a>						
+			</div>
+		</div>
+	</div>
 	<div id="contenair" > <!-- contient les 2 barre laterale et le contenu main - aucun style ne lui est appliquee sur cette page -->
-		<!-- Cacher le menu a gauche du header mais il doit sortie avec la mm hauteur que le header -->
+		<!-- MENU LATERAL HAUT Gauche: Cacher le menu a gauche du header mais il doit sortie avec la mm hauteur que le header -->
 		<div id="barre-laterale" >
 			<div id="mySidepanel" class="sidepanel">
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
@@ -41,9 +67,9 @@
 			</div>
 		</div>
         <!-- Barre laterale gauche  -->
-		<aside class="sidebarGauche"></aside>
+		<aside class="sidebarGauche"  id="sidebarGauche" ></aside>
 		<!-- Barre laterale droite  -->
-		<aside class=" sidebarDroite saut ">
+		<aside class=" sidebarDroite saut " id="sidebarDroit">
 			<div class="widget-asideD"  >
 				 widget1
 			</div>			
@@ -198,5 +224,6 @@
     </footer>
 	<!-- Back to top button --> 
 	<script type="text/javascript" src="../js/top.js"></script>
+	<script type="text/javascript" src="../js/sticky.js"></script>	
   </body>
 </html>
