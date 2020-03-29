@@ -1,8 +1,6 @@
 	window.onscroll = function(){remonter();}
     var ejectBtn = document.getElementById("ejectBtn");
 	var menu = document.getElementById("menu");
-	var barre =  document.getElementById("sidebarGauche") ;
-	var barreDroite =  document.getElementById("sidebarDroit") ;
 	var mybutton = document.getElementById("myBtn");// GO TO TOP
 
 	var positionInitiale = ejectBtn.offsetTop;
@@ -22,7 +20,6 @@
 		ejectBtn.classList.add("sticky-ejectBtn");
 		menu.classList.add("sticky-menu");
 		barre.classList.add("stickySidebar");
-		barreDroite.classList.add("stickySidebarDroit");
 		main.classList.add("sticky-main");
 		// virer les info-bulle
 		coursUn.onmouseover = function(){infoUn.style.display = "none";}
@@ -34,7 +31,6 @@
 		ejectBtn.classList.remove("sticky-ejectBtn");
 		menu.classList.remove("sticky-menu");
 		barre.classList.remove("stickySidebar");
-		barreDroite.classList.remove("stickySidebarDroit");
 		main.classList.remove("sticky-main");		
 		// remettre en place les info-bull ( sinon elles réaparaisse plus )
 		coursUn.onmouseover = function(){infoUn.style.display = "block";}
