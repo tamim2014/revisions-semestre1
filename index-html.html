@@ -38,6 +38,7 @@
 	
   </head>
   <body onload="openBarreGauche();">
+    <!-- En-tête -->
     <header>
         <hr  id="fantaisieRELOU3">
         <hr  id="fantaisieRELOU1">
@@ -47,13 +48,14 @@
         <h1  style='text-align:center'>---</h1>
         <button class="openbtn" id="ejectBtn" onclick="openNav(); openBarreGauche(); topFunction();">☰ </button>
         <hr  id="fantaisieRELOU1" >
-        <hr  id="fantaisieRELOU3">
-        
+        <hr  id="fantaisieRELOU3">        
     </header>
-	<div id="menu"></div>	
-	<div id="contenair"  > 
 	
-		<!-- Cacher le menu a gauche du header mais il doit sortie avec la mm hauteur que le header -->
+	<!-- TOP MENU -->
+	<div id="menu"></div>
+	
+	<div id="contenair"  > 	
+	<!-- MENU LATERAL HAUT: Cacher le menu a gauche du header mais il doit sortie avec la mm hauteur que le header -->
 		<div id="barre-laterale" >
 			<div id="mySidepanel" class="sidepanel">
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
@@ -67,7 +69,7 @@
 			</div>
 		</div>
 		
-		<!-- Barre laterale gauche  -->
+	<!-- MENU LATERAL BAS: Barre laterale gauche  -->
 		<aside class="sidebarGauche" id="sidebarGauche" style="height:76%;  ">
 		        <a href="javascript:void(0)" class="closebtn closebtn2" onclick="closeBarreGauche(); closeNav();">×</a>
 				<div id="documenter_sidebar" style="padding-bottom:0%; height:auto;"  > 

@@ -15,7 +15,8 @@
 	/* Ajout d'un menu horizontal */
 	#menu {
 	    height:48px;
-		background:whitesmoke; 
+		background:whitesmoke;
+       		
 
 	}
 	
@@ -78,7 +79,7 @@
 
 	/*################################################################# */
 	
-	/*ANEXE1: Animation du top nav:  juste pour m'amuser avec :hover:after*/
+	/*ANEXE1: Animation du top nav avec :hover:after*/
 	
 	#menu a, #menu .dropdown2 .dropdown2-btn{
 		position:relative;

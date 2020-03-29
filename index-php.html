@@ -11,29 +11,57 @@
     <link rel="stylesheet" href="style/contenuAccueil.css" media="screen" />
     <link rel="stylesheet" href="style/calculatrice.css" media="screen" />
     <link rel="stylesheet" href="style/examen.css" media="screen" />
-    <link rel="stylesheet" href="style/menu907.css" media="screen" />   
+    <link rel="stylesheet" href="style/menu907.css" media="screen" />
+    <link rel="stylesheet" href="style/dropdown.css" media="screen" />	
+    <link rel="stylesheet" href="style/sticky.css" media="screen" /> 	
 	<link rel="stylesheet" href="style/top.css"  media="screen"><!--  Bouton remonter en haut de page -->		
     <link rel="stylesheet" href="style/menu_accordeon.css" media="all">
 	<style>
-
+	    #menu .dropdown2-container{min-width:11.76em !important; }
+		#menu{ padding-left:20%; }
+		#menu a, #menu .dropdown2-btn{ font-weight:normal; }
 	</style>
+
 	
 	<script type="text/javascript" src="js/menu907.js"></script>
     <script type="text/javascript" src="js/accesAuxPopUps.js"></script>	
   </head>
+
   <body>
     <header>
         <hr  id="fantaisieRELOU3">
         <hr  id="fantaisieRELOU1">
         <h1  style='text-align:center'>Master MIASHS : Paris8 </h1>
-        <h3  style='text-align:center'>Revisions - Session 2019/2020  </h3>
+        <h3  style='text-align:center'>Revisions PHP - Session 2019/2020  </h3>
         <h5  style='text-align:center; font-style:italic;'>TD, TP, Fiches-synthèse, Sujets corrigés </h5>
         <h1  style='text-align:center'>---</h1>
-        <button class="openbtn" onclick="openNav()">☰ </button>
+		<button class="openbtn" id="ejectBtn" onclick="openNav();  topFunction();">☰ </button>
         <hr  id="fantaisieRELOU1" >
         <hr  id="fantaisieRELOU3">
     </header>
+	
+	<!-- TOP MENU -->
+	<div id="menu">	  
+        <a href="PHP/2017.html">Session 2017</a>	  
+		<div class="dropdown2" >
+			<button class="dropdown2-btn">Sessions 2018</button> 					  
+			<div class="dropdown2-container">
+				<a href="PHP/2018s1.html">2018s1</a>
+				<a href="PHP/2018s2.html">2018s2</a>						
+			</div>
+		</div>
+		
+		<div class="dropdown2" >
+			<button class="dropdown2-btn">Sessions 2019</button> 					  
+			<div class="dropdown2-container">
+				<a href="PHP/2019s1.html">2019s1</a>
+				<a href="PHP/2019s2.html">2019s2</a>						
+			</div>
+		</div>
+	</div>
+	
 	<div id="contenair"  > <!-- contient: le menu, les 2 barre laterales, et le contenu main  -->
+		<!-- MENU LATERAL HAUT Gauche -->
 		<div id="barre-laterale" >
 			<div id="mySidepanel" class="sidepanel">
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
@@ -47,23 +75,18 @@
 			</div>
 		</div>
 		
-		<!-- Barre laterale gauche  -->
-		<aside class="sidebarGauche" style=" height:132.5%;">
+		<!-- MENU LATERAL BAS Gauche -->
+		<aside class="sidebarGauche" id="sidebarGauche" style=" height:auto; z-index:1;">
 			<div id="documenter_sidebar"  > 
 				<ol id="documenter_nav" style="width=400px;" >		
 					<li><a  href="#" onclick="pop_tpSixPHP();" >TP6  Compte  bancaire</a></li>
-                    <li><a  href="#" onclick="pop_controlTroisPHP();" >Contrôle 3</a></li>							
-					<li><a  href="#" onclick="pop_tpQuatreTableau();" >#########</a></li>
-                    <li><a  href="#" onclick="pop_tpTroisFormulaire();" >########</a></li>						
-					<li><a  href="#" onclick="pop_tpDeuxFrame();" >#########</a></li>						
-                    <li><a  href="#" onclick="pop_tpQuatreCss();" >#######</a></li>
-                    <li><a  href="#" onclick="pop_tpUnCss();" >###########</a></li>                       					
+                    <li><a  href="#" onclick="pop_controlTroisPHP();" >Contrôle 3</a></li>							                     					
 				</ol>
 			</div>
 		</aside> <!-- comment lui donner le mm height que <main> ? -->
 		
 		<!-- Barre laterale droite  -->
-		<aside class="sidebarDroite saut ">
+		<aside class="sidebarDroite saut " id="sidebarDroit">
 			<div class="widget-asideD"  >
 				 widget1
 			</div>			
@@ -133,11 +156,11 @@
 	    </button>
 		
 		<hr width=100% color=whitesmoke style="display:inline-block;">
-		<div class="conteneur-reponses"></div> 
+		<div class="conteneur-reponses" style="z-index:99 !important;"></div> 
 	</div> <!-- div#contenair -->
 
 	           
-    <footer>     
+    <footer style="z-index:99 !important;">     
 		Pied de page (footer)<br>
 	    <div class="content-footer"  >         
                 <div class="ndreda-footer" > 		  
@@ -150,5 +173,6 @@
         </div><!-- conteneur-reponses Q1.1 -->	  
     </footer>
     <script type="text/javascript" src="js/top.js"></script>
+	<script type="text/javascript" src="js/sticky.js"></script>	
   </body>
 </html>

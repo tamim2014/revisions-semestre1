@@ -79,4 +79,69 @@
 		 .saut {  width:100%; }
           footer {padding-top:2px;}		 
 		}
+		
+		/***********  Extrait zonin2.css(pour index-html.html) *****************/
+		
+		/* Ajout d'un menu horizontal */
+		#menu {
+			height:48px;
+			background:whitesmoke;
+            z-index:1;			
+		}
+		#menu a, #menu object {
+			float:left;
+			padding:14px 41px 12.5px 41px; /* 14px 16px ; */	
+			text-decoration:none;
+			font-size:17px;
+			color:purple;
+			transition: all 0.8s;
+		}
+		#menu a:hover, #menu object:hover {
+			 background:#ccf;
+			 color:white;
+			 font-weight:bold;
+			 box-shadow:
+				0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+				0px 2px 2px 0px rgba(255, 255, 255, 0.5) !important;		 	
+		}
+		
+			/*################################################################# */
+	
+	/*ANEXE1: Animation du top nav avec :hover:after*/
+	
+	#menu a, #menu .dropdown2 .dropdown2-btn{
+		position:relative;
+	}
+	#menu a:after, #menu .dropdown2 .dropdown2-btn:after {
+		  position:relative;
+		  content:'';
+		  width:0%;
+		  margin-left:50%;
+		  height:2px;
+		  bottom:0;
+		  left:0;
+		  -webkit-border-radius: 40%;
+		  -moz-border-radius: 40%;
+		  border-radius:40%;
+		  -webkit-transition: all 0.5s;
+		  -o-transition: all 0.5s;
+		  transition:all 0.5s;
+		  position:absolute;
+		  -webkit-transition: all 0.5s;
+		  -o-transition: all 0.5s;
+		  transition:all 0.5s;
+	}
+	#menu a:hover:after, #menu .dropdown2 .dropdown2-btn:hover:after{
+		
+		  background-color: #15F3CF;
+		  width:60%;
+		  margin-left:20%;
+		  -moz-box-shadow: 0px 0px 10px #22A9E8;
+		  -webkit-box-shadow: 0px 0px 10px #22A9E8;
+		  -o-box-shadow: 0px 0px 10px #22A9E8;
+		  box-shadow:0px 0px 10px #22A9E8;
+		  z-index:99;
+	}	
+	
+	/*################################################################# */
    

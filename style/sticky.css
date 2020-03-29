@@ -43,10 +43,16 @@
 	
    /* sticky barre laterale */
    
-    .stickySidebar {
+    .stickySidebar, .stickySidebarDroit {
 	  position: fixed !important;
 	  top: 10% !important;
-	  left:0.9% !important;
+	  
 	  height:auto !important; 
+	  border-radius: 4px 0px 0px 4px !important;
+	  z-index:0;
+	}
+	.stickySidebarDroit {
+		right:0.9% !important;
+		border-radius: 0px 4px 0px 4px !important;
 	}
  
