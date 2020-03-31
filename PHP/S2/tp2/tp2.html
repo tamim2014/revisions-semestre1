@@ -20,23 +20,12 @@
 	    #menu .dropdown2-container{min-width:11.76em !important; }
 		#menu{ padding-left:20%; }
 		#menu a, #menu .dropdown2-btn{ font-weight:normal; }
-		.structureSujet{ line-height:1.5; font-size:0.9em;}
-		.structureSujet ul { line-height:1.5;  padding-left:0.9em; }
+
 	</style>
 
 	
 	<script type="text/javascript" src="../../../js/menu907.js"></script>
-    <script type="text/javascript" src="../../../js/accesAuxPopUps.js"></script>
-	<script type="text/javascript" src="../../../js/jquery3.4.1.min.js"></script><!-- moteur js: pour le chargement du sujet en mode ajax de la cuisine perso" -->
-    <script>
-	    // mon p'tit ajax perso
-		$(document).ready(function(){		
-		   $(".unset_").click(function(){			  	
-				$('#tpUn').replaceWith('<object  data="tp1-sujet.html" type="text/html" style="width:74%; height:162em; " ></object>'); 
-		   });
-
-		});
-    </script>		   
+    <script type="text/javascript" src="../../../js/accesAuxPopUps.js"></script>	
   </head>
 
   <body>
@@ -54,20 +43,20 @@
 	
 	<!-- TOP MENU -->
 	<div id="menu">	  
-        <a href="../../../PHP/2017.html">Session 2017</a>	  
+        <a href="PHP/2017.html">Session 2017</a>	  
 		<div class="dropdown2" >
 			<button class="dropdown2-btn">Sessions 2018</button> 					  
 			<div class="dropdown2-container">
-				<a href="../../../PHP/2018s1.html">2018s1</a>
-				<a href="../../../PHP/2018s2.html">2018s2</a>						
+				<a href="PHP/2018s1.html">2018s1</a>
+				<a href="PHP/2018s2.html">2018s2</a>						
 			</div>
 		</div>
 		
 		<div class="dropdown2" >
 			<button class="dropdown2-btn">Sessions 2019</button> 					  
 			<div class="dropdown2-container">
-				<a href="../../../PHP/2019s1.html">2019s1</a>
-				<a href="../../../PHP/2019s2.html">2019s2</a>						
+				<a href="PHP/2019s1.html">2019s1</a>
+				<a href="PHP/2019s2.html">2019s2</a>						
 			</div>
 		</div>
 	</div>
@@ -97,9 +86,9 @@
 				<div class="dropdown" >
 					<button class="dropdown-btn">S2</button> 					  
 					<div class="dropdown-container">
-						<a href="../../../PHP/S2/tp1/tp1.html">TP1</a>
-						<a href="../../../PHP/S2/tp2/tp2.html">TP2</a>
-						<a href="../../../PHP/S2/tp3/tp3.html">TP3</a>						
+						<a href="PHP/S2/tp1/tp1.html">TP1</a>
+						<a href="PHP/S2/tp2/tp2.html">TP2</a>
+						<a href="PHP/S2/tp3/tp3.html">TP3</a>						
 					</div>
 				</div>
 				
@@ -126,10 +115,10 @@
 		<!-- Contenu: pricipal -->	
 		<main >		    
 			<section class="bordureSupSection1 " ></section>			
-			<section class="conteneurDesSujet" id="tpUn" >
+			<section class="conteneurDesSujet"  >
             			
-				<h2 class="matiere">PHP2: TP1</h2>		  
-				<div class="success  structureSujet"  >			  			  
+				  <h2 class="matiere">PHP2: TP1</h2>		  
+				  <div class="success  structureSujet"  >			  			  
 					<p><u><a href="#"><strong>Rappel:</strong> </a></u></p>
 					
 					<ul type="none" style="line-height:1.5">
@@ -224,46 +213,47 @@
                          
                          </li>
 					</ul>
-					<a href="#" class="unset_" >&Eacute;nonc&eacute; complet ... </a>
+
+					<a href="PHP/2019s2.html" class="unset_">&Eacute;nonc&eacute; complet </a>
 					<p></p>
-				</div>
-				<!-- Exercice1 -->
-				<div class="danger  structureSujet" >
-					<p><u><a href="#"><strong>Exo1:</strong>Premier programme en PHP</a></u></p>
+				  </div>
+				  
+				  <div class="danger  structureSujet" >
+					<p><u><a href="PHP/2019s1.html"><strong>2019:</strong> Session1</a></u></p>
 					<p><strong>Partie1</strong> Questions de cours (5 points -15mn):............................<strong>Variable superglobale</strong></p>
 					<p><strong>Partie2</strong> Probleme( 5 points -30mn ):.............................................<strong>Bataille Navale</strong></p>
 					<p><strong>Partie3</strong> Interprétation d’un code PHP (5point - 15 mn):..........<strong>Tableaux imbriques</strong></p>
 					<p><strong>Partie4</strong> Interprétation de classe ( 5points - 1H ):....................<strong> POO</strong></p>
-					<a href="#" class="unset_">&Eacute;nonc&eacute; complet ... </a>
+					<a href="PHP/2019s1.html" class="unset_">lire la suite ...</a>
 					<p></p>
-				</div>
-                <!-- Exercice2-->
-				<div class="success structureSujet ">
-					<p><u><a href="#"><strong>Exo2:</strong> Transmettre des donn&eacute;es d’une page &agrave; l’autre </a></u></p>
+				  </div>
 
+
+				  <div class="success structureSujet ">
+					<p><u><a href="PHP/2018s2.html"><strong>2018:</strong> Session2</a></u></p>
 					<p><strong>Partie1</strong> Questions cours(5 points-15mn):..............<strong>Variable superglobale, Clnt/Srvr</strong></p>
 					<p><strong>Partie2</strong> Structuration de donnees(5 points -15mn):.................<strong> POO</strong></p>
 					<p><strong>Partie3</strong> Interprétation d’un code PHP (5point - 15 mn):..........<strong>Tableaux ,modulo</strong></p>
 					<p><strong>Partie4</strong> Interprétation de classe ( 5points - 1H ):....................<strong> POO</strong></p>
-					<a href="#" class="unset_">&Eacute;nonc&eacute; complet ... </a>
+					<a href="PHP/2018s2.html" class="unset_">lire la suite ...</a>
 					<p></p>		
-				</div>
-                <!-- Exercice3 -->
-				<div class="danger structureSujet">
-					<p><u><a href="#"><strong>Exo3:</strong> prot&eacute;ger une page par mot de passe</a></u></p>
+				  </div>
+
+				  <div class="danger structureSujet">
+					<p><u><a href="PHP/2018s1.html"><strong>2018:</strong> Session1</a></u></p>
 					<p><strong>Partie1</strong> Questions de cours (5 points -15mn):............................<strong>Variable superglobale</strong></p>
 					<p><strong>Partie2</strong> Structuration de donnees(5 points -15mn):......................................<strong>POO</strong></p>
 					<p><strong>Partie3</strong> Interprétation d’un code PHP (5point - 15 mn):..........<strong>Tableaux modulo</strong></p>
 					<p><strong>Partie4</strong> Interprétation de classe ( 5points - 1H ):....................<strong> POO</strong></p>
 					
-					<a href="#" class="unset_">&Eacute;nonc&eacute; complet ... </a> suite ...</a>
+					<a href="PHP/2018s1.html" class="unset_">lire la suite ...</a>
 					<p></p>
-				</div>
-                <!-- Exercice4 -->
-				<div class="success structureSujet">
-					<p><u><a href="#"><strong>Exo4:</strong> Variables superglobales(les sessions)</a></u></p>
+				  </div>
+
+				  <div class="success structureSujet">
+					<p><u><a href="PHP/2017.html"><strong>2017:</strong> Session1</a></u></p>
 					 ...
-					<a href="#" class="unset_">&Eacute;nonc&eacute; complet ... </a>
+					<a href="PHP/2017.html" class="unset_">lire la suite ...</a>
 					<p></p>
 				  </div>				  
 			</section> <!-- FIN section1- conteneurDesSujet - PHP -->
