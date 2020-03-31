@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> HTML -Revisions Masters MIASH 2019</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Trucsweb.com" />    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">  
+	
+    <link rel="stylesheet" href="../../../style/zoning2.css" media="screen" />	
+    <link rel="stylesheet" href="../../../style/contenuAccueil.css" media="screen" />
+    <link rel="stylesheet" href="../../../style/calculatrice.css" media="screen" />
+    <link rel="stylesheet" href="../../../style/examen.css" media="screen" />
+    <link rel="stylesheet" href="../../../style/menu907.css" media="screen" />
+    <link rel="stylesheet" href="../../../style/dropdown.css" media="screen" />
+    <link rel="stylesheet" href="../../../style/sticky.css" media="screen" />  	
+	<link rel="stylesheet" href="../../../style/top.css"  media="screen"><!--  Bouton remonter en haut de page -->
+    <link rel="stylesheet" href="../../../style/menu_accordeon.css" media="all">
+	<link rel="stylesheet" href="../../../style/info-Bulle.css" media="screen" /> 
+	<!-- display -->
+	<style>
+	/* section2: contient .colonne1, .colonne2, .colone3 */ 
+	.conteneurDesSujet{
+			font-family: "Open Sans", sans-serif;
+			line-height: 1.5;
+			background: #ECECEA;
+	}
+	.height_{
+		   height:70em; /* taille contenu des colonne */
+	}
+	.colone1, .colone3 {
+	    float: left;
+		padding: 0 ;
+		list-style-type: none;
+
+    }
+	.colone1{width:32%;}
+    .colone3 { margin-right:0; padding-right:0; width:31%;}
+	.colone2 {
+	    float: left;
+		padding: 35px 0px;
+		width: 34%;  /* 50%; */
+        margin-right:0.5em;
+		background: #ECECEA; /* white; */		
+	}
+	</style>
+	
+
+    <script type="text/javascript" src="../../../js/menu907.js"></script>
+    <script type="text/javascript" src="../../../js/accesAuxPopUps.js"></script>
+	<script type="text/javascript" src="../../../js/jquery3.4.1.min.js"></script> <!-- pour la pagination -->	
+
+
+	<script>
+		$(document).ready(function(){
+		
+		   $("#coursUn").click(function(){			  	
+				$('#section2').replaceWith('<object id="section2" data="cours1web2.html" type="text/html" style="width:73%; height:490em; margin-bottom:0; padding:0;" ></object>'); 
+		   });
+		   
+		   $("#coursDeux").click(function(){			  	
+				$('#section2').replaceWith('<object id="section2" data="cours2web2.html" type="text/html" style="width:73%; height:707em; margin-bottom:0; padding:0;" ></object>'); 
+		   });
+		   $("#coursTrois").click(function(){			  	
+				$('#section2').replaceWith('<object id="section2" data="cours3web2.html" type="text/html" style="width:73%; height:103.75em; margin-bottom:0; padding:0;" ></object>'); 
+		   });
+		   $("#coursQuatre").click(function(){			  	
+				$('#section2').replaceWith('<object id="section2" data="cours4web2.html" type="text/html" style="width:73%; height:870em; margin-bottom:0; padding:0;" ></object>'); 
+		   });
+		   $("#coursCinq").click(function(){			  	
+				$('#section2').replaceWith('<object id="section2" data="cours5web2.html" type="text/html" style="width:73%; height:103.75em; margin-bottom:0; padding:0;" ></object>'); 
+		   });
+		   $("#anis-R1").click(function(){			  	
+				$('#section2').replaceWith('<object id="section2" data="anis-R1.html" type="text/html" style="width:73%; height:110em; margin-bottom:0; padding:0;" ></object>'); 
+		   });
+		   $("#anis-R2").click(function(){			  	
+				$('#section2').replaceWith('<object id="section2" data="anis-R2.html" type="text/html" style="width:73%; height:511em; margin-bottom:0; padding:0;" ></object>'); 
+		   });
+		});
+		
+	    // mise à jour liens pop du semestre1: PAS DE POP AU SEMESTRE2 ( WAI oblige ! )
+		function atelierPosition() 
+		{                 
+		    window.open("../../../HTML/atelier1/index.html", 'Popup', 'scrollbars=1, Menubar=1, resizable=1, height=510, width= 808 ,  top=125, left=227,  toolbar=1  '); return false;          
+		}		
+		function webUn()
+		{                  
+		    window.open("../../../HTML/coursHTML/index.html", 'Popup', 'scrollbars=1, Menubar=1, resizable=1, height=510, width= 808 ,  top=125, left=227,  toolbar=1  '); return false;          
+		}
+		function pop_tpCinqHTML()
+		{           
+		    window.open("../../../HTML/tp5-zoning/index.html", 'Popup', 'scrollbars=1, Menubar=1, resizable=1, height=510, width= 808 ,  top=125, left=227,  toolbar=1  '); return false;          
+		}
+		function pop_tdSix()
+        {           
+		    window.open("../../../HTML/td6-zoning2/myTemplatePop.html", 'Popup', 'scrollbars=1, Menubar=1, resizable=1, height=510, width= 808 ,  top=125, left=227,  toolbar=1  '); return false;          
+		}
+		function pop_tpQuatreTableau()
+        {           
+		    window.open("../../../HTML/tp4-tableau/index.html", 'Popup', 'scrollbars=1, Menubar=1, resizable=1, height=510, width= 808 ,  top=125, left=227,  toolbar=1  '); return false;          
+		}
+		function pop_tpTroisFormulaire()
+        {           
+		    window.open("../../../HTML/tp3-formulaire/index.html", 'Popup', 'scrollbars=1, Menubar=1, resizable=1, height=510, width= 808 ,  top=125, left=227,  toolbar=1  '); return false;          
+		}
+		function pop_tpDeuxFrame()
+        {           
+		    window.open("../../../HTML/tp2-frame/index.html", 'Popup', 'scrollbars=1, Menubar=1, resizable=1, height=510, width= 808 ,  top=125, left=227,  toolbar=1  '); return false;          
+		}
+		function pop_tpQuatreCss()
+        {           
+		    window.open("../../../HTML/tp4-css/index.html", 'Popup', 'scrollbars=1, Menubar=1, resizable=1, height=510, width= 808 ,  top=125, left=227,  toolbar=1  '); return false;          
+		}
+		function pop_tpUnCss()
+        {           
+		    window.open("../../../HTML/tp1-css/index.html", 'Popup', 'scrollbars=1, Menubar=1, resizable=1, height=510, width= 808 ,  top=125, left=227,  toolbar=1  '); return false;          
+		}
+		function formulaire_HTML()
+        {           
+		    window.open("../../../HTML/tools/index.html", 'Popup', 'scrollbars=1, Menubar=1, resizable=1, height=510, width= 808 ,  top=125, left=227,  toolbar=1  '); return false;          
+		}
+	</script>
+	
+  </head>
+  <body onload="openBarreGauche();" >
+    <header id="entete">
+        <hr  id="fantaisieRELOU3">
+        <hr  id="fantaisieRELOU1">
+        <h1  style='text-align:center'>Master MIASHS : Paris8 </h1>
+        <h3  style='text-align:center'>Revisions - Session 2019/2020  </h3>
+        <h5  style='text-align:center; font-style:italic;'>La proprieté <strong>display</strong> </h5>
+        <h1  style='text-align:center' >---</h1>
+        <button class="openbtn" id="ejectBtn" onclick="openNav(); openBarreGauche(); topFunction(); ">☰ </button>
+        <hr  id="fantaisieRELOU1" >
+        <hr  id="fantaisieRELOU3">
+        
+    </header>
+	<div id="menu">
+	  
+	  <!--  	
+	  <a href="#" id="coursUn">Cours1</a>	  
+	  <a href="#" id="coursDeux" >Cours2</a>
+	  <a href="#" id="coursTrois">Cours3</a>
+	  <a href="#" id="coursQuatre">Referencement web</a>
+	  <div class="dropdown2" >
+		<button class="dropdown2-btn">Raccourci clavier</button> 					  
+		<div class="dropdown2-container">
+			<a  href="#" id="anis-R1" >Anis Rojbi1</a>
+			<a  href="#" id="anis-R2" >Anis Rojbi2</a>						
+		</div>
+	  </div>
+	  <p class="bubble-cours1" id="infoUn">
+		<span> &Eacute;tapes de conception d'un site web &emsp; &emsp; &emsp;</span>
+	  </p>
+	  <p class="bubble-cours2" id="infoDeux">
+		<span> Web accessible&emsp; </span>
+	  </p>
+	  <p class="bubble-cours3" id="infoTrois">
+		<span> Responsive Design&emsp;&emsp;&emsp;</span>
+	  </p>
+	  -->	
+	</div><!-- fin #menu (topmenu)	-->
+	<div id="contenair"  > <!-- contient: le menu, les 2 barre laterales, et le contenu main  -->
+	
+		<!-- Cacher le menu a gauche du header mais il doit sortie avec la mm hauteur que le header -->
+		<div id="barre-laterale"  >
+			<div id="mySidepanel" class="sidepanel" >
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+				<a href="../../../index.html" id="iconAccueil"><img src="../../../photos/accueil.png" ></a>
+				<a href="../../../index-php.html">PHP</a>
+				<a href="../../../index-html.html">HTML</a>
+				<a href="../../../index-reseau.html">R&eacute;seaux</a>
+				<a href="../../../index-java.html">Java</a>			
+				<a href="../../../index-lsf.html">LSF</a>
+				<a href="../../../index-cms.html">CMS</a>
+			</div>
+		</div>
+		
+		<!-- Barre laterale gauche  -->
+		<aside class="sidebarGauche" id="sidebarGauche" style="height:76%;  ">
+				<a href="javascript:void(0)" class="closebtn closebtn2" onclick="closeBarreGauche(); closeNav();">×</a>
+				<div id="documenter_sidebar" style="padding-bottom:0%; height:auto;"  > 
+
+					<div class="dropdown" style="margin-top:0; ">
+					  <button class="dropdown-btn">Semestre2:Web2</button> 					  
+					  <div class="dropdown-container">
+					    <a  href="cours.html"  >Cours: Web accessible</a> 
+						<a  href="#"  >TD: Web2</a>
+						<a  href="#"  >TP: Web2</a>						
+					  </div>
+					</div>                       					
+					<div class="dropdown" style="margin-top:0;">
+					  <button class="dropdown-btn">Semestre1:Web1 
+						<i class="fa fa-caret-down"></i>
+					  </button>
+					  <div class="dropdown-container">
+					    <a  href="#" onclick="webUn();" >WEB1: Les bases</a> 
+						<a  href="#" onclick="pop_tpCinqHTML();" >TP5 Zoning</a>
+                        <a  href="#" onclick="pop_tdSix();" >TD6 Zoning2</a>							
+						<a  href="#" onclick="pop_tpQuatreTableau();" >TP4 Tableaux</a>
+                        <a  href="#" onclick="pop_tpTroisFormulaire();" >TP3 Formulaire</a>						
+						<a  href="#" onclick="pop_tpDeuxFrame();" >TP2 Frame URGENT</a>						
+                        <a  href="#" onclick="pop_tpQuatreCss();" >TP4 CSS</a>
+                      	<a  href="#" onclick="pop_tpUnCss();" >TP1 CSS</a>
+                        <a  href="#" onclick="formulaire_HTML();" >Aide-mémoire</a>
+					  </div>
+					</div>
+					<ol id="documenter_nav" style=" height:100%; margin-bottom:0; padding-bottom:0;  margin-top:0;" >
+						<li><a  href="#" onclick="#" >ATELIER 1(Display)</a></li>
+						<li><a  href="#" onclick="atelierPosition();" >ATELIER 2(position)</a></li>
+						<li><a  href="#" onclick="#" >ATELIER 3(exemples)</a></li>
+						<li><a  href="#" onclick="#" >ATELIER 4(templates)</a></li>                          					
+					</ol> 
+				</div>
+		</aside> 		
+		
+		<!-- Contenu: pricipal -->	
+		<main id="main" >	
+			<section class="bordureSupSection1 " id="section1" ></section>			
+			<section class="conteneurDesSujet" id="section2" style=""   >			
+				<div class="colone1">
+					<b style="color:#ECECEA;"> Les 3 premiers exercices </b>
+					<p >
+					   <object class="height_"  data="display/1.display.html" ></object>
+					</p>           
+				</div>
+				<div class="colone2">
+					<p>
+					   <object class="height_"  data="display/2.alignementHorizontal.html" ></object>
+					</p>            
+				</div>
+
+				<div class="colone3" style="padding-left:0;">
+					<b style="color:#ECECEA;"> Les 3 derniers </b>
+					<p>
+					  <object class="height_"  data="display/3.testBruno.html"  ></object>
+					</p>
+				</div>			
+			</section> <!-- FIN section1- conteneurDesSujet - HTML -->			
+		</main>
+		
+		<button onclick="topFunction()" id="myBtn" title="Go to top" >
+		    <img  src="../../../photos/top.JPG" id="imageToTop">
+	    </button>
+	</div> <!-- div#contenair -->
+	
+	<hr width=100% color=whitesmoke style="display:inline-block;">
+	<div class="conteneur-reponses"></div> 	           
+    <footer >     
+		Pied de page (footer)<br>
+	    <div class="content-footer"  >         
+            <div class="ndreda-footer" > 		  
+                <ul type="square">
+                    <li>Convertisseur de document:&emsp;<a href="https://convertio.co/fr/download/c5eba97c63aa7512996b5320c5bf789ed72c2e/" style="color:gray; text-decoration:none">convertico.co</a>  </li>
+                    <li>Convertisseur pixel-em :&emsp;<a href="https://nekocalc.com/fr/px-a-em-convertisseur" style="color:gray; text-decoration:none">nekocalc.com</a> </li>
+                </ul>
+            </div>		
+			<span class="copyright_"><span style="color:gray;">2019 &copy; -</span> Master Handi</span>
+        </div><!-- conteneur-reponses Q1.1 -->	  
+    </footer>
+    <script type="text/javascript" src="../../../js/top.js"></script>
+	<script type="text/javascript" src="../../../js/sticky.js"></script>
+    <script type="text/javascript" src="../../../js/info-Bulle.js"></script>
+	<script type="text/javascript" src="../../../js/sidebar.js"></script>
+
+  </body>
+</html>

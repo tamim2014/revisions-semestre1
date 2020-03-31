@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TP3 Formulaire</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../style/fullPageTabs.css" media="screen" /> 
+    <script type="text/javascript" src="../../js/fullPageTabs.js"></script>	
+</head>
+<body style="position:absolute; top:0; width:100%;">
+    <!-- MENU FULL PAGE TABS -->
+	<button class="tablink" onclick="openPage('Sujet', this, 'black')" id="defaultOpen"  >Sujet</button>
+	<button class="tablink" onclick="openPage('index.html', this, 'black')"  >Solution</button>
+	<button class="tablink" onclick="openPage('Cours', this, 'purpule')">Cours</button>
+	<button class="tablink" onclick="openPage('Fiche', this, 'green')">Fiche synth&egravese</button>
+	<div id="Sujet" class="tabcontent">
+	  <object data="tp3-formulaire.pdf" type="application/pdf" class="chargerObjet"  ></object>
+	</div>
+	<div id="Solution" class="tabcontent"></div> 
+	<div id="Cours" class="tabcontent">
+	  <object data="cours1-liste-et-frame.pdf" type="application/pdf" class="chargerObjet"  ></object>
+	</div>
+	<div id="Fiche" class="tabcontent">
+	  <h3>Fiche</h3>
+	  <p>Mettre ici juste l'essenciel du cours</p>
+	</div>
+	<div class="conteneur-reponses"> </div> <!-- c'est juste un separateur sujet/solution -->
+    <!-- CONTENU DE LA SOLUTION SOLUTION -->
+	<form action="formulaire.php" method="get">
+		<table>
+			<thead>
+				<tr><th align="left">Questions</th><th align="left">R&eacute;ponse</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>Nom</td><td><input type="text" name="nom" placeholder="Votre nom" required></td></tr>
+			    <tr><td>Prenom</td><td><input type="text" name="prenom" placeholder="Votre prenom" required></td></tr>
+			    <tr><td>Email</td><td><input type="email" name="email" value="a.andjib@yahoo.fr"></td></tr>
+			    <!-- 1ere evaluation -->
+			    <tr>
+			    	<td>J'ai sassist&eacute; &agrave; la premi&egrave;re &eacute;valuation</td>
+			    	<td><input type="checkbox" name="checkbox1"></td>
+			    </tr>
+			    <tr>
+			    	<td>Avez-vous trouv&eacute; cette &eacute;valuation </td>
+			    	<td>
+			    		<input type="radio" name="appreciation1" value="tr&egrave;s facile">&nbsp;tr&egrave;s facile<br>
+			    		<input type="radio" name="appreciation1" value="facile">&nbsp;facile<br>
+			    		<input type="radio" name="appreciation1" value="moyennement facile">&nbsp;moyennement facile<br>
+			    		<input type="radio" name="appreciation1" value="difficile">&nbsp;difficile<br>
+			    		<input type="radio" name="appreciation1" value="tr&egrave;s difficile">&nbsp;tr&egrave;s difficile
+			    	</td>
+			    </tr>
+			    <!-- 2eme evaluation -->
+			    <tr>
+			    	<td>J'ai sassist&eacute; &agrave; la deuxi&egrave;me &eacute;valuation</td>
+			    	<td><input type="checkbox" name="checkbox2"></td>
+			    </tr>
+			    <tr>
+			    	<td>Avez-vous trouv&eacute; cette &eacute;valuation </td>
+			    	<td>
+			    		<input type="radio" name="appreciation2" value="tr&egrave;s facile">&nbsp;tr&egrave;s facile<br>
+			    		<input type="radio" name="appreciation2" value="facile">&nbsp;facile<br>
+			    		<input type="radio" name="appreciation2" value="moyennement facile">&nbsp;moyennement facile<br>
+			    		<input type="radio" name="appreciation2" value="difficile">&nbsp;difficile<br>
+			    		<input type="radio" name="appreciation2" value="tr&egrave;s difficile">&nbsp;tr&egrave;s difficile
+			    	</td>
+			    </tr>
+			    <tr>
+			    	<td>Aves-vous des commentaires sur le d&eacute;roulement des TD? </td>
+			    	<td><textarea rows="5" cols="35" name="commentTD">Tapez ici vos commentaires</textarea></td>
+			    </tr>
+			    <tr>
+			    	<td>Promotion</td>
+			    	<td>
+			    		<select name="promotion">
+			    		    <option >M1 handi</option>
+			    		    <option >M2 handi</option>
+			    		</select>
+			    	</td>
+			    </tr>
+			    <tr ><td><input type="reset" name="rst" value="R&eacute;initialiser"></td><td></td></tr>
+			    <tr style="height: 4px"></tr>
+			    <tr ><td><input type="submit" name="submit" value="Envoyer" ></td><td></td></tr>
+			</tbody>
+	    </table>		
+	</form>
+</body>
+</html>

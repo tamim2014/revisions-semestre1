@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tp2 FRAME</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../style/fullPageTabs.css" media="screen" /> 
+    <script type="text/javascript" src="../../js/fullPageTabs.js"></script>		  
+</head>
+<body style="position:absolute; top:0; width:100%;">
+
+<!-- MENU FULL PAGE TABS -->
+<button class="tablink" onclick="openPage('Sujet', this, 'black')" id="defaultOpen"  >Sujet</button>
+<button class="tablink" onclick="openPage('index.html', this, 'black')"  >Solution</button>
+<button class="tablink" onclick="openPage('Cours', this, 'purpule')">Cours</button>
+<button class="tablink" onclick="openPage('Fiche', this, 'green')">Fiche synth&egravese</button>
+<div id="Sujet" class="tabcontent">
+  <object data="tp2-frame.pdf" type="application/pdf" class="chargerObjet"  ></object>
+</div>
+<div id="Solution" class="tabcontent"></div> 
+<div id="Cours" class="tabcontent">
+  <object data="cours1-liste-et-frame.pdf" type="application/pdf" class="chargerObjet"  ></object>
+</div>
+<div id="Fiche" class="tabcontent">
+  <h3>Fiche</h3>
+  <p>Mettre ici juste l'essenciel du cours</p>
+</div>
+<div class="conteneur-reponses"> </div> <!-- c'est juste un separateur sujet/solution -->
+
+<!-- CONTENU DE LA SOLUTION SOLUTION -->	
+	<h2 >Urgent! g pas fait ce tp => je dois le faire d'urgence</h2>
+	<h3 >d'ailleurs j'connais rien sur les frame</h3>
+
+	
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cours8 Interface</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="../../favicon.ico"  />
+	<link rel="stylesheet" href="../../style/fullPageTabs.css" media="screen" /> 
+
+    <script type="text/javascript" src="../../js/fullPageTabs.js"></script>
+
+	
+	
+</head>
+<body style="position:absolute; top:0; width:100%; " onload="openPage('Sujet', this, 'black')"  >
+
+	<!-- MENU FULL PAGE TABS --> 
+	<button class="tablink" onclick="openPage('Sujet', this, 'black')" id="defaultOpen">sujet</button>
+	<button class="tablink" onclick="openPage('Solution', this, 'black')">Solution flottant</button>
+	<button class="tablink" onclick="openPage('Cours', this, 'black')">Solution absolute</button>
+	<button class="tablink" onclick="openPage('Fiche', this, 'black')">Rapport de TD</button>
+	
+	<!-- ONGLET 1    -->
+	<div id="Sujet" class="tabcontent" >
+	   <object  data="td6-css-bloc.pdf" type="application/pdf" class="chargerObjet"  ></object>	
+	</div>
+	
+	<!-- ONGLET 2    -->
+	<div id="Solution" class="tabcontent" style="background:black"   >
+	  <!-- Deco  amovible haut -->
+	  <div class="alert" >
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+		<strong> Zoning flottant VS Zoning absolu:</strong> <span style="color:#555; font-style:italic; ">  Un "<b>clear : both</b>" s'impose en flottant !</span><br> 
+      </div>	
+	  <!-- Contenu -->
+	  <!-- pour afficher les 2 page je dois regler quelques details media-query 
+	  <object class="onglet1-1-resume"   data="td6-flottant.html" ></object>
+	  <object class="onglet1-2-resume"   data="resume-cours8.html" ></object>
+	  -->
+	  <object class="onglet1-1-resume" style="width:90%;"  data="td6-flottant.html" ></object>
+	  
+	  <!-- Deco amovible bas -->
+	  <div class="alert" style="margin-top:40%; margin-bottom:0; padding-top:5%;">
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+		<span > 
+           <small><code><span style="color:black">C'est la classe</span> <b>responsive{max-width: 94%; height: auto;}</b><br>
+           <span style="color:black">qui empêche l'image ci-haut de depasser ses conteneurs !!</span></code></small>		   	  
+		</span> 
+      </div>
+	</div> 
+	
+	<!-- ONGLET 3    -->
+	<div id="Cours" class="tabcontent" style="background:black" >
+	
+	  <!-- Deco  amovible haut -->
+	  <div class="alert" >
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+		<strong> Zoning flottant VS Zoning absolu:</strong> <span style="color:#555; font-style:italic; "> Pas besoin de "<b>clear : both</b>" </span><br>
+      </div>
+	  
+	  <!-- Contenu -->
+	  <object class="onglet1-1-resume" style="width:90%;"  data="td6-absolue.html" ></object>
+	  
+	  <!-- Deco amovible bas -->
+	  <div class="alert" style="margin-top:40%; margin-bottom:0; padding-top:5%;">
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+		<span > Position:float VS  Position:absolute</span> 
+      </div>
+	</div>
+	
+	<!-- ONGLET 4    -->
+	<div id="Fiche" class="tabcontent" style="background:black"  >	
+	   <!-- pour une image utiliser class="onglet1-sujet" -->
+	   <object  data="rapport-td6.pdf" type="application/pdf" class="chargerObjet"  ></object>	
+	</div>
+
+	<!-- <div class="conteneur-reponses" > </div>  separateur -->
+
+</body>
+</html>

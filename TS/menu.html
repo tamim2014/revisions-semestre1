@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8"> <!-- sinon tu peux pas écrire N° ni les accent-->
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Ateliers HTML </title>
+ <link rel="stylesheet" href="../style/login.css" type="text/css" media="screen, projection">
+ <style>
+    table { width:98%; height:70%; margin:40px  2px;}
+	td {margin : 2px; }  
+ </style>
+ <style>
+	#mySidenav a, .test {
+	  position: absolute;
+	  left: -140px;
+	  transition: 0.3s;
+	  padding: 15px 20px 15px 15px;
+	  width: 120px;
+	  text-decoration: none;
+	  font-size: 20px;
+	  color: white;
+	  border-radius: 0 5px 5px 0;
+	}
+	#mySidenav2 a {
+	  position: absolute;
+	  /* left: 185%; */
+	  right:-140px;
+	  transition: 0.3s;
+	  padding: 15px 15px 15px 20px;
+	  width: 120px;
+	  text-decoration: none;
+	  font-size: 20px;
+	  color: white;
+	  border-radius: 5px 0 0 5px;
+	}
+
+
+	#mySidenav a:hover { left: -8px; }
+	/* #mySidenav2 a:hover { left: 160%; } */
+	#mySidenav2 a:hover { right: -2px; }
+	  
+	
+ 
+	#sujet1html, #solution1html {
+	  top: 80px;
+	  background-color: #4CAF50;
+	}
+
+	#sujet2html, #solution2html {
+	  top: 140px;
+	  background-color: #2196F3;
+	}
+
+	#sujet3html, #solution3html {
+	  top: 200px;
+	  background-color: #f44336;
+	}
+
+	#sujet4html, #solution4html {
+	  top: 260px;
+	  background-color: #555;
+	}
+	#sujet5html, #solution5html {
+	  top: 320px;
+	  background-color: #9199F3;
+	}
+	.button {
+	   background-color:white;
+	}
+</style>
+</head>
+
+<body style="background-color:#f7f7f9;" >
+        <div id="mySidenav" class="sidenav">
+		  
+		   <a href="#" style="top:10px; color:black; background:white; left: -8px;">Sujets</a>
+		   <a href="tp5-zoning.pdf" id="sujet1html">TP5 Zoning</a>
+		   <a href="tp4-tableau.pdf" id="sujet2html">TP4 Tableau </a>
+		   <a href="tp4-css.pdf" id="sujet3html">TP4 CSS</a>
+		   <a href="tp3-formulaire.pdf" id="sujet4html">TP3 Form</a>
+		   <a href="tp1-css.pdf" id="sujet5html">TP1 CSS</a>	
+		</div>
+		<div id="mySidenav2"  >
+		  <a href="#" style="top:10px; color:black; background:white; left:51%;">Solutions</a>
+		  <a href="tp5-zoning/index.html" id="solution1html">TP5 Zoning</a>
+		  <a href="tp4-tableau/index.html" id="solution2html">TP4 Tableau</a>
+		  <a href="tp4-css/index.html" id="solution3html">TP4 CSS</a>
+		  <a href="tp3-formulaire/index.html" id="solution4html">TP3 Form</a>
+		  <a href="tp1-css/index.html" id="solution5html">TP1 CSS</a>
+		</div>
+
+    	   
+ 
+		<div  style=" position:relative; margin:2% 100%;  border: 1px solid #d6d7da; background:white; border-radius: 5px; width:60%; height:365px;" > 
+            <table >
+               <tr>
+			      <td style="float:left; "><a href="tp1-css/index.html" target="_self" class="button"  >&sum; &prod; &sum; &prod;</a>  </td>
+                  <td style="float:right; "><a href="tp4-css/index.html" target="_self" class="button"  >  &prod; = 3,1415926535897932</a>  </td>				  				   
+			   </tr>
+               <tr>
+			      <td style="float:left;"><a href="tp3-formulaire/index.html" target="_self" class="button"  >&nabla;</a></td>  
+				  <td style="float:right;"><a href="tp4-tableau/index.html" target="_self" class="button"  >&#916;</a></td>  
+			   </tr>
+               <tr>
+			      <td style="float:left;"><a href="tp5-zoning/index.html" target="_self" class="button"  >&loz;</a></td>  
+				  <td style="float:right;"><a href="#" target="_self" class="button"  >&prod;</a></td>  
+			   </tr>			   
+		    </table>              		            
+		</div>
+
+		
+      
+</body>
+</html>

@@ -1,0 +1,239 @@
+body {
+	background-color: gray; 
+	background-image: url("img/image2.png"), url("img/test.png"); 
+	background-repeat: repeat;
+	background-attachment :fixed;
+  background-position: right bottom;  
+}
+
+
+div#haut-de-page {
+  width: 100%;
+  background-color: black;
+  vertical-align:middle;
+}
+
+img#logo {
+   margin-top: 20px;
+   margin-left:40px;
+   padding-bottom:10px; 
+
+}
+
+body div#haut-de-page span.slogan{
+  transition-duration: 2s;
+  font:  italic  bold  1.8em  sans-serif ;  
+  color:white;
+  line-height: 35px;
+  
+  float:right;
+  padding-right: 1.6%;
+  padding-top:50px; 
+ 
+}
+
+img.image-article {
+  float: left;
+  margin-right: 12px;
+  transition-duration: 2s;
+}
+
+
+
+/* Effets au survol d’un lien par le curseur - Menu*/
+.topnav a:hover  {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight:bold;
+  color: red;
+  background-color: green;
+  border-bottom: 3px solid red; 
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.4em;
+  transition-duration: 0.2s;
+}
+
+
+.topnav a.active {
+  /*
+  background-color: #4CAF50;
+  color: #ff1;
+  border-bottom: 3px solid green;
+  */
+  background-color: red;
+  color: #f2f2f2;
+  border-bottom: 3px solid  #ff0000;
+  font-size: 1.5em;
+  padding-left: 30px;
+  padding-right: 30px;
+ 
+}
+
+.topnav a.active:hover {
+  background-color: green;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+
+
+
+
+/* Effets 3D sur le texte pour le rendre + accessible */
+
+#titre {
+  font-size:1.1em;
+  text-shadow: 2px 2px #ff0000;  
+}
+
+p {
+  font: italic bold 30px arial, sans-serif; 
+}
+p:hover {
+  color: #f2f2f2;
+  background: #000066;     
+  box-shadow:
+    0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+    0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+  border:1px solid #000066;
+  padding:10px;  
+}
+span {
+  color:#ff1;
+}
+
+/*EXERCICE2: identification d'elt */
+
+div#document {
+	background-color:white;
+	padding:10px;		
+}
+h1#chap1, h1#chap2  {
+	color:white;
+	background-color:black;
+  /********************* Definition des bordures : ***********
+     BORDURES EN GORS POINTS DORES
+
+        Bordure, en gros points dorés; 
+        border-width: thick; 
+        border-style: dotted; 
+        border-color: gold;
+  ************************************************************/
+
+  /* BORDURE DIFFERENT POUR CHAQUE COTE D'UN MEME ELEMENT */
+    
+    border-top-width: thick; border-top-style: solid; border-top-color: red;
+    border-bottom-width: thick; border-bottom-style: solid; border-bottom-color: blue;
+    border-right-width: thick; border-right-style: solid; border-right-color: green;
+    border-left-width: thick; border-left-style: solid; border-left-color: yellow;
+}
+/*
+h1#chap2{
+	color:red;
+	background-color :#f0f1f1;
+
+}
+*/
+h2.souschapitre{
+  color:#0000ff;
+  text-decoration: underline black;  
+}
+
+#footer {
+  width:98%;
+  padding: 1%;
+  background-color: black;
+  vertical-align:middle;
+
+
+  float:left;
+  color:#f2f2f2;
+  margin-bottom: 0;
+}
+
+.bottomnav {
+  overflow: hidden;
+  background-color: red;
+  float:left;
+  
+  width: 100%;
+  padding: 1% 9% 1% 1%;
+  margin-bottom: 2px;
+  text-align: right;
+}
+
+.bottomnav a{
+  color: white;
+  padding-left: 20px;
+  text-decoration: none;
+
+}
+
+.copyright_ {
+
+  background: black;
+  color:#f2f2f2;
+  padding: 20px;
+  margin-top: 2px;
+
+}
+
+@media all and (max-width: 900px) {   
+    
+	body div#haut-de-page span.slogan{
+
+	  font:  italic  bold  1.2em  sans-serif ;  
+	  line-height: 30px;	  
+	  padding-right: 0.8%;
+	  padding-top:25px; 
+	 
+	}
+	
+	.topnav a {  
+       	
+	   padding: 10px 12px;     
+	   font-size: 1.2em; 
+	   
+	} 
+
+    .topnav a.active {
+	  border-bottom: 2px solid  #ff0000;
+	  font-size: 1.6em;
+	  padding-left: 40px;
+	  padding-right: 40px;
+	 
+	}	
+	
+	.topnav a.active:hover {
+	  padding-left: 15px;
+	  padding-right: 15px;
+	}
+	.topnav a:hover {
+	  padding-left: 0px;
+	  padding-right: 0px;
+	}
+
+}
+
+
+
+/*
+2 gris tres chics(mais pas accessible)
+background-color : #f0f1f1;
+color: #f2f2f2;
+*/
+

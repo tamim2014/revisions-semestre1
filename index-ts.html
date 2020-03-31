@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Traitement du signal</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Trucsweb.com" />    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">  
+	
+    <link rel="stylesheet" href="style/zoning2.css" media="screen" />	
+    <link rel="stylesheet" href="style/contenuAccueil.css" media="screen" />
+    <link rel="stylesheet" href="style/calculatrice.css" media="screen" />
+    <link rel="stylesheet" href="style/examen.css" media="screen" />
+    <link rel="stylesheet" href="style/menu907.css" media="screen" /> 
+    <link rel="stylesheet" href="style/dropdown.css" media="screen" /> 
+    <link rel="stylesheet" href="style/sticky.css" media="screen" /> 	
+	<link rel="stylesheet" href="style/top.css"  media="screen"><!--  Bouton remonter en haut de page -->
+    <link rel="stylesheet" href="style/menu_accordeon.css" media="all">
+
+    <script type="text/javascript" src="js/menu907.js"></script>
+    <script type="text/javascript" src="js/accesAuxPopUps.js"></script>
+	<script type="text/javascript" src="js/jquery3.4.1.min.js"></script> <!-- pour la pagination -->
+    <script type="text/javascript" src="js/sidebar.js"></script>
+    
+	<script>
+	
+	$(document).ready(function(){
+	   $("#coursDeux").click(function(){			  	
+			$('#section2').replaceWith('<object id="section2" data="cours2web2.html" type="text/html" style="width:73%; height:1000px; margin-bottom:0; padding:0;" ></object>'); 
+       });
+	});
+	</script>
+	<style>
+	 /* exporter ce code vers "style/menu_accrdeon.css" 
+	 #documenter_sidebar a, #documenter_sidebar  .dropdown-btn{ height:2em; }
+	 */
+	</style>
+	
+  </head>
+  <body onload="openBarreGauche();">
+    <!-- En-tête -->
+    <header>
+        <hr  id="fantaisieRELOU3">
+        <hr  id="fantaisieRELOU1">
+        <h1  style='text-align:center'>Master MIASHS : Paris8 </h1>
+        <h3  style='text-align:center'>Revisions - Session 2019/2020  </h3>
+        <h5  style='text-align:center; font-style:italic;'>TD, TP, Fiches-synthèse, Sujets corrigés </h5>
+        <h1  style='text-align:center'>---</h1>
+        <button class="openbtn" id="ejectBtn" onclick="openNav(); openBarreGauche(); topFunction();">☰ </button>
+        <hr  id="fantaisieRELOU1" >
+        <hr  id="fantaisieRELOU3">        
+    </header>
+	
+	<!-- TOP MENU -->
+	<div id="menu"></div>
+	
+	<div id="contenair"  > 	
+	<!-- MENU LATERAL HAUT: Cacher le menu a gauche du header mais il doit sortie avec la mm hauteur que le header -->
+		<div id="barre-laterale" >
+			<div id="mySidepanel" class="sidepanel">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+				<a href="index.html" id="iconAccueil"><img src="photos/accueil.png" ></a>
+				<a href="index-ihm.html">IHM</a>
+				<a href="index-stat.html">Statistique</a>
+				<a href="index-ts.html">TS</a>
+				<a href="index-php.html">PHP</a>
+				<a href="index-html.html">HTML</a>
+				<a href="index-reseau.html">R&eacute;seaux</a>
+				<a href="index-java.html">Java</a>			
+				<a href="index-lsf.html">LSF</a>
+				<a href="index-cms.html">CMS</a>
+			</div>
+		</div>
+		
+	<!-- MENU LATERAL BAS: Barre laterale gauche  -->
+		<aside class="sidebarGauche" id="sidebarGauche" style="height:76%;  ">
+		        <a href="javascript:void(0)" class="closebtn closebtn2" onclick="closeBarreGauche(); closeNav();">×</a>
+				<div id="documenter_sidebar" style="padding-bottom:0%; height:auto;"  > 
+
+					<div class="dropdown" >
+					  <button class="dropdown-btn">Semestre2:Web2 </button> 					 
+					  <div class="dropdown-container">
+					    <a  href="TS/semestre2/cours/cours.html"  >Cours: Web accessible</a>
+						<a  href="#"  >TD: Web2</a>
+						<a  href="#"  >TP: Web2</a>						
+					  </div>
+					</div>
+					<div class="dropdown" >
+					  <button class="dropdown-btn" >Semestre1:Web1 </button>	  
+					  <div class="dropdown-container">
+					    <a  href="#" onclick="webUn();" >WEB1: Les bases</a> 
+						<a  href="#" onclick="pop_tpCinqHTML();" >TP5 Zoning</a>
+                        <a  href="#" onclick="pop_tdSix();" >TD6 Zoning2</a>							
+						<a  href="#" onclick="pop_tpQuatreTableau();" >TP4 Tableaux</a>
+                        <a  href="#" onclick="pop_tpTroisFormulaire();" >TP3 Formulaire</a>						
+						<a  href="#" onclick="pop_tpDeuxFrame();" >TP2 Frame URGENT</a>						
+                        <a  href="#" onclick="pop_tpQuatreCss();" >TP4 CSS</a>
+                      	<a  href="#" onclick="pop_tpUnCss();" >TP1 CSS</a>
+                        <a  href="#" onclick="formulaire_HTML();" >Aide-mémoire</a>
+					  </div>
+					</div>
+					<ol id="documenter_nav" style=" height:100%; margin-bottom:0; padding-bottom:0; margin-top:0;" >
+					    <li><a  href="TS/semestre2/cours/display.html" onclick="#" >ATELIER 1(Display)</a></li>
+						<li><a  href="#" onclick="atelierPosition();" >ATELIER 2(position)</a></li>
+						<li><a  href="#" onclick="#" >ATELIER 3(exemples)</a></li>
+						<li><a  href="#" onclick="#" >ATELIER 4(templates)</a></li>                          					
+					</ol>
+				</div>
+		</aside> 		
+		
+		<!-- Contenu: pricipal -->	
+		<main id="main" >	
+			<section class="bordureSupSection1 " id="section1" ></section>			
+			<section class="conteneurDesSujet" id="section2"   >			
+				  <h2 class="matiere">Traitement du signal</h2>		  
+				  <div class="success  structureSujet"  >			  			  
+					<p><u><strong>Travaux Pratiques:</strong> Travaux rendus</u></p>
+					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpUnCss();" target="_self">						
+							<strong>TP1</strong> CSS:...................<b></b>					
+					</a></p>
+					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpQuatreCss();" target="_self">						
+							<strong>TP4</strong> CSS:...................<b></b>					
+					</a></p>
+					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpTroisFormulaire();" target="_self">						
+							<strong>TP3</strong> Formulaire:...................<b></b>					
+					</a></p>
+					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpQuatreTableau();" target="_self">						
+							<strong>TP4</strong> Tableaux:...................<b></b>					
+					</a></p>
+					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpCinqHTML();" target="_self">						
+							<strong>TP5</strong> Zoning:...................<b></b>					
+					</a></p>
+					<a href="#"  class="unset_"  onclick="pop_menuHTML();">lire la suite( Cours / &Eacute;nonc&eacute;s des sujets ) ...</a>	
+					<p></p>
+				  </div>
+		         <div class="info  structureSujet"  >			  			  
+					<p><u><strong>Travaux Pratiques:</strong> Travaux rendus</u></p>
+					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpUnCss();" target="_self">						
+							<strong>TP1</strong> CSS:...................<b></b>					
+					</a></p>
+					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpQuatreCss();" target="_self">						
+							<strong>TP4</strong> CSS:...................<b></b>					
+					</a></p>
+					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpTroisFormulaire();" target="_self">						
+							<strong>TP3</strong> Formulaire:...................<b></b>					
+					</a></p>
+					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpQuatreTableau();" target="_self">						
+							<strong>TP4</strong> Tableaux:...................<b></b>					
+					</a></p>
+					<p>&bull;&emsp;&emsp;<a   class="unset_"  href="#" onclick="pop_tpCinqHTML();" target="_self">						
+							<strong>TP5</strong> Zoning:...................<b></b>					
+					</a></p>
+					<a href="#"  class="unset_"  onclick="pop_menuHTML();">lire la suite( Cours / &Eacute;nonc&eacute;s des sujets ) ...</a>	
+					<p></p>
+				  </div>				  
+			</section> <!-- FIN section1- conteneurDesSujet - HTML -->			
+		</main>
+		
+		<button onclick="topFunction()" id="myBtn" title="Go to top" >
+			<img  src="photos/top.JPG" id="imageToTop">
+		</button>
+	</div> <!-- div#contenair -->
+	
+	<hr width=100% color=whitesmoke style="display:inline-block;">
+	<div class="conteneur-reponses"></div> 	           
+    <footer>     
+		Pied de page (footer)<br>
+	    <div class="content-footer"  >         
+            <div class="ndreda-footer" > 		  
+                <ul type="square">
+                    <li>Convertisseur de document:&emsp;<a href="https://convertio.co/fr/download/c5eba97c63aa7512996b5320c5bf789ed72c2e/" style="color:#f7f7f9; text-decoration:none">convertico.co</a>  </li>
+                    <li>Convertisseur pixel-em :&emsp;<a href="https://nekocalc.com/fr/px-a-em-convertisseur">nekocalc.com</a> </li>
+				</ul>
+            </div>		
+			<span class="copyright_"><span style="color:gray;">2019 &copy; -</span> Master Handi</span>
+        </div><!-- conteneur-reponses Q1.1 -->	  
+    </footer>
+   
+	
+	<script type="text/javascript" src="js/sidebar.js"></script>
+	<script type="text/javascript" src="js/top.js"></script>
+	<script type="text/javascript" src="js/sticky.js"></script>	
+  </body>
+</html>

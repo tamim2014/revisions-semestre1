@@ -1,0 +1,146 @@
+<! Doctype html>
+
+<html>
+
+	<head>
+	  <title> TP4</title>
+	  <link rel="stylesheet" type="text/css" href="exo3.css">
+	</head>
+
+	<body >
+		<h1><u>Exercice1</u></h1>
+		<table border="1"   align="center"  cellspacing="1"  cellpadding="4px" >
+			<tr>
+				<td>Cellule1</td>			
+				<td>Cellule2</td>
+				<td>Cellule3</td>
+				<td>Cellule4</td>
+			</tr>
+			<tr>			
+				<td colspan="4" align="center" >Cellule fusionnee sur 4 colonnes</td>		
+			</tr>
+			<tr>
+				<td>Cellule6</td>			
+				<td>Cellule7</td>
+				<td>Cellule8</td>
+				<td>Cellule9</td>							
+			</tr>		
+		</table>
+
+		<hr width="200px"> <!-- Separe les 2 tables de l'Exercice1-->
+
+		<table id="exo1" border="1px"   align="center"  cellspacing="0"  cellpadding="50px" >
+			<tr>
+				<td colspan="2" bgcolor="yellow">Cellule1 <br> (jaune )</td>			
+				
+				<td colspan="2"  bgcolor="#e6ffff">Cellule2  <br> (bleu pale )</td>
+				
+				<td rowspan="2" bgcolor="black" class="color-text" width="20%" >Fusion de 2 lignes (blanc/noir)</td>
+			</tr>
+			<tr>
+				<td colspan="2" bgcolor="#DDDDDD" >Cellule3 <br> (gris clair )</td>			
+			
+				<td colspan="2" bgcolor="#D3D3D3">Cellule4 <br> (gris )</td>								
+			</tr>						
+		</table>
+
+		
+
+		<h1 ><u>Exercice2</u></h1>
+	    <p>Tableau 	&agrave; 3 colonnes et 2 rangees</p>
+
+		<table id="exo2" border="5" bgcolor="yellow"   align="center"  cellpadding="100px">
+			  <caption>Tableau 1</caption>
+			  <tr>
+			  	<td>Rangee1, cellule 1</td>
+			    <td><b>Rangee1, cellule 2</b></td>
+			    <td align="left" valign="middle"><img  src="arbre.png" alt="petit arbre vert " width="80"  height="80"></td>    
+			  </tr>
+			  <tr>
+			    <td bgcolor="#DDDDDD"  >Rangee2, cellule4</td>
+			    <td colspan="2" align="center" ><b>Rangee 2, cellules 5 et 6</b></td>
+			  </tr>
+		</table>
+
+		<h1><u>Exercice3</u></h1>
+	    <p>R&eacute;aliser le tableau ci-dessous: </p>
+	    <table border="1" align="center" cellspacing="8"  cellpadding="50" bgcolor="#DDDDDD">
+	      <caption style="caption-side:bottom; padding: 4px;"><b>Tableau1:</b>abc def ghi jkl mno pqr stu vwx yz </caption>
+		  <tr>
+		  	<td bgcolor="red"  rowspan="2" align="center">Nnnnnn</td>
+		    <td bgcolor="red"  colspan="2" align="center"> Aaaaaaaaaaaa  </td>
+		  </tr>
+		  <tr bgcolor="B3B3B3">
+		    <td align="center"><b>Bbbbbbbb</b></td>
+		    <td align="center"><b>Cccccccc</b></td>
+		  </tr>
+		  <tr>
+		    <td bgcolor="B3B3B3"><b>Un</b></td>
+		    <td class="marge-gauche">Blabla  blabla blablabla blabla bla  blabla blablabla blabla bla blabla blablabla blabla bla</td>
+		    <td valign="top"  style="padding-left:4px; padding-top:4px;">Xxxxx</td>
+		  </tr>
+		  <tr>
+		    <td bgcolor="B3B3B3"><b>Deux</b></td>
+		    <td valign="bottom" style="padding-left:4px; padding-bottom: 4px; ">Yyyyy</td>
+		    <td class="marge-gauche">Blabla  blabla blablabla blabla bla  blabla blablabla blabla bla blabla blablabla blabla bla</td>
+		  </tr>
+		</table>
+
+		<p style="padding-left: 15%;">
+			2) Indiquer l'utilit&eacute; de chaque attribut et son influence sur la structure du tableau
+		</p>
+			<ul  style="padding-left: 20%;">
+				<li>BGCOLOR :            Couleur de fond</li>
+				<li>CELLSPACING:         Espace entres les cellules</li>
+				<li>BORDER :             Epaisseur de la bordure</li>
+				<li>WIDTH :              Largeur</li>
+				<li>COLSPAN:             Regroupement horizontal(fusion de colonnes) </li>
+				<li>ROWSPAN:             Regroupement vertical( fusion de lignes)</li>
+				<li>ALIGN :              Alignement horizontal</li>
+			</ul>
+		<p style="padding-left: 15%;">
+			3) Ins&eacute;rer des images dans les cellules de tableau
+		</p>
+		   <span style="padding-left: 20%;"> ... </span>
+
+		<p style="padding-left: 15%;">
+			4) Eliminer l'espace entre les cellules afin d'obtenir un tableau avec des traits.
+		</p>
+		   <span style="padding-left: 20%;"> ... </span>
+
+		<p style="padding-left: 15%;">
+			5) Rendre transparent le tableau
+		</p>
+		   <span style="padding-left: 20%;"> ... </span>
+
+		<p style="padding-left: 15%;">
+			6) R&eacute;aliser  toute la mise en forme en utlisant que des feuilles de Styles CSS
+		</p>
+		   <span style="padding-left: 20%;"> ... </span>
+
+
+
+		<table border="1" align="center"  cellpadding="50" bgcolor="transparent">
+	      <caption class="caption-bas" ><b>Tableau1:</b>abc def ghi jkl mno pqr stu vwx yz </caption>
+		  <tr>
+		  	<td bgcolor="red"  rowspan="2" align="center">Antigua  <img  src="img/tanque.png"  width="100"  height="120"></td>
+		    <td bgcolor="red"  colspan="2" align="center"> <img  src="img/boreal.png" width="300"  height="100" >  </td>
+		  </tr>
+		  <tr bgcolor="B3B3B3">
+		    <td align="center"><b><img  src="img/guatemala.png" width="100"  height="50" > </b></td>
+		    <td align="center"><b><img  src="img/arc.png" width="100"  height="50" ></b></td>
+		  </tr>
+		  <tr>
+		    <td bgcolor="B3B3B3"><b>Green house <img  src="img/greenhouse.jpg"  width="100"  height="100"></b></td>
+		    <td class="marge-gauche">Blabla  blabla blablabla blabla bla  blabla blablabla blabla bla blabla blablabla <img  src="img/3.png" width="100"  height="50" ></td>
+		    <td valign="top"  class="gauche-haut"><img  src="img/1.png" width="100"  height="50" ></td>
+		  </tr>
+		  <tr>
+		    <td bgcolor="B3B3B3"><b>Corsica <img  src="img/corsica.jpg"  width="100"  height="100"></b></td>
+		    <td valign="bottom" class="gauche-bas" ><img  src="img/chouaniere.png" width="100"  height="50" > </td>
+		    <td class="marge-gauche">Blabla  blabla blablabla blabla bla  blabla blablabla blabla bla blabla blablabla <img  src="img/2.png" width="100"  height="50" ></td>
+		  </tr>
+		</table>	
+
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>bloc-zoning</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="shortcut icon" href="../../favicon.ico"  />  
+   <link rel="stylesheet" href="../../style/fullPageTabs.css" media="screen" /> 
+   <script type="text/javascript" src="../../js/fullPageTabs.js"></script>	
+
+       
+</head>
+<body onload="openPage('Sujet', this, 'black')" >
+  <!-- MENU FULL PAGE TABS -->
+	<button class="tablink" onclick="openPage('Sujet', this, 'black')" id="defaultOpen">sujet</button>
+	<button class="tablink" onclick="openPage('Solution', this, 'black')"  >Solution</button>	
+	<button class="tablink" onclick="openPage('Fiche', this, 'black')">Fiche synth&egravese</button>
+	<button class="tablink" onclick="openPage('Cours', this, 'black')">Exercices</button>
+	
+	<!-- ONGLET 1 -->
+	<div id="Sujet" class="tabcontent">
+	  <object data="tp5-zoning.pdf" type="application/pdf" class="chargerObjet"  ></object> 
+	</div>
+	
+	<!-- ONGLET 2 -->
+	<div id="Solution" class="tabcontent" style="background:black">	 
+       <object class="onglet1-1-resume" style="width:90%;"  data="solution.html" ></object>
+	</div>
+
+    <!-- ONGLET 3 -->	
+	<div id="Cours" class="tabcontent" style="background:black">
+	  <object data="rappels1/index-rappels1.html"  class="chargerObjet"  ></object>
+	</div>
+	
+	<!-- ONGLET 4 -->
+	<div id="Fiche" class="tabcontent" style="background:red">
+	  <object data="fiche.pdf" type="application/pdf" class="chargerObjet"  ></object>
+	</div>
+	<div class="conteneur-reponses"> </div> <!-- c'est juste un separateur sujet/solution -->
+
+
+  
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Accueil - dropdown</title>
+	<link rel="stylesheet" href="css/test3-zoning.css" >
+	<link rel="stylesheet" href="css/test3-dropdown.css" >
+	<style>
+	  .entete-fixe{
+	     position:fixed;  top:0; width:100%;
+	  }
+	  .menu-fixe{
+	     position:fixed;  top:200px; width:100%;
+	  }
+	  .colone-gauche-fixe{
+	    position:fixed; left:0em; top:15.7em;
+	  }
+	  .colone-droite-fixe{
+         position:fixed; right:0em; top:15.7em;
+	  }
+
+	  .nouveau-top-contenu{
+         margin-left:25%; margin-top: 17.7em;
+	  }
+	  
+
+	</style>
+
+</head>
+<body>
+
+	<div id="entete" class="entete-fixe" style="padding:2em; color:#ECECEA;"></div>	
+	<div id="menu" class="menu-fixe">
+		<a href="#" style="background-color: #111; color:#ECECEA;">Accueil</a>
+		<a href="dropdown.html">Dropdown</a>
+		<a href="dropdown-subnav.html">Dropdown Subnav </a> 	
+		<div class="dropdown">
+			<button class="dropdown-btn">Exercice</button>
+			<div class="dropdown-content">
+			    <!--
+			    <a href="../rappels1/index-exo1.html">Sujet: Dropdown</a>
+				<a href="../rappels1/solution-exo1.html">Solution: Dropdown</a>
+                -->				
+                <a href="index-exo1.html">Sujet: Dropdown</a>
+				<a href="solution-exo1.html">Solution: Dropdown</a>					
+			</div>
+		</div>
+	</div>
+	<div id="contenu">
+	    
+		<div class="colone-laterale colone-gauche-fixe" ><!-- top: 250px; -->
+			<p class="paragraphe">
+               Les elts d'une page se suivent de gauche à droite, de haut en bas:<br>
+			   &#8718; Un elt hors de ce flux est positionné : <span style="color:#990033; font-weight:bold">absolute</span><br>
+			   &#8718; On peut <u>décaler un elt</u>( &#37; à sa position  dans le flux): <span style="color:#990033; font-weight:bold">relative</span><br>           
+			</p>
+			
+			<p class="paragraphe">
+			 <b>Bref</b>:<br><br>
+			 &nbsp;&#8718; absolute &equiv; hors du flux <br>
+			 &nbsp;&#8718; relative &equiv; décalé( <span style="font-size:0.7em"> de sa position </span> )<br>
+			 &nbsp;&#8718; relative &equiv; déplacé <br>
+
+			</p>
+		</div>
+		<div class="colone-contenu nouveau-top-contenu" ><!-- margin-top: 280px; -->
+            <h1 class="img" ><span  class="box-shadow-titre" > Zoning </span></h1>
+            <img src="img/z1.png">
+			<img src="img/z2.png">
+			<img src="img/z3.png">
+		</div>
+		<div class="colone-laterale colone-droite-fixe" ><!-- top: 250px; -->
+			<p class="paragraphe">
+					&#9203; Début:20h<br>
+					&#8987; Fin HTML: 20h10<br>
+					&#8987; Fin CSS et test:21h05 <br>
+				
+					&#9200; Durée totale: 55mn
+			</p>
+		</div>
+	</div>
+	<div style="clear:both"></div>
+	<div id="footer"></div>
+
+</body>
+</html>

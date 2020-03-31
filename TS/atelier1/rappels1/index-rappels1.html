@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+	<link rel="shortcut icon" href="../favicon.ico"  />
+	<link rel="stylesheet" type="text/css" href="../css/template-laeticia.css">
+    <link rel="stylesheet" href="../css/top.css"  media="screen">	
+    <title>Fiche de rappels HTML</title>
+	<style>	
+		.height_{
+		   height:2200px; /* taille de la page */
+		}
+		#menu_navigation {height:60px;}
+		#menu_navigation a {
+		  float:left;
+		  padding:12px 16px;
+		  font-size: 16px;
+			
+		}
+       /* Dropdown */
+       		.dropdown {
+			overflow: hidden;
+			float:left;
+		}
+
+		.dropdown-btn{
+			padding: 12px 16px; /* IMPORTANT: IMPACT POUR LA STRUCTURE GENERALE*/
+			font-size: 16px;
+			
+			border:none;
+			outline:none;
+			margin:0;
+			background: inherit;
+			color:inherit;
+			
+		}
+
+		.dropdown-content {
+			position: absolute;
+			left:14em;
+			top:13em;
+			min-width: 160px;
+			background: whitesmoke;
+			box-shadow: 0px 1px 2px 0px #ccf;
+
+		}
+
+        /****
+         * Alignement verical du sous-menu: 
+         * Commencer la selection depuis #menu.: SINON K.O !
+         */
+		#menu_navigation .dropdown-content a{
+			display: block;
+			float:none;	
+		}
+		#menu_navigation .dropdown-content a:hover{
+          color:#558c89;
+		}
+
+
+	 .dropdown-content{ display:none; }
+	 .dropdown:hover .dropdown-content{ display:block; }	   
+	</style>
+</head>
+<body >
+
+<div class="en-tete">
+        <h1> Fiche de Rappels HTML </h1>
+        <h2> "Eléments blocs" et "éléments en ligne"  </h2>
+
+        <div id="menu_navigation" class="menu">
+			   <a href="#" >Alignement Horizontal</a>
+			   <!--		   
+			   <span class="item-menu" ><a href="../rappels1/index-exo1.html">Exo1</a></span>
+			   -->
+			    <div class="dropdown">
+					<button class="dropdown-btn">Exo1</button>
+					<div class="dropdown-content">
+						<a href="../rappels1/index-exo1.html">Sujet</a>
+						<a href="../rappels1/solution-exo1.html">Solution</a>						
+					</div>
+		        </div>
+		   
+        </div>	   
+       
+</div>
+
+
+
+<div class="contenu">
+        <div class="colonne_laterale">
+            <b style="color:#ECECEA;"> Les 3 premiers exercices </b>
+			<p >
+			   <object class="height_"  data="1.display.html" ></object>
+			</p>           
+        </div>
+        <div class="colonne_contenu">
+			<p>
+			   <object class="height_"  data="2.alignementHorizontal.html" ></object>
+			</p>            
+        </div>
+
+        <div class="colonne_laterale">
+		    <b style="color:#ECECEA;"> Les 3 derniers </b>
+			<p>
+			  <object class="height_"  data="3.testBruno.html"  ></object>
+			</p>
+        </div>
+
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top" >
+	<img  src="img/top.png" id="imageToTop">
+</button>
+	
+<div class="footer">
+    <small style="color:#ECECEA;"><span style="color:gray;">2019 &copy; -</span> Master Handi</small>
+</div>
+<script type="text/javascript" src="../js/top.js"></script>
+
+</body>
+</html>

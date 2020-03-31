@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test3 Dropdown</title>
+	<link rel="stylesheet" href="css/test3-zoning.css" >
+	<link rel="stylesheet" href="css/test3-dropdown.css" >
+		<!-- icon dropdown -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+	body{
+	  margin:0;
+	}
+	.divH{
+	  float:left;
+	 
+	  height:308px;
+	  width:42%;
+	  margin:1px;
+	  padding:0.2em;
+	  border:1px solid #8c8b8b;
+	}
+	.divH img{
+	  margin:1%;
+	  width:98%;
+	}
+	#footer{
+	position:absolute;
+	bottom:0;
+	width:100%;
+	margin:0;
+	}
+	</style>
+</head>
+<body>
+
+	<div id="entete"></div>
+	
+	<!-- topmenu -->
+	
+	<div id="menu">
+		<a href="absolue.html" style="background-color: #111; color:#ECECEA;">Accueil</a>
+		<a href="#" >Dropdown</a>
+		<div class="dropdown">
+			<button class="dropdown-btn">Exemple1</button>
+			<div class="dropdown-content">
+			    <a href="#">Link1</a>
+				<a href="#">Link2</a>						
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropdown-btn">Exemple2</button>
+			<div class="dropdown-content">
+			    <a href="#">Link1</a>
+				<a href="#">Link2</a>
+				<a href="#">Link3</a>									
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropdown-btn">Exercice</button>
+			<div class="dropdown-content">
+			    <!--
+			    <a href="../rappels1/index-exo1.html">Sujet: Dropdown</a>
+				<a href="../rappels1/solution-exo1.html">Solution: Dropdown</a>
+                -->				
+
+                <a href="index-exo1.html">Sujet: Dropdown</a>
+				<a href="solution-exo1.html">Solution: Dropdown</a>					
+			</div>
+		</div>
+	</div>
+	
+	<!-- contenu -->
+	
+	<div id="contenu">
+	    <div class="divH" style="width:15%;"></div>
+		<div class="divH">
+		   1. Apprendre Parcoeur la classe ".divH"
+			  <img src="img/head.png"  />
+		</div>
+		<div class="divH">
+		   2. Aprendre par coeur la structure HTML <br> 
+		   <img src="img/body.png"  />
+		</div>
+	</div>
+	
+	<!-- fin contenu -->
+	
+	
+	<div style="clear:both"></div>
+	<div id="footer"></div>
+
+</body>
+</html>

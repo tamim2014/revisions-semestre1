@@ -1,0 +1,57 @@
+		*{box-sizing: border-box;}
+		body{margin:0; background: #ECECEA;}
+
+		#entete{ height: 200px; background: #555; }
+		#footer{ height: 100px; background: #555; }
+		#menu{ height: 48px; background: #c4c4c4; }
+		#menu a {
+			float:left;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+		}
+		#menu a:hover, .dropdown:hover { background: #ccf; }
+
+		.colone-laterale{width:25%;   }
+		.colone-contenu{width: 50%;}
+		.colone-laterale, .colone-contenu {
+			float:left; 
+			height:auto; 
+			margin-top: 2em; 
+			/* border: 1px solid #8c8b8b; */
+		}
+	   .paragraphe{
+			border:1px solid #8c8b8b; 
+			padding: 0.5em;
+			margin:0.5em; 
+			border-radius: 2px;
+		}
+
+		
+		img , .img{ 
+		  float: left; 
+		  width:87%;
+		  height: 90% ;
+		  padding:1.2em;
+
+		  margin:1.5% 6.5%; 
+		  background-color:#555;   
+		  box-shadow:
+			0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+			0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+		  border:1px solid #8c8b8b;
+		  border-radius: 4px; 
+		  
+	  
+		}
+		/* pour les titre de page dans la colonne centrale */
+		.box-shadow-titre{
+			box-shadow:0px 1px 2px 0px #8c8b8b;
+			padding:0.3em 2em; 
+			margin:auto 2em; 
+			border-radius:2px;
+			font-weight:bold;
+			text-align:center;
+            color:#115;	
+		}
+		

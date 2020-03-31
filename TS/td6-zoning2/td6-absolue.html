@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<style>
+	
+	   #entete {	
+	     width:auto;  margin: 1px 0;
+	     height:65px;	padding-top:35px;
+
+		 background-color:#ff9933; text-align:center; 
+		 
+	   }
+	   
+	   #main { 
+	   	 position:relative;
+	     margin:auto; 	
+		 max-width:90%; /* max-width:940px; */		
+	   }
+			   
+	   #menu {
+         position:absolute;	
+	     height:100%; /*par rapport a la hauteur du contenu(400px) */            
+         width:240px;
+         		 
+	     background-color:#ff0066; text-align:center;		
+	   }
+	   
+	   #contenu {  
+	     height:400px; 	
+         margin-left:250px;
+        	 
+	     background-color:#9966ff;	text-align:center;	 
+	   }
+	   
+
+	   #footer {
+	   	height:65px;	padding-top:35px; margin:1% 0;
+	      	  
+	   	 background-color:#009933; text-align:center;
+	   	}
+		
+		/************************************************************************/
+	   /******* Cette mise en page qui ne conserne pas l'exercice **************/
+	  /************************************************************************/
+	   .responsive { max-width: 94%; height: auto; }
+	   .essentiel{
+	      width:auto; height:100%;
+		  margin: 0 20px 0 0;
+		  padding:5px;
+		  border:2px solid gray;
+		  background-color: white; 
+		  border-radius: 10px; 
+		  border-bottom: 0; 
+		  border-right: 0;
+		  /* float: left; */
+		  line-height:4px;
+		
+		  border-radius: 0px ;
+		  
+	   }
+	   code {
+		background-color: #F7F7F9;
+		border: 1px solid #E1E1E8;
+	
+		color: #DD1144;
+		padding: 2px 2px 0 2px;
+		white-space: nowrap;
+       }
+	</style>
+</head>
+<body>
+
+	<div id="entete">
+		<span class="essentiel"><code>width:auto;</code></span>			 
+		<span class="essentiel"><code>margin: 1% 0;</code></span> 
+		<span class="essentiel"><code>height:65px;</code></span>			 
+		<span class="essentiel"><code>padding-top:35px;</code></span> 
+	</div>
+
+	<div id="main">
+		<div id="menu" >
+			<p style="padding:40px">
+				<span class="essentiel" ><code>position:absolute;	</code></span><br><br> 			 
+				<span class="essentiel" ><code>height:100%;	</code></span><br><br>			 
+				<span class="essentiel"><code>width:240px;</code></span><br><br>
+			</p>
+		</div>
+		
+		<div id="contenu" >
+			<p style="padding:40px">
+			    <span class="essentiel" ><code>margin-left:250px;</code></span><br><br> 			 
+				<span class="essentiel" ><code> height:400px; 	</code></span><br><br>
+                <small style="font : italic bold 1.2em cursive ;">Donc hauteur menu de gauche = <code>100%</code> de <code>400px</code> </small> <br><br>
+            			
+				<p class="essentiel responsive" style="width:200px; height:120px; margin:auto;  text-align:left; padding:10px; line-height:0.7em; " >				
+					#main { <br><br>
+					
+						<code style="color:#555; font-weight:bold;">
+							 &emsp;&emsp;position:relative;<br><br>
+							&emsp;&emsp;margin:auto;<br><br>
+							&emsp;&emsp;max-width:90%;<br><br>
+						</code> 
+						 
+					}					
+				</p>	 
+            				
+			</p>
+		</div>
+	</div>
+
+	<div id="footer">
+        <span class="essentiel"><code>margin:1% 0;</code></span> 			 
+		<span class="essentiel"><code>height:65px;</code></span>			 
+		<span class="essentiel"><code>padding-top:35px;</code></span>
+	</div>
+
+
+</body>
+</html>

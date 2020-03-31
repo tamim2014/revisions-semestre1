@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tools HTML</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../style/fullPageTabs.css" media="screen" /> 
+    <script type="text/javascript" src="../../js/fullPageTabs.js"></script>		  
+</head>
+<body style="position:absolute; top:0; width:100%;" onload="openPage('Sujet', this, 'black')" >
+
+<!-- MENU FULL PAGE TABS -->
+<button class="tablink" onclick="openPage('Sujet', this, 'black')" id="defaultOpen"  >Colors</button>
+<button class="tablink" onclick="openPage('Solution', this, 'black')"  >Symboles</button>
+<button class="tablink" onclick="openPage('Cours', this, 'purpule')">inline & block</button>
+<button class="tablink" onclick="openPage('Fiche', this, 'black')">DropDown</button>
+<div id="Sujet" class="tabcontent">
+  <object data="colors.html"  class="chargerObjet"  ></object>
+</div>
+<div id="Solution" class="tabcontent">
+  <object data="symboles.html"  class="chargerObjet"  ></object>
+</div> 
+<div id="Cours" class="tabcontent">
+  <object data="rappels1/index-rappels1.html"  class="chargerObjet"  ></object>
+</div>
+<div id="Fiche" class="tabcontent" style="background:black">
+  <object data="dropdown/index-dropdown.html"  class="chargerObjet"  ></object>
+</div>
+<div class="conteneur-reponses"> </div> <!-- c'est juste un separateur sujet/solution -->
+
+
+	
+
+</body>
+</html>

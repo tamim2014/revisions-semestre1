@@ -66,6 +66,9 @@
 			<div id="mySidepanel" class="sidepanel">
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
 				<a href="index.html" id="iconAccueil"><img src="photos/accueil.png" ></a>
+				<a href="index-ihm.html">IHM</a>
+				<a href="index-stat.html">Statistique</a>
+				<a href="index-ts.html">TS</a>
 				<a href="index-php.html">PHP</a>
 				<a href="index-html.html">HTML</a>
 				<a href="index-reseau.html">R&eacute;seaux</a>
@@ -77,11 +80,24 @@
 		
 		<!-- MENU LATERAL BAS Gauche -->
 		<aside class="sidebarGauche" id="sidebarGauche" style=" height:auto; z-index:1;">
-			<div id="documenter_sidebar"  > 
-				<ol id="documenter_nav" style="width=400px;" >		
-					<li><a  href="#" onclick="pop_tpSixPHP();" >TP6  Compte  bancaire</a></li>
-                    <li><a  href="#" onclick="pop_controlTroisPHP();" >Contrôle 3</a></li>							                     					
-				</ol>
+			<div id="documenter_sidebar"  >
+			
+				<div class="dropdown" >
+					<button class="dropdown-btn">S2</button> 					  
+					<div class="dropdown-container">
+						<a href="PHP/S2/tp1/tp1.html">TP1</a>
+						<a href="PHP/S2/tp1/tp2.html">TP2</a>
+						<a href="PHP/S2/tp1/tp3.html">TP3</a>						
+					</div>
+				</div>
+				
+				<div class="dropdown" style="margin-bottom:0; padding-bottom:0;" >
+					<button class="dropdown-btn">S1</button> 					  
+					<div class="dropdown-container">
+						<a  href="#" onclick="pop_tpSixPHP();" >TP6  Compte  bancaire</a> 
+						<a  href="#" onclick="pop_controlTroisPHP();" >Contrôle 3</a>						
+					</div>
+				</div>
 			</div>
 		</aside> <!-- comment lui donner le mm height que <main> ? -->
 		
