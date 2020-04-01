@@ -26,6 +26,15 @@
 		.structureSujet{ font-size:0.9em;}
 		.questions_{ padding-left:4em ; }
 		.reponse_ { padding-left:3em ; }
+		
+		.greenNum { 
+		    color:#115; 
+			box-shadow:
+              0px 2px 4px 0px green inset,
+              0px 2px 4px 0px;
+            border-radius:50px;
+ 		
+		}
 	</style>
 
 	
@@ -134,7 +143,7 @@
 			<section class="conteneurDesSujet" id="tpUn" >
             			
 				<h2 class="matiere">PHP2: TP1</h2>		  
-				<div class="success  structureSujet"  >			  			  
+				<div class="success_  structureSujet"  >			  			  
 					<p><u><a href="#"><strong>Rappel:</strong> </a></u></p>
 					
 					<ul type="none" style="line-height:1.5">
@@ -233,7 +242,7 @@
 					<p></p>
 				</div>
 				<!-- Exercice1 -->
-				<div class="danger  structureSujet" >
+				<div class="info_  structureSujet" >
 				    <p><u><a href="#"><strong>Exo1:</strong>  Premier programme en PHP </a></u></p>
 					&#9312; Construire à l'aide de l'éditeur <b>emacs</b>, la page <b>index.php</b> .
 					Elle est constituée:<br>
@@ -311,15 +320,103 @@
 				
 				
                 <!-- Exercice2-->
-				<div class="success structureSujet ">
+				<div class="success_ structureSujet ">
 					<p><u><a href="#"><strong>Exo2:</strong> Transmettre des donn&eacute;es d’une page &agrave; l’autre </a></u></p>
 
-					<p><strong>Partie1</strong> Questions cours(5 points-15mn):..............<strong>Variable superglobale, Clnt/Srvr</strong></p>
-					<p><strong>Partie2</strong> Structuration de donnees(5 points -15mn):.................<strong> POO</strong></p>
-					<p><strong>Partie3</strong> Interprétation d’un code PHP (5point - 15 mn):..........<strong>Tableaux ,modulo</strong></p>
-					<p><strong>Partie4</strong> Interprétation de classe ( 5points - 1H ):....................<strong> POO</strong></p>
-					<a href="#" class="unset_">&Eacute;nonc&eacute; complet ... </a>
-					<p></p>		
+					<b class="greenNum">&#9312;</b> Ajouter un fichier "<b>form.php</b>" qui permet &agrave;  l'internaute
+					d'entrer <br>							
+				    <span style="line-height:2em"> &emsp;&nbsp;&nbsp;son <b>Nom</b>, son <b>Pr&eacute;nom</b>, et son <b>password</b>:</span>
+                    
+					<ul type="disc" class="questions_" >
+                         <li>Méthode: <b>GET</b> </li>					
+						 <li>Le <u>traitement</u> et <u>l'affichage</u> se font dans <b>corps.php</b></li>						 
+						 <li>Dedans i fo un lien vers <b>form.php</b> </li>
+					</ul>
+					<details>
+					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+						 ...
+					</details>
+					<p></p>	
+
+					<b class="greenNum">&#9313;</b> Que se passe-t-il au niveau de l'URL, lors du passage des paramètres ?<br>							
+				    <span style="line-height:2em"> &emsp;&nbsp;&nbsp; (<b>Nom</b>, <b>Pr&eacute;nom</b>, <b>password</b>)</span>
+                    
+
+					<details>
+					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+						 ...
+					</details>
+					<p></p>	
+
+					<b class="greenNum">&#9314;</b> Avant d'afficher les paramètres transmis, <b> vérifier</b><br>
+					<ul type="disc" class="questions_" >
+                         <li>S'ils sont ben positionnés[ <b>isset()</b> et <b>empty()</b> ] </li>					
+						 <li>Sinon afficher un message d'erreur</li>						 
+					</ul>
+					<details>
+					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+						 ...
+					</details>
+					<p></p>
+					
+					<b class="greenNum">&#9315;</b> Ajouter dans le formulaire<br>
+					<ul type="disc" class="questions_" >
+                         <li>Un champs <b>puniton</b>(string)</li>
+                         <li>Un champs <b>nbFois</b>(int): 10 par défaut</li>
+                         <li>Modifier <b>corps.php</b> pour qu'il affiche "la punition" <b>nbFois</b></li>
+                         <li>V&eacute;rifier si  <b>nbFois</b> est bien un entier(en le castant)</li>
+                         <li>Limiter <b>nbFois</b> à 100</li>
+                         <li><span style="color:#990033">Quel danger pour le passage des pramètres</span>(au niveau de l'URL) </li>						 						 
+					</ul>
+					<details>
+					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+						 ...
+					</details>
+					<p></p>
+					
+					<b class="greenNum">&#9316;</b> Dupliquer <b>form.php</b> en <b>form.1.php</b><br>
+					<ul type="disc" class="questions_" >
+                         <li>Dans <b>form.php</b>: Remplacer <b>GET</b> par <b>POST</b> </li>					
+						 <li>Qu'est-ce qui change ?</li>						 
+					</ul>
+					<details>
+					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+						 ...
+					</details>
+					<p></p>
+					
+					<b class="greenNum">&#9317;</b> <b>Vulnérabilté &#9760; du fichier traitement</b>(corps.php)<br>
+					<span style="line-height:2em"> &emsp;&nbsp;&nbsp; Il peut être appelé par n'importe quelle page( pas seulement form.php)</span>
+					<ul type="disc" class="questions_" >
+					     <li>Quellle conséquence ?! </li>
+						 <li>Et si on met du code HTML dans le champs <b>nom</b> !</li>
+						 <li>Et si(&#9760; oncore pire) on y gave du javascript !! </li>		
+					</ul>
+					<details>
+					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+						  ...
+					</details>
+					<p></p>
+					
+					<b class="greenNum">&#9318;</b> Comment résoudre le problème précédent ?<br>
+					<span style="line-height:1.5em; color:transparent;">...</span>
+					<details>
+					    <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+						<ul type="none" class="questions_" style="padding-left:2.8em;" >
+							 <li>
+							     &#9193; &Eacute;chapper le code HTML transmis : fonction&emsp; <b>html<span style="color:#990033">special</span>chars()</b><br>
+								 &emsp; Tester cette fonction
+							 </li>
+
+							 <li>
+							     &#9193; Supprimer les balise HTML du champs : fonction&emsp; <b><span style="color:#990033">strip_tags()</span></b><br>
+								 &emsp; Tester &eacute;galement cette fonction
+							 </li>		
+						</ul>
+					</details>
+					<p></p>
+
+					
 				</div>
 				
 				
@@ -327,7 +424,7 @@
 				
 				
                 <!-- Exercice3 -->
-				<div class="danger structureSujet">
+				<div class="danger_ structureSujet">
 					<p><u><a href="#"><strong>Exo3:</strong> prot&eacute;ger une page par mot de passe</a></u></p>
 					<p><strong>Partie1</strong> Questions de cours (5 points -15mn):............................<strong>Variable superglobale</strong></p>
 					<p><strong>Partie2</strong> Structuration de donnees(5 points -15mn):......................................<strong>POO</strong></p>
@@ -342,7 +439,7 @@
 				
 				
                 <!-- Exercice4 -->
-				<div class="success structureSujet">
+				<div class="success_ structureSujet">
 					<p><u><a href="#"><strong>Exo4:</strong> Variables superglobales(les sessions)</a></u></p>
 					 ...
 					<a href="#" class="unset_">&Eacute;nonc&eacute; complet ... </a>
