@@ -33,18 +33,31 @@
 		}
 		.greenNum { 
 			box-shadow:
-              0px 2px 4px 0px green inset,
+              0px 2px 4px 0px #4CAF50 inset,
               0px 2px 4px 0px inset;		
 		}
 		.blueNum { 
 			box-shadow:
-              0px 2px 4px 0px blue inset,
+              0px 2px 4px 0px #2196F3 inset,
               0px 2px 4px 0px inset;		
 		}
 		.redNum { 
 			box-shadow:
               0px 2px 4px 0px #a1008c inset,
               0px 2px 4px 0px inset;		
+		}
+		.img{ 
+
+		  width:87%;
+		  height: 90% ;
+		  padding:1.2em; 
+		  margin:0 0 0 -1em;
+		  box-shadow:
+			0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+			0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+		  border:1px solid #8c8b8b;
+		  border-radius: 4px; 
+          background:white;		  
 		}
 	</style>
 
@@ -160,7 +173,7 @@
 					<ul type="none" style="line-height:1.5">
 					     <li>
 						    <details>
-						      <summary>Expliquer les 5 principaux types de variables(sans oublier les variables pr&eacute;d&eacute;finies)</summary>
+						      <summary>Expliquer les 5 principaux types de variables<br>&emsp;(sans oublier les variables pr&eacute;d&eacute;finies)</summary>
 						      &emsp;&#8718; les types primitifs(integer, double, string)<br>
 							  &emsp;&#8718; les float<br>
 							  &emsp;&#8718; les booléens<br>
@@ -168,7 +181,7 @@
 						 </li>
 						 <li>		     
 							 <details>
-						      <summary>Pour afficher les "string", on prèfère les quotes ou les guillemets ? Pourquoi ?</summary>
+						      <summary>Pour afficher les "string", on prèfère les quotes ou les guillemets ?<br>&emsp;Expliquer  Pourquoi </summary>
 							  &emsp;&#8718; les quotes<br>
 							  &emsp;&#8718; ...<br>
 							</details>
@@ -476,9 +489,76 @@
                 <!-- Exercice4 -->
 				<div class="info_ structureSujet">
 					<p><u><a href="#"><strong>Exo4:</strong> Variables superglobales(les sessions)</a></u></p>
-					 ...
-					<a href="#" class="unset_">&Eacute;nonc&eacute; complet ... </a>
+					<b class="blueNum">&#9312;</b> Qu'est-ce qu'une variable SUPERGLOBALE ?<br>
+					<span style="line-height:1.5em; color:transparent;">...</span>
+					<details>
+					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+						 ...
+					</details>
 					<p></p>
+					
+					<b class="blueNum">&#9313;</b> Les principales sont:<br>
+					<ul type="square" class="questions_" >
+                         <li>&dollar;_SERVER</li>
+                         <li>&dollar;_ENV</li>
+						 <li>&dollar;_SESSION</li>
+						 <li>&dollar;_COOKIES</li>
+						 <li>&dollar;_GET, &dollar;POST</li>
+						 <li>&dollar;_FILE</li>
+						 <li><b>En dire deux mots ...</b></li> 						  
+					</ul>
+					<details>
+					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+						 ...
+					</details>
+					<p></p>
+					
+					<b class="blueNum">&#9314;</b> &Agrave; quoi sert la valeur contenu dans <b>&dollar;_SERVER['<span style="color:#f44336;">REMOTE_ADDR</span>']</b> ?<br>
+					<span style="line-height:1.5em; color:transparent;">...</span>
+					<details>
+					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+						 ...
+					</details>
+					<p></p>
+					
+					<b class="blueNum">&#9315;</b> &Agrave; quoi sert la variable <b>&dollar;_SESSION</b> ?<br>
+					<span style="line-height:1.5em; color:transparent;">...</span>
+					<details>
+					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+						 ...
+					</details>
+					<p></p>
+					
+					<b class="blueNum">&#9316;</b> Ajouter un fichier <b>login.php</b> contenant 3 variables session:<br>
+					<ul type="square" class="questions_" >
+						 <li>&dollar;_SESSION['<span style="color:gray">nom</span>']</li>
+						 <li>&dollar;_SESSION['<span style="color:gray">prenom</span>']</li>
+						 <li>&dollar;_SESSION['<span style="color:gray">motPasse</span>']</li>
+						 <li><b>login.php</b> est accessible par un lien depuis <b>corps.php</b> </li> 						  
+					</ul>
+					<details>
+					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+						 ...
+					</details>
+					<p></p>
+					
+					<b class="blueNum">&#9317;</b> Reprendre le fichier <b>index.php</b> qui, maintenant appelle:<br>
+					<ul type="square" class="questions_" >
+						 <li>entete<span style="color:gray">.php</span></li>
+						 <li>login<span style="color:gray">.php</span></li>
+						 <li>piedPage<span style="color:gray">.php</span></li>
+						 <li>Comme le montre la figure suivante: </li> 						  
+					</ul>
+					<ul type="none" class="questions_" >
+					  <li><img src="index.png" class="img"/></li>
+					</ul>
+					
+					<details>
+					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+						 ...
+					</details>
+					<p></p>
+					
 				  </div>				  
 			</section> <!-- FIN section1- conteneurDesSujet - PHP -->
 		</main>
