@@ -27,13 +27,24 @@
 		.questions_{ padding-left:4em ; }
 		.reponse_ { padding-left:3em ; }
 		
-		.greenNum { 
+		.greenNum, .blueNum, .redNum { 
 		    color:#115; 
+            border-radius:50px;		
+		}
+		.greenNum { 
 			box-shadow:
               0px 2px 4px 0px green inset,
-              0px 2px 4px 0px;
-            border-radius:50px;
- 		
+              0px 2px 4px 0px inset;		
+		}
+		.blueNum { 
+			box-shadow:
+              0px 2px 4px 0px blue inset,
+              0px 2px 4px 0px inset;		
+		}
+		.redNum { 
+			box-shadow:
+              0px 2px 4px 0px #a1008c inset,
+              0px 2px 4px 0px inset;		
 		}
 	</style>
 
@@ -244,7 +255,7 @@
 				<!-- Exercice1 -->
 				<div class="info_  structureSujet" >
 				    <p><u><a href="#"><strong>Exo1:</strong>  Premier programme en PHP </a></u></p>
-					&#9312; Construire à l'aide de l'éditeur <b>emacs</b>, la page <b>index.php</b> .
+					<b class="blueNum">&#9312;</b> Construire à l'aide de l'éditeur <b>emacs</b>, la page <b>index.php</b> .
 					Elle est constituée:<br>
 					<ul type="disc" class="questions_" >
 					     <li>d’une entête: entete.php </li>
@@ -294,7 +305,7 @@
 					</details>
 					<p></p>
 					
-					&#9313; Dans le fichier entete.php, afficher la date en français<br>
+					<b class="blueNum">&#9313;</b> Dans le fichier entete.php, afficher la date en français<br>
 					<span style="line-height:2em"> &emsp;&nbsp;&nbsp;(exple:“Mardi 2 mars 2020, 18h30”)</span>
                     <ul type="disc" class="questions_" >		   
 						 <li>Une solution utilisant les tableaux( associatif ou numéroté) </li>
@@ -306,7 +317,7 @@
 					</details>
 					<p></p>
 					
-					&#9314; Tester le tout en copiant les fichiers sur le serveur handiman (193.54.166.23)<br>
+					<b class="blueNum">&#9314;</b> Tester le tout en copiant les fichiers sur le serveur handiman (193.54.166.23)<br>
 					<span style="line-height:2em"> &emsp;&nbsp;&nbsp;sous le r&eacute;pertoire <b>public html/TP1</b></span>
 
 					<details>
@@ -425,13 +436,37 @@
 				
                 <!-- Exercice3 -->
 				<div class="danger_ structureSujet">
-					<p><u><a href="#"><strong>Exo3:</strong> prot&eacute;ger une page par mot de passe</a></u></p>
-					<p><strong>Partie1</strong> Questions de cours (5 points -15mn):............................<strong>Variable superglobale</strong></p>
-					<p><strong>Partie2</strong> Structuration de donnees(5 points -15mn):......................................<strong>POO</strong></p>
-					<p><strong>Partie3</strong> Interprétation d’un code PHP (5point - 15 mn):..........<strong>Tableaux modulo</strong></p>
-					<p><strong>Partie4</strong> Interprétation de classe ( 5points - 1H ):....................<strong> POO</strong></p>
-					
-					<a href="#" class="unset_">&Eacute;nonc&eacute; complet ... </a> suite ...</a>
+					<p><u><a href="#"><strong>Exo3:</strong> prot&eacute;ger une page par mot de passe</a></u></p>					
+					<b class="redNum">&#9312;</b> Ajouter une page <b>form<span style="color:#a1008c">ulaire</span>.php</b> contenant:<br>
+					<ul type="disc" class="questions_" >
+					     <li>Un titre</li>
+                         <li>Un formulaire avec un champs "<b>mot de passe</b>" et un champs "<b>Acc&eacute;der</b>"  </li>					
+						 <li>Le champs "<b>Acc&eacute;der</b>" appelle la page <b>pageProtegee.php</b>(par POST)</li>						 
+					</ul>
+					<details>
+					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+						 ...
+					</details>
+					<p></p>
+					<b class="redNum">&#9313;</b> Ajouter la page <b><span style="color:#a1008c">pageProtegee.php</span></b> qui, <br>
+					<ul type="disc" class="questions_" >
+					     <li> affiche un texte si le mot d'passe est correcte </li>
+                         <li> affiche un message d'erreur le cas &eacute;ch&eacute;ant  </li>											 
+					</ul>
+					<details>
+					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+						 ...
+					</details>
+					<p></p>
+					<b class="redNum">&#9314;</b> Reprendre la page <b>form<span style="color:#a1008c">ulaire</span>.php</b> :<br>
+					<ul type="disc" class="questions_" >
+					     <li>Dedans, ins&eacute;rer le contenu de la page <span style="color:#a1008c">pageProtegee.php</span></li>
+                         <li>Le formulaire pointe donc sur lui-même</li>											 
+					</ul>
+					<details>
+					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+						 ...
+					</details>
 					<p></p>
 				</div>
 				
@@ -439,7 +474,7 @@
 				
 				
                 <!-- Exercice4 -->
-				<div class="success_ structureSujet">
+				<div class="info_ structureSujet">
 					<p><u><a href="#"><strong>Exo4:</strong> Variables superglobales(les sessions)</a></u></p>
 					 ...
 					<a href="#" class="unset_">&Eacute;nonc&eacute; complet ... </a>
