@@ -71,9 +71,14 @@ h2.matiere {
   background-color: #ffffcc;
   border-left: 6px solid #ffeb3b;
 }
-.unset_ {
+.unset_ , .reponse_{
   text-decoration: unset;
   font-style: italic;
+}
+.reponse_{
+	font-family:calibri light;
+	color:purple;
+	font-weight:bold;
 }
 
 

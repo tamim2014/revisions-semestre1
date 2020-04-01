@@ -16,18 +16,23 @@
     <link rel="stylesheet" href="../../../style/sticky.css" media="screen" /> 	
 	<link rel="stylesheet" href="../../../style/top.css"  media="screen"><!--  Bouton remonter en haut de page -->		
     <link rel="stylesheet" href="../../../style/menu_accordeon.css" media="all">
+	<link rel="stylesheet" href="../../../style/prism.css" media="screen" /> 
+    
 	<style>
 	    #menu .dropdown2-container{min-width:11.76em !important; }
 		#menu{ padding-left:20%; }
 		#menu a, #menu .dropdown2-btn{ font-weight:normal; }
-		.structureSujet{ line-height:1.5; font-size:0.9em;}
-		.structureSujet ul { line-height:1.5;  padding-left:0.9em; }
+		.structureSujet, .questions_, .reponse_ {line-height:1.5;}
+		.structureSujet{ font-size:0.9em;}
+		.questions_{ padding-left:4em ; }
+		.reponse_ { padding-left:3em ; }
 	</style>
 
 	
 	<script type="text/javascript" src="../../../js/menu907.js"></script>
     <script type="text/javascript" src="../../../js/accesAuxPopUps.js"></script>
 	<script type="text/javascript" src="../../../js/jquery3.4.1.min.js"></script><!-- moteur js: pour le chargement du sujet en mode ajax de la cuisine perso" -->
+	<script type="text/javascript" src="../../../js/prism.js"></script>
     <script>
 	    // mon p'tit ajax perso
 		$(document).ready(function(){		
@@ -229,14 +234,82 @@
 				</div>
 				<!-- Exercice1 -->
 				<div class="danger  structureSujet" >
-					<p><u><a href="#"><strong>Exo1:</strong>Premier programme en PHP</a></u></p>
-					<p><strong>Partie1</strong> Questions de cours (5 points -15mn):............................<strong>Variable superglobale</strong></p>
-					<p><strong>Partie2</strong> Probleme( 5 points -30mn ):.............................................<strong>Bataille Navale</strong></p>
-					<p><strong>Partie3</strong> Interprétation d’un code PHP (5point - 15 mn):..........<strong>Tableaux imbriques</strong></p>
-					<p><strong>Partie4</strong> Interprétation de classe ( 5points - 1H ):....................<strong> POO</strong></p>
-					<a href="#" class="unset_">&Eacute;nonc&eacute; complet ... </a>
+				    <p><u><a href="#"><strong>Exo1:</strong>  Premier programme en PHP </a></u></p>
+					&#9312; Construire à l'aide de l'éditeur <b>emacs</b>, la page <b>index.php</b> .
+					Elle est constituée:<br>
+					<ul type="disc" class="questions_" >
+					     <li>d’une entête: entete.php </li>
+						 <li>d’un corps:corps.php(contient le numéro du TP et de l’exercice) </li>
+						 <li>d’un pied de page: piedPage.php </li>
+					</ul>
+					<details>
+					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+
+							 <pre><code class="language-html" ><source lang="html" line>
+/********  entete.php ******/
+&lt;!DOCTYPE html>
+&lt;html lang="fr">
+&lt;head>
+	&lt;meta charset="utf-8">
+	&lt;title> PHP2: TP1/Exercice1 &lt;/title>
+&lt;/head>
+
+&lt;body>
+	&lt;header>	    
+		&lt;div id="en-tete"> &lt;/div>
+		&lt;div id="menu"> &lt;/div>						
+	&lt;/header>
+                            </source></code></pre>
+                            <pre><code class="language-html" ><source lang="html" line>
+/********  corps.php ******/
+	&lt;div id="contenu">
+		&lt;P> TP2: Exercice1&lt;/p>
+	&lt;/div>   	
+                             </source></code></pre>
+							 <pre><code class="language-html" ><source lang="html" line>
+/********  piedPage.php ******/
+	&lt;footer>
+        ...		
+	&lt;/footer>
+&lt;/body>
+&lt;/html>   	
+                             </source></code></pre>
+							 <pre><code class="language-php" ><source lang="php" line>
+/********  index.php ******/
+&lt;?php 
+     include 'entete.php';
+     include 'corps.php'; 
+     include 'piedPage.php'; 	 
+?>    	
+                             </source></code></pre>
+					</details>
+					<p></p>
+					
+					&#9313; Dans le fichier entete.php, afficher la date en français<br>
+					<span style="line-height:2em"> &emsp;&nbsp;&nbsp;(exple:“Mardi 2 mars 2020, 18h30”)</span>
+                    <ul type="disc" class="questions_" >		   
+						 <li>Une solution utilisant les tableaux( associatif ou numéroté) </li>
+						 <li>Une solution utilisant la fonction setlocale() </li>
+					</ul>
+					<details>
+					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+						 ...
+					</details>
+					<p></p>
+					
+					&#9314; Tester le tout en copiant les fichiers sur le serveur handiman (193.54.166.23)<br>
+					<span style="line-height:2em"> &emsp;&nbsp;&nbsp;sous le r&eacute;pertoire <b>public html/TP1</b></span>
+
+					<details>
+					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+						 ...
+					</details>
 					<p></p>
 				</div>
+				
+				
+				
+				
                 <!-- Exercice2-->
 				<div class="success structureSujet ">
 					<p><u><a href="#"><strong>Exo2:</strong> Transmettre des donn&eacute;es d’une page &agrave; l’autre </a></u></p>
@@ -248,6 +321,11 @@
 					<a href="#" class="unset_">&Eacute;nonc&eacute; complet ... </a>
 					<p></p>		
 				</div>
+				
+				
+				
+				
+				
                 <!-- Exercice3 -->
 				<div class="danger structureSujet">
 					<p><u><a href="#"><strong>Exo3:</strong> prot&eacute;ger une page par mot de passe</a></u></p>
@@ -259,6 +337,10 @@
 					<a href="#" class="unset_">&Eacute;nonc&eacute; complet ... </a> suite ...</a>
 					<p></p>
 				</div>
+				
+				
+				
+				
                 <!-- Exercice4 -->
 				<div class="success structureSujet">
 					<p><u><a href="#"><strong>Exo4:</strong> Variables superglobales(les sessions)</a></u></p>
