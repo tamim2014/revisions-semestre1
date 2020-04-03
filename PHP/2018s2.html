@@ -13,15 +13,53 @@
 	<link rel="stylesheet" href="../style/dropdown.css" media="screen" />	
     <link rel="stylesheet" href="../style/sticky.css" media="screen" /> 
     <link rel="stylesheet" href="../style/top.css" media="screen">
+	<link rel="stylesheet" href="../style/menu_accordeon.css" media="all"><!-- barre laterale gauche bas -->
     <script type="text/javascript" src="../js/menu907.js"></script>
 	<style>
-	 .div1 { position:relative; left:0;  width:36.6%; padding-right:3em; }
+	  body{ overflow-x:hidden;}
+	 .div1 { position:relative; left:0;  width:36.6%; padding-right:3em;  }
 	 .div2 {
 	          margin-left:auto; margin-right:auto; width:40%; /* ALIGNEMENT HORIZONTAL */ 
 		   }
 	 #menu .dropdown2-container{min-width:11.76em !important; }
 	 #menu{ padding-left:20%; }
 	 #menu a, #menu .dropdown2-btn{ font-weight:normal; }
+	 .enonce1-p4-2018s1{ margin-right:1em;}
+	 
+	 	 
+/**********************************************************
+ *	
+ * Date: 02.04.2020
+ * Objet: Faciliter la navigation
+ * New zoning 
+ * Ajout d'une barre laterale gauche( en bas)
+ * Integration d'un menu accordeon dans la barre laterale
+ *	  
+ */
+	
+
+    /* La barre latérale */	
+	aside.sidebarGauche {  width:16%; }
+    #documenter_sidebar{margin-top:2.2em;}	
+	aside .dropdown{ width:100%; }	
+	aside#sidebarGauche div.dropdown div.dropdown-container a{
+        padding:14px 15px 12px 0;
+        width:11.6em ;  		
+	}
+		
+	/* Le ontenu */ 
+	#main{
+	   padding:0.5em 1em !important;
+	   margin-left:17%;
+	   margin-bottom:1em;
+	   background:#bbb;
+	   border-radius: 0px 2px 0px 0px;
+	}
+	 
+	/* Partie gauche du contenu */
+	.enonce1-p4-2018s1 {  
+	    margin:0 0 2em 0; 
+	}
 	</style>
   </head>
   <body>
@@ -79,37 +117,62 @@
 				<a href="../index-cms.html">CMS</a>
             </div>
         </div>
-        <div id="blog">    
+		
+		<!-- MENU LATERAL BAS Gauche -->
+		<aside class="sidebarGauche" id="sidebarGauche" style=" height:auto; z-index:1; ">
+			<div id="documenter_sidebar">			
+				<div class="dropdown" >
+					<button class="dropdown-btn">S2</button> 					  
+					<div class="dropdown-container">
+						<a href="../PHP/S2/tp1/tp1.html">TP1</a>
+						<a href="../PHP/S2/tp2/tp2.html">TP2</a>
+						<a href="../PHP/S2/tp3/tp3.html">TP3</a>						
+					</div>
+				</div>
+				
+				<div class="dropdown" style="margin-bottom:0; padding-bottom:0;" >
+					<button class="dropdown-btn">S1</button> 					  
+					<div class="dropdown-container">
+						<a  href="#" onclick="pop_tpSixPHP();" >TP6  Compte  bancaire</a> 
+						<a  href="#" onclick="pop_controlTroisPHP();" >Contrôle 3</a>						
+					</div>
+				</div>
+			</div>
+		</aside> <!-- comment lui donner le mm height que <main> ? -->
+        
+		<main id="main"><!-- <div id="blog"> -->   
        
         <p></p>	
         <b class="partie">Partie n°1 : questions de cours (5 points) (maximum 15 minutes)</b><br>
         Barème : 2 points – 1 point – 2 points <p></p>
-		
-		<div class="enonce1-p4-2018s1" >
-			<p>Q1. Par défaut, quelle est la durée de vie d’une session ?</p>
-			<ol type="A">
-				<li>Rechargement de la page Web</li>
-				<li>Redémarrage navigateur</li>
-				<li>Redémarrage ordinateur</li>
-				<li>Une autre durée</li>
-			</ol><br> 
-        </div>		
-        <div class=" enonce2-p4-2018s1 div2" style="padding-bottom:9px; ">
-			<code>
+		<DIV STYLE="FLOAT:LEFT">
+			<div class="enonce1-p4-2018s1"  >
+				<p>Q1. Par défaut, quelle est la durée de vie d’une session ?</p>
 				<ol type="A">
-				   <li><s>Rechargement de la page Web</s></li>
-				   <li>Redémarrage navigateur</li>
-				   <li>Redémarrage ordinateur</li>
-				   <li>Une autre durée</li>
-				</ol> 
-			</code>
-			<blockquote><cite>
-                   Une session démarre lorsque l'utilisateur commence à interagir avec un programme logiciel, qu'il s'agisse<br> d'un système d'exploitation (OS),<br> d'une application lourde, <br> ou à travers un site internet.
-            </cite></blockquote>
-        </div><p></p>		
+					<li>Rechargement de la page Web</li>
+					<li>Redémarrage navigateur</li>
+					<li>Redémarrage ordinateur</li>
+					<li>Une autre durée</li>
+				</ol><br> 
+			</div>		
+			<div class=" enonce2-p4-2018s1 div2" style="padding-bottom:9px;  ">
+				<code>
+					<ol type="A">
+					   <li><s>Rechargement de la page Web</s></li>
+					   <li>Redémarrage navigateur</li>
+					   <li>Redémarrage ordinateur</li>
+					   <li>Une autre durée</li>
+					</ol> 
+				</code>
+				<blockquote><cite>
+					   Une session démarre lorsque l'utilisateur commence à interagir avec un programme logiciel, qu'il s'agisse<br> d'un système d'exploitation (OS),<br> d'une application lourde, <br> ou à travers un site internet.
+				</cite></blockquote>
+			</div>
+		</DIV>
+		<p></p>		
 		<!-- SEPARATEUR ENTRE Q1.1 et Q1.2 -->
-		<hr width=100% color=whitesmoke>
-		<div style="float:left;">
+		<hr width=100% color=whitesmoke style="float:left">
+		<DIV STYLE="FLOAT:LEFT">
 			<div class="enonce1-p4-2018s1" >
 				<p>Q2. Entre l’écriture du code PHP dans un éditeur de texte et l’affichage dans le navigateur,</p>
 				<ol type="A">
@@ -128,11 +191,11 @@
 				   <li>j’envoie mon code à un serveur qui génère une page HTML envoyée au navigateur</li>
 				</ol>
 			</div>
-		</div>
+		</DIV>
 		<p></p>		
 		<!-- SEPARATEUR ENTRE Q1.2 et Q1.3 -->
-		<hr width=100% color=whitesmoke>
-		<div style="float:left;">
+		<hr width=100% color=whitesmoke style="float:left">
+		<DIV STYLE="FLOAT:LEFT">
 			<div class="enonce1-p4-2018s1 div1"  >
 				<p>Q3. Où sont stockées les informations qui viennent d’un formulaire HTML reçues via le
 				protocole POST ?</p>
@@ -154,40 +217,55 @@
 				   <li><s>&dollar;_FILES</s></li>
 				</ol> 
 			</div>
-		</div>
+		</DIV>
 		<p></p>		
 		<!-- SEPARATEUR ENTRE Q1.3 et Q1.4 -->
-		<hr width=100% color=whitesmoke>
+		<hr width=100% color=whitesmoke style="float:left">
 		
-		<div style="float:left;">
-			<div class="enonce1-p4-2018s1 div1" style="width:41%; left:0.5em; margin-right:5em;"  >
+		<DIV STYLE="FLOAT:LEFT">
+		    <p></p>
+			<div class="enonce1-p4-2018s1 div1" style=" width:110%;"  >
+				<p></p>
+				<ol type="A">
+				   <li><u>Post-incrémente</u>? <br>  Retourne &dollar;i, <br>puis incrémente &dollar;i de 1.</li>
+				   <li><u>Pre-incrémente</u>? <br>Incrémente &dollar;i de 1,<br> puis retourne &dollar;i.	</li>				
+				</ol>
+			</div>		
+		</DIV>
+		<p></p>
+		<hr width=100% color=whitesmoke style="float:left">
+		
+		<DIV >
+		    
+			<div class="enonce1-p4-2018s1 div1" style="width:37%; left:0; margin-right:5em; margin-top:1em; float:left; "  >
+				
 				<p>Q4. Qui est l’intrus ?</p>
 				<ol type="A">
-				   <li>&dollar;i = &dollar;i+1 </span> <u>Post-incrémente</u>:	Retourne &dollar;i, puis incrémente &dollar;i de 1.</li>
+				   <li>&dollar;i = &dollar;i+1 </span> <u>Post-incrémente</u></li>
 				   <li>&dollar;i++</li>
-				   <li>++&dollar;i &emsp;&emsp;<u>Pre-incrémente</u>:	Incrémente &dollar;i de 1, puis retourne &dollar;i.</li>
+				   <li>++&dollar;i &emsp;&emsp;<u>Pre-incrémente</u>	</li>
 				   <li>&dollar;i+=1</li>
 				</ol>
 			</div>		
-			<div class=" enonce2-p4-2018s1 div2" style="   width:35%;" >
+			<div class=" enonce2-p4-2018s1 div2" style="width:40%; height:11.6em; float:right; margin-top:1.2em; margin-right:0em; " >
 				<p style="margin-left:4%;"><u><i>SOLUTION1.4</i></u></p>
 				<ol type="A">
-				   <li><span style='color:green'>&dollar;i = &dollar;i+1 </span> <u>Post-incrémente</u>: <br>  Retourne &dollar;i, puis incrémente &dollar;i de 1.</li>
+				   <li><span style='color:green'>&dollar;i = &dollar;i+1 </span> <u>Post-incrémente</u>: <br>  </li>
 				   <li><span style='color:green'>&dollar;i++</span></li>
-				   <li><span style='color:red'>++&dollar;i </span>&emsp;&emsp;<u>Pre-incrémente</u>: <br> Incrémente &dollar;i de 1, puis retourne &dollar;i.</li>
+				   <li><span style='color:red'>++&dollar;i </span>&emsp;&emsp;<u>Pre-incrémente</u>: <br> </li>
 				   <li><span style='color:green'>&dollar;i+=1</span></li>
 				</ol> 
 			</div>
-		</div>
+		</DIV>
 		<p></p>		
 		<!-- SEPARATEUR ENTRE Q1.4 et Q1.5 -->
-		<hr width=100% color=whitesmoke>
-		<div style="float:left;">
-			<p style="margin-left:6%;">Q5. Complétez le code suivant avec les éléments manquants.</p>
-			<img  src="../photos/2018q5.png" class="fotoquestion enonce1-p4-2018s1" style="position:relative;  height:400px; width:67%; ">
+		<hr width=100% color=whitesmoke style="float:left"> 
+		<DIV STYLE="FLOAT:LEFT">
+			<p style="margin-left:0;">Q5. Complétez le code suivant avec les éléments manquants.</p>
+			<img  src="../photos/2018q5.png" class="fotoquestion enonce1-p4-2018s1 img2" style="position:relative;  height:25em; width:50%; border-radius:10px; ">
 			
 		
-			<div class=" enonce2-p4-2018s1" style=" position:absolute; margin-top:0; right:0.5%; width:30%; height:auto; " >
+			<div class=" enonce2-p4-2018s1" style=" margin-top:0;  width:40%; height:26.7em; float:right; margin-right:0;" >
 				<p style="margin-left:8%;" ><u><i>SOLUTION 1.5</i></u></p>
 				<ol>
 				   <li>method</li>
@@ -202,21 +280,10 @@
 				   <li>&dollar;[POST]</li><br>
 				 </ol> 	
 			</div>
-		</div>
+		</DIV>
 		<p></p>	
         		
-		<!-- SEPARATEUR ENTRE Q1.5 et Partie2 -->
-		<hr width=100% color=whitesmoke>
-		
-		
-		<!--
-		
-		<div class="enonce1-p4-2018s1" ></div>
-		<div class=" enonce2-p4-2018s1" ></div><p></p>
-		
-		-->
-       
-	    <!-- SEPARATEUR Partie1-Partie2 -->
+
 	    <hr width=100% color=whitesmoke style="display:inline-block;">
 		<div class="conteneur-reponses"></div><p></p>
        	
@@ -224,23 +291,19 @@
         <b class="partie">Partie n°3 : interprétation d’un code PHP (5 points) (maximum 15 minutes)</b><br>
         Barème : 3 points – 2 points <br><br>
     	
-        <p style="margin-left:6%; margin-bottom:0;">Ecrire le résultat de l’interprétation du code PHP suivant</p>
-    	<img src="../photos/2018p3.png"  class="fotoquestion">
+        <p style="margin-left:0; margin-bottom:4px;">Ecrire le résultat de l’interprétation du code PHP suivant</p>
+    	<img src="../photos/2018p3.png"  class="fotoquestion img2" style="margin-left:0; border-radius:10px; width:45%; height:29.8em;">
     	
 		
-		<div class=" enonce2-p4-2018s1" style="padding-bottom:9px" >
+		<div class=" enonce2-p4-2018s1" style="padding-bottom:9px; float:right; margin-right:0; " >
 			<p style="margin-left:8%;"><u><i>SOLUTION  (Partie3)</i></u></p>
-            <img src="../photos/2018p3reponse.png"> 
+            <img src="../photos/2018p3reponse.png" class="img2" > 
 		</div><p></p>
 		
 	    <!-- SEPARATEUR Partie3-Partie4 -->
 	    <hr width=100% color=whitesmoke style="display:inline-block;">
 		<div class="conteneur-reponses"></div><p></p>
         
-		
-		
-
-
       	<b class="partie">Partie n°4.A : implémentation de classes (10 points) (maximum 1h)</b><br>
         Barème : 6 points/10 <br>
         <div class="diagramme-de-classe">
@@ -267,9 +330,8 @@
         	+ getDate():chaine<br>
         	+ getProduits():Produit[]<br>   	
         </div>
-        <!-- <hr width=100% color=whitesmoke> -->
-        
-        <div class=" enonce2-p4-2018s1 div2" style="padding-top:0; padding-bottom:0; width:35%;" >
+       
+        <div class=" enonce2-p4-2018s1 div2" style="padding-top:0; padding-bottom:0; float:left; width:99%; border-radius:0;" >
 		    <p style="margin-bottom:0;" >4.A : Ecrire le code PHP qui traduit exactement le diagramme de classes ci-contre, sachant que :</p>
         	<ul>
         		<li>La fonction ajouterPhotos(url_photo:chaine) ajoute url_photo à photos.</li>
@@ -284,7 +346,7 @@
 	   
         <div class="conteneur-reponses" style="float:left; width: 100%;">
 		    <!-- Solution partie4.A  a gauche -->
-			<div class="reponses reponse1" style="height:500px; margin-bottom:50px; margin-top:40px;" >
+			<div class="reponses reponse1" style="height:42em; margin-bottom:50px; margin-top:40px;" >
 				<code>
 					class Produit<br>
 					{<br>
@@ -299,21 +361,28 @@
 						&emsp; }<br>
 						&emsp;<span style="color:green"> //Ajouter un fichier</span><br>
 						&emsp; public function ajouterPhotos($url_photo) { <br>  
-							&emsp; &emsp; $lsFichier = $url_photo;<br>
-							&emsp; &emsp; if(!file_exists($lsFichier)) echo "Photo introuvable";<br>
-							&emsp; &emsp; else $fichier = fopen($lsFichier,"r");<br>
+							&emsp; &emsp; $cheminFichier = $url_photo;<br>
+							&emsp; &emsp; if(!file_exists($cheminFichier)){<br>
+							&emsp; &emsp; &emsp; echo "Photo introuvable";<br>
+							&emsp; &emsp; }else{<br>
+							&emsp; &emsp; &emsp;$fichier = fopen($cheminFichier,"r");<br>
+							&emsp; &emsp; }<br>
 						&emsp; }<br>
 						&emsp;<span style="color:green"> //Accesseurs</span><br>
 						&emsp; public function getNom() {  return $this->nom; }<br>
-						&emsp; public function geReference() {  return $this->reference; }<br>
-						&emsp;<span style="color:red"> //FAUX: Comment construire l accesseur d un attribut tableau ??</span><br>
-						&emsp; public function gePhotos() {  return $this->photos; }<br>
+						&emsp; public function geReference() {<br>
+						&emsp; &emsp;return $this->reference; <br>
+						&emsp; }<br>
+						&emsp;<span style="color:red"> //FAUX: Comment construire l accesseur<br>&emsp;// d un attribut tableau ??</span><br>
+						&emsp; public function gePhotos() {<br>
+            			&emsp;&emsp;&emsp;return $this->photos;<br>
+						&emsp; }<br>
 					}
 
 				</code>	
 			</div>
 			<!-- Solution partie4.A  a droite -->
-			<div class="reponses reponse2" style="height:500px; margin-bottom:50px; margin-top:40px; " >
+			<div class="reponses reponse2" style="height:42em; margin-bottom:50px; margin-top:40px; " >
             <code>
                 class Panier<br>
                 {<br>
@@ -328,19 +397,19 @@
                     &emsp; }<br>
 
                     &emsp;<span style="color:red"> //Ajouter un Objet ; FAUX ! How to do ?</span><br>
-                    &emsp; public function ajouterProduit($produit) { <br>
+                    &emsp; public function ajouterProduit(Produit $produit) { <br>
                         &emsp; &emsp; <span style="color:green">//$this->$Produit = $produit;</span><br>                
                         &emsp; &emsp; $nom=$produit->getNom();<br>
                         &emsp; &emsp; $reference=$produit->getReference();<br>
                         &emsp; &emsp; <span style="color:green">//$Produit = new Produit($nom, $reference);</span><br>
                         &emsp; &emsp; $Produit = array($nom, $reference);<br>
-                        &emsp; &emsp; array_push( $Produit, $nom, $reference );<br>
+                        &emsp; &emsp; array_push( $produit, $nom, $reference );<br>
                     &emsp;}<br>      
                     &emsp;<span style="color:green"> //Accesseurs</span><br>
-                    &emsp; public function getClient() {  return $this->client; }<br>
-                    &emsp; public function geDate() {  return $this->date; }<br>
-                    &emsp;<span style="color:red"> //FAUX: Comment construire l accesseur d un attribut Objet ??</span><br>
-                    &emsp; public function geProduits() {  return $this->produits; }<br>
+                    &emsp; public function getClient() {<br>&emsp;&emsp;   return $this->client;<br>&emsp; }<br>
+                    &emsp; public function geDate() {<br>&emsp;&emsp;  return $this->date;<br>&emsp; }<br>
+                    &emsp;<span style="color:red"> //FAUX: Comment construire l accesseur <br>&emsp;&emsp;//d un attribut Objet ??</span><br>
+                    &emsp; public function geProduits() {<br>&emsp;&emsp;   return $this->produits;<br>&emsp; }<br>
                 }
 
             </code>
@@ -348,7 +417,7 @@
         </div><!-- conteneur-reponses -->
         	
 	    <!-- SEPARATEUR Partie4.A et Partie4.B -->
-	    <hr width=100% color=whitesmoke style="display:inline-block;">
+	    <hr width=100% color=whitesmoke style="display:inline-block; ">
 		<div class="conteneur-reponses"></div><p></p>
 		
 	
@@ -381,13 +450,13 @@
             </ul>
         </div><p></p>		
 		<!-- SEPARATEUR ENTRE Partie4.B et sa solution -->
-		<hr width=100% color=whitesmoke>
+		<hr width=100% color=whitesmoke style="float:left">
 		
 
 
         <div class="conteneur-reponses" style="float:left; width: 100%;">
 		    <!-- Solution partie4.B  a gauche -->
-			<div class="reponses reponse1" style="height:600px; margin-bottom:50px; margin-top:40px;" >
+			<div class="reponses reponse1" style="height:45em; margin-bottom:50px; margin-top:40px;" >
 				<code style="font-weight:bold; font-size:1.2em;">
 					<span style="color:green">//Instanciation d’un Produit $produit1 qui contient "Perceuse" et "A034412219"</span><br>
 					$produit1 = new Produit("Perceuse", "A034412219");<br>
@@ -396,9 +465,13 @@
 					<span style="color:green">//Instanciation d’un Produit $produit3 qui contient "Forêt" et "A04421789"</span><br>
 					$produit3 = new Produit("Forêt", "A04421789");<br>
 					<span style="color:green">//Ajout de la chaine "photos/perceuse01.png" à $produit1</span><br>
-					<small>$produit1->ajouterPhotos("photos/perceuse01.png");</small><br>
+					<small>$produit1->ajouterPhotos("<br>
+					         &emsp; &emsp; photos/perceuse01.png<br>
+					");</small><br>
 					<span style="color:green">//Ajout de la chaine "photos/perceuse02.png" à $produit1</span><br>
-					<small>$produit1->ajouterPhotos("photos/perceuse02.png");</small><br>
+					<small>$produit1->ajouterPhotos("<br>
+					         &emsp; &emsp; photos/perceuse02.png<br>
+					");</small><br>
 					<span style="color:green">//Instanciation d’un panier $panier dans lequel sont les trois produits pour le client</span><br>
 					<span style="color:green">//"Jacques Brogniard" en date du 26 septembre 2018.</span><br>
 					$panier = new Panier("Jacques Brogniard" , "26 septembre 2018");<br>
@@ -409,15 +482,18 @@
 				</code>
 			</div>
 			<!-- Solution partie4.B  a droite -->
-			<div class="reponses reponse2" style="height:600px; margin-bottom:50px; margin-top:40px;" >
+			<div class="reponses reponse2" style="height:45em; margin-bottom:50px; margin-top:40px;" >
 				<code>
 					echo "Panier de Jacques Brogniard&lt;br&gt;";      <br>
 					echo "Commande effectuée le 26/09/2018&lt;br&gt;"; <br>
 					echo "Contenu :&lt;br&gt;";  <br><br>
 
-					echo $produit1->getReference().":".$produit1->getNom()."(".$produit1->getPhotos().")&lt;br&gt;";<br>
-					echo $produit2->getReference().":".$produit2->getNom()."&lt;br&gt;";  <br>
-					echo $produit3->getReference().":".$produit3->getNom();  <br>
+					echo $produit1->getReference().":
+					        &emsp;&emsp; ".$produit1->getNom()."(".$produit1->getPhotos().")&lt;br&gt;";<br><br>
+					echo $produit2->getReference().":
+					        &emsp;&emsp; ".$produit2->getNom()."&lt;br&gt;";  <br><br>
+					echo $produit3->getReference().":
+					        &emsp;&emsp; ".$produit3->getNom();  <br>
 
 				</code>
 			</div>
@@ -425,7 +501,7 @@
 		<hr width=100% color=whitesmoke style="display:inline-block;">
 		<!-- FIN PARTIE 4 -->
 	
-      </div><!-- <div id="blog">  -->
+      </main> <!-- div#blog -->
 	   
 	  <button onclick="topFunction()" id="myBtn" title="Go to top" >
 		<img  src="../photos/top.JPG" id="imageToTop">
