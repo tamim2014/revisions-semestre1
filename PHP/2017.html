@@ -58,8 +58,45 @@
 			text-align:center;
             color:#ccc;	 /* #8c8c8c; */
 		}
-		.sidebarDroit{
+		
+
+		
+		/* style spécifique à session2017:contient  aside.sidebarGauche et  aside.sidebarDroit */
+		div.enveloppe-SG, div.enveloppe-SD{ 
+		  position:absolute;
+		  height:122.5em ;
+		  padding:0;
+		  		  
+		}
+		div.enveloppe-SG{ width:16.8%;}
+        div.enveloppe-SD{ width:21%; right:0.5%; margin-bottom:0; } 
+		
+		aside.sidebarGauche{
+		  width:92%; 
+		  margin-right:0;
+		}
+		
+		aside.sidebarDroit{
 		   height:122.5em ;
+		   width:100%;/* width:20.5%; pour le sticky voir sticky.css*/
+		   border-radius:0;
+
+		}
+		
+		.sticky-SidebarGauche{
+		  width:14.5%;
+		}
+		
+		/* Deco de la structure */
+		
+		.grisMetal, div.enveloppe-SG, div.enveloppe-SD, aside.sidebarDroit {
+		  background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc) !important;
+		}
+		
+		.widget-asideD{ 
+          width:85%; /* width:90%;*/
+		  margin-right:5%;
+		  height:95px !important; /* 100px  */
 		}
 		
 
@@ -117,38 +154,40 @@
 			</div>
 		</div>
         <!-- Barre laterale gauche  -->
-		<aside class="sidebarGauche"  id="sidebarGauche" style=" height:auto; z-index:1; background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);">
-		
-			<div id="documenter_sidebar" style="margin-top:9.2em; ">			
-				<div class="dropdown" >
-					<button class="dropdown-btn">S2</button> 					  
-					<div class="dropdown-container">
-						<a href="../PHP/S2/tp1/tp1.html">TP1</a>
-						<a href="../PHP/S2/tp2/tp2.html">TP2</a>
-						<a href="../PHP/S2/tp3/tp3.html">TP3</a>						
+		<div class="enveloppe-SG" id="enveloppeSG">
+			<aside class="sidebarGauche grisMetal"  id="sidebarGauche" style=" height:auto;  z-index:1; ">		
+				<div id="documenter_sidebar" style="margin-top:9.2em; ">			
+					<div class="dropdown" >
+						<button class="dropdown-btn">S2</button> 					  
+						<div class="dropdown-container">
+							<a href="../PHP/S2/tp1/tp1.html">TP1</a>
+							<a href="../PHP/S2/tp2/tp2.html">TP2</a>
+							<a href="../PHP/S2/tp3/tp3.html">TP3</a>						
+						</div>
 					</div>
-				</div>
-				
-				<div class="dropdown" style="margin-bottom:0; padding-bottom:0;" >
-					<button class="dropdown-btn">S1</button> 					  
-					<div class="dropdown-container">
-						<a  href="#" onclick="pop_tpSixPHP();" >TP6  Compte  bancaire</a> 
-						<a  href="#" onclick="pop_controlTroisPHP();" >Contrôle 3</a>						
+					
+					<div class="dropdown" style="margin-bottom:0; padding-bottom:0;" >
+						<button class="dropdown-btn">S1</button> 					  
+						<div class="dropdown-container">
+							<a  href="#" onclick="pop_tpSixPHP();" >TP6  Compte  bancaire</a> 
+							<a  href="#" onclick="pop_controlTroisPHP();" >Contrôle 3</a>						
+						</div>
 					</div>
-				</div>
-			</div>
+				</div>	
+			</aside>
+		</div><!--div.enveloppe-SG -->
 		
-	
-		</aside>
 		<!-- Barre laterale droite  -->
-		<aside class=" sidebarDroite saut sidebarDroit" id="sidebarDroit" style="background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc); color:gray;">
-			<div class="widget-asideD" style="background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);"  >
-				 widget1
-			</div>			
-			<div class="widget-asideD" style=" clear:both; background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc); color:gray;" >			
-				widget2
-			</div>
-		</aside>
+		<div class="enveloppe-SD" id="enveloppeSD" >
+			<aside class=" sidebarDroite saut sidebarDroit grisMetal" id="sidebarDroit">
+				<div class="widget-asideD grisMetal">
+					 widget1
+				</div>			
+				<div class="widget-asideD grisMetal" style=" clear:both;" >			
+					widget2
+				</div>
+			</aside>
+		</div>
 		 
 		<!-- Contenu: listes des sujets d'examens-corriges avec le saommaire des questions -->	
 		<main>
@@ -310,6 +349,7 @@
 					Partie n°4 : implémentation de classes(6 points)   
 				</p>
 			</section>
+
 		</main>
 		<button onclick="topFunction()" id="myBtn" title="Go to top" >
 		  <img  src="../photos/top.JPG" id="imageToTop">
@@ -317,7 +357,10 @@
 
 
 	</div> <!-- div#contenair -->
-	
+	<!--
+	<hr width=100% color="whitesmoke" style="display:inline-block; ">
+    <div class="conteneur-reponses"></div>
+   -->	
     <footer>     
 		Pied de page (footer)<br>
 	    <div class="content-footer"  >         

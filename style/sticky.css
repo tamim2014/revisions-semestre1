@@ -45,14 +45,39 @@
    
     .stickySidebar, .stickySidebarDroit {
 	  position: fixed !important;
-	  top: 10% !important;
-	  
-	  height:auto !important; 
-	  border-radius: 4px 0px 0px 4px !important;
+	  top: 10% !important;	  
+	  height:auto !important; 	  
 	  z-index:0;
 	}
-	.stickySidebarDroit {
-		right:0.9% !important;
-		border-radius: 0px 4px 0px 4px !important;
+	
+
+	
+	.stickySidebar{
+	  border-radius: 4px 0px 0px 4px !important;	
 	}
- 
+	.stickySidebarDroit {
+
+		right:1.1em !important;
+		border-radius: 0px 0px 0px 0px !important;
+		padding-top:1em;		
+	}
+	
+	/*
+	 * Problème spécifique au template session1 2017: Vendredi 03 Mars 2020
+	 *
+	 * Objectif: Mieux ressortir l'effet coulissant lors d'un sticky en scroll-Y ( remontée de la page par l'utilisateur) 
+	 *
+	 * J'ai enveloppé les sidebar( gauche et droite) dans des div métaliques pour mieux ressortir l'effet coulissant quant la page défile
+	 * Ces "div enveloppe" sont en postition absolute => donc leurs contenu( les sidebar doivent faire width:100%). OK!
+	 *
+	 * Où est le blème?
+	 * Le blème est que,  lors d'un sticky j'ai fixé les sidebar( position:fixed)
+     * Du coup, comme maintenant ils sont à "width: 100%";  ils occupent toute la largeur de l'écran( un vrai catastrophe !)	 
+	 * 
+	 * La solution est de spécifier des nouvelles width correspant à la  "position:fixed" qui se met en place lorsqu'on remonte la page
+	 * Cette solution se traduit par les 2 lignes suivantes:
+	 *
+	 */
+	.stickySidebar{ width:14.5% !important;} /* à specifier seulement pour session2017 car envelopée dans un div position absolute */
+    .stickySidebarDroit{ width:18% !important; } /* à specifier seulement pour session2017 car envelopée dans un div position absolute */
+    

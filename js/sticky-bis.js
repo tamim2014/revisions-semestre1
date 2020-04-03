@@ -18,7 +18,7 @@
 		ejectBtn.classList.remove("sticky-ejectBtn");
 		menu.classList.remove("sticky-menu");
         barre.classList.remove("stickySidebar"); // pour les pages corrigées d'examen		
-	    barreDroite.classList.remove("stickySidebarDroit"); // pour la session 2017 seulement
+		barreDroite.classList.remove("stickySidebarDroit"); // pour la session 2017 seulement
 	  }
 	} 
 	
