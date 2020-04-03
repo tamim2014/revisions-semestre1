@@ -12,12 +12,58 @@
     <link rel="stylesheet" href="../style/examen.css" media="screen" />
     <link rel="stylesheet" href="../style/menu907.css" media="screen" />
 	<link rel="stylesheet" href="../style/dropdown.css" media="screen" />	
-    <link rel="stylesheet" href="../style/sticky.css" media="screen" /> 	
+    <link rel="stylesheet" href="../style/sticky.css" media="screen" />
+    <link rel="stylesheet" href="../style/menu_accordeon.css" media="all"><!-- barre laterale gauche bas -->	 	
 	<link rel="stylesheet" href="../style/top.css" media="screen">
 	<style>
 	    #menu .dropdown2-container{min-width:11.76em !important; }
 		#menu{ padding-left:20%; }
 		#menu a, #menu .dropdown2-btn{ font-weight:normal; }
+		/* énoncé centré plein page */
+		.centrer-question{
+		   margin-left:0;
+		   margin-bottom: 1em;
+		   padding:0.5em;
+		   background:white;
+		   width:97.7%;
+		   box-shadow:
+			 0px 2px 20px 0px white inset,
+			 0px 2px 10px 0px ;	   
+		 }
+		 /* MISE EN PAGE */
+		 summary{font-size:1.5em; }
+		 details{margin-bottom:1.5em;}
+		.planche-bis, .grosTitre{ 
+		  float: left; 	
+		  padding:1.2em; 
+		  box-shadow:
+			0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+			0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+		    border:1px solid #8c8b8b; /*  border:2px solid gray  */      		  
+		}
+		.grosTitre{
+		     margin:0.5em 4.5em 0.5em 6em;
+		     text-align: center;
+			 background: #c3c3c3 ;
+			 
+		}
+		.box-shadow-titre{
+			box-shadow:0px 1px 2px 0px #8c8b8b;
+			padding:0.3em 2em; 
+			
+			/* margin-left:auto; margin-right:auto; */
+			margin:auto;/* รงa suffit pour center le truc */
+			border-radius:2px;
+			font-weight:bold;
+			text-align:center;
+            color:#ccc;	 /* #8c8c8c; */
+		}
+		.sidebarDroit{
+		   height:122.5em ;
+		}
+		
+
+
 
 	</style>	
     <script type="text/javascript" src="../js/menu907.js"></script>   
@@ -71,13 +117,35 @@
 			</div>
 		</div>
         <!-- Barre laterale gauche  -->
-		<aside class="sidebarGauche"  id="sidebarGauche" ></aside>
+		<aside class="sidebarGauche"  id="sidebarGauche" style=" height:auto; z-index:1; background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);">
+		
+			<div id="documenter_sidebar" style="margin-top:9.2em; ">			
+				<div class="dropdown" >
+					<button class="dropdown-btn">S2</button> 					  
+					<div class="dropdown-container">
+						<a href="../PHP/S2/tp1/tp1.html">TP1</a>
+						<a href="../PHP/S2/tp2/tp2.html">TP2</a>
+						<a href="../PHP/S2/tp3/tp3.html">TP3</a>						
+					</div>
+				</div>
+				
+				<div class="dropdown" style="margin-bottom:0; padding-bottom:0;" >
+					<button class="dropdown-btn">S1</button> 					  
+					<div class="dropdown-container">
+						<a  href="#" onclick="pop_tpSixPHP();" >TP6  Compte  bancaire</a> 
+						<a  href="#" onclick="pop_controlTroisPHP();" >Contrôle 3</a>						
+					</div>
+				</div>
+			</div>
+		
+	
+		</aside>
 		<!-- Barre laterale droite  -->
-		<aside class=" sidebarDroite saut " id="sidebarDroit">
-			<div class="widget-asideD"  >
+		<aside class=" sidebarDroite saut sidebarDroit" id="sidebarDroit" style="background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc); color:gray;">
+			<div class="widget-asideD" style="background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);"  >
 				 widget1
 			</div>			
-			<div class="widget-asideD" style=" clear:both;" >			
+			<div class="widget-asideD" style=" clear:both; background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc); color:gray;" >			
 				widget2
 			</div>
 		</aside>
@@ -85,95 +153,131 @@
 		<!-- Contenu: listes des sujets d'examens-corriges avec le saommaire des questions -->	
 		<main>
 
-			<section class="bordureSupSection1 " ></section>
-			<section class="conteneurDesSujet "  >							
+			<section class="bordureSupSection1 planche-bis " style="height:auto; style="padding-right:0;   " >
+			    <h2 class="grosTitre"><span class="box-shadow-titre" style="text-align:center; color:#ECECEA;" > Session 2017 </span></h2>
+			</section>
+			<section class="conteneurDesSujet planche-bis"  >							
 				<p class="bleu">
 					Partie n°1: questions de cours(5 points ) 
 				</p> 
 				<p>FORMULAIRE, CLIENT/SERVEUR,  PASSAGE DE PARAMETTRES</p>
 				<p><u><i>1.A : FORMULAIRE</i></u></p>
 				<b class="rouge">Quelles sont, et à quoi servent, les 3 types d’informations qu’il faut repérer dans un formulaire HTML pour pouvoir exploiter ses données à l’aide de PHP ? </b>
-
-				<ul type="square">
-					<li>
-						<span class="bleu">method:</span> Méthode d'envoie des données au script( GET ou POST )
-					</li>
-					<li>
-						<span class="bleu">action:</span>    Url du fichier PHP qui va recevoir les informations
-					</li>
-					<li>
-						<span class="bleu">name:</span>    un attribut rempli par une valeur ( Le nom du champ sera ensuite considéré par le script PHP comme une variable contenant la valeur saisie. )
-					</li>
-				</ul>
-				<b><i><u>Remarque:</u></i></b><br>
-				<i>Si l'on a affaire à un formulaire d'upload de fichiers, la balise &lt;form&gt; doit comporter l'attribut <span class="rouge">enctype</span>
-				et la valeur <span class="rouge">multipart/form-data</span> multipart/form-data .</i><br>
-
+                <p></p>
+				<details><summary>Réponses</summary>
+					<div class="centrer-question">
+						<ul type="square">
+							<li>
+								<span class="bleu">method:</span> Méthode d'envoie des données au script( GET ou POST )
+							</li>
+							<li>
+								<span class="bleu">action:</span>    Url du fichier PHP qui va recevoir les informations
+							</li>
+							<li>
+								<span class="bleu">name:</span>    un attribut rempli par une valeur ( Le nom du champ sera ensuite considéré par le script PHP comme une variable contenant la valeur saisie. )
+							</li>
+						</ul>
+					</div>
+					
+					<b><i><u>Remarque:</u></i></b><br>
+					<i>Si l'on a affaire à un formulaire d'upload de fichiers, la balise &lt;form&gt; doit comporter l'attribut <span class="rouge">enctype</span>
+					et la valeur <span class="rouge">multipart/form-data</span> multipart/form-data .</i><br>
+				</details>
+				
 				<p><u><i>1.B : ARCHITECTURE  CLIENT/SERVEUR </i></u></p>
 				<b class="rouge">Qu’est-ce qu’une architecture client-serveur ? <br></b><br>
-
-	            C'est un mode de communication à travers un réseau entre plusieurs programmes :<br>
-	            <ul type="square">
-	            	<li>
-	            		L'un, qualifié de client, envoie des requêtes  
-	                </li>
-	            	<li>
-	            		L'autre(ou les autres), qualifiés de serveurs, attendent les requêtes des clients et y répondent.
-	            	</li>
-	            </ul>
+                <p></p>
+				<details><summary>Réponses</summary>
+				    <div class="centrer-question">
+						C'est un mode de communication à travers un réseau entre plusieurs programmes :<br>
+						<ul type="square">
+							<li>
+								L'un, qualifié de client, envoie des requêtes  
+							</li>
+							<li>
+								L'autre(ou les autres), qualifiés de serveurs, attendent les requêtes des clients et y répondent.
+							</li>
+						</ul>
+					</div>
+				</details>
+				
+				
+	
 	            <b class="rouge">Où se situent le navigateur et le PHP dans cette architecture ?  <br></b><br>
-	            <ul type="square">
-	            	<li>
-	            		Le navigateur : Se trouve cote client  
-	                </li>
-	            	<li>
-	            		Le moteur PHP: Se trouve cote serveur
-	            	</li>
-	            </ul>
+	            <p></p>
+				<details><summary>Réponses</summary>
+				    <div class="centrer-question">
+						<ul type="square">
+							<li>
+								Le navigateur : Se trouve cote client  
+							</li>
+							<li>
+								Le moteur PHP: Se trouve cote serveur
+							</li>
+						</ul>
+					</div>
+				</details>
 
 	            <b class="rouge">Entre le moment où j’écris du code PHP dans un traitement de texte sur mon ordinateur et le moment où j’affiche le résultat dans le navigateur, que s’est-il passé ?  <br></b><br>
-	            <ul type="square">
-	            	<li>
-	            		D'abord  j’envoie mon code a un serveur web( Apache,Nginx,IIS, ou Tomcat, ...etc). Ce, en utilisant le protocole HTTP.  
-	                </li>
-	            	<li>
-	            		Ensuite  le serveur web genere une page reponse( eventuelle interrogation de se la base d'une data base)
-	            	</li>
-	            	    Enfin le serveur retourne la page reponse à mon navigateur en utilisant le même protocole.
-	            	<li>
-	            		
-	            	</li>
-	            </ul>
+	            <p></p>
+				<details><summary>Réponses</summary>
+				    <div class="centrer-question">
+						<ul type="square">
+							<li>
+								D'abord  j’envoie mon code a un serveur web( Apache,Nginx,IIS, ou Tomcat, ...etc). Ce, en utilisant le protocole HTTP.  
+							</li>
+							<li>
+								Ensuite  le serveur web genere une page reponse( eventuelle interrogation de se la base d'une data base)
+							</li>
+								Enfin le serveur retourne la page reponse à mon navigateur en utilisant le même protocole.
+							<li>
+								
+							</li>
+						</ul>
+					</div>
+				</details>
 
 	            <p><u><i>1.C : À QUOI SERVENT  LES    FONCTIONS isset()   et  empty() ?   </i></u></p>
-	                  
-	            <ul type="square">
-	            	<li>
-	            		<span class="bleu">isset():</span>...  
-	                </li>
-	            	<li>
-	            		<span class="bleu">empty():</span>... 
-	            	</li>
-	            </ul> 
-
+	            <p></p>
+				<details><summary>Réponses</summary>
+                    <div class="centrer-question">				
+						<ul type="square">
+							<li>
+								<span class="bleu">isset():</span>...  
+							</li>
+							<li>
+								<span class="bleu">empty():</span>... 
+							</li>
+						</ul>
+                    </div>					
+                </details>
+				
 	            <p><u><i>1.D: Quels sont les 2 types de passage de parametres d'une fonction? Expliquez-les  </i></u></p>
-	                  
-	            <ul type="square">
-	            	<li>
-	            		<span class="bleu">Par valeur:</span>...  
-	                </li>
-	            	<li>
-	            		<span class="bleu">Par reference:</span>...(Voir le cours7 php)
-	            	</li>
-	            </ul>
-
+	            <p></p>
+				<details><summary>Réponses</summary>
+                <div class="centrer-question">				
+					<ul type="square">
+						<li>
+							<span class="bleu">Par valeur:</span>...  
+						</li>
+						<li>
+							<span class="bleu">Par reference:</span>...(Voir le cours7 php)
+						</li>
+					</ul>
+				</div>
+                </details>
+				
 	            <p><u><i>1.E: Qu'est-ce que la serealisation ?   </i></u></p>
-	                  
-	            <ul type="square">
-	            	<li>
-	            		<span class="bleu">serealisation:</span>...  
-	                </li>
-	            </ul>				  
+	            <p></p>
+				<details><summary>Réponses</summary>
+                    <div class="centrer-question">				
+						<ul type="square">
+							<li>
+								<span class="bleu">serealisation:</span>...  
+							</li>
+						</ul>
+					</div>
+                </details>				
 			</section> <!-- FIN section1- conteneurDesSujet - PHP -->
 			
 			
@@ -181,7 +285,7 @@
 			
 			
 			
-			<section class="conteneurDesSujet" >
+			<section class="conteneurDesSujet planche-bis" >
 
 				<p class="bleu">
 					Partie n°2 : interpretation d’un code PHP(4 points)  
@@ -194,14 +298,14 @@
 
 
 			</section> <!-- FIN section2 .conteneurDesSujet JAVA -->
-			<section class="conteneurDesSujet" >
+			<section class="conteneurDesSujet planche-bis" >
 				<p class="bleu">
 					Partie n°3 : comprehension d’erreurs(5 points)   
 				</p>
 			</section>
 			
 			
-			<section class="conteneurDesSujet" >
+			<section class="conteneurDesSujet planche-bis" >
 				<p class="bleu">
 					Partie n°4 : implémentation de classes(6 points)   
 				</p>
