@@ -61,9 +61,8 @@
 	   background:whitesmoke;
 	 }
 	 .test-hr{
-	     border-top: 1px solid #8c8b8b;
-       }
-	 
+	   box-shadow{}
+	 }
 	</style>	
     <script type="text/javascript" src="../js/menu907.js"></script>   
   </head>
@@ -149,7 +148,7 @@
         <b class="partie">Partie n°1 : Questions de cours (5 points -15mn)</b><br>
         Barème : 3 points – 2 point  <br>
 
-      <p>1.1 COMMANDES LINUX </p>
+      <p>COMMANDES LINUX </p>
       <span style="font-size: 1.2em">
         Vous recevez un fichier .zip qui contient les fichiers d’un site Web à mettre en ligne sur un serveur qui tourne sous Linux.
       </span>    
@@ -158,46 +157,45 @@
         <li>Quelle commande permet d’envoyer les fichiers sur le serveur ? </li>
         <li>Quelle commande permet d’affecter les droits aux fichiers de facon  que le navigateur affiche correctement le site ?</li>
       </ol>     
-    	
-       <details>
-		   <p><summary><u><i>SOLUTION 1.1</i></u></summary></p>
-		   <div class="conteneur-reponses" style=" float:left; width: 100%;  " >
-				<div class="reponses reponse1  petitereponse"  style="height: 250px; ">
-					<code>
-						<ol type="A">
-							<li> <code> <b style="color:red">zip</b> <b style="color:#990099">-r</b> fichier.zip  dossierDest </code> </li>
-							<li><code><b style="color:red">scp</b> fichierSource utilisateur@serveur:dossierDest</code></li>
-							<li><code><b style="color:red">chmod</b> <b style="color:#990099">-R</b> <b style="color:#990033">a+rx</b> Dossier</code></li>
-						</ul>
-					</code>
-				</div>
-				<div class="reponses reponse2" style="height: 250px; color:blue;" >
-					Que -ce l'architecture client serveur ? 
-					<blockquote><cite>
-					Le web se fonde sur une architecture client/serveur élémentaire ;<br> 
-					en résumé : 
+    	<hr width=100% color=#ddd class="test-hr" >
 
-						<ul type="square">
-							<li>
-							  Un client (généralement un navigateur Web) envoie une requête à un serveur (le plus souvent un serveur web comme Apache, Nginx, IIS, Tomcat...), 
-							  en utilisant le protocole HTTP.
-							</li>
-							<li>
-							  Le serveur répond à la requête en utilisant le même protocole.
-							</li>
-						</ul>
-					</cite></blockquote>
-					<!-- </code> -->
-				</div>
+        <p><u><i>SOLUTION 1.1</i></u></p>
+       <div class="conteneur-reponses" style=" float:left; width: 100%;  " >
+            <div class="reponses reponse1  petitereponse"  style="height: 250px; ">
+                <code>
+                    <ol type="A">
+                        <li> <code> <b style="color:red">zip</b> <b style="color:#990099">-r</b> fichier.zip  dossierDest </code> </li>
+                        <li><code><b style="color:red">scp</b> fichierSource utilisateur@serveur:dossierDest</code></li>
+                        <li><code><b style="color:red">chmod</b> <b style="color:#990099">-R</b> <b style="color:#990033">a+rx</b> Dossier</code></li>
+                    </ul>
+                </code>
+            </div>
+            <div class="reponses reponse2" style="height: 250px; color:blue;" >
+                Que -ce l'architecture client serveur ? 
+        		<blockquote><cite>
+                Le web se fonde sur une architecture client/serveur élémentaire ;<br> 
+                en résumé : 
 
-			</div><!-- conteneur-reponses Q1.1 --> 		
-			<hr size=20 color="#c3c3c3" width="97.7%" id="firefoxtnul">
-        </details>
-		<hr width=100% color=#ddd >
+                    <ul type="square">
+                        <li>
+                          Un client (généralement un navigateur Web) envoie une requête à un serveur (le plus souvent un serveur web comme Apache, Nginx, IIS, Tomcat...), 
+                          en utilisant le protocole HTTP.
+                        </li>
+                        <li>
+                          Le serveur répond à la requête en utilisant le même protocole.
+                        </li>
+                    </ul>
+                </cite></blockquote>
+                <!-- </code> -->
+            </div>
+
+        </div><!-- conteneur-reponses Q1.1 -->      
+        <hr size=20 color="#c3c3c3" width="97.7%" id="firefoxtnul">
+
 
 
         
-        <p>1.2 VARIABLE SUPERGOLBALE </p>
+        <p>VARIABLE SUPERGOLBALE </p>
         <ol>
           <li>
             A quoi servent les variables &dollar;_POST et &dollar;_SESSION ? 
@@ -210,93 +208,91 @@
           </li>
         </ol>    
      
-        
-        <details>
-			<p><summary><u><i>SOLUTION 1.2</i></u></summary></p>
-			<div class="conteneur-reponses" style=" float:left; width: 100%;  " >
-				<div class="reponses reponse1  "  style="height: 55em;">
-				  <code>
-					<ol >
-					  <li > 
-						UTILIT&Eacute;<br><br>
-						&dollar;_POST[]: Contient les infos qui viennent d'être envoyées par un formulaire . C'est une methode d'envoie de donnees au script PHP<br><br>
-						&dollar;_SESSION[]: Contient des variables qui restent stockées sur le serveur le temps de la présence d'un visiteur<br><br>  
-					  </li>
-					  <li>
-						USAGE<br><br>
-						&dollar;_POST[] : Utilis&eacute; dans le traitement PHP d'un formulaire<br>
-						&dollar;_SESSION[]: Utilis&eacute; pour le passage de variables entre les pages<br><br>
-					  </li>
-					  <li>
-						COMPARAISON<br><br>
-						Leurs points communs?
-						<ul type="square">
-						  <li>
-							Elles font partie des variables superglobales de PHP</li>
-						  <li>
-							Elles fournissent des variables au  script  PHP
-						  </li>
-						  <li>
-							Ce sont donc des mecanismes d'entree
-						  </li>
-						</ul>
-						 Leurs differences?
-						<ul type="square">
-						  <li>&dollar;_POST[]  Récupere <i>seulement</i> les variables passées par un formulairePOST</li>
-						  <li>$_SESSION[]  Récupere  <i>toutes</i> les variables de session</li>
-						</ul>
-					  </li>
-					</ul>
-				  </code>
-				</div>
-				<div class="reponses reponse2" style="height: 55em; color:blue;" >
-					<span class="rouge">&Agrave; quoi sert &nbsp; &dollar;_REQUEST[ ] &nbsp;?  </span>
-				<blockquote><cite>
-					$_REQUEST fait partie des variables superglobales de PHP.<br><span class="gris"> Elle permet de récupérer des variables fournies au script par n'importe quel <u>mécanisme d'entrée</u></span>.<br> <i>Elle peut donc remplacer <span class="gris"> &dollar;_POST,  &dollar;_GET,  &dollar;_ENV, &dollar;_COOKIE, et &dollar;_SESSION.<br></span></i> <br>
+        <hr width=100% color=#ddd >
 
-					Cependant les données sont récupérées selon un certain ordre, celui prédéfini par la directive <span class="gris">php.ini</span>, vous pouvez par exemple avoir ceci:<br>
-					<code> variables_order = "<span class="gris">EGPCS</span>"</code> &emsp; avec:<br>
+        <p><u><i>SOLUTION 1.2</i></u></p>
+       <div class="conteneur-reponses" style=" float:left; width: 100%;  " >
+            <div class="reponses reponse1  "  style="height: 55em;">
+              <code>
+                <ol >
+                  <li > 
+                    UTILIT&Eacute;<br><br>
+                    &dollar;_POST[]: Contient les infos qui viennent d'être envoyées par un formulaire . C'est une methode d'envoie de donnees au script PHP<br><br>
+                    &dollar;_SESSION[]: Contient des variables qui restent stockées sur le serveur le temps de la présence d'un visiteur<br><br>  
+                  </li>
+                  <li>
+                    USAGE<br><br>
+                    &dollar;_POST[] : Utilis&eacute; dans le traitement PHP d'un formulaire<br>
+                    &dollar;_SESSION[]: Utilis&eacute; pour le passage de variables entre les pages<br><br>
+                  </li>
+                  <li>
+                    COMPARAISON<br><br>
+                    Leurs points communs?
+                    <ul type="square">
+                      <li>
+                        Elles font partie des variables superglobales de PHP</li>
+                      <li>
+                        Elles fournissent des variables au  script  PHP
+                      </li>
+                      <li>
+                        Ce sont donc des mecanismes d'entree
+                      </li>
+                    </ul>
+                     Leurs differences?
+                    <ul type="square">
+                      <li>&dollar;_POST[]  Récupere <i>seulement</i> les variables passées par un formulairePOST</li>
+                      <li>$_SESSION[]  Récupere  <i>toutes</i> les variables de session</li>
+                    </ul>
+                  </li>
+                </ul>
+              </code>
+            </div>
+            <div class="reponses reponse2" style="height: 55em; color:blue;" >
+                <span class="rouge">&Agrave; quoi sert &nbsp; &dollar;_REQUEST[ ] &nbsp;?  </span>
+            <blockquote><cite>
+                $_REQUEST fait partie des variables superglobales de PHP.<br><span class="gris"> Elle permet de récupérer des variables fournies au script par n'importe quel <u>mécanisme d'entrée</u></span>.<br> <i>Elle peut donc remplacer <span class="gris"> &dollar;_POST,  &dollar;_GET,  &dollar;_ENV, &dollar;_COOKIE, et &dollar;_SESSION.<br></span></i> <br>
+
+                Cependant les données sont récupérées selon un certain ordre, celui prédéfini par la directive <span class="gris">php.ini</span>, vous pouvez par exemple avoir ceci:<br>
+                <code> variables_order = "<span class="gris">EGPCS</span>"</code> &emsp; avec:<br>
 
 
-						<ul type="square">
-							<li>
-							  <span class="gris">E</span> pour les variables d'<span class="gris">E</span>nvironnement
-							</li>
-							<li>
-							  <span class="gris">G</span> pour les variables provenant de la méthode <span class="gris">G</span>ET
-							</li>
-							<li>
-							  <span class="gris">P</span> pour les variables provenant de la méthode <span class="gris">P</span>OST
-							</li>
-							<li>
-							  <span class="gris">C</span> pour les variables provenant d'un <span class="gris">C</span>ookie
-							</li>
-							<li>
-							  <span class="gris">S</span> pour les variables de <span class="gris">S</span>ession<br>
-							</li>
-						</ul>               
-					Dans ce cas les données seront traitées dans cette ordre:
-					<ol>
-					  <li>variable d'Environnement</li>
-					  <li>variables GET</li>
-					  <li>variables POST</li>
-					  <li>Cookies</li>                       
-					  <li>variables de Sessions</li>
-					</ol>
-					<i>Il vous est bien sûr possible de changer l'ordre comme vous le souhaitez, mais ce n'est à mon sens pas ce qu'il y a de mieux à faire.<br></i>            
-				  </cite></blockquote>
-					  <span class="rouge">    
-					  Pourquoi ne pas utiliser cette superglobale ?<br></span> 
-				  <cite><blockquote>
-					Tout simplement à cause de l'ordre des variables cité ci-dessus.
-				  </cite></blockquote>
-				  <!-- </code> -->
-				</div>
+                    <ul type="square">
+                        <li>
+                          <span class="gris">E</span> pour les variables d'<span class="gris">E</span>nvironnement
+                        </li>
+                        <li>
+                          <span class="gris">G</span> pour les variables provenant de la méthode <span class="gris">G</span>ET
+                        </li>
+                        <li>
+                          <span class="gris">P</span> pour les variables provenant de la méthode <span class="gris">P</span>OST
+                        </li>
+                        <li>
+                          <span class="gris">C</span> pour les variables provenant d'un <span class="gris">C</span>ookie
+                        </li>
+                        <li>
+                          <span class="gris">S</span> pour les variables de <span class="gris">S</span>ession<br>
+                        </li>
+                    </ul>               
+                Dans ce cas les données seront traitées dans cette ordre:
+                <ol>
+                  <li>variable d'Environnement</li>
+                  <li>variables GET</li>
+                  <li>variables POST</li>
+                  <li>Cookies</li>                       
+                  <li>variables de Sessions</li>
+                </ol>
+                <i>Il vous est bien sûr possible de changer l'ordre comme vous le souhaitez, mais ce n'est à mon sens pas ce qu'il y a de mieux à faire.<br></i>            
+              </cite></blockquote>
+                  <span class="rouge">    
+                  Pourquoi ne pas utiliser cette superglobale ?<br></span> 
+              <cite><blockquote>
+                Tout simplement à cause de l'ordre des variables cité ci-dessus.
+              </cite></blockquote>
+              <!-- </code> -->
+            </div>
 
-			</div><!-- conteneur-reponses Q1.1 -->      
-			<hr size=20 color=#c3c3c3 width="97.7%" id="firefoxtnul">
-		</details>
-		
+        </div><!-- conteneur-reponses Q1.1 -->      
+        <hr size=20 color=#c3c3c3 width="97.7%" id="firefoxtnul">
 	    <!-- SEPARATEUR Partie3-Partie4 -->
 	    <hr width=99.7% color=#ddd style="display:inline-block;">
 		<div class="conteneur-reponses"></div><p></p>
@@ -371,18 +367,17 @@
             
     	<hr width=100% color=#ddd style="display:inline-block;">
 
-       <details>
-		   <p><summary><u><i>SOLUTION BATAILLE NAVALE</i></u></summary></p>
-		   <div class="conteneur-reponses" style="float:left; width: 100%;">
-			<div class="reponses reponse1" style="height: 200px;">
-				   Blablabla ...
-			</div>
-			<div class="reponses reponse2" style="height: 200px;" >
-				 Encore Blabla ...
-			</div>
-			</div><!-- conteneur-reponses -->
-			<hr size=20 color=#c3c3c3 width="97.7%" id="firefoxtnul">
-		</details>
+
+       <p><u><i>SOLUTION BATAILLE NAVALE</i></u></p>
+       <div class="conteneur-reponses" style="float:left; width: 100%;">
+        <div class="reponses reponse1" style="height: 200px;">
+	           Blablabla ...
+        </div>
+        <div class="reponses reponse2" style="height: 200px;" >
+             Encore Blabla ...
+        </div>
+        </div><!-- conteneur-reponses -->
+        <hr size=20 color=#c3c3c3 width="97.7%" id="firefoxtnul">
 		<!-- SEPARATEUR Partie3-Partie4 -->
 	    <hr width=99.7% color=#ddd style="display:inline-block;">
 		<div class="conteneur-reponses"></div><p></p>
