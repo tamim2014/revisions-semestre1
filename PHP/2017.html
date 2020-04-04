@@ -19,7 +19,9 @@
 	    #menu .dropdown2-container{min-width:11.76em !important; }
 		#menu{ padding-left:20%; }
 		#menu a, #menu .dropdown2-btn{ font-weight:normal; }
+		
 		/* énoncé centré plein page */
+		
 		.centrer-question{
 		   margin-left:0;
 		   margin-bottom: 1em;
@@ -30,6 +32,7 @@
 			 0px 2px 20px 0px white inset,
 			 0px 2px 10px 0px ;	   
 		 }
+		 
 		 /* MISE EN PAGE */
 		 summary{font-size:1.5em; }
 		 details{margin-bottom:1.5em;}
@@ -64,12 +67,19 @@
 		/* style spécifique à session2017:contient  aside.sidebarGauche et  aside.sidebarDroit */
 		div.enveloppe-SG, div.enveloppe-SD{ 
 		  position:absolute;
-		  height:122.5em ;
+		  height:129.65em ;/* ! ne pas changer cette valeur(même si le contenu se rallonge) car je veux garder l'effet des blocs qui s'articulent lors de la montée de la page  */
 		  padding:0;
 		  		  
 		}
-		div.enveloppe-SG{ width:16.8%;}
-        div.enveloppe-SD{ width:21%; right:0.5%; margin-bottom:0; } 
+		div.enveloppe-SG{ 
+		  width:16.8%; 
+		}
+        div.enveloppe-SD{ 
+		   width:21.2%;
+		   right:0.8%;
+		   margin-bottom:0; 
+		   margin-right:0;
+		 } 
 		
 		aside.sidebarGauche{
 		  width:92%; 
@@ -89,7 +99,7 @@
 		
 		/* Deco de la structure */
 		
-		.grisMetal, div.enveloppe-SG, div.enveloppe-SD, aside.sidebarDroit {
+		.grisMetal, div.enveloppe-SG, div.enveloppe-SD, aside.sidebarDroit{
 		  background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc) !important;
 		}
 		
@@ -99,7 +109,30 @@
 		  height:95px !important; /* 100px  */
 		}
 		
-
+		/* 
+		 *
+		 *pour une raison inconnue le background de <main> refuse de changer
+		 * alors je met des div entre les section 
+		 * et je les affecte de la classe grisMetal
+		 * KO! même cette solution " brute" n'y arrive pas
+		 * ...
+		 * Bah ...ça fini par marcher mais g pas compris ce qui avait bloqué !!!!!!!!!!!!!
+		 */
+		 .entre-section{	   
+		   padding: 0;
+		   margin:0 ; 	 
+		   width:75%;
+		   background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc) !important;
+		   color:transparent;
+		 }
+		 /* toute cette classe  .entre-section  pour arriver à changer le background de main: 
+		 
+		 main{
+		   background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc) !important;
+		 }
+		 */
+		
+         section{margin-right:0 !important;}
 
 
 	</style>	
@@ -190,7 +223,7 @@
 		</div>
 		 
 		<!-- Contenu: listes des sujets d'examens-corriges avec le saommaire des questions -->	
-		<main>
+		<main >
 
 			<section class="bordureSupSection1 planche-bis " style="height:auto; style="padding-right:0;   " >
 			    <h2 class="grosTitre"><span class="box-shadow-titre" style="text-align:center; color:#ECECEA;" > Session 2017 </span></h2>
@@ -320,12 +353,11 @@
 			</section> <!-- FIN section1- conteneurDesSujet - PHP -->
 			
 			
-			
+			<div class="entre-section">...</div>
 			
 			
 			
 			<section class="conteneurDesSujet planche-bis" >
-
 				<p class="bleu">
 					Partie n°2 : interpretation d’un code PHP(4 points)  
 				</p> 
@@ -334,21 +366,25 @@
 				<b class="rouge"><i> Ecrire le resultat (code HTML) de l’interpretation du code PHP suivant.</i>  </b>
 				<img src="../photos/2017p2.png"><br>
 				...
-
-
-			</section> <!-- FIN section2 .conteneurDesSujet JAVA -->
+			</section> 
+			
+			<div class="entre-section">...</div>
+			
 			<section class="conteneurDesSujet planche-bis" >
 				<p class="bleu">
 					Partie n°3 : comprehension d’erreurs(5 points)   
 				</p>
 			</section>
 			
+			<div class="entre-section">...</div>
 			
-			<section class="conteneurDesSujet planche-bis" >
+			<section class="conteneurDesSujet planche-bis" style="height:800px">
 				<p class="bleu">
 					Partie n°4 : implémentation de classes(6 points)   
 				</p>
 			</section>
+			<div class="entre-section">...</div>
+
 
 		</main>
 		<button onclick="topFunction()" id="myBtn" title="Go to top" >

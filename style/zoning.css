@@ -18,7 +18,7 @@
 
 		
 		/* precautions  pour les vieux navigateurs */ 
-		aside, footer, header, main {display: block;} 
+		aside, footer, header, main {display: block; } 
 		
        	/* Detail de style pour les 2 barres laterales */ 
         .sidebarGauche {
