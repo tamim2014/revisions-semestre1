@@ -72,8 +72,10 @@
 			border:1px solid #8c8b8b ; 
 			padding:1px 4px; 
 			border-radius:0 0 3px 3px;
+									
+			/* box-shadow:0.2px 2px 8px 0px #8c8b8b; */
 			
-			box-shadow:0.2px 2px 0.3px 0.4px #8c8b8b; 
+			box-shadow:0.2px 2px 16px 0px #8c8b8b; 
 
 			width:96.5%;
 			background:white;
@@ -95,7 +97,7 @@
 			margin-top:2em !important;
 			margin-bottom:0 !important;
 			background:transparent !important;
- 			
+
         }			
 	</style>
 
@@ -519,7 +521,7 @@ scp -r -P 60022 tp1 myLogin@193.54.166.23:public_html/PHP2/tp1
                          <li >4.1 Un champs <b>puniton</b>(string)</li>
                          <li >4.2 Un champs <b>nbFois</b>(int): 10 par défaut</li>
                          <li >4.3 Modifier <b>corps.php</b> pour qu'il affiche "la punition" <b>nbFois</b></li>
-                         <li >4.4 V&eacute;rifier si  <b>nbFois</b> est bien un entier(en le castant)</li>
+                         <li >4.4 V&eacute;rifier si  <b>nbFois</b> est bien un entier(en le castrant)</li>
                          <li >4.5 Limiter <b>nbFois</b> à 100</li>
                          <li >4.6 <span style="color:#990033">Quel danger pour le passage des pramètres</span>(au niveau de l'URL) </li>						 						 
 					</ul>
@@ -564,7 +566,7 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 	}
 ?>	
 </source></code></pre>
-					<span class="idS subQuestion t-transparent"> &nbsp;<b style="color:gray">&bull;</b>&emsp; 4.4&emsp; V&eacute;rifier si  <b>nbFois</b> est bien un entier(en le castant)</span>
+					<span class="idS subQuestion t-transparent"> &nbsp;<b style="color:gray">&bull;</b>&emsp; 4.4&emsp; V&eacute;rifier si  <b>nbFois</b> est bien un entier(en le castrant)</span>
 <pre><code class="language-php" ><source lang="php">
 /********  corps.php ******/
 &lt;?php 
