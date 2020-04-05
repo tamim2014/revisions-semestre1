@@ -59,6 +59,44 @@
 		  border-radius: 4px; 
           background:white;		  
 		}
+		.paragraphe{
+			border:1px solid #8c8b8b; 
+			padding: 0.5em;
+			margin:1em 0; 
+			border-radius: 2px;
+			display:inline-block;
+			background:white;
+			width:96.5%;
+		}
+		.idS{
+			border:1px solid #8c8b8b ; 
+			padding:1px 4px; 
+			border-radius:0 0 3px 3px;
+			
+			box-shadow:0.2px 2px 0.3px 0.4px #8c8b8b; 
+
+			width:96.5%;
+			background:white;
+			margin-bottom:1em;
+			
+			/************************************************
+			  Pour mettre un width sur un elt texte(inline):
+			  display:inline-block; width:xxx;
+			*************************************************/
+		}
+		.subQuestion{
+		   line-height:1.5; 
+		   background:white;
+		   display:inline-block; width:98.2%;
+		}
+		.t-transparent{
+		    line-height:1.5; 
+			border:none;
+			margin-top:2em !important;
+			margin-bottom:0 !important;
+			background:transparent !important;
+ 			
+        }			
 	</style>
 
 	
@@ -386,7 +424,43 @@ scp -r -P 60022 tp1 myLogin@193.54.166.23:public_html/PHP2/tp1
 					</ul>
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
-						 ...
+<pre><code class="language-html" ><source lang="html">
+/********  form.php ******/
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+	&lt;title>TP2: Exercice2&lt;/title>
+&lt;/head>
+&lt;body>
+	&lt;form action="corps.php" method="get">
+		Nom :     &lt;input type="text"     name="nom">
+		Prénom:   &lt;input type="text"     name="prenom">
+		Password: &lt;input type="password" name="password">		
+	    &lt;input type="submit" name="submit" value="Envoyer">
+	&lt;/form>
+&lt;/body>
+&lt;/html>	
+</source></code></pre>
+<pre><code class="language-php" ><source lang="php">
+/********  corps.php ******/
+&lt;div id="contenu">
+	&lt;h3> TP2: Exercice1&lt;/h3>
+&lt;/div>
+&lt;?php  
+   // COLLECT 
+   $nom = $_GET["nom"];
+   $prenom = $_GET["prenom"];
+   $password = $_GET["password"];
+   
+  // AFFICHAGE
+   echo '
+	  &lt;p>Nom:          '.$nom.'     &lt;/p>
+	  &lt;p>Prénom:       '.$prenom.'  &lt;/p>
+	  &lt;p>Mot de passe: '.$password.'&lt;/p>        
+   ';
+?>
+&lt;p>&lt;a href="form.php"> Formulaire de saisie &lt;/a>&lt;/p>	
+</source></code></pre>
 					</details>
 					<p></p>	
 
@@ -396,33 +470,131 @@ scp -r -P 60022 tp1 myLogin@193.54.166.23:public_html/PHP2/tp1
 
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
-						 ...
+						 <div class="paragraphe">
+						     ...
+						 </div>
 					</details>
 					<p></p>	
 
 					<b class="greenNum">&#9314;</b> Avant d'afficher les paramètres transmis, <b> vérifier</b><br>
 					<ul type="disc" class="questions_" >
-                         <li>S'ils sont ben positionnés[ <b>isset()</b> et <b>empty()</b> ] </li>					
+                         <li>S'ils sont bien positionnés[ <b>isset()</b> et <b>empty()</b> ] </li>					
 						 <li>Sinon afficher un message d'erreur</li>						 
 					</ul>
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
-						 ...
+<pre><code class="language-php" ><source lang="php">
+/********  corps.php ******/
+
+&lt;div id="contenu">
+	&lt;h3> TP2: Exercice1&lt;/h3>
+&lt;/div>
+&lt;?php  
+   // COLLECTE et TRAITEMENT
+	   
+   if(isset($_GET["nom"])) $nom = $_GET["nom"];
+   if(empty($nom))echo 'Entrer votre nom &lt;br>';
+   
+   if(isset($_GET["prenom"])) $prenom = $_GET["prenom"];
+   if(empty($prenom)) echo 'Entrer votre prenom &lt;br>';
+   
+   if(isset($_GET["password"])) $password = $_GET["password"];
+   if(empty($password)) echo 'Entrer votre password &lt;br>';
+   
+  // AFFICHAGE
+  
+   echo '
+	  &lt;p>Nom:          '.$nom.'     &lt;/p>
+	  &lt;p>Prénom:       '.$prenom.'  &lt;/p>
+	  &lt;p>Mot de passe: '.$password.'&lt;/p>        
+   ';
+?>
+&lt;p>&lt;a href="form.php"> Formulaire de saisie &lt;/a>&lt;/p>	
+</source></code></pre>
 					</details>
 					<p></p>
 					
 					<b class="greenNum">&#9315;</b> Ajouter dans le formulaire<br>
 					<ul type="disc" class="questions_" >
-                         <li>Un champs <b>puniton</b>(string)</li>
-                         <li>Un champs <b>nbFois</b>(int): 10 par défaut</li>
-                         <li>Modifier <b>corps.php</b> pour qu'il affiche "la punition" <b>nbFois</b></li>
-                         <li>V&eacute;rifier si  <b>nbFois</b> est bien un entier(en le castant)</li>
-                         <li>Limiter <b>nbFois</b> à 100</li>
-                         <li><span style="color:#990033">Quel danger pour le passage des pramètres</span>(au niveau de l'URL) </li>						 						 
+                         <li >4.1 Un champs <b>puniton</b>(string)</li>
+                         <li >4.2 Un champs <b>nbFois</b>(int): 10 par défaut</li>
+                         <li >4.3 Modifier <b>corps.php</b> pour qu'il affiche "la punition" <b>nbFois</b></li>
+                         <li >4.4 V&eacute;rifier si  <b>nbFois</b> est bien un entier(en le castant)</li>
+                         <li >4.5 Limiter <b>nbFois</b> à 100</li>
+                         <li >4.6 <span style="color:#990033">Quel danger pour le passage des pramètres</span>(au niveau de l'URL) </li>						 						 
 					</ul>
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
-						 ...
+<pre><code class="language-html" ><source lang="html">
+/********  form.php ******/
+    ...  	
+Punition : &lt;input type="text" name="punition"  >
+nbFois:    &lt;input type="number" name="nbFois" value="10" >
+	
+</source></code></pre>
+<span class="idS t-transparent" > &nbsp; Pour éviter les erreurs: Traiter séparement avant de concatener  &nbsp;&nbsp;<b style="background:#ff1;  border-radius:2px; padding:2px;">&#9888;</b></span>
+<pre><code class="language-php" ><source lang="php">
+/********  corps.php ******/
+    ...  	
+&lt;?php  
+   // COLLECTE et TRAITEMENT	   
+    ... 
+  // AFFICHAGE  
+    ...	
+	$n = 1;
+	while ($n <= 10)
+	{
+		echo $punition.'&lt;br/>';
+		$n++; 
+	}
+?>
+&lt;p>&lt;a href="form.php"> Formulaire de saisie &lt;/a>&lt;/p>	
+</source></code></pre>
+					
+					<span class="idS subQuestion t-transparent"> &nbsp;<b style="color:gray">&bull;</b>&emsp; 4.3&emsp; Modifier <b>corps.php</b> pour qu'il affiche "la punition" <b>nbFois</b></span>
+<pre><code class="language-php" ><source lang="php">
+/********  corps.php ******/
+    ...  	
+&lt;?php  	
+	$n = 1;
+	while ($n <= $nbFois)
+	{
+		echo $punition.'&lt;br/>';
+		$n++; 
+	}
+?>	
+</source></code></pre>
+					<span class="idS subQuestion t-transparent"> &nbsp;<b style="color:gray">&bull;</b>&emsp; 4.4&emsp; V&eacute;rifier si  <b>nbFois</b> est bien un entier(en le castant)</span>
+<pre><code class="language-php" ><source lang="php">
+/********  corps.php ******/
+&lt;?php 
+    ...  	
+    // is_int() mais à refaire
+	// changer le type number en int (champs nbFois) !
+?>	
+</source></code></pre>
+					<span class="idS subQuestion t-transparent"> &nbsp;<b style="color:gray">&bull;</b>&emsp; 4.5&emsp; Limiter <b>nbFois</b> à 100</span>
+<pre><code class="language-php" ><source lang="php">
+/********  corps.php ******/
+&lt;?php 
+    ...  	
+	$n = 1;
+	while ($n &lt;= $nbFois)
+	{
+		if($nbFois &lt;= 100 ){
+			 echo $punition.'&lt;br/>';			 
+		}else{
+		  echo 'Nombre trop grand ';
+		  break;
+		}
+		$n++;					
+	}
+?>	
+</source></code></pre>
+					<span class="idS subQuestion t-transparent"> &nbsp;<b style="color:gray">&bull;</b>&emsp; 4.6&emsp; <span style="color:#990033">Quel danger pour le passage des pramètres</span>(au niveau de l'URL)</span>
+					<div class="paragraphe">
+						     ???
+					</div>
 					</details>
 					<p></p>
 					
