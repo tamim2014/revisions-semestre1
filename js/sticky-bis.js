@@ -4,8 +4,7 @@
 	var menu = document.getElementById("menu");
 	var mybutton = document.getElementById("myBtn"); // GO TO TOP
 	var barre = document.getElementById("sidebarGauche");
-	var barreDroite = document.getElementById("sidebarDroit");// session 2017 seulement
-    //var main_ = document.getElementById("main_");
+	var barreDroite = document.getElementById("sidebarDroit");
 	
 	var positionInitiale = ejectBtn.offsetTop;
 
@@ -14,14 +13,13 @@
 		ejectBtn.classList.add("sticky-ejectBtn");
 		menu.classList.add("sticky-menu");
 		barre.classList.add("stickySidebar");// pour les pages corrigées d'examen
-		barreDroite.classList.add("stickySidebarDroit");// pour la session 2017 seulement
-	    //main_.classList.add("main_");
+		barreDroite.classList.add("stickySidebarDroit");
+		barreDroite2017.classList.add("stickySidebarDroit2017");// pour la session 2017 seulement
 	  } else {
 		ejectBtn.classList.remove("sticky-ejectBtn");
 		menu.classList.remove("sticky-menu");
         barre.classList.remove("stickySidebar"); // pour les pages corrigées d'examen		
-		barreDroite.classList.remove("stickySidebarDroit"); // pour la session 2017 seulement
-	    //main_.classList.remove("main_");
+		barreDroite.classList.remove("stickySidebarDroit"); 
 	  }
 	} 
 	
