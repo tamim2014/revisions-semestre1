@@ -324,7 +324,31 @@
 					</ul>
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
-						 ...
+						                         
+							 <pre><code class="language-php" ><source lang="php" line>
+/********  La fonction date() le fait en anglais ******/
+&lt;?php
+    // 2020-04-05 01:16:53
+	echo date('Y-m-d H:i:s')."&lt;br/>"; 
+    // Saturday 05 April 2020, 01:16	
+	echo date('l j F Y, H:i')."&lt;br/>"; 	
+	echo date('d F Y')."&lt;br/>";// 05 April 2020
+	echo date('d/m/Y')."&lt;br/>";// 04/04/2020
+?>   	
+                             </source></code></pre>
+							 <pre><code class="language-php" ><source lang="php" line>
+/*** setlocale( ) + strftime() le font en français ***/
+&lt;?php
+	setlocale(LC_TIME, 'fra_fra');
+	 
+	// 2020-04-04 23:43:59 
+	echo strftime('%Y-%m-%d %H:%M:%S'); 
+    // samedi 04 avril 2020, 23:43	
+	echo strftime('%A %d %B %Y, %H:%M');  
+	echo strftime('%d %B %Y'). // 04 avril 2020
+	echo strftime('%d/%m/%y'); //04/04/20
+?>  	
+                             </source></code></pre>
 					</details>
 					<p></p>
 					
@@ -333,7 +357,9 @@
 
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
-						 ...
+				<pre><code class="language-php" ><source lang="php">
+scp -r -P 60022 tp1 myLogin@193.54.166.23:public_html/PHP2/tp1	
+                </source></code></pre>
 					</details>
 					<p></p>
 				</div>
@@ -570,7 +596,9 @@
 	</div> <!-- div#contenair -->
 
 	           
-    <footer style="z-index:99 !important; text-align:left">     
+    <footer style="z-index:99 !important; text-align:left">
+
+        <span style="padding:0 0 0 26.3em">Revue des installations</span><br>
 		<span style=" padding-left:8em; padding-right:18em; color:#8c8b8b; ">Inventaire ports apache (local host)</span>
 		<span style="color:#8c8b8b;">URL ( 3 premiers TP )</span>
 	    <div class="content-footer" style=" margin-top:-2.4em; " >         
