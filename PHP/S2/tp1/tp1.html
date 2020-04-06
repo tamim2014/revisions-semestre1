@@ -69,6 +69,10 @@
 			background:white;
 			width:93.9%;
 		}
+		.petitParagraphe{
+		   width:84% !important; 
+		   padding-left:2em !important;
+		}
 		.idS{
 			border:1px solid #8c8b8b ; 
 			padding:1px 4px; 
@@ -99,7 +103,12 @@
 			margin-bottom:0 !important;
 			background:transparent !important;
 
-        }			
+        }
+        .attention{
+		  background:#ff1;
+		  border-radius:2px;
+		  padding:2px;
+		}		
 	</style>
 
 	
@@ -208,7 +217,7 @@
 				<h2 class="matiere">PHP2: TP1</h2>		  
 				<div class="success_  structureSujet"  >			  			  
 					<p><u><a href="#"><strong>Rappel:</strong> </a></u></p>
-					
+					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; width:91.91%;"> &nbsp;<b style="color:gray">&bull; &emsp; Rappel sur les boucles </b></span>
 					<ul type="none" style="line-height:1.5">
 					     <li>
 						    <details>
@@ -228,17 +237,57 @@
 						 <li>
 							<details>
 						      <summary>Quelles &ne; entre if-else, elseif, switch et l'opérateur ternaire ‘ <b>? :</b>’ ?</summary>
-							  &emsp;&#8718; ???<br>
-							  &emsp;&#8718; ...<br>
+					           <ul type="square" class="paragraphe petitParagraphe"> 
+							      <li>
+								     Un switch est l'équivalent d'une succession de bloc if/else if/else<br>
+									 Très rapide: accède une seul fois &agrave; la cellule mémoire afin de la comparer aux "case".
+								  </li>
+								  <li>
+								     Alors qu'une succession de bloc if/else accède plusieurs fois à l'élément à comparer.
+								  </li>
+							   </ul>
 							</details>
 						 </li>
 						 <li>						      
 							<details>
-						      <summary>Quelle &ne; entre <b>while</b> et <b>for </b>?</summary>
-							  &emsp;&#8718; ???<br>
-							  &emsp;&#8718; ...<br>
-							</details>
-						  </li>
+							  <summary>Quelle &ne; entre <b>while</b> et <b>for </b>?</summary>
+							   <ul type="square" class="paragraphe petitParagraphe" style="margin-bottom:0.4em !important; "> 
+								  <li>
+									 <b>for</b>: Repète la "<b><i>punition</i></b>" un "<b><i>nbFois</i></b>" précis et puis c'est tout.
+								  </li>
+								  <li>
+									 <b>while</b>: Lui, il est dingue! On peut l'foutre n'importe quoi, elle va répeter la "<b><i>punition</i></b>" tant que la connerie n'est pas vraie. Si la <i style="color:#990033"> "condition = dateFinDuMonde"</i>, bah elle va continuer d'afficher la  "<b><i>punition</i></b>"" jusqu'à planter la machine.
+								  </li>
+							   </ul>
+<span class="idS subQuestion t-transparent" style="margin-top:0 !important; width:91.91%;"> &nbsp;<b style="color:gray">&bull;</b>&emsp; Un exemple avec <b>while</b></span>
+<div style="width:93.3%; margin-bottom:0.4em; ">
+<pre style="margin-right:1em important;"><code class="language-php" ><source lang="php">  	
+&lt;?php  	
+	$n = 1;
+	$nbFois = 10;
+	while( $n &lt;= $nbFois ){
+		echo $punition.'&lt;br/>';		
+		$n++; 
+	}
+?>	
+</source></code></pre>
+<span class="idS subQuestion t-transparent" style="margin-top:0 !important; width:91.91%;"> &nbsp;<b style="color:gray">&bull;</b>&emsp; Un exemple avec <b>for</b></span>
+<div style="width:93.3%;  margin-bottom:0.4em;">
+<pre style="margin-right:1em important;"><code class="language-php" ><source lang="php">  	
+&lt;?php  	
+	$nbFois = 10;
+	for( $i=0; $i &lt;= $nbFois; $i++ ){
+		echo $punition.'&lt;br/>';		
+	}
+?>	
+</source></code></pre>
+</div>
+                            </details>
+						 </li>
+					</ul>
+					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; width:91.91%;"> &nbsp;<b style="color:gray">&bull; &emsp; Rappel sur les fonctions </b></span>
+					<ul type="none" style="line-height:1.5">
+					
 						 <li>					     
 							<details>
 						      <summary>Quelle &ne; entre <b>print</b> et <b>echo </b>?</summary>
@@ -258,7 +307,7 @@
 
                             <details>
 						      <summary>Site officiel reference des fonction ?</summary>
-							  &emsp;&#8718; http://fr.php.net/manual/fr/funcref.php
+							  &emsp;<b class="attention" >&#9888;</b> http://fr.php.net/manual/fr/funcref.php
 							</details>							 
 						 </li>
 						 <li>
@@ -270,11 +319,17 @@
 							  &emsp;&#8718;<b>strtolower():</b> ...<br>
 							</details>
 						 </li>
-						 <li>Il existe deux types de tableaux :
-                            <ol>
-							   <li>les tableaux num&eacute;rot&eacute;s</li>
-							   <li>les tableaux associatifs</li>
-							</ol>						 
+					</ul>
+					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; width:91.91%;"> &nbsp;<b style="color:gray">&bull; &emsp; Rappel sur les tableaux </b></span>
+					<ul type="none" style="line-height:1.5">
+						 <li>
+						    <div class="paragraphe petitParagraphe" style="background:#d2f2df; width:83% !important;"> <!-- ici un dispaly:block s'impose l'elt block à l'intérieur de l'eli inline -->
+								Il existe deux types de tableaux :
+								<ol>
+								   <li>les tableaux num&eacute;rot&eacute;s</li>
+								   <li>les tableaux associatifs</li>
+								</ol>
+                            </div>							
                        
 						   	<details>
 						      <summary>Donner un exemple en PHP, avec les deux types.</summary>
@@ -535,7 +590,7 @@ Punition : &lt;input type="text" name="punition"  >
 nbFois:    &lt;input type="number" name="nbFois" value="10" >
 	
 </source></code></pre>
-<span class="idS t-transparent" > &nbsp; Pour éviter les erreurs: Traiter séparement avant de concatener  &nbsp;&nbsp;<b style="background:#ff1;  border-radius:2px; padding:2px;">&#9888;</b></span>
+<span class="idS t-transparent" > &nbsp; Pour éviter les erreurs: Traiter séparement avant de concatener  &nbsp;&nbsp;<b class="attention" >&#9888;</b></span>
 <pre><code class="language-php" ><source lang="php">
 /********  corps.php ******/  	
 &lt;?php  
@@ -547,7 +602,7 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
   // AFFICHAGE  
   ...	
   $n = 1;
-  while( $n <= 10 ){
+  while( $n &lt;= 10 ){
 	   echo $punition.'&lt;br/>';
 	   $n++; 
 	}
@@ -560,7 +615,7 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
     ...  	
 &lt;?php  	
 	$n = 1;
-	while( $n <= $nbFois ){
+	while( $n &lt;= $nbFois ){
 		echo $punition.'&lt;br/>';		
 		$n++; 
 	}
@@ -618,9 +673,11 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
 						 <div class="paragraphe" style="margin-bottom:0.4em !important;">
-						    &#8718; <b>Conséquence</b>: Modifier son contenu pour "passer" le formulaire de login <br>
-							&#8718; <b>Injection HTML</b>: Une balise &lt;a&gt; pour rediriger l'utilisateur vers un autre site qui réaffiche la valeur du champs <b>Nom</b> <br>
-                            &#8718; <b>Injection javaScript</b>: Voler le cookie contenant les paramètres de connexion( en utilisant une rédirection javaScript) <br>							
+						    <ul type="square">
+							   <li><b>Conséquence</b>: Modifier son contenu pour "passer" le formulaire de login </li>
+							   <li><b>Injection HTML</b>: Une balise &lt;a&gt; pour rediriger l'utilisateur vers un autre site qui réaffiche la valeur du champs <b>Nom</b></li>
+							   <li><b>Injection javaScript</b>: Voler le cookie contenant les paramètres de connexion( en utilisant une rédirection javaScript)</li>
+							</ul>							
 						 </div>
 						 <span class="idS subQuestion t-transparent" style="margin-top:0 !important;">&nbsp;&nbsp;Exemple de vol de cookie par injection javaScript</span>
 <pre><code class="language-html" ><source lang="html">
