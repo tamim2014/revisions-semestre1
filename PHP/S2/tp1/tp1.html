@@ -61,12 +61,13 @@
 		}
 		.paragraphe{
 			border:1px solid #8c8b8b; 
-			padding: 0.5em;
+			padding: 0.5em 1em;
+			line-height:1.5;
 			margin:1em 0; 
 			border-radius: 2px;
 			display:inline-block;
 			background:white;
-			width:96.5%;
+			width:93.9%;
 		}
 		.idS{
 			border:1px solid #8c8b8b ; 
@@ -492,15 +493,15 @@ scp -r -P 60022 tp1 myLogin@193.54.166.23:public_html/PHP2/tp1
 	&lt;h3> TP2: Exercice1&lt;/h3>
 &lt;/div>
 &lt;?php  
-   // COLLECTE et TRAITEMENT
+   // COLLECTE 
 	   
-   if(isset($_GET["nom"])) $nom = $_GET["nom"];
+   $nom = isset($_GET["nom"]) ? $_GET["nom"] : '';
    if(empty($nom))echo 'Entrer votre nom &lt;br>';
    
-   if(isset($_GET["prenom"])) $prenom = $_GET["prenom"];
+   $prenom = isset($_GET["prenom"]) ? $_GET["prenom"] : '';
    if(empty($prenom)) echo 'Entrer votre prenom &lt;br>';
    
-   if(isset($_GET["password"])) $password = $_GET["password"];
+   $password= isset($_GET["password"]) ? $_GET["password"] : '';
    if(empty($password)) echo 'Entrer votre password &lt;br>';
    
   // AFFICHAGE
@@ -521,7 +522,7 @@ scp -r -P 60022 tp1 myLogin@193.54.166.23:public_html/PHP2/tp1
                          <li >4.1 Un champs <b>puniton</b>(string)</li>
                          <li >4.2 Un champs <b>nbFois</b>(int): 10 par défaut</li>
                          <li >4.3 Modifier <b>corps.php</b> pour qu'il affiche "la punition" <b>nbFois</b></li>
-                         <li >4.4 V&eacute;rifier si  <b>nbFois</b> est bien un entier(en le castrant)</li>
+                         <li >4.4 V&eacute;rifier si  <b>nbFois</b> est bien un entier(en le castant)</li>
                          <li >4.5 Limiter <b>nbFois</b> à 100</li>
                          <li >4.6 <span style="color:#990033">Quel danger pour le passage des pramètres</span>(au niveau de l'URL) </li>						 						 
 					</ul>
@@ -536,43 +537,40 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 </source></code></pre>
 <span class="idS t-transparent" > &nbsp; Pour éviter les erreurs: Traiter séparement avant de concatener  &nbsp;&nbsp;<b style="background:#ff1;  border-radius:2px; padding:2px;">&#9888;</b></span>
 <pre><code class="language-php" ><source lang="php">
-/********  corps.php ******/
-    ...  	
+/********  corps.php ******/  	
 &lt;?php  
-   // COLLECTE et TRAITEMENT	   
-    ... 
+  // COLLECTE 
+  ...  
+  $punition=isset($_GET["punition"]) ? $_GET["punition"] : '';
+  if( empty($punition) ) echo 'Saisir la punition&lt;br>';
+  
   // AFFICHAGE  
-    ...	
-	$n = 1;
-	while ($n <= 10)
-	{
-		echo $punition.'&lt;br/>';
-		$n++; 
+  ...	
+  $n = 1;
+  while( $n <= 10 ){
+	   echo $punition.'&lt;br/>';
+	   $n++; 
 	}
 ?>
 &lt;p>&lt;a href="form.php"> Formulaire de saisie &lt;/a>&lt;/p>	
-</source></code></pre>
-					
+</source></code></pre>					
 					<span class="idS subQuestion t-transparent"> &nbsp;<b style="color:gray">&bull;</b>&emsp; 4.3&emsp; Modifier <b>corps.php</b> pour qu'il affiche "la punition" <b>nbFois</b></span>
 <pre><code class="language-php" ><source lang="php">
 /********  corps.php ******/
     ...  	
 &lt;?php  	
 	$n = 1;
-	while ($n <= $nbFois)
-	{
-		echo $punition.'&lt;br/>';
+	while( $n <= $nbFois ){
+		echo $punition.'&lt;br/>';		
 		$n++; 
 	}
 ?>	
 </source></code></pre>
-					<span class="idS subQuestion t-transparent"> &nbsp;<b style="color:gray">&bull;</b>&emsp; 4.4&emsp; V&eacute;rifier si  <b>nbFois</b> est bien un entier(en le castrant)</span>
+					<span class="idS subQuestion t-transparent"> &nbsp;<b style="color:gray">&bull;</b>&emsp; 4.4&emsp; V&eacute;rifier si  <b>nbFois</b> est bien un entier(en le castant)</span>
 <pre><code class="language-php" ><source lang="php">
 /********  corps.php ******/
 &lt;?php 
-    ...  	
-    // is_int() mais à refaire
-	// changer le type number en int (champs nbFois) !
+   $nbFois=isset($_GET["nbFois"]) ? (int) $_GET["nbFois"] : ''; 
 ?>	
 </source></code></pre>
 					<span class="idS subQuestion t-transparent"> &nbsp;<b style="color:gray">&bull;</b>&emsp; 4.5&emsp; Limiter <b>nbFois</b> à 100</span>
@@ -581,21 +579,17 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 &lt;?php 
     ...  	
 	$n = 1;
-	while ($n &lt;= $nbFois)
-	{
-		if($nbFois &lt;= 100 ){
-			 echo $punition.'&lt;br/>';			 
-		}else{
-		  echo 'Nombre trop grand ';
-		  break;
-		}
+	while( $n &lt;= $nbFois ){
+		if($nbFois &lt;= 100 ){ echo $punition.'&lt;br/>';}			 			 
+		else{  echo 'Nombre trop grand '; break;    }		 
 		$n++;					
 	}
 ?>	
 </source></code></pre>
 					<span class="idS subQuestion t-transparent"> &nbsp;<b style="color:gray">&bull;</b>&emsp; 4.6&emsp; <span style="color:#990033">Quel danger pour le passage des pramètres</span>(au niveau de l'URL)</span>
 					<div class="paragraphe">
-						     ???
+						N'importe qui peut modifier les paramètres(voir même les supprimer <span style="color:red">&#9760;</span> )
+						dans la barre d'adresse de son navigateur !
 					</div>
 					</details>
 					<p></p>
