@@ -80,6 +80,11 @@
 		   width:84% !important; 
 		   padding-left:2em !important;
 		}
+		.moyenParagraphe{
+		    width:89.8%;
+			padding-left:0 !important;
+		}
+		
 		.idS{
 			border:1px solid #8c8b8b ; 
 			padding:1px 4px; 
@@ -866,7 +871,10 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 					<span style="line-height:1.5em; color:transparent;">...</span>
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-						 ...
+						 <div class="paragraphe petitParagraphe">
+						     Variable  accessibles n’importe où dans le script: &Agrave; l'intéieur des fonction(contexte locale) et à l'extérieur des fonctions(contexte global). <br><br>
+							 <small>C'pas moi qui défini cette variable! Elle existe déjà prédéfinie dans le moteur PHP</small>
+						 </div>
 					</details>
 					<p></p>
 					
@@ -882,7 +890,44 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 					</ul>
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-						 ...
+						 <div class="paragraphe moyenParagraphe">
+						    <ul type="square" class="questions_" >
+								 <li><b>&dollar;_SERVER : Variables définies par le serveur </b> </li>
+								 <ul type="disc">
+								    <li>$_SERVER['PHP_SELF'] &equiv; fichier(<small style="color:gray"> qui contient le script</small>)</li>
+									<li>$_SERVER['SERVER_NAME'] &equiv; serveur(<small style="color:gray"> qui héberge le fichier</small>)</li>
+									<li>$_SERVER['SERVER_ADDR'] &equiv; serveur(<small style="color:gray"> qui héberge le fichier</small>)</li>
+									<li>$_SERVER['REMOTE_ADDR'] &equiv; @IP(<small style="color:gray"> du visiteur </small>)</li>
+									<li>$_SERVER['REQUEST_TIME']&equiv; durée(<small style="color:gray"> de la requête</small>)</li>
+								 </ul>
+								 <li><p></p><b>&dollar;_ENV : Environnement où s'exécute le script </b> </li>
+								 <ul type="disc">				 
+									 <li>
+										$_ENV['USER'] &equiv; visiteur(<small style="color:gray"> qui éxecute le script </small>)
+									 </li>
+								 </ul>
+								 <li>
+								    <p></p><b>&dollar;_FILE : Va contenir des informations sur un fichier téléchargé !</b><br>
+									<span style="color:#555">On pourra donc utiliser cette superglobale lorsqu’on offre la possibilité à nos utilisateurs de nous envoyer des fichiers.</span>
+								 </li>	
+                                 <ul type="disc">
+								     <li>Ce, afin d’obtenir des informations sur les fichiers envoyés au serverveur web( type du fichier, sa taille, son nom, ... etc ) </li>
+									 <li>ou même pour filtrer et interdire l’envoi de certains fichiers</li>
+								 </ul>								 
+								 <li><p></p><b>&dollar;_SESSION: &emsp;</b> <span style="color:#666">Transmissions de donnéees entre pages</span></li>
+								 <li><b>&dollar;_GET : &emsp;&emsp;&emsp;</b> <span style="color:#777">Transmissions de donnéees entre pages</span></li>
+								 <li><b>&dollar;_POST : &emsp;&emsp;&nbsp;&nbsp;</b> <span style="color:#888">Transmissions de donnéees entre pages</span></li>                               
+								 <li>
+								    <p></p>
+								    <b>&dollar;_COOKIES</b>
+									<div class="paragraphe petiPragraphe" style="padding:0 0 0 1.5em; padding-top:0; margin-top:0; border:none;">
+									    Un cookie est un fichier qui est déposé par votre navigateur sur votre ordinateur lorsque vous surfez sur Internet. <br> C'est le navigateur qui va enregistrer le fichier sur votre disque dur(car le serveur n'a pas accès directement à votre ordinateur).<br>
+										Ce fichier sert à stocker et récupérer des informations sur vos habitudes de navigation
+									</div>
+								 </li>								 								 
+					        </ul>
+							
+						 </div>
 					</details>
 					<p></p>
 					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="blueNum">&#9313;</small> &emsp; Valeur &emsp; <i style="color:#115;">REMOTE_ADDR</i> </b></span><br>
@@ -890,7 +935,10 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 					<span style="line-height:1.5em; color:transparent;">...</span>
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-						 ...
+						 <div class="paragraphe petitParagraphe">
+						    @IP du visiteur qui demande la page
+						 </div>
+						 
 					</details>
 					<p></p>
 					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="blueNum">&#9314;</small> &emsp; Variable &emsp; <i style="color:#115;">&dollar;_SESSION</i> </b></span><br>
@@ -996,8 +1044,8 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 					<ul type="none" class="questions_" style="margin-left:-1em; line-height:0.9 !important;" >
 						  
 						  <li class="paragraphe petitParagraphe notaBene"><!-- avant c't background:#d2f2df, après g mis white   -->
-							  Pour faire cette d´econnexion automatique, servez vous de cette page :
-							  https://stackoverflow.com/questions/520237/how-do-i-expire-a-php-session-after-30-minutes
+							  Pour faire la déconnexion automatique, servez vous de cette page :
+							  <small><code>https://stackoverflow.com/questions/520237/how-do-i-expire-a-php-session-after-30-minutes</code></small>
 							  avec le code :
 <pre><code class="language-php" ><source lang="php">
 if (isset($_SESSION[’LAST_ACTIVITY’]) && (time() - $_SESSION[’LAST_ACTIVITY’] > 30)){

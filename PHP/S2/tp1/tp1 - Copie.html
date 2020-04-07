@@ -80,6 +80,11 @@
 		   width:84% !important; 
 		   padding-left:2em !important;
 		}
+		.moyenParagraphe{
+		    width:89.8%;
+			padding-left:0 !important;
+		}
+		
 		.idS{
 			border:1px solid #8c8b8b ; 
 			padding:1px 4px; 
@@ -123,6 +128,12 @@
 		   padding-bottom:0;
 		   background:transparent !important;
 		   border:none;
+		}
+        .notaBene{
+		  background:white;
+		  margin:0;
+		  width:86%;
+		  padding-right:2em; 
 		}		
 	</style>
 
@@ -860,7 +871,10 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 					<span style="line-height:1.5em; color:transparent;">...</span>
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-						 ...
+						 <div class="paragraphe petitParagraphe">
+						     Variable  accessibles n’importe où dans le script: &Agrave; l'intéieur des fonction(contexte locale) et à l'extérieur des fonctions(contexte global). <br><br>
+							 <small>C'pas moi qui défini cette variable! Elle existe déjà prédéfinie dans le moteur PHP</small>
+						 </div>
 					</details>
 					<p></p>
 					
@@ -876,7 +890,44 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 					</ul>
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-						 ...
+						 <div class="paragraphe moyenParagraphe">
+						    <ul type="square" class="questions_" >
+								 <li><b>&dollar;_SERVER : Variables définies par le serveur </b> </li>
+								 <ul type="disc">
+								    <li>$_SERVER['PHP_SELF'] &equiv; fichier(<small style="color:gray"> qui contient le script</small>)</li>
+									<li>$_SERVER['SERVER_NAME'] &equiv; serveur(<small style="color:gray"> qui héberge le fichier</small>)</li>
+									<li>$_SERVER['SERVER_ADDR'] &equiv; serveur(<small style="color:gray"> qui héberge le fichier</small>)</li>
+									<li>$_SERVER['REMOTE_ADDR'] &equiv; @IP(<small style="color:gray"> du visiteur </small>)</li>
+									<li>$_SERVER['REQUEST_TIME']&equiv; durée(<small style="color:gray"> de la requête</small>)</li>
+								 </ul>
+								 <li><b>&dollar;_ENV : Environnement où s'exécute le script </b> </li>
+								 <ul type="disc">				 
+									 <li>
+										$_ENV['USER'] &equiv; visiteur(<small style="color:gray"> qui éxecute le script </small>)
+									 </li>
+								 </ul>
+								 
+								 <li><b>&dollar;_SESSION : ???</b></li>
+								 
+								 <ul type="disc">
+								     <li><li>$_SESSION[''] &equiv; ???(<small style="color:gray"> ??? </small>)</li></li>
+									 <li></li>
+									 <li></li>
+								 </ul>
+								 
+								 <li><b>&dollar;_COOKIES</b></li>
+								 
+								 <ul type="disc">
+								     <li></li>
+									 <li></li>
+									 <li></li>
+								 </ul>
+								 
+								 <li><b>&dollar;_GET, &dollar;POST :</b></li>
+								 
+								 <li><b>&dollar;_FILE :</b></li>			  
+					        </ul>
+						 </div>
 					</details>
 					<p></p>
 					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="blueNum">&#9313;</small> &emsp; Valeur &emsp; <i style="color:#115;">REMOTE_ADDR</i> </b></span><br>
@@ -884,7 +935,10 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 					<span style="line-height:1.5em; color:transparent;">...</span>
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-						 ...
+						 <div class="paragraphe petitParagraphe">
+						    @IP du visiteur qui demande la page
+						 </div>
+						 
 					</details>
 					<p></p>
 					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="blueNum">&#9314;</small> &emsp; Variable &emsp; <i style="color:#115;">&dollar;_SESSION</i> </b></span><br>
@@ -938,7 +992,7 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 
 					<ul type="none" class="questions_" style="margin-left:-1em; line-height:0.9 !important; " >
 			
-					  <li class="paragraphe petitParagraphe" style="background:#d2f2df !important; margin-top:0; margin-bottom:0; ">
+					  <li class="paragraphe petitParagraphe" style="background:#dbe7fe !important; margin-top:0; margin-bottom:0; ">
 					     Pour ce faire, il faut une page de déconnexion intermédiaire (logout.php)
                          qui<br> -  va d’abord appeler la fonction unset($ SESSION)<br> - avant session destroy()
 					  </li>
@@ -949,6 +1003,59 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 					  <li class="paragraphe petitParagraphe indication" style="margin-left:-2em;" >
 					    header(’Location: index.php’)  permet de rediriger le navigateur 
 					  </li>
+					</ul>
+					
+					<details>
+					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
+						 ...
+					</details>
+					<p></p>
+					&emsp;Dupliquer <span style="color:#990033">infos.php</span> en info2.php<br>
+					<ul type="square" class="questions_" >
+					  <li>Ajouter  dans login.php un lien vers la page infos2.php</li>
+                      <li>
+					        infos2.php va déconnecter l’utilisateur au bout de 30 secondes
+							et afficher "Vous avez été déconnecté" 
+					  </li>
+					  <li>
+					        Ensuite, si la session existe encore (donc avant l’écoulement des 30 secondes),
+                            il faut afficher les informations de session (nom, prénom)
+					  </li>                          							
+					  <li><b style="font-size:1em"><u>Indications</u></b>:</li>
+					</ul>
+					<ul type="none" class="questions_" style="margin-left:-1em; line-height:0.9 !important;" >			
+			
+						  <li class="paragraphe petitParagraphe indication" style="margin:top:0; margin-left:-2em;">
+							  Pour tester, vous pouvez rafraichir la page avant 30 secondes,
+                              puis attendre 30 secondes et rafraichir de nouveau.
+
+						  </li>
+						  <li class="paragraphe petitParagraphe indication" style="margin-left:-2em;" >
+							  Vous devriez voir apparaître le
+                              message "Vous avez été déconnecté" la deuxième fois
+						  </li>
+					</ul>
+					
+					<ul type="square" class="questions_" >                         							
+					  <li><b style="font-size:1em"><u>Nota bene</u></b>:</li>
+					</ul>
+					
+					
+					<ul type="none" class="questions_" style="margin-left:-1em; line-height:0.9 !important;" >
+						  
+						  <li class="paragraphe petitParagraphe notaBene"><!-- avant c't background:#d2f2df, après g mis white   -->
+							  Pour faire la déconnexion automatique, servez vous de cette page :
+							  <small><code>https://stackoverflow.com/questions/520237/how-do-i-expire-a-php-session-after-30-minutes</code></small>
+							  avec le code :
+<pre><code class="language-php" ><source lang="php">
+if (isset($_SESSION[’LAST_ACTIVITY’]) && (time() - $_SESSION[’LAST_ACTIVITY’] > 30)){
+session_unset(); 
+session_destroy(); 
+}
+// Met à jour le timeStamp de la dernière activité
+$_SESSION[’LAST_ACTIVITY’] = time(); 
+</source></code></pre>
+						  </li>
 					</ul>
 					
 					<details>
