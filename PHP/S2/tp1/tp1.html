@@ -28,9 +28,10 @@
 		.reponse_ { padding-left:3em ; }
 		
 		.greenNum, .blueNum, .redNum { 
-		    color:#115; 
+		    color:black; 
             border-radius:50px;		
 		}
+		/********** ça fait un peu tâche. je vire tout pour faire propre( du noir sur fond blanc ) **************
 		.greenNum { 
 			box-shadow:
               0px 2px 4px 0px #4CAF50 inset,
@@ -45,6 +46,12 @@
 			box-shadow:
               0px 2px 4px 0px #a1008c inset,
               0px 2px 4px 0px inset;		
+		}
+		*********************************************************************************************/
+		.greenNum, .blueNum, .redNum { 
+			box-shadow:
+			0px 16px 4px 0px white inset,
+            0px 2px 4px 0px inset;		
 		}
 		.img{ 
 
@@ -108,6 +115,14 @@
 		  background:#ff1;
 		  border-radius:2px;
 		  padding:2px;
+		}
+        .indication{
+		   margin-top:0;
+		   padding-top:0;
+		   margin-bottom:0;
+		   padding-bottom:0;
+		   background:transparent !important;
+		   border:none;
 		}		
 	</style>
 
@@ -722,7 +737,7 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 				
                 <!-- Exercice3 -->
 				<div class="danger_ structureSujet">
-					<p><u><a href="#"><strong>Exo3:</strong> prot&eacute;ger une page par mot de passe</a></u></p>					
+					<p><u><a href="#"><strong>Exo3:</strong> Prot&eacute;ger une page par mot de passe</a> </u> &emsp;strcmp() </p>					
 					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="redNum">&#9312;</small> &emsp; HTML: &emsp; <i style="color:#115;">Saisie <small style="color:gray">( interface d'entrée )</small></i> </b></span><br>
 					&emsp;Ajouter une page <b>form<span style="color:#a1008c">ulaire</span>.php</b> contenant:<br>
 					<ul type="disc" class="questions_" >
@@ -822,7 +837,7 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 					  <li>
 					     <b>Traitement dans le même fichier :</b><br>
                          Pour eviter les erreurs "<b style="color:#990033">Notice indefined variable</b>":<br> 
-	                     Mettre tout le code à l'interieur d'<u>une grosse boucle</u> <b>if</b> qui teste la variable réçue, en utilisant <b>isset()</b> et <b>!empty()</b>.
+	                     Mettre tout le code à l'interieur d'<u>une grosse boucle</u> <b>if</b> qui teste la variable réçue, en utilisant <b>isset()</b> et <b>!empty()</b>
 					  </li>
 					  <li>
 					     <b>Traitement dans un autre fichier :</b><br>
@@ -840,7 +855,8 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
                 <!-- Exercice4 -->
 				<div class="info_ structureSujet">
 					<p><u><a href="#"><strong>Exo4:</strong> Variables superglobales(les sessions)</a></u></p>
-					<b class="blueNum">&#9312;</b> Qu'est-ce qu'une variable SUPERGLOBALE ?<br>
+					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="blueNum">&#9312;</small> &emsp; Variable &emsp; <i style="color:#115;">SUPERGLOBALE</i> </b></span><br>
+					&emsp;Qu'est-ce qu'une variable superglobale ?<br>
 					<span style="line-height:1.5em; color:transparent;">...</span>
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
@@ -848,7 +864,7 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 					</details>
 					<p></p>
 					
-					<b class="blueNum">&#9313;</b> Les principales sont:<br>
+					&emsp;Les principales sont:<br>
 					<ul type="square" class="questions_" >
                          <li>&dollar;_SERVER</li>
                          <li>&dollar;_ENV</li>
@@ -863,24 +879,27 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 						 ...
 					</details>
 					<p></p>
-					
-					<b class="blueNum">&#9314;</b> &Agrave; quoi sert la valeur contenu dans <b>&dollar;_SERVER['<span style="color:#f44336;">REMOTE_ADDR</span>']</b> ?<br>
+					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="blueNum">&#9313;</small> &emsp; Valeur &emsp; <i style="color:#115;">REMOTE_ADDR</i> </b></span><br>
+					&emsp;&Agrave; quoi sert la valeur contenu dans <b>&dollar;_SERVER['<span style="color:#f44336;">REMOTE_ADDR</span>']</b> ?<br>
 					<span style="line-height:1.5em; color:transparent;">...</span>
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
 						 ...
 					</details>
 					<p></p>
-					
-					<b class="blueNum">&#9315;</b> &Agrave; quoi sert la variable <b>&dollar;_SESSION</b> ?<br>
+					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="blueNum">&#9314;</small> &emsp; Variable &emsp; <i style="color:#115;">&dollar;_SESSION</i> </b></span><br>
+					&emsp;&Agrave; quoi sert la variable <b>&dollar;_SESSION</b> ?<br>
 					<span style="line-height:1.5em; color:transparent;">...</span>
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-						 ...
+						 <div class="paragraphe petitParagraphe">
+						    Pour conserver des variables sur toutes les pages du site et pendant toute la durée de présence de
+                            l’internaute, on utilise les sessions (plus facile qu’avec GET ou POST).
+						 </div>
 					</details>
 					<p></p>
 					
-					<b class="blueNum">&#9316;</b> Ajouter un fichier <b>login.php</b> contenant 3 variables session:<br>
+					&emsp;Ajouter un fichier <b>login.php</b> contenant 3 variables session:<br>
 					<ul type="square" class="questions_" >
 						 <li>&dollar;_SESSION['<span style="color:gray">nom</span>']</li>
 						 <li>&dollar;_SESSION['<span style="color:gray">prenom</span>']</li>
@@ -893,7 +912,7 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 					</details>
 					<p></p>
 					
-					<b class="blueNum">&#9317;</b> Reprendre le fichier <b>index.php</b> qui, maintenant appelle:<br>
+					&emsp;Reprendre le fichier <b>index.php</b> qui, maintenant appelle:<br>
 					<ul type="square" class="questions_" >
 						 <li>entete<span style="color:gray">.php</span></li>
 						 <li>login<span style="color:gray">.php</span></li>
@@ -902,6 +921,34 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 					</ul>
 					<ul type="none" class="questions_" >
 					  <li><img src="index.png" class="img"/></li>
+					</ul>
+
+					&emsp;Reprendre la page <b>login.php</b> qui, maintenant:<br>
+					<ul type="square" class="questions_" >
+					  <li>Pointe sur elle-même.</li>
+					  <li>Ajouter un lien vers <span style="color:#990033">infos.php</span></li>
+					</ul>
+					&emsp;Dans <span style="color:#990033">infos.php</span> :<br>
+					<ul type="square" class="questions_" >
+					  <li>Afficher les 3 variables session.</li>
+					  <li>Est-ce que <span style="color:#990033">infos.php</span> les voit bien?</li>
+					  <li>Ajouter un lien de "Déconnexion" qui ramène l’internaute à la page index.php et qui supprime la session</li>
+					  <li><b style="font-size:1em"><u>Indications</u></b>:</li>
+					</ul>
+
+					<ul type="none" class="questions_" style="margin-left:-1em; line-height:0.9 !important; " >
+			
+					  <li class="paragraphe petitParagraphe" style="background:#d2f2df !important; margin-top:0; margin-bottom:0; ">
+					     Pour ce faire, il faut une page de déconnexion intermédiaire (logout.php)
+                         qui<br> -  va d’abord appeler la fonction unset($ SESSION)<br> - avant session destroy()
+					  </li>
+		
+					  <li class="paragraphe petitParagraphe indication" style="margin:top:0; margin-left:-2em;">
+					     L’appel à index.php se fait grâce à header(’Location: index.php’)
+					  </li>
+					  <li class="paragraphe petitParagraphe indication" style="margin-left:-2em;" >
+					    header(’Location: index.php’)  permet de rediriger le navigateur 
+					  </li>
 					</ul>
 					
 					<details>
