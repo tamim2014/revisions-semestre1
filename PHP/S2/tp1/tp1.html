@@ -921,8 +921,9 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 								    <p></p>
 								    <b>&dollar;_COOKIES</b>
 									<div class="paragraphe petiPragraphe" style="padding:0 0 0 1.5em; padding-top:0; margin-top:0; border:none;">
-									    Un cookie est un fichier qui est déposé par votre navigateur sur votre ordinateur lorsque vous surfez sur Internet. <hr width=60% size=1>C'est le navigateur qui va enregistrer le fichier sur votre disque dur(car le serveur n'a pas accès directement à votre ordinateur).<br>
+									    Un cookie est un fichier qui est déposé par votre navigateur sur votre ordinateur lorsque vous surfez sur Internet. 
 										<hr width=60% size=1><b><i style="calibri ligh; font-size:1.2em;"><small>Ce fichier sert à stocker et récupérer des informations sur vos habitudes de navigation</small></i></b>
+										<hr width=60% size=1>C'est le navigateur qui va enregistrer le fichier sur votre disque dur(car le serveur n'a pas accès directement à votre ordinateur)
 									</div>
 								 </li>								 								 
 					        </ul>
@@ -1020,14 +1021,15 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 &lt;/head>
 &lt;body>
  &lt;h3>Travail sur les sessions&lt;/h3>
- &lt;p> Merci de saisie vos coordonnées </p>
+ &lt;p> Merci de saisir vos coordonnées </p>
  &lt;form action="" method="post">		 
     &lt;p> Nom&amp;emsp;:&lt;input type="text" name="nom">&lt;/p>
     &lt;p> Prénom:&lt;input type="text" name="prenom">&lt;/p>
     &lt;p> Pass:&lt;input type="password" name="motPass">&lt;/p>
-    &lt;p> &lt;input type="submit" name="submit" value="Accéder">&lt;/p>			
+    &lt;p> &lt;input type="submit" name="submit" value="Accéder">&lt;/p>
+    &lt;input type="button" value="Infos ..."
+	       onclick="window.location.href='infos.php';" />	
  &lt;/form>
- &lt;p>&lt;a href="infos.php"> Infos ... &lt;/a>&lt;/p>
 &lt;/body>
 &lt;/html>
 
@@ -1088,8 +1090,8 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 	   unset($_SESSION['nom']); 
 	   unset($_SESSION['prenom']);
 	   unset($_SESSION['motPasse']);
-    }
-   session_destroy();  
+	   session_destroy(); 
+    }  
    header('Location:index.php');
 ?>
 </source></code></pre>
