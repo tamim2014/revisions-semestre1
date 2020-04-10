@@ -134,7 +134,8 @@
 		  margin:0;
 		  width:86%;
 		  padding-right:2em; 
-		}		
+		}
+        		
 	</style>
 
 	
@@ -1147,7 +1148,35 @@ $_SESSION[’LAST_ACTIVITY’] = time();
 					
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-						 ...
+<pre><code class="language-php" ><source lang="php">
+/********  login.php ******/
+... 
+&lt;?php 
+  if(!isset($_SESSION['LAST_ACTIVITY']) && empty($_SESSION['LAST_ACTIVITY'])){
+	$_SESSION['LAST_ACTIVITY'] = time();  
+  }
+?>
+</source></code></pre>
+<pre><code class="language-php" ><source lang="php">
+/********  info2.php ******/ 
+&lt;?php 
+    session_start(); 
+    // Ce if car après la déconnexion i veut pas de variables vides
+	if (!empty($_SESSION['nom'])){ 
+		echo $_SESSION['nom'].'&lt;br>' ;	   
+		echo $_SESSION['prenom'].'&lt;br>' ;
+		echo $_SESSION['motPasse'].'&lt;br>';    	
+	    echo '&lt;p>&#9200; Actualiser pour voir la durée de votre session:&lt;b>'.(time() - $_SESSION['LAST_ACTIVITY']).' S&lt;/b>&lt;/p>';
+	}	
+	//Logout   
+   	if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 30)) {
+        session_unset(); 
+        session_destroy(); 
+        echo '&lt;p>&lt;span style="color:red">&#9200;&lt;/span> Vous êtes déconnecté !&lt;/p>' ;			
+	} 
+?>
+&lt;p>&lt;a href="index.php" style="text-decoration:none;"> &#9194; Connexion &lt;/a>&lt;/p>
+</source></code></pre>		
 					</details>
 					<p></p>
 					
