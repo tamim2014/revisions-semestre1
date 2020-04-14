@@ -51,10 +51,6 @@
 	  height:auto !important; 	  
 	  z-index:0;
 	}
-	.stickyNoSupepose{	
-		top: -14% !important;	
-		transition: top 2s;
-	}
 	
 
 	

@@ -1,38 +1,26 @@
-	window.onscroll = function(){remonter(); paSuperposer(); scrollFunction(); }
+	window.onscroll = function(){remonter(); scrollFunction(); }
 	
     var ejectBtn = document.getElementById("ejectBtn");
 	var menu = document.getElementById("menu");
 	var mybutton = document.getElementById("myBtn"); // GO TO TOP
 	var barre = document.getElementById("sidebarGauche");
 	var barreDroite = document.getElementById("sidebarDroit");
-
 	
 	var positionInitiale = ejectBtn.offsetTop;
-	var positionFinale = footer.offsetTop;
 
 	function remonter() {
-	  if(window.pageYOffset > positionInitiale  ){
+	  if(window.pageYOffset > positionInitiale ){
 		ejectBtn.classList.add("sticky-ejectBtn");
 		menu.classList.add("sticky-menu");
-		barre.classList.add("stickySidebar");// pour seulement les pages corrigées d'examen
+		barre.classList.add("stickySidebar");// pour les pages corrigées d'examen
 		barreDroite.classList.add("stickySidebarDroit");
-	  } else  {
+	  } else {
 		ejectBtn.classList.remove("sticky-ejectBtn");
 		menu.classList.remove("sticky-menu");
-        barre.classList.remove("stickySidebar"); // pour seulement les pages corrigées d'examen		
+        barre.classList.remove("stickySidebar"); // pour les pages corrigées d'examen		
 		barreDroite.classList.remove("stickySidebarDroit"); 
 	  }
-
-	  
 	} 
-	// Solution à la supperposition des sidebar par le footer
-	function paSuperposer() {
-	  if (document.body.scrollTop > 5626  || document.documentElement.scrollTop > 5626 ) {
-		barreDroite.classList.add("stickyNoSupepose");
-	  }else{
-		barreDroite.classList.remove("stickyNoSupepose");   
-	  } 		
-	}
 	
 	
 	function scrollFunction() {
