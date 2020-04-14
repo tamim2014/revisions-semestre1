@@ -53,6 +53,7 @@
 			0px 16px 4px 0px white inset,
             0px 2px 4px 0px inset;		
 		}
+		
 		.img{ 
 
 		  width:87%;
@@ -134,6 +135,21 @@
 		  margin:0;
 		  width:86%;
 		  padding-right:2em; 
+		}
+		.widget-asideD{
+		  font:italic 0.8em calibri ligh ;
+		  height:auto;
+		  padding:0.5em 0.2em 0.5em 0.5em;
+		}
+		.widget-asideD ul {
+		    margin:0.3em ;
+			color:#8c8b8b;
+		}
+		.widget-asideD ul ~ .widget-asideD ul { 
+		  color:black !important;
+		}
+		.widget-asideD ul li {
+		    margin-left:-1.5em; margin-right:1em; 
 		}
         		
 	</style>
@@ -228,11 +244,41 @@
 		
 		<!-- Barre laterale droite  -->
 		<aside class="sidebarDroite saut " id="sidebarDroit">
-			<div class="widget-asideD"  >
-				 widget1
+			<div class="widget-asideD idS">
+				<b>TP1:</b> <br>
+				Les données sont stockées dans:
+				<ul type="square">
+				    <li>&dollar;_SESSION[ ] (exo1)</li>
+					<li>&dollar;_COOKIE[ ] (exo2 et 3)</li>
+					<li>Fichier.txt (exo4 ) </li>
+				</ul>
+				<small>&rArr; Pas besoin de Mysql(Apache suffit)</small>			 
 			</div>			
-			<div class="widget-asideD" style=" clear:both;" >			
-				widget2
+			<div class="widget-asideD idS" style=" clear:both;" >			
+				<b>Start Apache in <span style="color:#660033"><u>prompt Dos</u></span>:</b> <br>
+				<span style="color:#8c8b8b">Path:</span>
+				<ul type="square" style="color:black"> 
+				    <li><small><span style="color:#aaa">C:\Users\Admin&gt;</span> &emsp;CD ../..</small></li>
+					<li><small><span style="color:#aaa">C:&gt;</span> &emsp;DIR</small></li>
+					<li><small><span style="color:#aaa">C:&gt;</span> &emsp;CD wamp64/www/</small></li>
+				</ul>
+				<span style="color:#8c8b8b">Commande:</span>
+				<ul type="square" style="color:black">
+				    <li><small><span style="color:#aaa">&gt;</span> &emsp;php -S localhost : n&deg; port</small></li>
+				</ul>
+			</div>
+			<div class="widget-asideD idS" style=" clear:both;" >			
+				<b>Start Apache in <span style="color:#660033"><u>git Bash</u></span>:</b> <br>
+				<span style="color:#8c8b8b">Path:</span>
+				<ul type="square" style="color:black"> 
+				    <li><small><span style="color:#aaa">/</span>&emsp;&nbsp;<b>&emsp;cd</b></small></li>
+					<li><small><span style="color:#aaa">~</span>&emsp;<b>&emsp;cd ../..</b></small></li>
+					<li><small><span style="color:#aaa">/c</span>&emsp;<b>&emsp;cd wamp64/www/</b></small></li>
+				</ul>
+				<span style="color:#8c8b8b">Commande:</span>
+				<ul type="square" style="color:black">
+				    <li><small><span style="color:#aaa">&gt;</span> &emsp;php -S localhost : n&deg; port</small></li>
+				</ul>
 			</div>
 		</aside>
 		
@@ -674,7 +720,7 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 	}
 ?>	
 </source></code></pre>
-					<span class="idS subQuestion t-transparent"> &nbsp;<b style="color:gray">&bull;</b>&emsp; 4.6&emsp; <span style="color:#990033">Quel danger pour le passage des pramètres</span>(au niveau de l'URL)</span>
+					<span class="idS subQuestion t-transparent"> &nbsp;<b style="color:gray">&bull;</b>&emsp; 4.6&emsp; <span style="color:#990033">Quel danger pour le passage des paramètres</span>(au niveau de l'URL)</span>
 					<div class="paragraphe">
 						N'importe qui peut modifier les paramètres(voir même les supprimer <span style="color:red">&#9760;</span> )
 						dans la barre d'adresse de son navigateur !
