@@ -49,10 +49,10 @@
 	  position: fixed !important;
 	  top: 10% !important;	  
 	  height:auto !important; 	  
-	  z-index:0;
+	  z-index:0;	  
 	}
 	.stickyNoSupepose{	
-		top: -14% !important;	
+		top: -17% !important;	 
 		transition: top 2s;
 	}
 	

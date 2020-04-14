@@ -136,6 +136,9 @@
 		  width:86%;
 		  padding-right:2em; 
 		}
+		
+		
+		
 		.widget-asideD{
 		  font:italic 0.8em calibri ligh ;
 		  height:auto;
@@ -150,6 +153,23 @@
 		}
 		.widget-asideD ul li {
 		    margin-left:-1.5em; margin-right:1em; 
+		}
+		
+		
+		
+		.exemple{
+			width:60%; 
+			margin-bottom:0.4em;
+		}
+		pre{
+			white-space:pre-line; 
+			padding-left:2em !important;
+			color:#999;
+			
+		}
+		summary{
+		  	outline:none !important;
+			border:none !important;
 		}
         		
 	</style>
@@ -256,28 +276,28 @@
 			</div>			
 			<div class="widget-asideD idS" style=" clear:both;" >			
 				<b>Start Apache in <span style="color:#660033"><u>prompt Dos</u></span>:</b> <br>
-				<span style="color:#8c8b8b">Path:</span>
+				<span style="color:#8c8b8b">Path( cd <b style="color:red">/</b> &rArr; racine):</span>
 				<ul type="square" style="color:black"> 
-				    <li><small><span style="color:#aaa">C:\Users\Admin&gt;</span> &emsp;CD ../..</small></li>
-					<li><small><span style="color:#aaa">C:&gt;</span> &emsp;DIR</small></li>
-					<li><small><span style="color:#aaa">C:&gt;</span> &emsp;CD wamp64/www/</small></li>
+				    <li><small><span style="color:#aaa">C:\Users\Admin&gt;</span> &emsp;cd 	<b>../..</b></small></li>
+					<li><small><span style="color:#aaa">C:&gt;</span> &emsp;cd wamp64/www/</small></li>
 				</ul>
 				<span style="color:#8c8b8b">Commande:</span>
 				<ul type="square" style="color:black">
-				    <li><small><span style="color:#aaa">&gt;</span> &emsp;php -S localhost : n&deg; port</small></li>
+				    <li><small><span style="color:#aaa">&gt;</span> cd <b style="color:red">../..</b>/wamp64/www</small></li>
+				    <li><small><span style="color:#aaa">&gt;</span> php -S localhost : n&deg; port</small></li>
 				</ul>
 			</div>
 			<div class="widget-asideD idS" style=" clear:both;" >			
 				<b>Start Apache in <span style="color:#660033"><u>git Bash</u></span>:</b> <br>
-				<span style="color:#8c8b8b">Path:</span>
+				<span style="color:#8c8b8b">Path( cd &rArr; ~ ): </span>
 				<ul type="square" style="color:black"> 
-				    <li><small><span style="color:#aaa">/</span>&emsp;&nbsp;<b>&emsp;cd</b></small></li>
-					<li><small><span style="color:#aaa">~</span>&emsp;<b>&emsp;cd ../..</b></small></li>
+					<li><small><span style="color:#aaa">~</span>&emsp;<b>&emsp;cd 	<b>../..</b></b></small></li>
 					<li><small><span style="color:#aaa">/c</span>&emsp;<b>&emsp;cd wamp64/www/</b></small></li>
 				</ul>
 				<span style="color:#8c8b8b">Commande:</span>
 				<ul type="square" style="color:black">
-				    <li><small><span style="color:#aaa">&gt;</span> &emsp;php -S localhost : n&deg; port</small></li>
+				    <li><small><span style="color:#aaa">&gt;</span> cd ~/<b style="color:red">../..</b>/wamp64/www</small></li>
+				    <li><small><span style="color:#aaa">&gt;</span> php -S localhost : n&deg; port</small></li>
 				</ul>
 			</div>
 		</aside>
@@ -303,8 +323,8 @@
 						 <li>		     
 							 <details>
 						      <summary>Pour afficher les "string", on prèfère les quotes ou les guillemets ?<br>&emsp;Expliquer  Pourquoi </summary>
-							  &emsp;&#8718; les quotes<br>
-							  &emsp;&#8718; ...<br>
+							  &emsp;&#8718; Les quotes<br>
+							  &emsp;&#8718; Allège le traitement<br>
 							</details>
 						 </li>
 				    </ul>
@@ -329,10 +349,10 @@
 							  <summary>Quelle &ne; entre <b>while</b> et <b>for </b>?</summary>
 							   <ul type="square" class="paragraphe petitParagraphe" style="margin-bottom:0.4em !important; "> 
 								  <li>
-									 <b>for</b>: Repète la "<b><i>punition</i></b>" un "<b><i>nbFois</i></b>" précis et puis c'est tout.
+									 <b>for(<span style="color:#990099">itération</span>) { &emsp; instruction; &emsp; }</b><br><small> Repète la "<b><i>punition</i></b>" un "<b><i>nbFois</i></b>" précis et puis c'est tout.</small>
 								  </li>
 								  <li>
-									 <b>while</b>: Lui, il est dingue! On peut l'foutre n'importe quoi, elle va répeter la "<b><i>punition</i></b>" tant que la connerie n'est pas vraie.<br><br> Même si <i style="color:#990033"> "condition = dateFinDuMonde"</i>, elle continue d'afficher la "<b><i>punition</i></b>"" jusqu'à planter la machine.
+									 <b>while(<span style="color:#990033">condition</span>) { &emsp; instruction; &nbsp; <span style="color:#990099">itération; &emsp; </span> }</b><br><small> Lui, il est dingue! On peut l'foutre n'importe quoi, elle va répeter la "<b><i>punition</i></b>" tant que la connerie n'est pas vraie.<br>Même si <i style="color:#990033"> "condition = dateFinDuMonde"</i>, elle continue d'afficher la "<b><i>punition</i></b>"" jusqu'à planter la machine.</small>
 								  </li>
 							   </ul>
 <span class="idS subQuestion t-transparent" style="margin-top:0 !important; width:91.91%; background:#d2f2df !important;"> &nbsp;<b style="color:gray">&bull;</b>&emsp; Un exemple avec <b>while</b></span>
@@ -385,7 +405,7 @@
 
                             <details>
 						      <summary>Site officiel reference des fonction ?</summary>
-							  &emsp;<b class="attention" >&#9888;</b> http://fr.php.net/manual/fr/funcref.php
+							  &emsp;<b class="attention" style="border:4px solid red; background:gold;" >&#9888;</b> http://fr.php.net/manual/fr/funcref.php
 							</details>							 
 						 </li>
 						 <li>
@@ -411,25 +431,68 @@
                        
 						   	<details>
 						      <summary>Donner un exemple en PHP, avec les deux types.</summary>
-							  &emsp;&#8718; ???<br>
-							  &emsp;&#8718; ...<br>
+								<div class="exemple">
+								   <span class="idS subQuestion t-transparent" style="margin-top:0 !important; width:91.91%; background:white !important;">
+									   <pre >
+											&lt;?php
+												<span style="color:green">//Tableau numéroté</span> 								
+													$Prenoms=array();
+													$Prenoms[0]='Paul';
+													$Prenoms[1]='Jean';
+													$Prenoms[2]='Jule';
+													
+												<span style="color:green">//Tableau associatif</span>
+													$Personne=array();
+													$Personne['Nom']="Jacques";
+													$Personne['Prenom']="Jean";
+													$Personne['Age']=99;									
+											?>
+										</pre>
+									</span> 
+								</div>
 							</details>
 
 						   	<details>
-						      <summary>Quelle est la diff&eacute;rence entre les 2 ? </summary>
-							  &emsp;&#8718; ???<br>
-							  &emsp;&#8718; ...<br>
+						        <summary>Quelle est la diff&eacute;rence entre les 2 ? </summary>
+							    &emsp;&#8718; &dollar;Prenoms : les indices des éléments sont des nombres<br>
+							    &emsp;&#8718; &dollar;Personne : les indices des éléments sont des chaînes de caractères<br>
 							</details>
 							
 						   	<details>
-						      <summary>Comment les parcourir ?(cf. for, foreach, print r).</summary>
-							  &emsp;&#8718; ???<br>
-							  &emsp;&#8718; ...<br>
+						        <summary>Comment les parcourir ?(cf. for, foreach, print r).</summary>
+								<div class="exemple" style="width:99% !important;">
+								   <span class="idS subQuestion t-transparent" style="margin-top:0 !important; width:91.91%; background:white !important;">
+									   <pre  style="font-size:0.8em;">
+											&lt;?php
+												<span style="color:green">//Tableau numéroté</span> 																		
+													$Prenoms = array( "Paul", "Jean", "jule" );
+													foreach( $Prenoms as $value )  echo $value.'&lt;br&gt;';										
+													
+												<span style="color:green">//Tableau associatif</span>
+													$personne = array( 'Nom'=>'Jacques', 'Prenom'=>'Jean', 'Age'=>'99' );
+													foreach($personne as $value) echo $value.'&lt;br&gt;';									   										
+											?>
+										</pre>
+									</span> 
+								</div>
 							</details>
 						    <details>
-						      <summary>Comment rechercher une valeur ? (cf. array key exists, in array, array search)</summary>
-							  &emsp;&#8718; ???<br>
-							  &emsp;&#8718; ...<br>
+						        <summary>Comment rechercher une valeur ? (cf. array key exists, in array, array search)</summary>
+							    <!-- <div class="paragraphe petitParagraphe" style="background:white; width:83% !important; padding-left:2px; font-size:0.8em;"> -->
+                                <div class="exemple" style="width:99% !important;">
+                                    <span class="idS subQuestion t-transparent" style="margin-top:0 !important; width:91.91%; background:white !important;">
+									    <pre  style="font-size:0.9em;">
+											&emsp;&#8718; Vérifiez si la colonne "Age" existe dans la table personne:<br>
+											&emsp;&#8718; <b>if(array_key_exists("Age",$personne))</b> echo 'yes it exists';
+											<p></p>
+											&emsp;&#8718; Est-ce qu'il a une personne de 99ans dans la table  personne?<br>
+											&emsp;&#8718; <b>echo array_search("99",$personnes);</b><small style="color:green">//return name column</small>
+											<p></p>
+											&emsp;&#8718; Est-ce que "Paul" il existe dans la table prenom<br>
+											&emsp;&#8718; <b>if (in_array("Paul", $prenoms))</b> echo 'il est bien présent'
+							            </pre>
+									</span>
+							   </div>
 							</details>
                          
                          </li>
