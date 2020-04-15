@@ -183,14 +183,15 @@
 	    // mon p'tit ajax perso
 		$(document).ready(function(){		
 		   $(".unset_").click(function(){			  	
-				$('#tpUn').replaceWith('<object  data="tp1-sujet.html" type="text/html" style="width:74%; height:162em; " ></object>'); 
-		   });
-
+				$('#tpUn').replaceWith('<object  data="tp1-sujet.html" type="text/html" style="width:74%; height:162em;"  ></object>'); 
+			    // Solution à la supperposition des sidebar par le footer( changer le scrollTop en fonction de la longuer de la page)
+		        window.onscroll = function(){ remonter();  scrollFunction(); paSuperposerSujet();  }			
+		   });			
 		});
     </script>		   
   </head>
 
-  <body>
+  <body id="corrige">
     <header>
         <hr  id="fantaisieRELOU3">
         <hr  id="fantaisieRELOU1">

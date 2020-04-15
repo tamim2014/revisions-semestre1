@@ -33,6 +33,14 @@
 		barreDroite.classList.remove("stickyNoSupepose");   
 	  } 		
 	}
+	// L'action varie en fonction de la longuer de la page et la page de l'énoncé est plus courte
+	function paSuperposerSujet() {
+	  if (document.body.scrollTop > 2000  || document.documentElement.scrollTop > 2000 ) {
+		barreDroite.classList.add("stickyNoSupepose");
+	  }else{
+		barreDroite.classList.remove("stickyNoSupepose");   
+	  } 		
+	}
 	
 	
 	function scrollFunction() {
@@ -42,3 +50,6 @@
 			 mybutton.style.display = "none";
 		}
     }
+	
+	
+	
