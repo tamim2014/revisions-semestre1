@@ -29,7 +29,6 @@ section {
   margin:0px 0px 20px 0px;
   border:2px solid gray;
   background-color: white; 
-  border-radius: 10px; 
   border-bottom: 0; 
   border-right: 0;
   float: right;
@@ -84,7 +83,7 @@ h2.matiere {
   background-color: #ffffcc;
   border-left: 6px solid #ffeb3b;
 }
-.unset_ , .reponse_{
+.unset_ , .reponse_, .enonce_{
   text-decoration: unset;
   font-style: italic;
 }

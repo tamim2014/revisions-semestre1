@@ -171,6 +171,31 @@
 		  	outline:none !important;
 			border:none !important;
 		}
+		summary:hover {		    					   
+		   cursor: pointer;
+		}
+		.enonceTpUN{ 
+		    width:100.05%;
+			height:30em;
+			float:left;
+			margin-left:-8%;
+			overflow-x:visible !important;
+			magin-bottom:0;
+			zoom: reset; /* seul webkit sait faire ça */
+		}
+
+		
+
+	
+		#zoomerLeSujet details div:hover{
+		   width:128% ;
+		   margin-left:-8%;
+		   cursor: zoom-in;
+		   color:#990033;
+		   overflow-x:none;
+		}
+	
+        
         		
 	</style>
 
@@ -180,13 +205,18 @@
 	<script type="text/javascript" src="../../../js/jquery3.4.1.min.js"></script><!-- moteur js: pour le chargement du sujet en mode ajax de la cuisine perso" -->
 	<script type="text/javascript" src="../../../js/prism.js"></script>
     <script>
-	    // mon p'tit ajax perso
-		$(document).ready(function(){		
-		   $(".unset_").click(function(){			  	
-				$('#tpUn').replaceWith('<object  data="tp1-sujet.html" type="text/html" style="width:74%; height:162em;"  ></object>'); 
+	    // ma p'tite cuisine "ajaxo" 
+		$(document).ready(function(){		   
+		   $(".unset_").click(function(){
+				$('#tpUn').replaceWith('<object  data="tp1.pdf" type="application/pdf" style="width:74%; height:162em;"  ></object>'); 
 			    // Solution à la supperposition des sidebar par le footer( changer le scrollTop en fonction de la longuer de la page)
 		        window.onscroll = function(){ remonter();  scrollFunction(); paSuperposerSujet();  }			
-		   });			
+		   }); 
+		   // Dézoomer l'enoncé
+           $("#zoomerLeSujet").mouseout(function(){
+			  $("#enonceTpUN_").addClass("enonceTpUN"); // Problème: l'effet de zoom ne s'enleve pas( pourtant les dimension reviennent à la normales). Mais c'pas grave on l'faire manuellement avec les fonctionanalité du document source(PDF)"
+		      //$("#enonceTpUN_").css("zoom", "60%"); cette solution ne pas non plus. Pire ça m'reduit la hauteur du document
+		   });		   
 		});
     </script>		   
   </head>
@@ -308,10 +338,23 @@
 			<section class="bordureSupSection1 " ></section>			
 			<section class="conteneurDesSujet" id="tpUn" >
             			
-				<h2 class="matiere">PHP2: TP1</h2>		  
+				<h2 class="matiere">PHP2: TP1(<small><i> stockage sur session, cookies, fichier.txt ) </i></small></h2>		  
 				<div class="success_  structureSujet"  >			  			  
 					<p><u><a href="#"><strong>Rappels:</strong> </a></u></p>
-					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; width:91.91%;"> &nbsp;<b style="color:gray">&bull; &emsp; Rappel sur les types </b></span>
+					
+					<ul type="none" style="line-height:1.5" id="sujetPDF" >
+					     <li id="zoomerLeSujet" >
+						    <details >
+						      <summary ><a href="#" class="enonce_" >&Eacute;nonc&eacute;  </a></summary>
+                               <div>							  
+							        <object id="enonceTpUN_" class="enonceTpUN" data="tp1.pdf" type="application/pdf"   ></object>				
+							   </div>
+							</details>
+						 </li>
+				    </ul>
+					
+					
+					<span class="idS subQuestion t-transparent" style="margin-top:0 !important;  width:91.91%;"> &nbsp;<b style="color:gray">&bull; &emsp; Rappel sur les types </b></span>
 					<ul type="none" style="line-height:1.5">
 					     <li>
 						    <details>
@@ -478,7 +521,7 @@
 								</div>
 							</details>
 						    <details>
-						        <summary>Comment rechercher une valeur ? (cf. array key exists, in array, array search)</summary>
+						        <summary>Comment rechercher une valeur ?<br> &emsp;[ voir les f° array_key_exists(), in_array(), array_search() ]</summary>
 							    <!-- <div class="paragraphe petitParagraphe" style="background:white; width:83% !important; padding-left:2px; font-size:0.8em;"> -->
                                 <div class="exemple" style="width:99% !important; ">
                                     <span class="idS subQuestion t-transparent" style="margin-top:0 !important; width:91.91%; background:white !important;">
@@ -498,7 +541,7 @@
                          
                          </li>
 					</ul>
-					<a href="#" class="unset_" >&Eacute;nonc&eacute; complet ... </a>
+					<a href="#" class="unset_" >&Eacute;nonc&eacute; plein page ... </a>
 					<p></p>
 				</div>
 				<!-- Exercice1 -->
