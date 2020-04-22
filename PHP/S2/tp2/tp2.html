@@ -436,7 +436,11 @@
 					<a href="#" class="unset_" >&Eacute;nonc&eacute; plein page ... </a>
 					<p></p>
 				</div>
-				<!-- Exercice1 -->
+				
+				
+				<!-- ####################    Exercice1 #####################  -->
+				
+				
 				<div class="info_  structureSujet" >
 				    <p><u><a href="#"><strong>Exo1:</strong>  Stockage sur cookie </a></u></p>
 					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="blueNum">&#9312;</small> &emsp; La fonction &emsp; <i style="color:#115;">setcookie('clef', "valeur", durée);</i> </b></span><br>
@@ -466,19 +470,19 @@
 /********  corps.php ******/
 
 $nom = isset($_GET["nom"]) ? $_GET["nom"] : ''; 
-setcookie('nom', $nom, time()+86400*7); // 1jours
+setcookie( 'nom', $nom, time()+86400*7 ); // 1jours
 
 $prenom = isset($_GET["prenom"]) ? $_GET["prenom"] : '';
-setcookie('prenom', $prenom, time()+3600*24*7);//1 semaine
+setcookie( 'prenom', $prenom, time()+3600*24*7 );//1 semaine
 
 $password= isset($_GET["password"]) ? $_GET["password"] : '';
-setcookie('pass', $password, time()+86400*7);//une semaine
+setcookie( 'pass', $password, time()+86400*7 );//une semaine
 
 $punition=isset($_GET["punition"]) ? $_GET["punition"] : '';
-setcookie('punition', $punition, time()+86400*1);//1jour
+setcookie( 'punition', $punition, time()+86400*1 );//1jour
 
 $nbFois=isset($_GET["nbFois"]) ? (int) $_GET["nbFois"] : '';
-setcookie('nbFois', $nbFois, time()+86400*7);   	
+setcookie( 'nbFois', $nbFois, time()+86400*7 );   	
                              </source></code></pre>
 					</details>
 					<p></p>
@@ -505,18 +509,19 @@ setcookie('nbFois', $nbFois, time()+86400*7);
 							<pre><code class="language-php" ><source lang="php" line>
  if( isset($_COOKIE['nom']) && !empty($_COOKIE['nom']) ){
 	echo '
-	 COOKIE Nom:'.$tampon_nom.'&lt;br>		 
-	 COOKIE Prénom:'.$tampon_prenom.'&lt;br>			 		 
-	 COOKIE Password:'.$tampon_pass.'&lt;br>	 
-	 COOKIE Punition:&lt;br>';			 
+	 COOKIE Nom:'.$nom.'&lt;br>		 
+	 COOKIE Prénom:'.$prenom.'&lt;br>			 		 
+	 COOKIE Password:'.$pass.'&lt;br>	 
+	 COOKIE Punition:&lt;br>';
+        // while( condition ) { instructions; itérations; }	 
 		$n = 1;
-		while ($n &lt;= $tampon_nbFois)
+		while ($n &lt;= $nbFois)
 		{
-			if($tampon_nbFois &lt;= 100 ){
-				echo $tampon_punition.'&lt;br>';					 
+			if($nbFois &lt;= 100 ){
+				echo $punition.'&lt;br>';					 
 			}else{
-			  echo 'Nombre trop grand &lt;br>';
-			  break;
+			    echo 'Nombre trop grand &lt;br>';
+			    break;
 			}
 			$n++;					
 		}	   
@@ -529,6 +534,7 @@ setcookie('nbFois', $nbFois, time()+86400*7);
 						                         
 							 <pre><code class="language-php" ><source lang="php" line>
 &lt;?php
+    // for( itération ) { instructions; }
 	$nbFois = 100;
 	for( $i=0; $i <= $nbFois; $i++ ){
 	 echo $punition.'&lt;br/>';
