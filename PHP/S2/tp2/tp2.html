@@ -345,12 +345,12 @@
             			
 				<h2 class="matiere">PHP2: TP2(<small><i> stockage sur session, cookies, fichier.txt ) </i></small></h2>		  
 				<div class="success_  structureSujet"  >			  			  
-					<p><u><a href="#"><strong>Rappels:</strong> </a></u></p>
+					<p><u>Rappels</u>: Session vs Cookie</p>
 					
 					<ul type="none" style="line-height:1.5" id="sujetPDF" >
 					     <li id="zoomerLeSujet" >
 						    <details >
-						      <summary ><a href="#" class="enonce_" >&Eacute;nonc&eacute;  </a></summary>
+						      <summary ><a href="#" class="enonce_" >&Eacute;nonc&eacute; ( cliquer sur la flèche )  </a></summary>
                                <div>							  
 							        <object id="enonceTpUN_" class="enonceTpUN" data="tp2.pdf" type="application/pdf"   ></object>				
 							   </div>
@@ -438,105 +438,143 @@
 				</div>
 				<!-- Exercice1 -->
 				<div class="info_  structureSujet" >
-				    <p><u><a href="#"><strong>Exo1:</strong>  Premier programme en PHP </a></u></p>
-					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="blueNum">&#9312;</small> &emsp; La fonction &emsp; <i style="color:#115;">include()</i> </b></span><br>
-					 &emsp;Construire à l'aide de l'éditeur <b>emacs</b>, la page <b>index.php</b> .
-					 Elle est constituée:<br>
+				    <p><u><a href="#"><strong>Exo1:</strong>  Stockage sur cookie </a></u></p>
+					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="blueNum">&#9312;</small> &emsp; La fonction &emsp; <i style="color:#115;">setcookie('clef', "valeur", durée);</i> </b></span><br>
+					&emsp;Dans <b>corps.php</b>, enregistrer sur <b>cookies</b> les données saisie au formulaire:<br>  					
 					<ul type="disc" class="questions_" >
-					     <li>d’une entête: entete.php </li>
-						 <li>d’un corps:corps.php(contient le numéro du TP et de l’exercice) </li>
-						 <li>d’un pied de page: piedPage.php </li>
+					     <li>nom </li>
+						 <li>prénom </li>
+						 <li>phrase </li>
 					</ul>
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
 
 							 <pre><code class="language-html" ><source lang="html" line>
-/********  entete.php ******/
-&lt;!DOCTYPE html>
-&lt;html lang="fr">
-&lt;head>
-	&lt;meta charset="utf-8">
-	&lt;title> PHP2: TP1/Exercice1 &lt;/title>
-&lt;/head>
+/********  form.php ******/
 
-&lt;body>
-	&lt;header>	    
-		&lt;div id="en-tete"> &lt;/div>
-		&lt;div id="menu"> &lt;/div>						
-	&lt;/header>
+&lt;form action="corps.php" method="get" >
+	Nom :&lt;input type="text" name="nom" >
+	Prénom:&lt;input type="text" name="prenom" >
+	Password:&lt;input type="password" name="password" >
+	Punition:&lt;input type="text" name="punition">
+	nbFois:&lt;input type="number" name="nbFois" value="10">				 
+	&lt;input type="submit" name="submit" value="Envoyer">
+&lt;form>
+
                             </source></code></pre>
-                            <pre><code class="language-html" ><source lang="html" line>
+                            <pre><code class="language-php" ><source lang="php" line>
 /********  corps.php ******/
-	&lt;div id="contenu">
-		&lt;P> TP2: Exercice1&lt;/p>
-	&lt;/div>   	
-                             </source></code></pre>
-							 <pre><code class="language-html" ><source lang="html" line>
-/********  piedPage.php ******/
-	&lt;footer>
-        ...		
-	&lt;/footer>
-&lt;/body>
-&lt;/html>   	
-                             </source></code></pre>
-							 <pre><code class="language-php" ><source lang="php" line>
-/********  index.php ******/
-&lt;?php 
-     include 'entete.php';
-     include 'corps.php'; 
-     include 'piedPage.php'; 	 
-?>    	
+
+$nom = isset($_GET["nom"]) ? $_GET["nom"] : ''; 
+setcookie('nom', $nom, time()+86400*7); // 1jours
+
+$prenom = isset($_GET["prenom"]) ? $_GET["prenom"] : '';
+setcookie('prenom', $prenom, time()+3600*24*7);//1 semaine
+
+$password= isset($_GET["password"]) ? $_GET["password"] : '';
+setcookie('pass', $password, time()+86400*7);//une semaine
+
+$punition=isset($_GET["punition"]) ? $_GET["punition"] : '';
+setcookie('punition', $punition, time()+86400*1);//1jour
+
+$nbFois=isset($_GET["nbFois"]) ? (int) $_GET["nbFois"] : '';
+setcookie('nbFois', $nbFois, time()+86400*7);   	
                              </source></code></pre>
 					</details>
 					<p></p>
-					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="blueNum">&#9313;</small> &emsp; La fonction &emsp; <i style="color:#115;">setLocale()</i> </b></span><br>
-					 &emsp;Dans le fichier entete.php, afficher la date en français<br>
-					<span style="line-height:2em"> &emsp;&nbsp;&nbsp;(exple:“Mardi 2 mars 2020, 18h30”)</span>
+					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="blueNum">&#9313;</small> &emsp; La boucle &emsp; <i style="color:#115;">while(condition){ instructions; &emsp; itération; }</i> </b></span><br>
+					 &emsp;Afficher le contenu des cookies dans une autre page PHP (<b>cookies.php</b>)<br>
                     <ul type="disc" class="questions_" >		   
-						 <li>Une solution utilisant les tableaux( associatif ou numéroté) </li>
-						 <li>Une solution utilisant la fonction setlocale() </li>
+						 <li>Le "<b>nbFois</b>" doit être un entier </li>
+						 <li>Utiliser une boucle <b>while</b></li>
+						 <li>Tester aussi avec une boucle <b>for</b></li>
+						 <li>Utiliser un bouton pour afficher le résultat</li>
 					</ul>
 					<details>
-					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
+					     <summary class="reponse_"><span >R&eacute;ponses (avec while) </span></summary>
 						                         
 							 <pre><code class="language-php" ><source lang="php" line>
-/********  La fonction date() le fait en anglais ******/
+/********  cookies.php ******/
 &lt;?php
-    // 2020-04-05 01:16:53
-	echo date('Y-m-d H:i:s')."&lt;br/>"; 
-    // Saturday 05 April 2020, 01:16	
-	echo date('l j F Y, H:i')."&lt;br/>"; 	
-	echo date('d F Y')."&lt;br/>";// 05 April 2020
-	echo date('d/m/Y')."&lt;br/>";// 04/04/2020
+ $nom      = isset($_COOKIE['nom']) ? $_COOKIE['nom'] : '';
+ $prenom   = isset($_COOKIE['prenom'])   ? $_COOKIE['prenom'] : '';
+ $pass     = isset($_COOKIE['pass'])     ? $_COOKIE['pass'] : '';
+ $nbFois   = isset($_COOKIE['nbFois'])   ? (int)$_COOKIE['nbFois'] : ''; 
+ $punition = isset($_COOKIE['punition']) ? $_COOKIE['punition'] : ''; 
+                            </source></code></pre>
+							<pre><code class="language-php" ><source lang="php" line>
+ if( isset($_COOKIE['nom']) && !empty($_COOKIE['nom']) ){
+	echo '
+	 COOKIE Nom:'.$tampon_nom.'&lt;br>		 
+	 COOKIE Prénom:'.$tampon_prenom.'&lt;br>			 		 
+	 COOKIE Password:'.$tampon_pass.'&lt;br>	 
+	 COOKIE Punition:&lt;br>';			 
+		$n = 1;
+		while ($n &lt;= $tampon_nbFois)
+		{
+			if($tampon_nbFois &lt;= 100 ){
+				echo $tampon_punition.'&lt;br>';					 
+			}else{
+			  echo 'Nombre trop grand &lt;br>';
+			  break;
+			}
+			$n++;					
+		}	   
+  }';
 ?>   	
                              </source></code></pre>
+					</details>
+					<details>
+					     <summary class="reponse_"><span >Test (avec for) </span></summary>
+						                         
 							 <pre><code class="language-php" ><source lang="php" line>
-/*** setlocale( ) + strftime() le font en français ***/
 &lt;?php
-	setlocale(LC_TIME, 'fra_fra');
-	 
-	// 2020-04-04 23:43:59 
-	echo strftime('%Y-%m-%d %H:%M:%S'); 
-    // samedi 04 avril 2020, 23:43	
-	echo strftime('%A %d %B %Y, %H:%M');  
-	echo strftime('%d %B %Y'). // 04 avril 2020
-	echo strftime('%d/%m/%y'); //04/04/20
-?>  	
+	$nbFois = 100;
+	for( $i=0; $i <= $nbFois; $i++ ){
+	 echo $punition.'&lt;br/>';
+	}
+?>   	
                              </source></code></pre>
-							 <pre><code class="language-php" ><source lang="php" line>
-/*** Usage de tableau associatif ***/
-    ??? 	
+					</details>
+					<details>
+					     <summary class="reponse_"><span >Appel page d'affichage (cookies.php) </span></summary>
+						                         
+							 <pre><code class="language-html" ><source lang="html" line>
+/********  corps.php ******/
+&lt;button onclick="window.location.href='cookies.php';">
+    Afficher les cookies
+&lt;/button>   	
                              </source></code></pre>
 					</details>
 					<p></p>
-					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="blueNum">&#9314;</small> &emsp; La commande &emsp; <i style="color:#115;">scp</i> </b></span><br>
-					&emsp;Tester le tout en copiant les fichiers sur le serveur handiman (193.54.166.23)<br>
-					<span style="line-height:2em"> &emsp;&nbsp;&nbsp;sous le r&eacute;pertoire <b>public html/TP1</b></span>
-
+		
+					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="blueNum">&#9314;</small> &emsp; L'opérateur &emsp; <i style="color:#115;">ternaire</i> </b></span><br>
+					&emsp;Dans <b>cookies.php</b>, modifier la valeur du prénom dans le cookie  :<br>  					
+					<ul type="disc" class="questions_" >
+					     <li>Mettre Emilie à la place du "Prénom" saisi par l'internaute. </li>
+						 <li>La saisie utilisateur( sur le champs Prénom) sera donc ignorée!  </li>
+					</ul>
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
 				<pre><code class="language-php" ><source lang="php">
-scp -r -P 60022 tp1 myLogin@193.54.166.23:public_html/PHP2/tp1	
+/********  cookies.php ******/
+$prenom = isset($_COOKIE['prenom']) ? "Emilie" : '';	
+                </source></code></pre>
+					</details>
+					<p></p>
+
+					&emsp;Dans <b>corps.php</b>, modifier la valeur du nom dans le cookie  :<br>  					
+					<ul type="disc" class="questions_" >
+					     <li>Mettre Joseph à la place du "Nom" saisi par l'internaute. </li>
+						 <li>La saisie utilisateur( sur le champs Nom) sera donc ignorée!  </li>
+						 <li>Attention! je l'ai fait dans corps.php(<small> Or Isis le veut dans cookies.php</small>) </li>
+					</ul>
+					<details>
+					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
+				<pre><code class="language-php" ><source lang="php">
+/********  corps.php ******/
+$nom = isset($_GET["nom"]) ? $_GET["nom"] : '';
+setcookie('nom', "Joseph", time()+3600*24*7);	
                 </source></code></pre>
 					</details>
 					<p></p>
@@ -545,7 +583,13 @@ scp -r -P 60022 tp1 myLogin@193.54.166.23:public_html/PHP2/tp1
 				
 				
 				
-                <!-- Exercice2-->
+                <!-- #######################  Exercice2 #################### -->
+				
+				
+				
+				
+				
+				
 				<div class="success_ structureSujet ">
 					<p><u><a href="#"><strong>Exo2:</strong> Transmettre des donn&eacute;es d’une page &agrave; l’autre </a></u></p>
                     <span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="greenNum">&#9312;</small> &emsp; La méthode &emsp; <i style="color:#115;">get</i> </b></span><br>
@@ -794,7 +838,11 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 				
 				
 				
-                <!-- Exercice3 -->
+                <!-- ######################   Exercice3 ################################# -->
+				
+				
+				
+				
 				<div class="danger_ structureSujet">
 					<p><u><a href="#"><strong>Exo3:</strong> Prot&eacute;ger une page par mot de passe</a> </u> &emsp;strcmp() </p>					
 					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="redNum">&#9312;</small> &emsp; HTML: &emsp; <i style="color:#115;">Saisie <small style="color:gray">( interface d'entrée )</small></i> </b></span><br>
@@ -911,7 +959,12 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 				
 				
 				
-                <!-- Exercice4 -->
+                <!-- ############################# Exercice4 ########################## -->
+				
+				
+				
+				
+				
 				<div class="info_ structureSujet">
 					<p><u><a href="#"><strong>Exo4:</strong> Variables superglobales(les sessions)</a></u></p>
 					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="blueNum">&#9312;</small> &emsp; Variable &emsp; <i style="color:#115;">SUPERGLOBALE</i> </b></span><br>
@@ -1255,8 +1308,10 @@ $_SESSION[’LAST_ACTIVITY’] = time();
 			<span class="copyright_"><span style="color:gray;">2019 &copy; -</span> Master Handi</span>
         </div><!-- conteneur-reponses Q1.1 -->	  
     </footer>
+	
     <script type="text/javascript" src="../../../js/top.js"></script>
 	<!-- <script type="text/javascript" src="../../../js/sticky-bis.js"></script> -->
     <script type="text/javascript" src="../../../js/sticky-bis.js"></script>	
+  
   </body>
 </html>
