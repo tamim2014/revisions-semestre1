@@ -601,51 +601,40 @@ setcookie('nom', "Joseph", time()+3600*24*7);
 					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="blueNum">&#9315;</small> &emsp; La commande &emsp; <i style="color:#115;">shmod  &emsp; <span style="color:#990033">user|groupe|other</span> &emsp;  fichier</i> </b></span><br>
 					&emsp;Ajouter un répartoire <i>ad hoc</i>, pour les fichiers <b>.txt</b> :<br>  					
 					<ul type="disc" class="questions_" >
-					     <li>Mettre le répertoire en mode X pour other</li>
-						 <li>Mettre son contenu(fichiers.txt) en mode RW pour other </li>
+					    <li>Mettre le répertoire en mode X pour other</li>
+						<li>Mettre son contenu(fichiers.txt) en mode RW pour other </li>
 					</ul>	
-					
-				    <ul type="none" style="line-height:1.5">
-						<li>
-                            <details>
-						      <summary class="reponse_">Réponse: Définition droit d'accès aux fichiers</summary>
-								<div class="exemple">
-								   <span class="idS subQuestion t-transparent" style="margin-top:0 !important; width:91.91%; background:#ececea !important; ">
-									   <br>
-									   <small style="text-aligne:center !important; padding:2em !important; ">&#9888; <i>Sous MS Windows, intaller git bash </i></small><br>
-									   <small style="text-aligne:center !important; padding:2em !important; ">&#9888; <i>i fo retenir ce truc:</i></small>
-									   <pre style="padding-bottom:2em !important;  "  > 								
-										  <img src="chmod.png" class="onglet-sujet idS" style="border:none; padding:0 1em 0 0; float:left; margin:0;"/>																				
-										</pre>								
-									</span> 
-								</div>
-							</details>						 
-						   	<details>
-						      <summary class="reponse_">Réponse: Application à l'exo</summary>
-								<div class="exemple">
-								   <span class="idS subQuestion t-transparent" style="margin-top:0 !important; width:91.91%; background:white !important;">
-									   <pre >
-											<span style="color:green">Le répertoire en mode X(other):</span> 								
-												chmod 77<b style="color:#115">1</b> nomInternaute													
-											<span style="color:green">Les fichiers en mode RW(other):</span>
-												chmod 77<b style="color:#115">6</b> nomInternaute/*.txt								
-										</pre>								
-									</span> 
-								</div>
-							</details>
-						</li>
-					</ul>
+					<details>
+					  <summary class="reponse_">Réponse: Définition droit d'accès aux fichiers</summary>
+						<div class="exemple">
+						   <span class="idS subQuestion t-transparent" style="margin-top:0 !important; width:91.91%; background:#ececea !important; ">
+							   <br>
+							   <small style="text-aligne:center !important; padding:2em !important; ">&#9888; <i>Sous MS Windows, intaller git bash </i></small><br>
+							   <small style="text-aligne:center !important; padding:2em !important; ">&#9888; <i>i fo retenir ce truc:</i></small>
+							   <pre style="padding-bottom:2em !important;  "  > 								
+								  <img src="chmod.png" class="onglet-sujet idS" style="border:none; padding:0 1em 0 0; float:left; margin:0;"/>																				
+								</pre>								
+							</span> 
+						</div>
+					</details>						 
+					<details>
+					  <summary class="reponse_">Réponse: Application à l'exo</summary>
+						<div class="exemple">
+						   <span class="idS subQuestion t-transparent" style="margin-top:0 !important; width:91.91%; background:white !important;">
+							   <pre >
+									<span style="color:green">Le répertoire en mode X(other):</span> 								
+										chmod 77<b style="color:#115">1</b> nomInternaute													
+									<span style="color:green">Les fichiers en mode RW(other):</span>
+										chmod 77<b style="color:#115">6</b> nomInternaute/*.txt								
+								</pre>								
+							</span> 
+						</div>
+					</details>
 				</div>
 				
-				
-				
-				
+								
                 <!-- #######################  Exercice2 #################### -->
-				
-				
-				
-				
-				
+								
 				
 				<div class="success_ structureSujet ">
 					<p><u><a href="#"><strong>Exo2:</strong> Sauvegarde sur fichier </a></u></p>
@@ -672,27 +661,22 @@ setcookie('nom', "Joseph", time()+3600*24*7);
                     <span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="greenNum">&#9313;</small> &emsp; Stockage &emsp; <i style="color:#115;">dernier enregistrement</i> </b></span><br>
 					&emsp; Reprendre le fichier corpsFic.php | en faisant une copie <b>corpsFic2.php</b>
 					<ul type="disc" class="questions_" >
-                         <li>Modifier la façon de sauvegarder chaque couple (nom, prenom) </li>					
-						 <li>Il faut à chaque fois écraser l’ancien couple</li>
-						 <li>&#9888; Indication: <span class="calibri">i suffit de placer le pointeur en début de fichier !</span></li>
-						 
+                        <li>Modifier la façon de sauvegarder chaque couple (nom, prenom) </li>					
+						<li>Il faut à chaque fois écraser l’ancien couple</li>
+						<li>&#9888; Indication: <span class="calibri">i suffit de placer le pointeur en début de fichier !</span></li>						 
 					</ul>
 					<details>
-					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-                         <p class="paragraphe calibri" style="color:black;  margin-top:0; width:auto;">					
-						    &dollar;fichier=fopen("nomInternautes.txt",<b style="color:red">"w+"</b>);					
+					    <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
+                        <p class="paragraphe calibri" style="color:black;  margin-top:0; width:auto;">					
+						   &dollar;fichier=fopen("nomInternautes.txt",<b style="color:red">"w+"</b>);					
 						</p>	
 					</details>
-					<p></p>
-															
+					<p></p>															
 				</div>
 				
-						
-				
+										
                 <!-- ######################   Exercice3 ################################# -->
-				
-				
-				
+								
 				
 				<div class="danger_ structureSujet">
 					<p><u><a href="#"><strong>Exo3:</strong> les captcha</a> </u>  </p>					
