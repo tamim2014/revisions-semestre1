@@ -235,7 +235,7 @@
            $("#zoomerLeSujet").mouseout(function(){
 			  $("#enonceTpUN_").addClass("enonceTpUN"); // Problème: l'effet de zoom ne s'enleve pas( pourtant les dimension reviennent à la normales). Mais c'pas grave on l'faire manuellement avec les fonctionanalité du document source(PDF)"
 		      //$("#enonceTpUN_").css("zoom", "60%"); cette solution ne pas non plus. Pire ça m'reduit la hauteur du document
-		   });		   
+		   });	   
 		});
     </script>		   
   </head>
@@ -315,12 +315,11 @@
 		<!-- Barre laterale droite  -->
 		<aside class="sidebarDroite saut " id="sidebarDroit">
 			<div class="widget-asideD idS">
-				<b>TP1:</b> <br>
-				Les données sont stockées dans:
+				<b>TP2:</b> <br>
+				Stockage sur fichier:
 				<ul type="square">
-				    <li>&dollar;_SESSION[ ] (exo1)</li>
-					<li>&dollar;_COOKIE[ ] (exo2 et 3)</li>
-					<li>Fichier.txt (exo4 ) </li>
+				    <li>ligne par ligne(a+)</li>
+					<li>dernière ligne(w+)</li>
 				</ul>
 				<small>&rArr; Pas besoin de Mysql(Apache suffit)</small>			 
 			</div>			
@@ -845,8 +844,17 @@ setcookie('nom', "Joseph", time()+3600*24*7);
     </footer>
 	
     <script type="text/javascript" src="../../../js/top.js"></script>
-	<!-- <script type="text/javascript" src="../../../js/sticky-bis.js"></script> -->
     <script type="text/javascript" src="../../../js/sticky-bis.js"></script>	
-  
+    <script>
+	    // Pour pas que la barre laterale droite supperpose le footer
+		// redefinition f° pasupperpose() car ici la page est trop courte
+		function paSuperposer() {
+		  if (document.body.scrollTop > 2600  || document.documentElement.scrollTop > 2600 ) {
+			barreDroite.classList.add("stickyNoSupepose");
+		  }else{
+			barreDroite.classList.remove("stickyNoSupepose");   
+		  } 		
+		}	
+	</script>
   </body>
 </html>
