@@ -679,102 +679,75 @@ setcookie('nom', "Joseph", time()+3600*24*7);
 								
 				
 				<div class="danger_ structureSujet">
-					<p><u><a href="#"><strong>Exo3:</strong> les captcha</a> </u>  </p>					
-					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="redNum">&#9312;</small> &emsp; HTML: &emsp; <i style="color:#115;">Saisie <small style="color:gray">( interface d'entrée )</small></i> </b></span><br>
-					&emsp;Ajouter une page <b>form<span style="color:#a1008c">ulaire</span>.php</b> contenant:<br>
+					<p><u><a href="#"><strong>Exo3:</strong> les captcha</a> </u>  </p>	
+                    <span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="redNum">&#9312;</small> &emsp; Enregistrement: &emsp; <i style="color:#115;">fopen <small style="color:gray">( fichier,  mode )</small></i> &emsp; | &emsp; <i style="color:#115;">fwrite <small style="color:gray">(flux, valeurs&Agrave;saisir)</small></i></b></span><br>					
+					&emsp;<b>Traitement: <i>corpsFic<span style="color:#a1008c">2</span>.php</i></b><br>
 					<ul type="disc" class="questions_" >
-					     <li>Un titre</li>
-                         <li>Un formulaire avec un champs "<b>mot de passe</b>" et un champs "<b>Acc&eacute;der</b>"  </li>					
-						 <li>Le champs "<b>Acc&eacute;der</b>" appelle la page <b>pageProtegee.php</b>(par POST)</li>						 
+					     <li>Forcer le remplissage d’un captcha avant de valider la saisie</li>
+                         <li>cf   http://www.finalclap.com/faq/46-php-creer-captcha.</li>										 
 					</ul>
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
 <pre><code class="language-html" ><source lang="html">
-/********  formulaire.php ******/
-&lt;!DOCTYPE html>
-&lt;html>
-&lt;head>
-	&lt;title>TP2: Exercice3&lt;/title>
-&lt;/head>
-&lt;body>
-	&lt;form action="pageProtege.php" method="post">
-		Password: &lt;input type="password" name="password">		
-	    &lt;input type="submit" name="submit" value="Acéder">
-	&lt;/form>
-&lt;/body>
-&lt;/html>	
+/********  Formulaire:captcha.php ******/
+...
+&lt;input type="checkbox" name="captcha" checked>
+&lt;input type="image"  src="captcha.png">
+...	
 </source></code></pre>
+<pre><code class="language-php" ><source lang="php">
+/********  Traitement:corpsFic2.php ******/
+&lt;?php
+   $nom = isset($_GET["nom"]) ? $_GET["nom"] : ''; 
+   $prenom = isset($_GET["prenom"]) ? $_GET["prenom"] : '';
+   $captcha = isset($_GET["captcha"]) ? $_GET["captcha"] : '';	
+
+  
+   if(!$captcha){ 
+	   $fichier = fopen("nomInternautes.txt", "w+");
+	   $ligne = $nom." , ".$prenom."\r\n";
+	   echo fwrite($fichier, $ligne);
+	   fclose($fichier);	  
+	   header('Location: nomInternautes.php'); 
+   }else{
+      // transmettre la verif à la page d'affichage
+	  header('Location: nomInternautes.php?verif="'.$captcha.'"'); 
+   }
+?&gt;	
+</source></code></pre>
+
 					</details>
 					<p></p>
-					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="redNum">&#9313;</small> &emsp; PHP: &emsp; <i style="color:#115;">Traitement <small style="color:gray">( fichier externe )</small></i> </b></span><br>
-					&emsp;Ajouter la page <b><span style="color:#a1008c">pageProtegee.php</span></b> qui, <br>
+					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="redNum">&#9313;</small> &emsp; Affichage: &emsp; <i style="color:#115;">fopen <small style="color:gray">( fichier,  mode )</small></i> &emsp; | &emsp; <i style="color:#115;">fgets <small style="color:gray">(flux)</small></i></b></span><br>
+					&emsp;<b>Affichage: <i>nomInternautes.php</i></b><br>
 					<ul type="disc" class="questions_" >
-					     <li> affiche un texte si le mot d'passe est correcte </li>
-                         <li> affiche un message d'erreur le cas &eacute;ch&eacute;ant  </li>											 
+					     <li>Transmettre le captcha à la page d'affichage</li>
+                         <li>S'il n'est pas décocher, afficher un message d'erreur</li>											 
 					</ul>
 					<details>
 					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
 <pre><code class="language-php" ><source lang="php">
-/********  pageProtege.php ******/
-&lt;div id="contenu">
-	&lt;h3> TP2: Exercice3&lt;/h3>
-&lt;/div>
-&lt;?php  
-  // COLLECT 
-  $motdepasse = 'abc';
-  $password=isset($_POST["password"]) ? $_POST["password"]:'';
-   
-  // CONTRÔLE DE SAISIE
-  if(empty($password)) echo 'Entrer votre password&lt;br>';
-   
-  // AFFICHAGE
-  $resultat = strcmp($motdepasse,$password);
-  if ($resultat !== 0) echo 'mot de passe erroné';		   
-  else  echo 'le cheval de Henti Iv était blanc';
-?>
-&lt;p>&lt;a href="formulaire.php"> Formulaire de saisie &lt;/a>&lt;/p>
+/******** Affichage:nomInternautes.php ******/
+&lt;?php
+
+// verif est transmis depuis corpsFic2.php	
+$captcha = isset( $_GET["verif"] ) ? $_GET["verif"] : '';
+$fichier = fopen( 'nomInternautes.txt', 'rb' );
+
+if( $captcha ){
+  echo "Verifier votre saisie( si t'est pas un robot !)";
+}else{
+  $ligne = fgets( $fichier );	
+  echo '&lt;h3>Voici le dernier enregistrement &lt;/h3>'.$ligne.'<br>';		 					
+}
+
+?&gt;	
 </source></code></pre>					
 					</details>
 					<p></p>
-					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="redNum">&#9314;</small> &emsp; HTML/PHP: &emsp; <i style="color:#115;">Saisie et traitement <small style="color:gray">( dans le même fichier )</small></i> </b></span><br>
-					&emsp;Reprendre la page <b>form<span style="color:#a1008c">ulaire</span>.php</b> :<br>
-					<ul type="disc" class="questions_" >
-					     <li>Dedans, ins&eacute;rer le contenu de la page <span style="color:#a1008c">pageProtegee.php</span></li>
-                         <li>Le formulaire pointe donc sur lui-même</li>											 
-					</ul>
-					<details>
-					     <summary class="reponse_"><span >R&eacute;ponses ... </span></summary>
-<pre><code class="language-php" ><source lang="php">
-/********  formulaire.php ******/
-&lt;!DOCTYPE html>
-&lt;html>
-&lt;head>
-	&lt;title>TP2: Exercice3&lt;/title>
-&lt;/head>
-&lt;body>
-	&lt;form action="pageProtege.php" method="post">
-		Password: &lt;input type="password" name="password">		
-	    &lt;input type="submit" name="submit" value="Acéder">
-	&lt;/form>
-&lt;/body>
-&lt;/html>
-    <hr>	
-&lt;?php  
-  $motdepasse = 'abc';
-  
-  if(isset($_POST["password"]) && !empty($_POST["password"])){		
-		// COLLECTE
-		$password = $_POST["password"];
-		// AFFICHAGE
-		$resultat = strcmp($motdepasse,$password);
-		if ($resultat !== 0) echo 'mot de passe erroné';		   
-		else  echo 'le cheval de Henti Iv était blanc';	
-  }
-?>	
-</source></code></pre>
-					</details>
-					<p></p>
-					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="redNum">&#9315;</small> &emsp; Conclusion:  </b></span><br>
+
+
+					<span class="idS subQuestion t-transparent" style="margin-top:0 !important; margin-bottom:1em !important; width:91.91%;"> &nbsp;<b style="color:gray"><small class="redNum">&#9314;</small> &emsp; Conclusion:  </b></span><br>
 				    <ul type="square" class="paragraphe petitParagraphe"> 
 					  <li>
 					     <b>Traitement dans le même fichier :</b><br>
