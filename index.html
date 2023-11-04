@@ -20,6 +20,34 @@
 	    @media all and (max-width: 900px) {   
              .sidebarGauche{ height:92%;}                      
         }
+
+	/* 
+	 *Mettre un scroll horizont pour les p'tit ecran ( car le me ne s'affiche pas complètement)
+	 *
+	 *  Pas la peine d'ajouter un scrolbar. il est là par défaut
+	 *  Mais il s'affiche pas car il est à display:none
+	 *  Donc i suffit de modif(valeur par défaut) cette prorieté pour les 4 principaux browser
+	 *
+	 */
+	@media screen and (max-width: 1500px) {
+
+		/* 
+		 * il faut faire le contraire de "display: none;
+		 * et mettre la valeur par défaut de display
+		 * mais .... je la connais pas ...
+		 *
+		 */
+		
+		#mySidepanel::-webkit-scrollbar { display: block; }
+		#mySidepanel::-moz-scrollbar { display: block;}
+	
+		#mySidepanel::-o-scrollbar { display: block; }
+		
+	}       
+
+		
+
+    
 	</style>
 
     <script type="text/javascript" src="js/menu907.js"></script>
@@ -46,6 +74,7 @@
 	<div id="contenair"  > <!-- contient: le menu, les 2 barre laterales, et le contenu main  -->
 	
 		<!-- Cacher le menu a gauche du header mais il doit sortie avec la mm hauteur que le header -->
+		<!-- Mettre un scroll horizont pour les p'tit ecran ( car le me ne s'affiche pas complètement)-->
 		<div id="barre-laterale" >
 			<div id="mySidepanel" class="sidepanel">
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>

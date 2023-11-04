@@ -57,12 +57,13 @@
   background-color:#444;
 }
 
-/* masquer le scroll du menu */
+/* masquer le scroll du menu ( en dessous de 1500px i fo le réaficher et ça pause un gros problème*/
 
 #mySidepanel::-webkit-scrollbar { display: none; }
 #mySidepanel::-moz-scrollbar { display: none; }
 #mySidepanel::-webkit-scrollbar { display: none; }
 #mySidepanel::-o-scrollbar { display: none; }
+
 
  
 
