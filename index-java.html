@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="style/menu907.css" media="screen" />   
 	<link rel="stylesheet" href="style/top.css"  media="screen"><!--  Bouton remonter en haut de page -->
     <link rel="stylesheet" href="style/menu_accordeon.css" media="all">
+	<style>.conteneurDesSujet {min-height:45em;}</style>
 	<script type="text/javascript" src="js/menu907.js"></script>
     <script type="text/javascript" src="js/popup-reseau.js"></script>
 	<script type="text/javascript" src="js/accesAuxPopUps.js"></script>
@@ -71,19 +72,53 @@
 		<!-- Barre laterale droite  -->
 		<aside class="sidebarDroite saut ">
 			<div class="widget-asideD"  >
-				 Cours1
+			     <small>
+				   Cours1<br>
+                 </small>
 			</div>			
-			<div class="widget-asideD" style=" clear:both;" >			
-				 Cours2
+			<div class="widget-asideD" style=" clear:both;" >	
+                 <small>			
+				   Cours2<br>
+				   &nbsp;&bull; Transtipage : (Page58/82)<br>
+				   &nbsp;&bull; Cast: P60/62<br>
+				   &nbsp;&bull; les boucles P67/82<br>
+				 </small>
 			</div>			
-			<div class="widget-asideD" style=" clear:both;" >			
-				 Cours3
+			<div class="widget-asideD" style=" clear:both; height:auto;" >
+                 <small>			
+				   Cours3<br>
+				   &nbsp;&bull; Table à 2 dimensions: P15/40<br>
+				   &nbsp;&bull; Méthodes natives: P26/40<br><br>
+				   &emsp;&#9745; Une méthode typée<br>&emsp;&emsp; retourne qlq chose(return)<br>
+				   &emsp;&#9746; Une méthode void<br>&emsp;&emsp; ne retourne rien<br><br>
+				 </small>
 			</div>			
-			<div class="widget-asideD" style=" clear:both;" >			
-				 Cours4
+			<div class="widget-asideD" style=" clear:both;" >
+                 <small>			
+				   Cours4<br>
+				   &nbsp;&bull; constructeur:P43/75<br> 
+				   &nbsp;&bull; Le mot clé this: P47/73<br>
+				   &nbsp;&bull; Exemple d'instance : 58/73<br>
+				   &nbsp;&bull; Le mot clé static:  65/73<br><br>
+
+				 </small>
 			</div>
-			<div class="widget-asideD" style=" clear:both;" >			
-				 Cours5
+
+			<div class="widget-asideD" style=" clear:both; height:auto;" >			
+				 <small>
+				   Cours5<br>
+				   &nbsp;&bull; public/private:P16/78<br>
+
+				   &nbsp;&bull; getter/setter : P21/78<br>
+				     <!--
+					   -  public int  getLargeur(){  return this.largeur; }
+					   -  public void setLargeur(int autreLargeur) { this.largeur = autreLargeur ; }
+                     -->
+					&nbsp;&bull;  La méthode <b>toString()</b>: 27/78<br>
+					&nbsp;&bull;  Le mot clé <b>super</b>: 67/78<br>
+					&nbsp;&bull;  Le mot clé <b>final</b>: 73/78<br><br>
+				   
+				 </small>
 			</div>
 		</aside>
 		
@@ -124,7 +159,43 @@
 					     <strong>Exercice de r&eacute;vision</strong>
 					     <a class="unset_" href="#" onclick="exoCompteBjava();" >Compte bancaire</a>	
 					  </p>
-					</div>			  
+					</div>
+					<div class="info structureSujet ">
+			          <p></p>
+					  <p>
+					     <strong>Où  definir les variables d'instance ?</strong>
+					     <a class="unset_" href="#" >A L'INTERIEUR DE LA mthd main()</a>	
+					  </p>
+
+					</div>
+					
+					<div class="info structureSujet ">
+			          <p></p>
+					  <p>
+					     <strong>Afficher une variable d'instance ?</strong>
+					     <a class="unset_" href="#"  >
+						      Instancier un objet de sa classe
+						 </a>	
+					  </p>
+					  <p>
+					     <strong>Afficher une variable de classe ?</strong>
+					     <a class="unset_" href="#" >Pas d'instance. Le nom de sa classe suffit</a>	
+					  </p>
+					  <p>
+					     <strong> <span style="color:black">STATIC</span> sert à quoi d'autre ?</strong>
+					     <a class="unset_" href="#" >à définir une constante.</a>	
+					  </p>
+					</div>
+					<div class="info structureSujet ">
+			          <p></p>
+					  <p>
+					     <strong>Pourquoi on <span style="color:black">le</span> retrouve dans les prédicats de la méthodemain( String[] args) ?</strong>
+					     <a class="unset_" href="#"  >...</a>	
+					  </p>
+
+					</div>
+
+					
 			</section> <!-- FIN section2 .conteneurDesSujet JAVA -->		
 		</main>
 		
