@@ -33,15 +33,18 @@
 	
 	<!-- CONCLUSION -->
 	<div class="conteneur-reponses" > </div>  	
-    <p class="numCours " style="background-color:#111" > <u>Conclusion</u>: <span class="G">tableau</span> et variable <span class="G">static</span><br><br>
+    <p class="numCours " style="background-color:#111; margin-bottom:0;" > <u>Conclusion</u>: <span class="G">tableau</span> et variable <span class="G">static</span><br><br>
 		<small class="dateCours">
-		Un tableau c'est juste une liste. Il se déclare et s'instancie comme une classe : <br>
-		&emsp; &bull; &emsp; int &emsp; <span class="G">monTableau[ ]</span> =&emsp; new&emsp;&emsp; int[10];  &emsp;&emsp;&emsp; un tableau de 10 lignes<br>
-		&emsp; &bull; &emsp; <span class="G">int[ ]</span> &emsp; monTableau =&emsp; new&emsp;&emsp; int[11];  &emsp;&emsp;&emsp; un tableau de 11 lignes<br>	
+		Un tableau c'est juste une liste. Il se déclare et s'instancie comme une classe. Pour ce faire il éxiste 2 syntaxes différentes.<br><br>  Exemples syntaxe1<span style="color:gray;"> (Affectation du nom de la variable)</span> : <br>
+		&emsp; &bull; &emsp; int &emsp; <span class="G">monTableau[ ]</span> =&emsp; new&emsp;&emsp; int[10];     &emsp;&emsp;&emsp; <span style="color:gray;">//un tableau de 10 lignes</span><br>
+		&emsp; &bull; &emsp; int &emsp; <span class="G">monTableau[][]</span> =&emsp; new&emsp;&emsp; int[10][2];   &emsp;&emsp;<span style="color:gray;">//10 lignes et 2 colonnes</span><br><br>
+		<br> Exemples syntaxe2<span style="color:gray;"> (Affectation du type de données)</span> : <br>
+		&emsp; &bull; &emsp; <span class="G">int[ ]</span> &emsp; monTableau =&emsp; new&emsp;&emsp; int[11];     &emsp;&emsp;&emsp; <span style="color:gray;">//un tableau de 11 lignes</span><br>	
+		&emsp; &bull; &emsp; <span class="G">int[][]</span>&emsp; monTableau =&emsp; new&emsp;&emsp; int[11][3]; &emsp;&emsp;<span style="color:gray;">//11 lignes et 3 colonnes</span><br>	
 		</small>
-		<small><br>
-		 Les variables ou méthodes <span class="G">static</span> appartiennent à la classe elle-même.<br>
-		 On peut donc les utiliser <span class="G"> sans avoir une instance </span>créée
+		<small><br><br>
+		 Il éxiste des variables et des méthodes qui appartiennent à la classe elle-même.<br> On les dit : <span class="G">static</span>  <br>
+		 On peutes utiliser directement: <span class="G"> sans aucun objet d'instance </span>
 		</small>
 	</p>
 	<div class="conteneur-reponses" > </div>  

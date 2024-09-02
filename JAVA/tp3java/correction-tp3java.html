@@ -75,10 +75,15 @@
 
 		public static void main(String[] args){
 			
+			// déclaration java d'une table 3lignes, 4 colonnes
+			
 			int[][] tabM = new int [3][4];
+			  
+			// Initialisation et affichage  de la table déclarée
 			
 			for(int i = 0; i < tabM.length; i++){
-				for(int j = 0; j < tabM[i].length; j++){
+				//for(int j = 0; j < tabM[i].length; j++){ pourquoi tabM[i] ?
+				for(int j = 0; j < tabM.length; j++){
 					tabM[i][j] = i + j;	
 					System.out.print(tabM[i][j] + " ");
 				}
