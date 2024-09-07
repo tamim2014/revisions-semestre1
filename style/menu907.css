@@ -65,7 +65,9 @@
 #mySidepanel::-o-scrollbar { display: none; }
 
 
- 
+ /* Transformation de menu vertical en paneau horizontal */
+
+ #mySidepanel a { display:inline ; }	
 
     
 
