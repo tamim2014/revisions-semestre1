@@ -61,6 +61,10 @@
 
 
     #mySidepanel a { display:inline ; }	
+	/******************  centralisation du menu mais pas la peine  ************
+	#mySidepanel a:not(:first-child){ padding-left:12%;}
+	#mySidepanel a#iconAccueil { padding-left: inherit !important;}
+	*************************************************************************/
 
 		
 
@@ -93,9 +97,9 @@
 		<!-- Cacher le menu a gauche du header mais il doit sortie avec la mm hauteur que le header -->
 		<!-- Mettre un scroll horizont pour les p'tit ecran ( car le me ne s'affiche pas complètement)-->
 		<div id="barre-laterale" >
-			<div id="mySidepanel" class="sidepanel" style="width:100%; ">
+			<div id="mySidepanel" class="sidepanel" style="width:100%;  ">
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a><br>
-				<a href="index.html" id="iconAccueil" style="display: inherit !important;"><img src="photos/accueil.png"  ></a><br><br>
+				<a href="index.html" id="iconAccueil" style="display: inherit !important;  "><img src="photos/accueil.png"  ></a><br><br>
 				<a href="index-ihm.html">IHM<span style="color:transparent">M</span></a>
 				<a href="index-stat.html" style="display:inline !important;">Statistique</a>
 				<a href="index-ts.html">TS</a>
