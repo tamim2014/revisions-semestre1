@@ -190,6 +190,7 @@
 		    <div class="conteneur-reponses" style=" float:left; width:100%;" >
 			<div class="reponses reponse1" style="height:130px; margin-right: 20px;" >
 					<code>
+						Le principe d'une telle architecture se résume ainsi:
 						<ul type="square">
 							<li>Le client envoie des requêtes </li>
 							<li>Le serveur attend les requêtes des clients et y répond. </li>
@@ -224,6 +225,9 @@
 			<p><summary><u><i>SOLUTION 1.2</i></u></summary></p>
 			<div class="conteneur-reponses" style="float:left; width: 100%;" >
 				<div class="reponses reponse1" style="height: 130px; margin-right: 20px;" >
+					<code>
+						J'envoie: Je = Client = Browser 
+					</code>
 				<ol>
 				   <li>J’envoie mon code à un serveur web </li>
 				   <li>Le serveur web génère une page réponse</li>
@@ -258,8 +262,10 @@
 			 
 			<ul type="square">
 			   <li> Variables prédéfinie à PHP</li>
-			   <li> Sert à stocker des informations(sous forme de tableau associatif)</li>
-			   <li>Elles sont disponibles dans tous les contextes d'exécution <br> (fonctions ou méthodes)</li>
+			   <li><code>Servent à stocker des informations(sous forme de tableau associatif clés/valeurs)</code> </li>
+			   <li> Dans la colonne clés : On trouve les "name" des champs HTML</li>
+			   <li> Dans la colonne valeurs : On trouve les " valeurs saisies par l'utilisateur" dans ces champs HTML</li>
+			   <li> Ces tables sont disponibles dans tous les contextes d'exécution <br> (fonctions ou méthodes)</li>
 			</ul> 
 			</div>
 			<div class="reponses reponse2" style="height:25em;" >
@@ -315,7 +321,7 @@
 				<!-- <code> -->
 				<blockquote><cite>
 					Les clés (<i>des arguments passés a l'url</i>)<br>sont donc variables. <br>Pour illustrer,
-					imaginons que l'utilisateur ai entrée l'URL suivant : <i><code>http://example.com/?name=Toto</code></i><br>
+					imaginons que l'utilisateur ait entrée l'URL suivant : <i><code>http://example.com/?name=Toto</code></i><br>
 					L'exemple ci-contre va alors afficher : <br><code>Bonjour Toto</code>
 				</cite></blockquote>
 				<!-- </code> -->
@@ -388,7 +394,7 @@
 					<code class="language-php" style="border-radius:0;"><source lang="php">
 						 &dollar;user = "root";<br> 
 						 &dollar;pass= "123";<br>
-						 &dollar;cnx = new PDO('mysql:host=localhost;dbname=classement', <br> &dollar;user, &dollar;pass);<br>
+						 &dollar;cnx = new PDO('mysql:host=localhost;<br>dbname=classement', <br> &dollar;user, &dollar;pass);<br>
 					</source></code><br>
 
 					<span style="color:green;">
@@ -399,13 +405,13 @@
 							&dollar;sql1 = "INSERT INTO classement2018(Language, Web  , Mobile,  Entreprise,   
 							Embarque,  Rang, Rang2017)<br>                   
 							VALUES ('1.Python', 'X', '', 'X', 'X', '100.0', '100.0')";    
-							&dollar;<br>
-							cnx->exec(&dollar;sql1);<br><br>
+							<br>&dollar;cnx->exec(&dollar;sql1);<br><br>
+							
 
 							&dollar;sql2 = "INSERT INTO classement2018(Language, Web  , Mobile,  Entreprise,   
 							Embarque,  Rang, Rang2017)<br>                                
 							VALUES ('2.C++', '', 'X', 'X', 'X', '98.4', '97.4')";<br>    
-							&dollar;cnx->exec($sql2);<br><br>
+							<br>&dollar;cnx->exec($sql2);<br><br>
 
 							&dollar;sql3 = "INSERT INTO classement2018(Language, Web  , Mobile,  Entreprise,   
 							Embarque,  Rang, Rang2017)<br>                                                        VALUES ('3.C', '', 'X', 'X', 'X', '98.2', '99.7')"; <br>   
@@ -416,7 +422,7 @@
 				  </li>             
 			   </ol> 	
 			</div>
-			<div class="reponses reponse2" style="height: 100em;" >
+			<div class="reponses reponse2" style="height: 100em; overflow: hidden;" >
 				<ol start="3" type="square">
 					<li>
 					  AFFICHAGE: ACCES EN LECTURE A LA BASE DE DONNE  classement(par exemple)<br>
